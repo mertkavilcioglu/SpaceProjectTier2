@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbyrwi8w2y3bk"]
+
+[ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
+[ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_j43kv")]
+isScrolling = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Character" parent="." instance=ExtResource("2_eeww8")]
+
+[node name="Lasers" type="Node" parent="."]

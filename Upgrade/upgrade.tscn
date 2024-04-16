@@ -1,0 +1,292 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpftha7qcy8ig"]
+
+[ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_5y7i4"]
+[ext_resource type="Script" path="res://Upgrade/upgrade.gd" id="1_m760t"]
+[ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_6da6h"]
+[ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="4_7ec4c"]
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="5_cipow"]
+[ext_resource type="Texture2D" uid="uid://c7wurp75mpiqh" path="res://Sprites/UpgradeEmpty.png" id="6_h752f"]
+[ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="8_adlnu"]
+
+[node name="Upgrade" type="Node2D"]
+script = ExtResource("1_m760t")
+
+[node name="Background" parent="." instance=ExtResource("1_5y7i4")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.356863, 0.282353, 0.352941, 0.392157)
+
+[node name="BodyLvl1" type="Sprite2D" parent="."]
+position = Vector2(480, 270)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_6da6h")
+
+[node name="WingLvl1" type="Sprite2D" parent="."]
+position = Vector2(480, 270)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_7ec4c")
+
+[node name="Health" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 331.0
+offset_top = 57.0
+offset_right = 371.0
+offset_bottom = 97.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Health"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Health/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HealthLabel" type="Label" parent="Health/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Health: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="Health/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="Health/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="Health/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="Health/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="Health/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="HealthUpgradeButton" type="Button" parent="Health/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Upgrade"
+
+[node name="Speed" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 337.0
+offset_top = 399.0
+offset_right = 377.0
+offset_bottom = 439.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Speed"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Speed/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="Speed/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Speed: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="SpeedUpgradeButton" type="Button" parent="Speed/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Upgrade"
+
+[node name="Fuel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 70.0
+offset_top = 237.0
+offset_right = 110.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Fuel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Fuel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="Fuel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Fuel: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="FuelUpgradeButton" type="Button" parent="Fuel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Upgrade"
+
+[node name="Damage" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 608.0
+offset_top = 237.0
+offset_right = 648.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Damage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Damage/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="Damage/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Damage: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(120, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(160, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(200, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(240, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(280, -5)
+texture = ExtResource("6_h752f")
+centered = false
+
+[node name="DamageUpgradeButton" type="Button" parent="Damage/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "Upgrade"
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 808.0
+offset_top = 447.0
+offset_right = 928.0
+offset_bottom = 507.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_cipow")
+text = "Play"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 877.0
+offset_top = 30.0
+offset_right = 937.0
+offset_bottom = 60.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(-49, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("8_adlnu")
+centered = false
+
+[node name="Parts" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_cipow")
+text = "9999"
+
+[connection signal="pressed" from="Health/VBoxContainer/HealthUpgradeButton" to="." method="_on_health_upgrade_button_pressed"]
+[connection signal="pressed" from="Speed/VBoxContainer/SpeedUpgradeButton" to="." method="_on_speed_upgrade_button_pressed"]
+[connection signal="pressed" from="Fuel/VBoxContainer/FuelUpgradeButton" to="." method="_on_fuel_upgrade_button_pressed"]
+[connection signal="pressed" from="Damage/VBoxContainer/DamageUpgradeButton" to="." method="_on_damage_upgrade_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

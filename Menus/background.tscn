@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://cep87dbpwhpf6"]
+
+[ext_resource type="Texture2D" uid="uid://cpy68hg2deo24" path="res://Sprites/BGStatic.png" id="1_i8nry"]
+[ext_resource type="Texture2D" uid="uid://bytqekdwnabea" path="res://Sprites/background/starsLayer2.png" id="2_cpetq"]
+[ext_resource type="Texture2D" uid="uid://blgynkbbwn8pj" path="res://Sprites/background/starsLayer3.png" id="3_8ljot"]
+[ext_resource type="Texture2D" uid="uid://dqpfaxtd1uy15" path="res://Sprites/background/starsLayer1.png" id="4_mpaej"]
+
+[sub_resource type="GDScript" id="GDScript_nwfkd"]
+script/source = "extends ParallaxBackground
+
+@export var isScrolling:bool
+@export var scrollX:float = 6
+@export var scrollY:float = 4
+
+func _process(delta):
+	if isScrolling:
+		scroll_offset.x += scrollX * delta
+		scroll_offset.y += scrollY * delta
+	else:
+		$BgStatic.hide()
+		$ParallaxLayer2.hide()
+"
+
+[node name="Background" type="ParallaxBackground"]
+script = SubResource("GDScript_nwfkd")
+isScrolling = true
+scrollX = 50.0
+scrollY = 24.0
+
+[node name="BgStatic" type="Sprite2D" parent="."]
+z_index = -20
+texture = ExtResource("1_i8nry")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_offset = Vector2(50, 50)
+motion_mirroring = Vector2(1024, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(480, 270)
+texture = ExtResource("2_cpetq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(-0.3, -0.3)
+motion_mirroring = Vector2(1024, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(480, 270)
+texture = ExtResource("3_8ljot")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(50, 50)
+motion_mirroring = Vector2(1024, 1024)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(480, 270)
+texture = ExtResource("4_mpaej")

@@ -1,0 +1,15 @@
+Node
+Sprite2D
+Label
+HBoxContainer
+Button
+Control
+ColorRect
+VBoxContainer
+GridContainer
+CollisionShape2D
+CharacterBody2D
+Camera2D
+MarginContainer
+Panel
+VideoStreamPlayer

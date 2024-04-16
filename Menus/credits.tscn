@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=3 uid="uid://4hlsggv06p4o"]
+
+[ext_resource type="Script" path="res://Menus/credits.gd" id="1_jxlhd"]
+[ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_l48yw"]
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="2_4wjr4"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxlhd")
+
+[node name="Background" parent="." instance=ExtResource("1_l48yw")]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_4wjr4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(640, 2.08165e-12)
+layout_mode = 2
+
+[node name="Credits" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 381.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Thanks" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "Thank you for playing out game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mechanics" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "Mechanis:
+Player Boost System: Mert
+Enemy Types: Fercan, Taylan
+Planet Interaction System: Ege, Mehmet
+Boss Fight: Mert, Gökay
+Drone: Tolga
+Shield: Gökay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap2" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameLoop" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "Game Loop:
+Player Start: Ege
+Loot Drop: Ege, Batuhan
+Loot Pick-up/Economy: Ege, Mehmet
+Upgrade System: Berkay, Yağız
+Game Time: Berkay, Yağız "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap3" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animations" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "Animations: Yağız, Berkay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap4" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Effects" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "Effets:
+Glow: Gökay
+Reactive Music: Eren, Poyraz
+Particles: Gökay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap5" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UI" type="Label" parent="MarginContainer/HBoxContainer/Panel2/Credits"]
+layout_mode = 2
+theme = ExtResource("2_4wjr4")
+text = "UI:
+Start Menu: Çağan
+Options Menu: Eren
+Credits: Çağan
+Upgrade Menu: Eren"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsFinal" type="Label" parent="MarginContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Special Thanks To:
+Atilim University"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

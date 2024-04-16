@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm48kc742smsm"]
+
+[ext_resource type="Texture2D" uid="uid://cclahj55d7oeu" path="res://Sprites/uzaygemisi/EnemyShips/HUNTER.png" id="1_2vssp"]
+[ext_resource type="Script" path="res://Game/Enemy/hunter.gd" id="1_6hhyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1vit"]
+size = Vector2(100, 104)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_6hhyi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_2vssp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b1vit")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Muzzle" type="Node2D" parent="."]
+position = Vector2(62, 0)

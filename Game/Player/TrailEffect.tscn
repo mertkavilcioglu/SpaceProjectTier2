@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://caq61xx2lvglr"]
+
+[ext_resource type="Script" path="res://Game/Player/TrailEffect.gd" id="1_vmgby"]
+
+[sub_resource type="Curve" id="Curve_1gq7s"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_u5ess"]
+offsets = PackedFloat32Array(0, 0.32, 1)
+colors = PackedColorArray(0.996078, 0, 0.0823529, 1, 0.819996, 0.436486, 0, 1, 1, 1, 0, 1)
+
+[node name="Trail" type="Line2D"]
+top_level = true
+z_index = -1
+points = PackedVector2Array(-32, 96)
+width = 8.0
+width_curve = SubResource("Curve_1gq7s")
+gradient = SubResource("Gradient_u5ess")
+script = ExtResource("1_vmgby")
+MAX_LENGTH = 5

@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://inmklbs8atec"]
+
+[ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
+[ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="2_l72di"]
+[ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_barr6"]
+[ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="4_jeax1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
+radius = 44.0
+height = 94.0
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_bikhr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f4uun")
+
+[node name="wing" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_l72di")
+
+[node name="body" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(1.037, 1)
+texture = ExtResource("3_barr6")
+
+[node name="Upgrade" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -17.0
+offset_top = -22.0
+offset_right = 23.0
+offset_bottom = 18.0
+
+[node name="NewLevel" type="Panel" parent="Upgrade"]
+process_mode = 2
+layout_mode = 0
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+
+[node name="health" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 125.0
+offset_right = 250.0
+offset_bottom = 200.0
+text = "health"
+
+[node name="speed" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 200.0
+text = "speed"
+
+[node name="fuel" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 375.0
+offset_bottom = 200.0
+text = "fuel"
+
+[node name="damage" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 375.0
+offset_right = 500.0
+offset_bottom = 200.0
+text = "damage"
+
+[node name="get_level" type="Button" parent="."]
+visible = false
+offset_left = -500.0
+offset_top = -300.0
+offset_right = -350.0
+offset_bottom = -150.0
+text = "get level"
+
+[node name="Engine1" type="Node2D" parent="."]
+position = Vector2(-43, -6)
+rotation = 1.5708
+
+[node name="Trail" parent="Engine1" instance=ExtResource("4_jeax1")]
+
+[node name="Engine2" type="Node2D" parent="."]
+position = Vector2(-43, 6)
+rotation = 1.5708
+
+[node name="Trail" parent="Engine2" instance=ExtResource("4_jeax1")]
+
+[node name="Muzzle" type="Node2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="Muzzle2" type="Node2D" parent="."]
+position = Vector2(0, 13)
+
+[node name="Muzzle3" type="Node2D" parent="."]
+position = Vector2(0, -13)
+
+[connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/fuel" to="." method="_on_fuel_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/damage" to="." method="_on_damage_pressed"]
+[connection signal="pressed" from="get_level" to="." method="_on_get_level_pressed"]
