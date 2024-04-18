@@ -13,9 +13,8 @@ isScrolling = false
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 
-[node name="RigidBody2D" parent="." instance=ExtResource("3_dofhr")]
-position = Vector2(-261, 324)
-
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Lasers" type="Node" parent="."]
+
+[node name="Hunter" parent="." instance=ExtResource("3_dofhr")]
