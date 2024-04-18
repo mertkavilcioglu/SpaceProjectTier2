@@ -1,23 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm48kc742smsm"]
+[gd_scene load_steps=5 format=3 uid="uid://bm48kc742smsm"]
 
 [ext_resource type="Texture2D" uid="uid://cclahj55d7oeu" path="res://Sprites/uzaygemisi/EnemyShips/HUNTER.png" id="1_2vssp"]
 [ext_resource type="Script" path="res://Game/Enemy/hunter.gd" id="1_6hhyi"]
+[ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="3_2cyxv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1vit"]
-size = Vector2(100, 104)
+size = Vector2(65, 56)
 
 [node name="RigidBody2D" type="RigidBody2D"]
 script = ExtResource("1_6hhyi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2vssp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 0)
 shape = SubResource("RectangleShape2D_b1vit")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Muzzle" type="Node2D" parent="."]
 position = Vector2(62, 0)
+
+[node name="Engine1" type="Node2D" parent="."]
+position = Vector2(-33, 0)
+rotation = 1.5708
+
+[node name="Trail" parent="Engine1" instance=ExtResource("3_2cyxv")]

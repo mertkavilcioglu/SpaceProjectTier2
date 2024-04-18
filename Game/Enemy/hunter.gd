@@ -5,9 +5,9 @@ signal hit()
 var enemyHealth:int = 3 
 var playerDamage:int = 1 
 
-@onready var player = $"../../Character"
+@onready var player = $"../Character"
 @export var enemyMaxSpeed: float = 400.0
-@export var radius = 400
+@export var radius = 200
 
 var distanceToPlayer_x:int
 var distanceToPlayer_y:int
@@ -16,6 +16,7 @@ var calculatedRadius:int
 var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 @onready var muzzle1=$Muzzle 
 signal laser_shot(laser)
+@onready var lasers=$"../Lasers"
 
 
 func _physics_process(delta):
@@ -49,6 +50,7 @@ func getHit():
 		
 func shoot_to_player():
 	var l = laser_scene.instantiate()
+	lasers.add_child(l)
 	l.global_position = muzzle1.global_position
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
