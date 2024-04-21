@@ -1,2 +1,9 @@
-res://Game/Player/Character.tscn
+res://Game/game.tscn
 res://Game/Player/TrailEffect.gd
+res://Menus/main_menu.tscn
+res://Upgrade/upgrade.tscn
+res://Game/Player/Character.tscn
+res://Game/Enemy/hunter.tscn
+res://Menus/options_menu.tscn
+res://Game/Enemy/explosion_death_particle.tscn
+res://Game/Enemy/explosion_death_particle.gd

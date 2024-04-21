@@ -8,6 +8,7 @@ var playerDamage:int = 1
 @onready var player = $"../Character"
 @export var enemyMaxSpeed: float = 400.0
 @export var radius = 200
+@export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 
 var distanceToPlayer_x:int
 var distanceToPlayer_y:int
@@ -17,7 +18,6 @@ var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 @onready var muzzle1=$Muzzle 
 signal laser_shot(laser)
 @onready var lasers=$"../Lasers"
-
 
 func _physics_process(delta):
 	look_at(player.position)
@@ -46,6 +46,7 @@ func getHit():
 	if enemyHealth > 1: 
 		enemyHealth -= 1 #
 	elif enemyHealth <= 1:
+		playParticleEffect()
 		queue_free()
 		
 func shoot_to_player():
@@ -68,3 +69,10 @@ func reachPlayerMidRadius():
 		return false
 	
 		
+func playParticleEffect():
+	var _particle = deathParticle.instantiate()
+	_particle.position = global_position
+	_particle.rotation = global_rotation
+	_particle.emitting = true
+	get_tree().current_scene.add_child(_particle)
+	
