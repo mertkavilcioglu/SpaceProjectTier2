@@ -6,4 +6,4 @@ res://Game/Player/Character.tscn
 res://Game/Enemy/hunter.tscn
 res://Menus/options_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
-res://Game/Enemy/explosion_death_particle.gd
+res://Game/Player/DashShockwave.gdshader

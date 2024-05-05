@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=8 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="PackedScene" uid="uid://bm48kc742smsm" path="res://Game/Enemy/hunter.tscn" id="3_dofhr"]
+[ext_resource type="Shader" path="res://Game/Player/DashShockwave.gdshader" id="3_xmyfg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rjtwy"]
 
 [sub_resource type="Environment" id="Environment_v03uc"]
 background_mode = 3
@@ -16,6 +19,11 @@ glow_levels/6 = 1.0
 glow_levels/7 = 1.0
 glow_blend_mode = 1
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phsrd"]
+shader = ExtResource("3_xmyfg")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/force = 0.1
+
 [node name="Game" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_j43kv")]
@@ -24,6 +32,7 @@ isScrolling = false
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
+material = SubResource("ShaderMaterial_rjtwy")
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -35,3 +44,15 @@ isScrolling = false
 
 [node name="WorldEnvironment-forGlow" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v03uc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_phsrd")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0

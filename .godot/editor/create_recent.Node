@@ -1,3 +1,7 @@
+ColorRect
+CanvasLayer
+TextureRect
+Node2D
 WorldEnvironment
 CPUParticles2D
 GPUParticles2D
@@ -9,6 +13,3 @@ Label
 HBoxContainer
 Button
 Control
-ColorRect
-VBoxContainer
-GridContainer
