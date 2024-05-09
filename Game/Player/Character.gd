@@ -30,7 +30,7 @@ signal laser_shot(laser)
 var BoostCD:int = 3
 var shoot_bas=false
 
-@onready var animator = $"../CanvasLayer/AnimationPlayer"
+@onready var animator = $"CanvasLayer/AnimationPlayer"
 
 func _process(delta): 
 	if Input.is_action_pressed("Shoot"):
