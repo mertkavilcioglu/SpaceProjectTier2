@@ -1,18 +1,63 @@
-[gd_scene load_steps=6 format=3 uid="uid://bm48kc742smsm"]
+[gd_scene load_steps=11 format=3 uid="uid://bm48kc742smsm"]
 
 [ext_resource type="Texture2D" uid="uid://cclahj55d7oeu" path="res://Sprites/uzaygemisi/EnemyShips/HUNTER.png" id="1_2vssp"]
 [ext_resource type="Script" path="res://Game/Enemy/hunter.gd" id="1_6hhyi"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_pxmgi"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="3_2cyxv"]
+[ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_rqesy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iqn3t"]
+resource_local_to_scene = true
+shader = ExtResource("3_rqesy")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1vit"]
 size = Vector2(65, 56)
+
+[sub_resource type="Animation" id="Animation_nk146"]
+resource_name = "hit_flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_5g1fd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_olqy2"]
+_data = {
+"RESET": SubResource("Animation_5g1fd"),
+"hit_flash": SubResource("Animation_nk146")
+}
 
 [node name="Hunter" type="RigidBody2D"]
 script = ExtResource("1_6hhyi")
 deathParticle = ExtResource("2_pxmgi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_iqn3t")
 rotation = 1.5708
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2vssp")
@@ -31,3 +76,8 @@ position = Vector2(-33, 0)
 rotation = 1.5708
 
 [node name="Trail" parent="Engine1" instance=ExtResource("3_2cyxv")]
+
+[node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_olqy2")
+}

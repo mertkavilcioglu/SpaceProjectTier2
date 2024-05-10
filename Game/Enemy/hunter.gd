@@ -19,6 +19,8 @@ var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 signal laser_shot(laser)
 @onready var lasers=$"../Lasers"
 
+@onready var hit_flash_anim_player = $HitFlashAnimationPlayer
+
 func _physics_process(delta):
 	look_at(player.position)
 	
@@ -43,6 +45,7 @@ func _process(delta):
 
 func getHit(): 
 	emit_signal("hit") 
+	hit_flash_anim_player.play("hit_flash")
 	if enemyHealth > 1: 
 		enemyHealth -= 1 #
 	elif enemyHealth <= 1:
