@@ -30,6 +30,10 @@ signal laser_shot(laser)
 var BoostCD:int = 3
 var shoot_bas=false
 
+var ghost_scene = preload("res://Game/Player/dash_ghost.tscn")
+var sprite 
+@onready var ghost_timer = $GhostTimer
+
 func _process(delta): 
 	if Input.is_action_pressed("Shoot"):
 		if !shoot_bas:
@@ -58,8 +62,13 @@ func _physics_process(delta):
 					MaxSpeed = 3000
 					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
+					sprite = $body
+					ghost_timer.start()
+					instance_ghost()
 					BoostFuel -= 20
 					CanBoost = false
+					await get_tree().create_timer(0.2).timeout
+					ghost_timer.stop()
 				elif CanBoost == false:
 					MaxSpeed = 1500
 					if BoostFuel > 0:
@@ -161,4 +170,16 @@ func playerGetHit():
 		health -= 1 #
 	elif health <= 1:
 		print("DEAD")
+		
+func instance_ghost():
+	var ghost = ghost_scene.instantiate()
+	get_parent().get_parent().add_child(ghost)
+	
+	ghost.global_position = global_position
+	ghost.texture = sprite.texture
+	ghost.rotation = rotation + PI/2
+	ghost.scale = scale
 
+
+func _on_ghost_timer_timeout():
+	instance_ghost()

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://iqylx06f3aye"]
+
+[ext_resource type="Script" path="res://Game/Player/dash_ghost.gd" id="1_6eeur"]
+[ext_resource type="Texture2D" uid="uid://dnsi6cscy7oyt" path="res://icon.svg" id="1_q37cf"]
+
+[node name="DashGhost" type="Sprite2D"]
+texture = ExtResource("1_q37cf")
+script = ExtResource("1_6eeur")

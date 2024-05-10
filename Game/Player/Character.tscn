@@ -21,6 +21,7 @@ shape = SubResource("CapsuleShape2D_f4uun")
 
 [node name="wing" type="Sprite2D" parent="."]
 rotation = 1.5708
+scale = Vector2(1, 1)
 texture = ExtResource("2_l72di")
 
 [node name="body" type="Sprite2D" parent="."]
@@ -106,8 +107,12 @@ position = Vector2(0, -13)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseArea"]
 shape = SubResource("CircleShape2D_irjme")
 
+[node name="GhostTimer" type="Timer" parent="."]
+wait_time = 0.03
+
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/fuel" to="." method="_on_fuel_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/damage" to="." method="_on_damage_pressed"]
 [connection signal="pressed" from="get_level" to="." method="_on_get_level_pressed"]
+[connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
