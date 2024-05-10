@@ -20,6 +20,8 @@ signal laser_shot(laser)
 @onready var lasers=$"../Lasers"
 
 @onready var animator = $"../CanvasLayer/AnimationPlayer"
+var hunter_position = Vector2(0, 0)
+@onready var shockwave = $"../CanvasLayer/ColorRect"
 
 func _physics_process(delta):
 	look_at(player.position)
@@ -42,14 +44,16 @@ func _process(delta):
 	if(reachPlayerMidRadius()):
 		print(calculatedRadius)
 		linear_velocity = Vector2.ZERO
-
+		
+	hunter_position = global_transform.origin
+	var material = shockwave.get_material()
+	material.set_shader_parameter("hunter_position", hunter_position)
+	
 func getHit(): 
 	emit_signal("hit") 
 	if enemyHealth > 1: 
 		enemyHealth -= 1 #
 	elif enemyHealth <= 1:
-		if animator.is_playing():
-			animator.stop()
 		animator.play("shockwave")
 		print("Shock")
 		playParticleEffect()
