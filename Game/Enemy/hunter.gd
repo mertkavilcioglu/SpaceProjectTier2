@@ -19,6 +19,8 @@ var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 signal laser_shot(laser)
 @onready var lasers=$"../Lasers"
 
+@onready var animator = $"../CanvasLayer/AnimationPlayer"
+
 func _physics_process(delta):
 	look_at(player.position)
 	
@@ -46,6 +48,10 @@ func getHit():
 	if enemyHealth > 1: 
 		enemyHealth -= 1 #
 	elif enemyHealth <= 1:
+		if animator.is_playing():
+			animator.stop()
+		animator.play("shockwave")
+		print("Shock")
 		playParticleEffect()
 		queue_free()
 		

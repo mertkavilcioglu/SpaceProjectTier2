@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=7 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="2_l72di"]
 [ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_barr6"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="4_jeax1"]
-[ext_resource type="Shader" path="res://Game/Player/DashShockwave.gdshader" id="5_axp70"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -12,74 +11,6 @@ height = 94.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_irjme"]
 radius = 477.151
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gq3hj"]
-shader = ExtResource("5_axp70")
-shader_parameter/center = Vector2(0.5, 0.5)
-shader_parameter/force = 0.0
-shader_parameter/size = 0.0
-shader_parameter/thickness = 0.15
-
-[sub_resource type="Animation" id="Animation_3dblr"]
-length = 0.001
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/force")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_ve1hp"]
-resource_name = "shockwave"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:material:shader_parameter/force")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.15, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:material:shader_parameter/size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 0.7]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1au8"]
-_data = {
-"RESET": SubResource("Animation_3dblr"),
-"shockwave": SubResource("Animation_ve1hp")
-}
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -174,24 +105,6 @@ position = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseArea"]
 shape = SubResource("CircleShape2D_irjme")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_gq3hj")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-metadata/_edit_use_anchors_ = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
-libraries = {
-"": SubResource("AnimationLibrary_y1au8")
-}
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]

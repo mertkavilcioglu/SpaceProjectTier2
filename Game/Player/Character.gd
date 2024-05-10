@@ -30,8 +30,6 @@ signal laser_shot(laser)
 var BoostCD:int = 3
 var shoot_bas=false
 
-@onready var animator = $"CanvasLayer/AnimationPlayer"
-
 func _process(delta): 
 	if Input.is_action_pressed("Shoot"):
 		if !shoot_bas:
@@ -58,9 +56,6 @@ func _physics_process(delta):
 			if BoostFuel > 0:
 				if CanBoost == true:
 					MaxSpeed = 3000
-					if animator.is_playing():
-						animator.stop()
-					animator.play("shockwave")
 					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 					BoostFuel -= 20
