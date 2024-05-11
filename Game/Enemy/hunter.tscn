@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bm48kc742smsm"]
+[gd_scene load_steps=15 format=3 uid="uid://bm48kc742smsm"]
 
 [ext_resource type="Texture2D" uid="uid://cclahj55d7oeu" path="res://Sprites/uzaygemisi/EnemyShips/HUNTER.png" id="1_2vssp"]
 [ext_resource type="Script" path="res://Game/Enemy/hunter.gd" id="1_6hhyi"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_pxmgi"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="3_2cyxv"]
 [ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_rqesy"]
+[ext_resource type="Texture2D" uid="uid://cl5654k3a2mk3" path="res://Game/Player/muzzle_flash.png" id="5_7w0i2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iqn3t"]
 resource_local_to_scene = true
@@ -14,6 +15,43 @@ shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1vit"]
 size = Vector2(65, 56)
+
+[sub_resource type="Animation" id="Animation_k8pul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o7t1v"]
+resource_name = "muzzle_flash_anim"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c0ca8"]
+_data = {
+"RESET": SubResource("Animation_k8pul"),
+"muzzle_flash_anim": SubResource("Animation_o7t1v")
+}
 
 [sub_resource type="Animation" id="Animation_5g1fd"]
 length = 0.001
@@ -69,7 +107,20 @@ shape = SubResource("RectangleShape2D_b1vit")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Muzzle" type="Node2D" parent="."]
-position = Vector2(62, 0)
+position = Vector2(30, 7)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-17.5, 2.5)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_7w0i2")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
 
 [node name="Engine1" type="Node2D" parent="."]
 position = Vector2(-33, 0)

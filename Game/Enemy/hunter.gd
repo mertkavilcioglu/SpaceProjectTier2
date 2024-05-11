@@ -20,6 +20,7 @@ signal laser_shot(laser)
 @onready var lasers=$"../Lasers"
 
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
+@onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
 func _physics_process(delta):
 	look_at(player.position)
@@ -58,6 +59,7 @@ func shoot_to_player():
 	l.global_position = muzzle1.global_position
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
+	muzzle_flash.play("muzzle_flash_anim")
 	
 	
 func reachPlayerMidRadius():
