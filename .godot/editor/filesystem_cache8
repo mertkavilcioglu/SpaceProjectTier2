@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715437914
+::res://::1715454707
 icon.svg::CompressedTexture2D::8109417046477381051::1713300728::1713300728::1::::<><>::
 README.md::TextFile::-1::1713300728::0::1::::<><>::
-::res://Game/::1715438076
-economy.gd::GDScript::-1::1715438060::0::1::::<>Node<>::
-economy.tscn::PackedScene::4456821559663239828::1715438011::0::1::::<><>::
+::res://Game/::1715438080
 game.tscn::PackedScene::2507226541973488652::1715437923::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://bm48kc742smsm::::res://Game/Enemy/hunter.tscn
-::res://Game/Economy/::1715438076
+::res://Game/Economy/::1715454419
+economy.gd::GDScript::-1::1715454419::0::1::::<>Node<>::
+economy.tscn::PackedScene::4456821559663239828::1715454419::0::1::::<><>::res://Game/Economy/economy.gd
 ::res://Game/Enemy/::1715437924
 explosion_death_particle.gd::GDScript::-1::1713879325::0::1::::<>GPUParticles2D<>::
 explosion_death_particle.tscn::PackedScene::5388445551141711661::1715437924::0::1::::<><>::res://Game/Enemy/explosion_death_particle.gd
