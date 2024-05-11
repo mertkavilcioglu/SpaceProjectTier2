@@ -33,6 +33,7 @@ var shoot_bas=false
 var ghost_scene = preload("res://Game/Player/dash_ghost.tscn")
 var sprite 
 @onready var ghost_timer = $GhostTimer
+@onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
 func _process(delta): 
 	if Input.is_action_pressed("Shoot"):
@@ -103,6 +104,7 @@ func shoot_laser():
 	l.global_position = muzzle1.global_position
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
+	muzzle_flash.play("muzzle_flash_anim")
 	#var l2 = laser_scene.instantiate()
 	#l2.global_position = muzzle2.global_position
 	#l2.rotation = rotation + PI/2
