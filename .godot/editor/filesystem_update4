@@ -8,4 +8,5 @@ res://Game/Enemy/hunter.tscn
 res://Menus/options_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
 res://Game/Player/dash_ghost.tscn
+res://Game/Player/TrailEffect.tscn
 res://Game/Player/Character.gd

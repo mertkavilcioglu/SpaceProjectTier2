@@ -60,7 +60,7 @@ func _physics_process(delta):
 				BoostRefuel = true
 			if BoostFuel > 0:
 				if CanBoost == true:
-					MaxSpeed = 3000
+					MaxSpeed = 2250
 					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 					sprite = $body
@@ -71,7 +71,7 @@ func _physics_process(delta):
 					await get_tree().create_timer(0.2).timeout
 					ghost_timer.stop()
 				elif CanBoost == false:
-					MaxSpeed = 1500
+					MaxSpeed = 1000
 					if BoostFuel > 0:
 						BoostFuel -= 50*delta
 					else: 
