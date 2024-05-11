@@ -1,82 +1,85 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715425336
-icon.svg::CompressedTexture2D::8109417046477381051::1712637545::1713605634::1::::<><>::
-README.md::TextFile::-1::1713299557::0::1::::<><>::
-::res://Game/::1715425096
-game.tscn::PackedScene::2507226541973488652::1715425096::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://bm48kc742smsm::::res://Game/Enemy/hunter.tscn
-::res://Game/Enemy/::1715425096
-explosion_death_particle.gd::GDScript::-1::1715369443::0::1::::<>GPUParticles2D<>::
-explosion_death_particle.tscn::PackedScene::5388445551141711661::1715425096::0::1::::<><>::res://Game/Enemy/explosion_death_particle.gd
-hitFlash.tres::VisualShader::1042910257028187848::1715424128::0::1::::<><>::
-hunter.gd::GDScript::-1::1715416269::0::1::::Enemy<>RigidBody2D<>::
-hunter.tscn::PackedScene::3290575436752437376::1715425096::0::1::::<><>::uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>res://Game/Enemy/hunter.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres
-laser_enemy.gd::GDScript::-1::1713014505::0::1::::<>Area2D<>::
-laser_enemy.tscn::PackedScene::8982958392345640664::1715369443::0::1::::<><>::res://Game/Enemy/laser_enemy.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
-::res://Game/Player/::1715425218
-Character.gd::GDScript::-1::1715425218::0::1::::Player<>CharacterBody2D<>::
-Character.tscn::PackedScene::589094701922897510::1715425218::0::1::::<><>::res://Game/Player/Character.gd<>uid://bq6hdkhfcxw2k::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png
-dash_ghost.gd::GDScript::-1::1715423951::0::1::::<>Sprite2D<>::
-dash_ghost.tscn::PackedScene::596018892802009348::1715425096::0::1::::<><>::res://Game/Player/dash_ghost.gd<>uid://dnsi6cscy7oyt::::res://icon.svg
-laser.gd::GDScript::-1::1713014505::0::1::::<>Area2D<>::
-laser.tscn::PackedScene::1881788047753721134::1715369429::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
-laser_enemy.tscn::PackedScene::8668903748600545563::1715369443::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
-muzzle_flash.png::CompressedTexture2D::5608787320517724536::1715425218::1715425218::1::::<><>::
-TrailEffect.gd::GDScript::-1::1715424128::0::1::::Trails<>Line2D<>::
-TrailEffect.tscn::PackedScene::4807801313678289943::1715369429::0::1::::<><>::res://Game/Player/TrailEffect.gd
-::res://Menus/::1715425096
-background.tscn::PackedScene::5086623374241556541::1715369429::0::1::::<><>::uid://cpy68hg2deo24::::res://Sprites/BGStatic.png<>uid://bytqekdwnabea::::res://Sprites/background/starsLayer2.png<>uid://blgynkbbwn8pj::::res://Sprites/background/starsLayer3.png<>uid://dqpfaxtd1uy15::::res://Sprites/background/starsLayer1.png
-credits.gd::GDScript::-1::1713013355::0::1::::<>Control<>::
-credits.tscn::PackedScene::2050627466389793228::1713014355::0::1::::<><>::res://Menus/credits.gd<>uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
-main_menu.gd::GDScript::-1::1713018161::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::2491070560617598181::1715425096::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
-options_menu.gd::GDScript::-1::1713120722::0::1::::<>Control<>::
-options_menu.tscn::PackedScene::5921788066902643366::1715425096::0::1::::<><>::res://Menus/options_menu.gd
-Untitled-Project.ogv::VideoStreamTheora::-1::1712993033::0::1::::<><>::
-::res://Resources/::1713299605
-ChiKareGo2.ttf::FontFile::6772442393733449730::1712958504::1712958504::1::::<><>::
-Metal.png::CompressedTexture2D::4099735440482473760::1713096031::1713096124::1::::<><>::
-PixelTheme.tres::Theme::4149999933650392076::1712994246::0::1::::<><>::uid://c3qvewdfn0r3o::::res://Resources/ChiKareGo2.ttf
-::res://Sprites/::1715424311
-BGStatic.png::CompressedTexture2D::5877160624191961755::1712850716::1712850724::1::::<><>::
-UpgradeEmpty.png::CompressedTexture2D::7065546211407957567::1713083080::1713083086::1::::<><>::
-UpgradeFilled.png::CompressedTexture2D::2685171465560284814::1713083207::1713083211::1::::<><>::
-::res://Sprites/background/::1713299605
-nebula max znr.png::CompressedTexture2D::9087597484868003410::1712847621::1712847622::1::::<><>::
-starsLayer1.png::CompressedTexture2D::8313554038122753234::1712847621::1712847663::1::::<><>::
-starsLayer2.png::CompressedTexture2D::4111155254277764700::1712847621::1712847652::1::::<><>::
-starsLayer3.png::CompressedTexture2D::3172365180236665011::1712847621::1712847683::1::::<><>::
-starsLayer3_512x512.png::CompressedTexture2D::3340511738728731244::1712847621::1712847678::1::::<><>::
-uzay arkaplan max znrlk.png::CompressedTexture2D::2656228473320750957::1712847621::1712847624::1::::<><>::
-uzay ve nebula max znrkl.png::CompressedTexture2D::5393830554240215564::1712847621::1712847624::1::::<><>::
-::res://Sprites/gezegenler/::1713299605
-gezegen1.png::CompressedTexture2D::5954973793903626051::1712847621::1712847621::1::::<><>::
-gezegen2.png::CompressedTexture2D::4846559367383006312::1712847621::1712847621::1::::<><>::
-gezegen 3.png::CompressedTexture2D::5334084285625302017::1712847621::1712847621::1::::<><>::
-::res://Sprites/uzaygemisi/::1713299605
-laserRed01.png::CompressedTexture2D::1019264354959949958::1712946122::1713084142::1::::<><>::
-::res://Sprites/uzaygemisi/Bodies/::1713299605
-Body_lvl1.png::CompressedTexture2D::3405637901787742998::1712847621::1713015004::1::::<><>::
-Body_lvl2.png::CompressedTexture2D::1033537567746915865::1712847621::1713016823::1::::<><>::
-Body_lvl3.png::CompressedTexture2D::4588034963519242340::1712847621::1713016833::1::::<><>::
-Body_lvl4.png::CompressedTexture2D::318161191919175179::1712847621::1713016838::1::::<><>::
-Body_lvl5.png::CompressedTexture2D::2513689915473210479::1712847621::1713016848::1::::<><>::
-::res://Sprites/uzaygemisi/dman gemiler/::1713299605
-healer max znrlk.png::CompressedTexture2D::7331522764654350510::1712847621::1712847622::1::::<><>::
-Kamikze mzx znrlk.png::CompressedTexture2D::3401038335667345941::1712847621::1712847622::1::::<><>::
-::res://Sprites/uzaygemisi/EnemyShips/::1713299605
-healer 128x128.png::CompressedTexture2D::1981629833367384770::1712847621::1713014935::1::::<><>::
-HUNTER.png::CompressedTexture2D::4935940230936888260::1712847621::1713014935::1::::<><>::
-Kamikze 128x 128.png::CompressedTexture2D::746610272470362352::1712847621::1713014935::1::::<><>::
-::res://Sprites/uzaygemisi/Wings/::1713299606
-kanat lvl2.png::CompressedTexture2D::3644255600048786457::1712847621::1713014975::1::::<><>::
-kanat lvl3.png::CompressedTexture2D::3875757063045248325::1712847621::1713014975::1::::<><>::
-kanat lvl4.png::CompressedTexture2D::5229204453884754728::1712847621::1713014975::1::::<><>::
-kanat lvl5.png::CompressedTexture2D::661806292303126528::1712847621::1713014975::1::::<><>::
-Wing_lvl1.png::CompressedTexture2D::3573868804886464688::1712847621::1713014985::1::::<><>::
-wing_lvl3_body_lvl1.png::CompressedTexture2D::4071346052024858727::1712847621::1713017001::1::::<><>::
-wing_lvl4_body_lvl1.png::CompressedTexture2D::8239069613468857018::1712847621::1713017037::1::::<><>::
-wing_lvl5_body_lvl1.png::CompressedTexture2D::3943467661295345461::1712847621::1713017072::1::::<><>::
-wing_lvl_2_body_lvl1.png::CompressedTexture2D::1583272385770823992::1712847621::1713016980::1::::<><>::
-::res://Upgrade/::1715425096
-upgrade.gd::GDScript::-1::1713125441::0::1::::<>Node2D<>::
-upgrade.tscn::PackedScene::5837162084311246330::1715425096::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Upgrade/upgrade.gd<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://bq6hdkhfcxw2k::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png
+::res://::1715437914
+icon.svg::CompressedTexture2D::8109417046477381051::1713300728::1713300728::1::::<><>::
+README.md::TextFile::-1::1713300728::0::1::::<><>::
+::res://Game/::1715438076
+economy.gd::GDScript::-1::1715438060::0::1::::<>Node<>::
+economy.tscn::PackedScene::4456821559663239828::1715438011::0::1::::<><>::
+game.tscn::PackedScene::2507226541973488652::1715437923::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://bm48kc742smsm::::res://Game/Enemy/hunter.tscn
+::res://Game/Economy/::1715438076
+::res://Game/Enemy/::1715437924
+explosion_death_particle.gd::GDScript::-1::1713879325::0::1::::<>GPUParticles2D<>::
+explosion_death_particle.tscn::PackedScene::5388445551141711661::1715437924::0::1::::<><>::res://Game/Enemy/explosion_death_particle.gd
+hitFlash.tres::VisualShader::1042910257028187848::1715437923::0::1::::<><>::
+hunter.gd::GDScript::-1::1715437480::0::1::::Enemy<>RigidBody2D<>::
+hunter.tscn::PackedScene::3290575436752437376::1715437924::0::1::::<><>::uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>res://Game/Enemy/hunter.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png
+laser_enemy.gd::GDScript::-1::1713300728::0::1::::<>Area2D<>::
+laser_enemy.tscn::PackedScene::8982958392345640664::1713588485::0::1::::<><>::res://Game/Enemy/laser_enemy.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
+::res://Game/Player/::1715437924
+Character.gd::GDScript::-1::1715437480::0::1::::Player<>CharacterBody2D<>::
+Character.tscn::PackedScene::589094701922897510::1715437924::0::1::::<><>::res://Game/Player/Character.gd<>uid://bq6hdkhfcxw2k::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png
+dash_ghost.gd::GDScript::-1::1715437480::0::1::::<>Sprite2D<>::
+dash_ghost.tscn::PackedScene::596018892802009348::1715437924::0::1::::<><>::res://Game/Player/dash_ghost.gd<>uid://dnsi6cscy7oyt::::res://icon.svg
+laser.gd::GDScript::-1::1713300728::0::1::::<>Area2D<>::
+laser.tscn::PackedScene::1881788047753721134::1713300728::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
+laser_enemy.tscn::PackedScene::8668903748600545563::1713588485::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
+muzzle_flash.png::CompressedTexture2D::5608787320517724536::1715437480::1715437480::1::::<><>::
+TrailEffect.gd::GDScript::-1::1715437923::0::1::::Trails<>Line2D<>::
+TrailEffect.tscn::PackedScene::4807801313678289943::1715437924::0::1::::<><>::res://Game/Player/TrailEffect.gd
+::res://Menus/::1715437924
+background.tscn::PackedScene::5086623374241556541::1713300728::0::1::::<><>::uid://cpy68hg2deo24::::res://Sprites/BGStatic.png<>uid://bytqekdwnabea::::res://Sprites/background/starsLayer2.png<>uid://blgynkbbwn8pj::::res://Sprites/background/starsLayer3.png<>uid://dqpfaxtd1uy15::::res://Sprites/background/starsLayer1.png
+credits.gd::GDScript::-1::1713300728::0::1::::<>Control<>::
+credits.tscn::PackedScene::2050627466389793228::1713300728::0::1::::<><>::res://Menus/credits.gd<>uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
+main_menu.gd::GDScript::-1::1713300728::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::2491070560617598181::1715437924::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
+options_menu.gd::GDScript::-1::1713300728::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::5921788066902643366::1715437924::0::1::::<><>::res://Menus/options_menu.gd
+Untitled-Project.ogv::VideoStreamTheora::-1::1713300728::0::1::::<><>::
+::res://Resources/::1713300728
+ChiKareGo2.ttf::FontFile::6772442393733449730::1713300728::1713300728::1::::<><>::
+Metal.png::CompressedTexture2D::4099735440482473760::1713300728::1713300728::1::::<><>::
+PixelTheme.tres::Theme::4149999933650392076::1713300728::0::1::::<><>::uid://c3qvewdfn0r3o::::res://Resources/ChiKareGo2.ttf
+::res://Sprites/::1713300728
+BGStatic.png::CompressedTexture2D::5877160624191961755::1713300728::1713300728::1::::<><>::
+UpgradeEmpty.png::CompressedTexture2D::7065546211407957567::1713300728::1713300728::1::::<><>::
+UpgradeFilled.png::CompressedTexture2D::2685171465560284814::1713300728::1713300728::1::::<><>::
+::res://Sprites/background/::1713300728
+nebula max znr.png::CompressedTexture2D::9087597484868003410::1713300728::1713300728::1::::<><>::
+starsLayer1.png::CompressedTexture2D::8313554038122753234::1713300728::1713300728::1::::<><>::
+starsLayer2.png::CompressedTexture2D::4111155254277764700::1713300728::1713300728::1::::<><>::
+starsLayer3.png::CompressedTexture2D::3172365180236665011::1713300728::1713300728::1::::<><>::
+starsLayer3_512x512.png::CompressedTexture2D::3340511738728731244::1713300728::1713300728::1::::<><>::
+uzay arkaplan max znrlk.png::CompressedTexture2D::2656228473320750957::1713300728::1713300728::1::::<><>::
+uzay ve nebula max znrkl.png::CompressedTexture2D::5393830554240215564::1713300728::1713300728::1::::<><>::
+::res://Sprites/gezegenler/::1713300728
+gezegen1.png::CompressedTexture2D::5954973793903626051::1713300728::1713300728::1::::<><>::
+gezegen2.png::CompressedTexture2D::4846559367383006312::1713300728::1713300728::1::::<><>::
+gezegen 3.png::CompressedTexture2D::5334084285625302017::1713300728::1713300728::1::::<><>::
+::res://Sprites/uzaygemisi/::1713300728
+laserRed01.png::CompressedTexture2D::1019264354959949958::1713300728::1713300728::1::::<><>::
+::res://Sprites/uzaygemisi/Bodies/::1713300728
+Body_lvl1.png::CompressedTexture2D::3405637901787742998::1713300728::1713300728::1::::<><>::
+Body_lvl2.png::CompressedTexture2D::1033537567746915865::1713300728::1713300728::1::::<><>::
+Body_lvl3.png::CompressedTexture2D::4588034963519242340::1713300728::1713300728::1::::<><>::
+Body_lvl4.png::CompressedTexture2D::318161191919175179::1713300728::1713300728::1::::<><>::
+Body_lvl5.png::CompressedTexture2D::2513689915473210479::1713300728::1713300728::1::::<><>::
+::res://Sprites/uzaygemisi/dman gemiler/::1713300728
+healer max znrlk.png::CompressedTexture2D::7331522764654350510::1713300728::1713300728::1::::<><>::
+Kamikze mzx znrlk.png::CompressedTexture2D::3401038335667345941::1713300728::1713300728::1::::<><>::
+::res://Sprites/uzaygemisi/EnemyShips/::1713300728
+healer 128x128.png::CompressedTexture2D::1981629833367384770::1713300728::1713300728::1::::<><>::
+HUNTER.png::CompressedTexture2D::4935940230936888260::1713300728::1713300728::1::::<><>::
+Kamikze 128x 128.png::CompressedTexture2D::746610272470362352::1713300728::1713300728::1::::<><>::
+::res://Sprites/uzaygemisi/Wings/::1713300728
+kanat lvl2.png::CompressedTexture2D::3644255600048786457::1713300728::1713300728::1::::<><>::
+kanat lvl3.png::CompressedTexture2D::3875757063045248325::1713300728::1713300728::1::::<><>::
+kanat lvl4.png::CompressedTexture2D::5229204453884754728::1713300728::1713300728::1::::<><>::
+kanat lvl5.png::CompressedTexture2D::661806292303126528::1713300728::1713300728::1::::<><>::
+Wing_lvl1.png::CompressedTexture2D::3573868804886464688::1713300728::1713300728::1::::<><>::
+wing_lvl3_body_lvl1.png::CompressedTexture2D::4071346052024858727::1713300728::1713300728::1::::<><>::
+wing_lvl4_body_lvl1.png::CompressedTexture2D::8239069613468857018::1713300728::1713300728::1::::<><>::
+wing_lvl5_body_lvl1.png::CompressedTexture2D::3943467661295345461::1713300728::1713300728::1::::<><>::
+wing_lvl_2_body_lvl1.png::CompressedTexture2D::1583272385770823992::1713300728::1713300728::1::::<><>::
+::res://Upgrade/::1715437924
+upgrade.gd::GDScript::-1::1713300728::0::1::::<>Node2D<>::
+upgrade.tscn::PackedScene::5837162084311246330::1715437924::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Upgrade/upgrade.gd<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://bq6hdkhfcxw2k::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png

@@ -9,5 +9,5 @@ res://Menus/options_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
 res://Game/Player/dash_ghost.tscn
 res://Game/Player/TrailEffect.tscn
-res://Game/Player/Character.gd
-res://Game/Enemy/hunter.gd
+res://Game/Economy/economy.tscn
+res://Game/Economy/economy.gd
