@@ -41,7 +41,7 @@ func _process(delta):
 	linear_velocity = position * enemyMaxSpeed
 	
 	if(reachPlayerMidRadius()):
-		print(calculatedRadius)
+		#print(calculatedRadius)
 		linear_velocity = Vector2.ZERO
 
 func getHit(): 

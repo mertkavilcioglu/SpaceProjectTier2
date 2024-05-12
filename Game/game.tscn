@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=6 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="PackedScene" uid="uid://bm48kc742smsm" path="res://Game/Enemy/hunter.tscn" id="3_dofhr"]
+[ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
 
 [sub_resource type="Environment" id="Environment_v03uc"]
 background_mode = 3
@@ -35,3 +36,6 @@ isScrolling = false
 
 [node name="WorldEnvironment-forGlow" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v03uc")
+
+[node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
+position = Vector2(570, 122)

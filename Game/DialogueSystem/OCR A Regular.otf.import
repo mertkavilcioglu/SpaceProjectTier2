@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://5hns1cq7bj0c"
+path="res://.godot/imported/OCR A Regular.otf-747791e464eabc086d22bb474c1f5c23.fontdata"
+
+[deps]
+
+source_file="res://Game/DialogueSystem/OCR A Regular.otf"
+dest_files=["res://.godot/imported/OCR A Regular.otf-747791e464eabc086d22bb474c1f5c23.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

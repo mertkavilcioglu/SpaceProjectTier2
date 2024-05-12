@@ -44,7 +44,7 @@ func _process(delta):
 			shoot_bas=false
 
 func _physics_process(delta): 
-	print(BoostFuel)
+	#print(BoostFuel)
 	if BoostFuel <100:
 		BoostFuel += 10*delta
 	

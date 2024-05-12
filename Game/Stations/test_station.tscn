@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgl160tuumy2c"]
+
+[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="1_66p3v"]
+[ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_ujcyk"]
+[ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_mb6jl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lsk7k"]
+radius = 123.911
+
+[node name="TestStation" type="Node2D"]
+script = ExtResource("1_ujcyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_66p3v")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lsk7k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Dialogue" parent="CanvasLayer" instance=ExtResource("3_mb6jl")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
