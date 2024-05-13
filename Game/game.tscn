@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=11 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="PackedScene" uid="uid://bm48kc742smsm" path="res://Game/Enemy/hunter.tscn" id="3_dofhr"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
+[ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
+[ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
+[ext_resource type="Script" path="res://Game/Economy/resource_ship.gd" id="7_0q5w1"]
+[ext_resource type="Texture2D" uid="uid://cbs2pnprf0u1s" path="res://Sprites/uzaygemisi/resource ships/healer_max_cozunurluk.png" id="8_6duw0"]
 
 [sub_resource type="Environment" id="Environment_v03uc"]
 background_mode = 3
@@ -16,6 +20,12 @@ glow_levels/4 = 1.0
 glow_levels/6 = 1.0
 glow_levels/7 = 1.0
 glow_blend_mode = 1
+
+[sub_resource type="Curve2D" id="Curve2D_3e0fb"]
+_data = {
+"points": PackedVector2Array(1486.86, -1862.22, -1486.86, 1862.22, -131.449, -119.699, 152.049, 1841.74, -152.049, -1841.74, 95.5994, -40.6978)
+}
+point_count = 2
 
 [node name="Game" type="Node2D"]
 
@@ -39,3 +49,27 @@ environment = SubResource("Environment_v03uc")
 
 [node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
 position = Vector2(570, 122)
+
+[node name="test_resource" parent="." instance=ExtResource("5_612sc")]
+position = Vector2(363, 805)
+
+[node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
+position = Vector2(557, 199)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("7_0q5w1")
+
+[node name="resource_ship_path" type="Path2D" parent="resource_ship"]
+position = Vector2(-13.3334, 36.6666)
+scale = Vector2(1.11577, 1.39238)
+curve = SubResource("Curve2D_3e0fb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="resource_ship/resource_ship_path"]
+position = Vector2(-131.449, -119.699)
+rotation = 2.24458
+
+[node name="Sprite2D" type="Sprite2D" parent="resource_ship/resource_ship_path/PathFollow2D"]
+visible = false
+position = Vector2(-2.00216, 2.5512)
+rotation = 1.48511
+scale = Vector2(0.0938739, 0.0713392)
+texture = ExtResource("8_6duw0")
