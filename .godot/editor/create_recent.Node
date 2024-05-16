@@ -1,6 +1,6 @@
+Sprite2D
 PathFollow2D
 Path2D
-Sprite2D
 CollisionShape2D
 Area2D
 CanvasLayer
@@ -12,4 +12,3 @@ CPUParticles2D
 GPUParticles2D
 Label
 HBoxContainer
-Button

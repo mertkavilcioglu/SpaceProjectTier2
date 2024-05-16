@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbs2pnprf0u1s"
-path="res://.godot/imported/healer_max_cozunurluk.png-94c1e384eea611ee79a3e7eb281623f8.ctex"
+path="res://.godot/imported/resource_ship.png-7ce460fb8245991eef03558a3d8da6d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uzaygemisi/resource ships/healer_max_cozunurluk.png"
-dest_files=["res://.godot/imported/healer_max_cozunurluk.png-94c1e384eea611ee79a3e7eb281623f8.ctex"]
+source_file="res://Sprites/uzaygemisi/resource ships/resource_ship.png"
+dest_files=["res://.godot/imported/resource_ship.png-7ce460fb8245991eef03558a3d8da6d2.ctex"]
 
 [params]
 
