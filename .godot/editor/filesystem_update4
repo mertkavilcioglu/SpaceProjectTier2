@@ -1,11 +1,12 @@
-res://Game/game.tscn
+res://Game/DialogueSystem/dialogue.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
-res://Game/Stations/StationInteraction.gd
-res://Game/DialogueSystem/dialogue.tscn
+res://Game/game.tscn
 res://Game/Stations/test_station.tscn
 res://Game/Player/Character.tscn
 res://Game/Economy/test_resource_planet.tscn
 res://Game/Economy/economy.tscn
 res://Game/Economy/resource_ship.tscn
-res://Game/Economy/resource_ship.gd
+res://Upgrade/upgrade.tscn
+res://Upgrade/upgrade.gd
+res://Game/Economy/economy.gd
