@@ -31,7 +31,9 @@ var BoostCD:int = 3
 var shoot_bas=false
 
 var ghost_scene = preload("res://Game/Player/dash_ghost.tscn")
+var ghost_scene2 = preload("res://Game/Player/dash_ghost2.tscn")
 var sprite 
+var sprite2
 @onready var ghost_timer = $GhostTimer
 @onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
@@ -64,6 +66,7 @@ func _physics_process(delta):
 					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 					sprite = $body
+					sprite2 = $wing
 					ghost_timer.start()
 					instance_ghost()
 					BoostFuel -= 20
@@ -182,6 +185,14 @@ func instance_ghost():
 	ghost.texture = sprite.texture
 	ghost.rotation = rotation + PI/2
 	ghost.scale = scale
+	
+	var ghost2 = ghost_scene2.instantiate()
+	get_parent().get_parent().add_child(ghost2)
+	
+	ghost2.global_position = global_position
+	ghost2.texture = sprite2.texture
+	ghost2.rotation = rotation + PI/2
+	ghost2.scale = scale
 
 
 func _on_ghost_timer_timeout():

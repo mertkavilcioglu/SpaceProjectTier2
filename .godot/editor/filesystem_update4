@@ -10,3 +10,7 @@ res://Game/Economy/resource_ship.tscn
 res://Upgrade/upgrade.tscn
 res://Game/Player/Character.gd
 res://Upgrade/upgradeInGame.gd
+res://Menus/main_menu.tscn
+res://Upgrade/upgrade.gd
+res://Menus/background.tscn
+res://Game/Player/dash_ghost.tscn

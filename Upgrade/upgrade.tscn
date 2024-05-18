@@ -254,6 +254,20 @@ text = "Upgrade"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 447.0
+offset_right = 156.0
+offset_bottom = 507.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_cipow")
+text = "Back
+"
+
+[node name="PlayButton" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 808.0
 offset_top = 447.0
 offset_right = 928.0
@@ -290,3 +304,4 @@ text = "9999"
 [connection signal="pressed" from="Fuel/VBoxContainer/FuelUpgradeButton" to="." method="_on_fuel_upgrade_button_pressed"]
 [connection signal="pressed" from="Damage/VBoxContainer/DamageUpgradeButton" to="." method="_on_damage_upgrade_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
