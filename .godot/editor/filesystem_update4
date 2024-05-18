@@ -8,5 +8,5 @@ res://Game/Economy/test_resource_planet.tscn
 res://Game/Economy/economy.tscn
 res://Game/Economy/resource_ship.tscn
 res://Upgrade/upgrade.tscn
-res://Upgrade/upgrade.gd
-res://Game/Economy/economy.gd
+res://Game/Player/Character.gd
+res://Upgrade/upgradeInGame.gd

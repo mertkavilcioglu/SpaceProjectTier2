@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=15 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="2_l72di"]
 [ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_barr6"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="4_jeax1"]
 [ext_resource type="Texture2D" uid="uid://cl5654k3a2mk3" path="res://Game/Player/muzzle_flash.png" id="5_bfrk7"]
+[ext_resource type="Script" path="res://Upgrade/upgradeInGame.gd" id="6_w31uu"]
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="7_fk3np"]
+[ext_resource type="Texture2D" uid="uid://c7wurp75mpiqh" path="res://Sprites/UpgradeEmpty.png" id="8_4drn4"]
+[ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="9_m2bku"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -160,9 +164,278 @@ shape = SubResource("CircleShape2D_irjme")
 [node name="GhostTimer" type="Timer" parent="."]
 wait_time = 0.03
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UpgradeScreen" type="Node2D" parent="CanvasLayer"]
+visible = false
+script = ExtResource("6_w31uu")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UpgradeScreen"]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.356863, 0.282353, 0.352941, 0.392157)
+
+[node name="Health" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 331.0
+offset_top = 57.0
+offset_right = 371.0
+offset_bottom = 97.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Health"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Health: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="HealthUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Upgrade"
+
+[node name="Speed" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 337.0
+offset_top = 399.0
+offset_right = 377.0
+offset_bottom = 439.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Speed"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Speed: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="SpeedUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Upgrade"
+
+[node name="Fuel" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 70.0
+offset_top = 237.0
+offset_right = 110.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Fuel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Fuel: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="FuelUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Upgrade"
+
+[node name="Damage" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 608.0
+offset_top = 237.0
+offset_right = 648.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Damage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Damage: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(120, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(160, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(200, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(240, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(280, -5)
+texture = ExtResource("8_4drn4")
+centered = false
+
+[node name="DamageUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "Upgrade"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 877.0
+offset_top = 30.0
+offset_right = 937.0
+offset_bottom = 60.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
+position = Vector2(-49, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("9_m2bku")
+centered = false
+
+[node name="Parts" type="Label" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_fk3np")
+text = "9999"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/UpgradeScreen"]
+offset_left = 757.0
+offset_top = 445.0
+offset_right = 888.0
+offset_bottom = 487.0
+theme = ExtResource("7_fk3np")
+text = "Back
+"
+
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/fuel" to="." method="_on_fuel_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/damage" to="." method="_on_damage_pressed"]
 [connection signal="pressed" from="get_level" to="." method="_on_get_level_pressed"]
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HealthUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_health_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/SpeedUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_speed_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/FuelUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_fuel_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/DamageUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_damage_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/BackButton" to="CanvasLayer/UpgradeScreen" method="_on_back_button_pressed"]

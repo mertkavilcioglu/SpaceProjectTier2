@@ -145,6 +145,7 @@ func _on_health_pressed():
 	health+=10
 	get_tree().paused = false
 	LevelPanel.visible = false
+	LevelUp()
 	
 
 
@@ -185,3 +186,6 @@ func instance_ghost():
 
 func _on_ghost_timer_timeout():
 	instance_ghost()
+
+func upgradeLoader():
+	pass
