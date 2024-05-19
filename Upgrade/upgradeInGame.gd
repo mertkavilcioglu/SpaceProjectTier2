@@ -36,6 +36,12 @@ var FuelLevel:int = 1
 var DamageLevel:int = 1
 var ScrapParts:int = 0
 
+var playerHealth
+var playerSpeed
+var playerDamage
+
+@onready var character = get_parent().get_parent()
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,6 +52,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	update_character_attributes()
 	open_upgrade_screen()
 
 func open_upgrade_screen():
@@ -54,6 +61,41 @@ func open_upgrade_screen():
 			self.visible = true
 		else :
 			self.visible = false
+		
+	
+func update_character_attributes():
+	if HealthLevel == 1:
+		character.setHealth(10)
+	if HealthLevel == 2:
+		character.setHealth(12)
+	if HealthLevel == 3:
+		character.setHealth(14)
+	if HealthLevel == 4:
+		character.setHealth(16)
+	if HealthLevel == 5:
+		character.setHealth(18)
+	
+	if SpeedLevel == 1:
+		character.setSpeed(500)
+	if SpeedLevel == 2:
+		character.setSpeed(550)
+	if SpeedLevel == 3:
+		character.setSpeed(600)
+	if SpeedLevel == 4:
+		character.setSpeed(650)
+	if SpeedLevel == 5:
+		character.setSpeed(700)
+		
+	if DamageLevel == 1:
+		character.setDamage(1)
+	if DamageLevel == 2:
+		character.setDamage(2)
+	if DamageLevel == 3:
+		character.setDamage(3)
+	if DamageLevel == 4:
+		character.setDamage(4)
+	if DamageLevel == 5:
+		character.setDamage(5)
 		
 
 

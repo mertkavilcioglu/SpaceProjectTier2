@@ -47,9 +47,9 @@ func _process(delta):
 func getHit(): 
 	emit_signal("hit") 
 	hit_flash_anim_player.play("hit_flash")
-	if enemyHealth > 1: 
-		enemyHealth -= 1 #
-	elif enemyHealth <= 1:
+	if enemyHealth > 0: 
+		enemyHealth -= player.damage 
+	if enemyHealth <= 0:
 		playParticleEffect()
 		queue_free()
 		

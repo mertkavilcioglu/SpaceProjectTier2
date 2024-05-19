@@ -10,10 +10,11 @@ var damage: int = 1
 @onready var wing = $wing
 @onready var LevelPanel = get_node("Upgrade/NewLevel")
 var level_counter = 1
+const save_path = "user://game_save.save"
 
 #**************** MOVEMENT-COMBAT VARIABLES and FUNCTIONS *****************
-
-@export var MaxSpeed:float = 500.0
+@export var Speed:float = 500
+@export var MaxSpeed:float = Speed
 @export var Acceleration:float = 100.0
 @onready var Cam = $"../Camera2D"
 var MousePosition = null
@@ -38,6 +39,7 @@ var sprite2
 @onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
 func _process(delta): 
+	upgradeChecker()
 	if Input.is_action_pressed("Shoot"):
 		if !shoot_bas:
 			shoot_bas=true
@@ -62,7 +64,7 @@ func _physics_process(delta):
 				BoostRefuel = true
 			if BoostFuel > 0:
 				if CanBoost == true:
-					MaxSpeed = 2250
+					MaxSpeed = Speed*4
 					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 					sprite = $body
@@ -74,20 +76,20 @@ func _physics_process(delta):
 					await get_tree().create_timer(0.2).timeout
 					ghost_timer.stop()
 				elif CanBoost == false:
-					MaxSpeed = 1000
+					MaxSpeed = Speed*2
 					if BoostFuel > 0:
 						BoostFuel -= 50*delta
 					else: 
-						MaxSpeed = 500
+						MaxSpeed = Speed
 			else:
-				MaxSpeed = 500
+				MaxSpeed = Speed
 		elif BoostRefuel == true:
 			if BoostFuel < 100:
 				BoostFuel += 50*delta
 			else:
 				BoostRefuel = false
 	else:
-		MaxSpeed = 500
+		MaxSpeed = Speed
 	if Input.is_action_just_released("Turbo"):
 		if BoostFuel > 20:
 			CanBoost = true
@@ -198,5 +200,14 @@ func instance_ghost():
 func _on_ghost_timer_timeout():
 	instance_ghost()
 
-func upgradeLoader():
+func upgradeChecker():
 	pass
+	
+func setHealth(newHealth:int):
+	health = newHealth
+
+func setDamage(newDamage:int):
+	damage = newDamage
+
+func setSpeed(newSpeed:float):
+	Speed = newSpeed
