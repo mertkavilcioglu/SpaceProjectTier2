@@ -96,6 +96,17 @@ func update_character_attributes():
 		character.setDamage(4)
 	if DamageLevel == 5:
 		character.setDamage(5)
+	
+	if FuelLevel == 1:
+		character.setFireRate(0.50)
+	if FuelLevel == 2:
+		character.setFireRate(0.45)
+	if FuelLevel == 3:
+		character.setFireRate(0.40)
+	if FuelLevel == 4:
+		character.setFireRate(0.35)
+	if FuelLevel == 5:
+		character.setFireRate(0.30)
 		
 
 

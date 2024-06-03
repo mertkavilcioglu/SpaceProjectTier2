@@ -1,13 +1,12 @@
-res://Game/Player/Character.tscn
+res://Upgrade/upgrade.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
-res://Game/Player/Character.gd
 res://Upgrade/upgradeInGame.gd
-res://Game/Enemy/hunter.tscn
-res://Game/Enemy/hunter.gd
+res://Game/Player/Character.tscn
+res://Game/Player/Character.gd
 res://Game/DialogueSystem/dialogue.tscn
 res://Game/game.tscn
-res://Upgrade/upgrade.tscn
+res://Game/Enemy/hunter.tscn
 res://Game/Stations/test_station.tscn
 res://Game/Economy/test_resource_planet.tscn
 res://Game/Economy/economy.tscn

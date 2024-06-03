@@ -4,6 +4,7 @@ extends CharacterBody2D
 #**************** UPGRADE VARIABLES *****************
 var health:int = 10
 var damage: int = 1
+var fireCD:float = 0.5
 #var speed: float = 500.0
 #var fuel: float = 100.0
 @onready var body = $body
@@ -44,7 +45,7 @@ func _process(delta):
 		if !shoot_bas:
 			shoot_bas=true
 			shoot_laser()
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(fireCD).timeout
 			shoot_bas=false
 
 func _physics_process(delta): 
@@ -109,6 +110,8 @@ func shoot_laser():
 	l.global_position = muzzle1.global_position
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
+	if muzzle_flash.is_playing():
+		muzzle_flash.stop()
 	muzzle_flash.play("muzzle_flash_anim")
 	#var l2 = laser_scene.instantiate()
 	#l2.global_position = muzzle2.global_position
@@ -211,3 +214,6 @@ func setDamage(newDamage:int):
 
 func setSpeed(newSpeed:float):
 	Speed = newSpeed
+
+func setFireRate(newRate:float):
+	fireCD = newRate
