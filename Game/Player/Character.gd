@@ -5,6 +5,7 @@ extends CharacterBody2D
 var health:int = 10
 var damage: int = 1
 var fireCD:float = 0.5
+var guns:bool = false
 #var speed: float = 500.0
 #var fuel: float = 100.0
 @onready var body = $body
@@ -37,7 +38,9 @@ var ghost_scene2 = preload("res://Game/Player/dash_ghost2.tscn")
 var sprite 
 var sprite2
 @onready var ghost_timer = $GhostTimer
-@onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
+@onready var muzzle_flash1 = $Muzzle/MuzzleFlashAnimationPlayer
+@onready var muzzle_flash2 = $Muzzle2/MuzzleFlashAnimationPlayer
+@onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
 func _process(delta): 
 	upgradeChecker()
@@ -110,17 +113,27 @@ func shoot_laser():
 	l.global_position = muzzle1.global_position
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
-	if muzzle_flash.is_playing():
-		muzzle_flash.stop()
-	muzzle_flash.play("muzzle_flash_anim")
-	#var l2 = laser_scene.instantiate()
-	#l2.global_position = muzzle2.global_position
-	#l2.rotation = rotation + PI/2
-	#emit_signal("laser_shot", l2)
-	#var l3 = laser_scene.instantiate()
-	#l3.global_position = muzzle3.global_position
-	#l3.rotation = rotation + PI/2
-	#emit_signal("laser_shot", l3)
+	if muzzle_flash1.is_playing():
+		muzzle_flash1.stop()
+	muzzle_flash1.play("muzzle_flash_anim")
+	
+	if(guns):
+		var l2 = laser_scene.instantiate()
+		lasers.add_child(l2)
+		l2.global_position = muzzle2.global_position
+		l2.rotation = rotation + PI/2
+		emit_signal("laser_shot", l2)
+		if muzzle_flash2.is_playing():
+			muzzle_flash2.stop()
+		muzzle_flash2.play("muzzle_flash_anim")
+		var l3 = laser_scene.instantiate()
+		lasers.add_child(l3)
+		l3.global_position = muzzle3.global_position
+		l3.rotation = rotation + PI/2
+		emit_signal("laser_shot", l3)
+		if muzzle_flash3.is_playing():
+			muzzle_flash3.stop()
+		muzzle_flash3.play("muzzle_flash_anim")
 	
 	
 #**************** UPGRADE FUNCTIONS *****************
@@ -217,3 +230,9 @@ func setSpeed(newSpeed:float):
 
 func setFireRate(newRate:float):
 	fireCD = newRate
+	
+func setGuns():
+	guns = true
+
+func addGunsLVL3():
+	pass

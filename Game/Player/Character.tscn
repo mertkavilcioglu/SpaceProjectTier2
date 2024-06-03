@@ -150,10 +150,34 @@ libraries = {
 }
 
 [node name="Muzzle2" type="Node2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(4.28571, 22.8571)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle2"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.4286, -5.53066e-12)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_bfrk7")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle2"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
 
 [node name="Muzzle3" type="Node2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(4.28572, -22.8571)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle3"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.429, 0)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_bfrk7")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle3"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
 
 [node name="ChaseArea" type="Area2D" parent="."]
 

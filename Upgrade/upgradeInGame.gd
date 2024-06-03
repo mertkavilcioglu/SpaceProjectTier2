@@ -91,11 +91,14 @@ func update_character_attributes():
 	if DamageLevel == 2:
 		character.setDamage(2)
 	if DamageLevel == 3:
-		character.setDamage(3)
+		character.setDamage(2)
+		character.setGuns()
 	if DamageLevel == 4:
-		character.setDamage(4)
+		character.setDamage(3)
+		character.setGuns()
 	if DamageLevel == 5:
-		character.setDamage(5)
+		character.setDamage(4)
+		character.setGuns()
 	
 	if FuelLevel == 1:
 		character.setFireRate(0.50)
