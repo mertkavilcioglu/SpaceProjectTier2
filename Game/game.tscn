@@ -47,6 +47,4 @@ position = Vector2(570, 122)
 position = Vector2(363, 805)
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
-position = Vector2(557, 199)
-scale = Vector2(0.3, 0.3)
 script = ExtResource("7_0q5w1")

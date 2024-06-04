@@ -4,6 +4,7 @@ extends Node2D
 @onready var dialogue = $CanvasLayer
 @onready var resource_ship = $"../resource_ship"
 @onready var flag = true
+@onready var test_resource = $"../test_resource"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -17,7 +18,7 @@ func _on_area_2d_body_entered(body):
 		dialogue.show()
 		body_entered = true
 		if flag:
-			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
+			resource_ship.start_collecting(global_position,test_resource.position)
 			flag = false
 		
 		
