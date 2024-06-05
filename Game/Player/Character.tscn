@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=16 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="2_l72di"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="7_fk3np"]
 [ext_resource type="Texture2D" uid="uid://c7wurp75mpiqh" path="res://Sprites/UpgradeEmpty.png" id="8_4drn4"]
 [ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="9_m2bku"]
+[ext_resource type="PackedScene" uid="uid://bwv47xinnqyrs" path="res://Menus/pause_menu.tscn" id="10_gbvmw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -452,6 +453,9 @@ offset_bottom = 487.0
 theme = ExtResource("7_fk3np")
 text = "Back
 "
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
+visible = false
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]

@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwv47xinnqyrs"]
+
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="1_6ermp"]
+[ext_resource type="Shader" path="res://Menus/pause_menu.gdshader" id="1_b5ct1"]
+[ext_resource type="Script" path="res://Menus/pause_menu.gd" id="1_kgids"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u2fug"]
+shader = ExtResource("1_b5ct1")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_oqbv6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1v8sw"]
+resource_name = "blurAnim"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blur:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.886]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wyuii"]
+_data = {
+"RESET": SubResource("Animation_oqbv6"),
+"blurAnim": SubResource("Animation_1v8sw")
+}
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kgids")
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_u2fug")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+offset_left = 200.0
+offset_top = 432.0
+offset_right = 2120.0
+offset_bottom = 1512.0
+grow_vertical = 2
+scale = Vector2(0.3, 0.1)
+color = Color(0.356863, 0.282353, 0.352941, 0.619608)
+
+[node name="Resume" type="Button" parent="."]
+layout_mode = 2
+offset_left = 235.0
+offset_top = 460.0
+offset_right = 385.0
+offset_bottom = 515.001
+theme = ExtResource("1_6ermp")
+text = "Resume"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 2
+offset_left = 410.0
+offset_top = 460.0
+offset_right = 560.0
+offset_bottom = 515.0
+theme = ExtResource("1_6ermp")
+text = "Restart
+"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 460.0
+offset_right = 735.0
+offset_bottom = 515.0
+theme = ExtResource("1_6ermp")
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wyuii")
+}
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
