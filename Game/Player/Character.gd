@@ -31,6 +31,8 @@ var MousePosition = null
 
 @export var deathParticle : PackedScene 
 @onready var isDead = false 
+@onready var shockwave = $ShockwaveAnimationPlayer
+@onready var hit_flash_anim_player = $HitFlashAnimationPlayer
 
 var laser_scene = preload("res://Game/Player/laser.tscn")
 signal laser_shot(laser)
@@ -201,12 +203,16 @@ func playerGetHit():
 	if(!isDead):
 		emit_signal("hit") 
 		if health > 0: 
+			hit_flash_anim_player.play("hit_flash")
 			health -= 1 #
 		if health <= 0:
+			hit_flash_anim_player.play("hit_flash")
 			health = 0
 			playParticleEffect()
 			print("DEAD")
 			isDead = true
+			await get_tree().create_timer(0.1).timeout
+			shockwave.play("shockwaveAnim")
 		
 func instance_ghost():
 	var ghost = ghost_scene.instantiate()

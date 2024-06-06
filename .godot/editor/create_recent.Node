@@ -1,15 +1,14 @@
 AnimationPlayer
 ColorRect
+Node2D
+TextureRect
 HBoxContainer
 Button
 VBoxContainer
 PanelContainer
 MarginContainer
-Node2D
 CanvasLayer
 Node
 Sprite2D
 PathFollow2D
 Path2D
-CollisionShape2D
-Area2D

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://biec2qlye45np"]
+
+[ext_resource type="Shader" path="res://Game/Player/shockwaveShader.gdshader" id="1_8o27a"]
+[ext_resource type="Texture2D" uid="uid://dnsi6cscy7oyt" path="res://icon.svg" id="1_hynjf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21wl1"]
+shader = ExtResource("1_8o27a")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/force = 0.1
+shader_parameter/size = null
+shader_parameter/thickness = null
+
+[node name="TextureRect" type="TextureRect"]
+material = SubResource("ShaderMaterial_21wl1")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hynjf")
