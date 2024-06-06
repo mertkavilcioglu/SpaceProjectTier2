@@ -56,11 +56,14 @@ func _process(delta):
 	open_upgrade_screen()
 
 func open_upgrade_screen():
-	if Input.is_action_just_pressed("Upgrade"):
-		if self.visible == false:
-			self.visible = true
-		else :
-			self.visible = false
+	if(character.isDead == false):
+		if Input.is_action_just_pressed("Upgrade"):
+			if self.visible == false:
+				self.visible = true
+			else :
+				self.visible = false
+	elif(character.isDead == true):
+		self.visible = false
 		
 	
 func update_character_attributes():

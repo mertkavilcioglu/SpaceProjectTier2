@@ -29,6 +29,9 @@ var MousePosition = null
 @onready var muzzle3=$Muzzle3
 @onready var lasers=$"../Lasers"
 
+@export var deathParticle : PackedScene 
+@onready var isDead = false 
+
 var laser_scene = preload("res://Game/Player/laser.tscn")
 signal laser_shot(laser)
 var BoostCD:int = 3
@@ -44,65 +47,70 @@ var sprite2
 @onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
 func _process(delta): 
-	upgradeChecker()
-	if Input.is_action_pressed("Shoot"):
-		if !shoot_bas:
-			shoot_bas=true
-			shoot_laser()
-			await get_tree().create_timer(fireCD).timeout
-			shoot_bas=false
+	if (!isDead):
+		upgradeChecker()
+		if Input.is_action_pressed("Shoot"):
+			if !shoot_bas:
+				shoot_bas=true
+				shoot_laser()
+				await get_tree().create_timer(fireCD).timeout
+				shoot_bas=false
 
 func _physics_process(delta): 
-	print(health)
-	if BoostFuel <100:
-		BoostFuel += 10*delta
-	
-	var Motion = Vector2()
-	Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-	Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
-	velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
-	velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
-	
-	if Input.is_action_pressed("Turbo"):
-		if BoostRefuel == false:
-			if BoostFuel <0:
-				BoostRefuel = true
-			if BoostFuel > 0:
-				if CanBoost == true:
-					MaxSpeed = Speed*4
-					velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
-					velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
-					sprite = $body
-					sprite2 = $wing
-					ghost_timer.start()
-					instance_ghost()
-					BoostFuel -= 20
-					CanBoost = false
-					await get_tree().create_timer(0.2).timeout
-					ghost_timer.stop()
-				elif CanBoost == false:
-					MaxSpeed = Speed*2
-					if BoostFuel > 0:
-						BoostFuel -= 50*delta
-					else: 
-						MaxSpeed = Speed
-			else:
-				MaxSpeed = Speed
-		elif BoostRefuel == true:
-			if BoostFuel < 100:
-				BoostFuel += 50*delta
-			else:
-				BoostRefuel = false
-	else:
-		MaxSpeed = Speed
-	if Input.is_action_just_released("Turbo"):
-		if BoostFuel > 20:
-			CanBoost = true
-
-	move_and_slide()
-	MousePosition = get_global_mouse_position()
-	look_at(MousePosition)
-	Cam.position = lerp(Cam.position, position, 5 * delta)
+	if(!isDead):
+		if BoostFuel <100:
+			BoostFuel += 10*delta
+		
+		var Motion = Vector2()
+		Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+		Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
+		velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
+		velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
+		
+		if Input.is_action_pressed("Turbo"):
+			if BoostRefuel == false:
+				if BoostFuel <0:
+					BoostRefuel = true
+				if BoostFuel > 0:
+					if CanBoost == true:
+						MaxSpeed = Speed*4
+						velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
+						velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
+						sprite = $body
+						sprite2 = $wing
+						ghost_timer.start()
+						instance_ghost()
+						BoostFuel -= 20
+						CanBoost = false
+						await get_tree().create_timer(0.2).timeout
+						ghost_timer.stop()
+					elif CanBoost == false:
+						MaxSpeed = Speed*2
+						if BoostFuel > 0:
+							BoostFuel -= 50*delta
+						else: 
+							MaxSpeed = Speed
+				else:
+					MaxSpeed = Speed
+			elif BoostRefuel == true:
+				if BoostFuel < 100:
+					BoostFuel += 50*delta
+				else:
+					BoostRefuel = false
+		else:
+			MaxSpeed = Speed
+		if Input.is_action_just_released("Turbo"):
+			if BoostFuel > 20:
+				CanBoost = true
+		move_and_slide()
+		MousePosition = get_global_mouse_position()
+		look_at(MousePosition)
+		Cam.position = lerp(Cam.position, position, 5 * delta)
+	elif(isDead):
+		velocity.x = move_toward(velocity.x, 0 , Acceleration)
+		velocity.y = move_toward(velocity.y, 0 , Acceleration)
+		move_and_slide()
+		Cam.position = lerp(Cam.position, position, 5 * delta)
 	
 func Boost_True():
 	CanBoost = true
@@ -190,12 +198,15 @@ func _on_damage_pressed():
 	LevelPanel.visible = false
 	
 func playerGetHit(): 
-	emit_signal("hit") 
-	if health > 0: 
-		health -= 1 #
-	if health <= 0:
-		health = 0
-		print("DEAD")
+	if(!isDead):
+		emit_signal("hit") 
+		if health > 0: 
+			health -= 1 #
+		if health <= 0:
+			health = 0
+			playParticleEffect()
+			print("DEAD")
+			isDead = true
 		
 func instance_ghost():
 	var ghost = ghost_scene.instantiate()
@@ -238,3 +249,10 @@ func setGuns():
 
 func addGunsLVL3():
 	pass
+
+func playParticleEffect():
+	var _particle = deathParticle.instantiate()
+	_particle.position = global_position
+	_particle.rotation = global_rotation
+	_particle.emitting = true
+	get_tree().current_scene.add_child(_particle)
