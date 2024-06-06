@@ -2,7 +2,8 @@ class_name Player
 extends CharacterBody2D
 
 #**************** UPGRADE VARIABLES *****************
-var health:int = 10
+var maxHealth = 10
+@onready var health:int = maxHealth
 var damage: int = 1
 var fireCD:float = 0.5
 var guns:bool = false
@@ -52,7 +53,7 @@ func _process(delta):
 			shoot_bas=false
 
 func _physics_process(delta): 
-	#print(BoostFuel)
+	print(health)
 	if BoostFuel <100:
 		BoostFuel += 10*delta
 	
@@ -190,9 +191,10 @@ func _on_damage_pressed():
 	
 func playerGetHit(): 
 	emit_signal("hit") 
-	if health > 1: 
+	if health > 0: 
 		health -= 1 #
-	elif health <= 1:
+	if health <= 0:
+		health = 0
 		print("DEAD")
 		
 func instance_ghost():
@@ -220,7 +222,7 @@ func upgradeChecker():
 	pass
 	
 func setHealth(newHealth:int):
-	health = newHealth
+	maxHealth = newHealth
 
 func setDamage(newDamage:int):
 	damage = newDamage
