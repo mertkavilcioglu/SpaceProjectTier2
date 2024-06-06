@@ -33,6 +33,7 @@ var MousePosition = null
 @onready var isDead = false 
 @onready var shockwave = $ShockwaveAnimationPlayer
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
+@onready var chroma_player = $ChromaAnimationPlayer
 
 var laser_scene = preload("res://Game/Player/laser.tscn")
 signal laser_shot(laser)
@@ -50,6 +51,7 @@ var sprite2
 
 func _ready():
 	shockwave.play("RESET")
+	chroma_player.play("RESET")
 
 func _process(delta): 
 	if (!isDead):
@@ -214,6 +216,7 @@ func playerGetHit():
 			playParticleEffect()
 			print("DEAD")
 			isDead = true
+			chroma_player.play("chroma")
 			await get_tree().create_timer(0.1).timeout
 			shockwave.play("shockwaveAnim")
 		

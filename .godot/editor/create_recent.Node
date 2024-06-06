@@ -1,9 +1,10 @@
+CanvasLayer
+AnimationPlayer
+ColorRect
 Label
 TextEdit
 RichTextLabel
 Control
-AnimationPlayer
-ColorRect
 Node2D
 TextureRect
 HBoxContainer
@@ -11,5 +12,3 @@ Button
 VBoxContainer
 PanelContainer
 MarginContainer
-CanvasLayer
-Node

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=34 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bwv47xinnqyrs" path="res://Menus/pause_menu.tscn" id="10_gbvmw"]
 [ext_resource type="Shader" path="res://Game/Player/shockwaveShader.gdshader" id="12_ylxmx"]
 [ext_resource type="PackedScene" uid="uid://btgiyvnu75u0q" path="res://Menus/die_menu.tscn" id="14_m4ht6"]
+[ext_resource type="Shader" path="res://Game/Player/DeathChroma.gdshader" id="15_0p2tx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -22,13 +23,13 @@ height = 94.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_70htx"]
 resource_local_to_scene = true
 shader = ExtResource("3_5jlhn")
-shader_parameter/enabled = true
+shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3758"]
 resource_local_to_scene = true
 shader = ExtResource("3_5jlhn")
-shader_parameter/enabled = true
+shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_k8pul"]
@@ -78,22 +79,6 @@ shader_parameter/force = 0.05
 shader_parameter/size = 0.0
 shader_parameter/thickness = 0.2
 
-[sub_resource type="Animation" id="Animation_vi77d"]
-resource_name = "shockwaveAnim"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/DeathShockwave:material:shader_parameter/size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 2.0]
-}
-
 [sub_resource type="Animation" id="Animation_q2oqf"]
 length = 0.001
 tracks/0/type = "value"
@@ -109,40 +94,29 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_vi77d"]
+resource_name = "shockwaveAnim"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/DeathShockwave:material:shader_parameter/size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 2.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p70dk"]
 _data = {
 "RESET": SubResource("Animation_q2oqf"),
 "shockwaveAnim": SubResource("Animation_vi77d")
 }
 
-[sub_resource type="Animation" id="Animation_5g1fd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("body:material:shader_parameter/enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_nk146"]
+[sub_resource type="Animation" id="Animation_6lwf5"]
 resource_name = "hit_flash"
 length = 0.1
 tracks/0/type = "value"
@@ -170,11 +144,80 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_olqy2"]
-_data = {
-"RESET": SubResource("Animation_5g1fd"),
-"hit_flash": SubResource("Animation_nk146")
+[sub_resource type="Animation" id="Animation_g68aa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:material:shader_parameter/enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxjqi"]
+_data = {
+"RESET": SubResource("Animation_g68aa"),
+"hit_flash": SubResource("Animation_6lwf5")
+}
+
+[sub_resource type="Animation" id="Animation_56shq"]
+resource_name = "chroma"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 10.0]
+}
+
+[sub_resource type="Animation" id="Animation_wtyn7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhq4c"]
+_data = {
+"RESET": SubResource("Animation_wtyn7"),
+"chroma": SubResource("Animation_56shq")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_reucl"]
+resource_local_to_scene = true
+shader = ExtResource("15_0p2tx")
+shader_parameter/ca_strength = 0.0
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -589,9 +632,6 @@ text = "Back
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
 visible = false
 
-[node name="DieMenu" parent="CanvasLayer" instance=ExtResource("14_m4ht6")]
-visible = false
-
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_p70dk")
@@ -599,8 +639,27 @@ libraries = {
 
 [node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_olqy2")
+"": SubResource("AnimationLibrary_qxjqi")
 }
+
+[node name="ChromaAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uhq4c")
+}
+
+[node name="CanvasForChroma" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="DeathChroma" type="ColorRect" parent="CanvasForChroma"]
+material = SubResource("ShaderMaterial_reucl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DieMenu" parent="CanvasForChroma" instance=ExtResource("14_m4ht6")]
+visible = false
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
