@@ -7,7 +7,7 @@
 [ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_rqesy"]
 [ext_resource type="Texture2D" uid="uid://cl5654k3a2mk3" path="res://Game/Player/muzzle_flash.png" id="5_7w0i2"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iqn3t"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_osjsk"]
 resource_local_to_scene = true
 shader = ExtResource("3_rqesy")
 shader_parameter/enabled = false
@@ -53,40 +53,13 @@ _data = {
 "muzzle_flash_anim": SubResource("Animation_o7t1v")
 }
 
-[sub_resource type="Animation" id="Animation_5g1fd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("body:material:shader_parameter/enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_nk146"]
+[sub_resource type="Animation" id="Animation_8eewg"]
 resource_name = "hit_flash"
 length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -95,23 +68,26 @@ tracks/0/keys = {
 "update": 1,
 "values": [true, false]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("body:material:shader_parameter/enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
+
+[sub_resource type="Animation" id="Animation_o8wlj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true, false]
+"values": [false]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_olqy2"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k77pc"]
 _data = {
-"RESET": SubResource("Animation_5g1fd"),
-"hit_flash": SubResource("Animation_nk146")
+"RESET": SubResource("Animation_o8wlj"),
+"hit_flash": SubResource("Animation_8eewg")
 }
 
 [node name="Hunter" type="RigidBody2D"]
@@ -119,7 +95,7 @@ script = ExtResource("1_6hhyi")
 deathParticle = ExtResource("2_pxmgi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_iqn3t")
+material = SubResource("ShaderMaterial_osjsk")
 rotation = 1.5708
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2vssp")
@@ -154,5 +130,5 @@ rotation = 1.5708
 
 [node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_olqy2")
+"": SubResource("AnimationLibrary_k77pc")
 }

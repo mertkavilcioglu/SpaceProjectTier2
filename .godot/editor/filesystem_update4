@@ -16,3 +16,4 @@ res://Game/Economy/resource_ship.tscn
 res://Menus/pause_menu.tscn
 res://Menus/main_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
+res://Game/Enemy/hunter.gd

@@ -19,11 +19,13 @@ radius = 44.0
 height = 94.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_70htx"]
+resource_local_to_scene = true
 shader = ExtResource("3_5jlhn")
 shader_parameter/enabled = true
 shader_parameter/tint = Color(1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3758"]
+resource_local_to_scene = true
 shader = ExtResource("3_5jlhn")
 shader_parameter/enabled = true
 shader_parameter/tint = Color(1, 1, 1, 1)
@@ -312,6 +314,14 @@ wait_time = 0.03
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="DeathShockwave" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_3oppj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="UpgradeScreen" type="Node2D" parent="CanvasLayer"]
 visible = false
 script = ExtResource("6_w31uu")
@@ -577,14 +587,6 @@ text = "Back
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
 visible = false
-
-[node name="DeathShockwave" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_3oppj")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
