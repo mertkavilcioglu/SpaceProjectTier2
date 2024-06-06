@@ -1,7 +1,7 @@
 extends Control
 
 @onready var player = get_parent().get_parent()
-
+@onready var animPlayed = false;
 func _ready():
 	$AnimationPlayer.play("RESET")
 
@@ -13,18 +13,14 @@ func resume():
 func pause():
 	self.visible = true
 	get_tree().paused = true
-	$AnimationPlayer.play("blurAnim")
+	if(animPlayed == false):
+		$AnimationPlayer.play("blurAnim")
+		animPlayed = true
 
-func testEsc():
-	if(player.isDead == false):
-		if Input.is_action_just_pressed("Pause") and !get_tree().paused:
-			pause()
-		elif Input.is_action_just_pressed("Pause") and get_tree().paused:
-			resume()
-
-
-func _on_resume_pressed():
-	resume()
+func testDeath():
+	if (player.isDead) and !get_tree().paused:
+		await get_tree().create_timer(1).timeout
+		pause()
 
 
 func _on_quit_pressed():
@@ -32,7 +28,7 @@ func _on_quit_pressed():
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 func _process(delta):
-	testEsc()
+	testDeath()
 
 
 func _on_restart_pressed():

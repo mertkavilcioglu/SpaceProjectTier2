@@ -1,3 +1,7 @@
+Label
+TextEdit
+RichTextLabel
+Control
 AnimationPlayer
 ColorRect
 Node2D
@@ -9,6 +13,3 @@ PanelContainer
 MarginContainer
 CanvasLayer
 Node
-Sprite2D
-PathFollow2D
-Path2D

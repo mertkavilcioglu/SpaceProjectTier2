@@ -48,6 +48,9 @@ var sprite2
 @onready var muzzle_flash2 = $Muzzle2/MuzzleFlashAnimationPlayer
 @onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
+func _ready():
+	shockwave.play("RESET")
+
 func _process(delta): 
 	if (!isDead):
 		upgradeChecker()

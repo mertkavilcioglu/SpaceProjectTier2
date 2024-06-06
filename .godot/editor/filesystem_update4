@@ -17,3 +17,6 @@ res://Menus/pause_menu.tscn
 res://Menus/main_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
 res://Game/Enemy/hunter.gd
+res://Menus/die_menu.tscn
+res://Menus/die_menu.gd
+res://Menus/pause_menu.gd

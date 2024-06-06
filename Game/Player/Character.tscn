@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=29 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="9_m2bku"]
 [ext_resource type="PackedScene" uid="uid://bwv47xinnqyrs" path="res://Menus/pause_menu.tscn" id="10_gbvmw"]
 [ext_resource type="Shader" path="res://Game/Player/shockwaveShader.gdshader" id="12_ylxmx"]
+[ext_resource type="PackedScene" uid="uid://btgiyvnu75u0q" path="res://Menus/die_menu.tscn" id="14_m4ht6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -586,6 +587,9 @@ text = "Back
 "
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
+visible = false
+
+[node name="DieMenu" parent="CanvasLayer" instance=ExtResource("14_m4ht6")]
 visible = false
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
