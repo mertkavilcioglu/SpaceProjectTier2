@@ -116,6 +116,33 @@ _data = {
 "shockwaveAnim": SubResource("Animation_vi77d")
 }
 
+[sub_resource type="Animation" id="Animation_g68aa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:material:shader_parameter/enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_6lwf5"]
 resource_name = "hit_flash"
 length = 0.1
@@ -144,37 +171,25 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
-[sub_resource type="Animation" id="Animation_g68aa"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxjqi"]
+_data = {
+"RESET": SubResource("Animation_g68aa"),
+"hit_flash": SubResource("Animation_6lwf5")
+}
+
+[sub_resource type="Animation" id="Animation_wtyn7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("body:material:shader_parameter/enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxjqi"]
-_data = {
-"RESET": SubResource("Animation_g68aa"),
-"hit_flash": SubResource("Animation_6lwf5")
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_56shq"]
@@ -191,21 +206,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 10.0]
-}
-
-[sub_resource type="Animation" id="Animation_wtyn7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uhq4c"]

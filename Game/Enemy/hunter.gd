@@ -9,6 +9,7 @@ var playerDamage:int = 1
 @export var enemyMaxSpeed: float = 400.0
 @export var radius = 200
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
+@export var playerRegen:int = 1
 
 var distanceToPlayer_x:int
 var distanceToPlayer_y:int
@@ -50,6 +51,8 @@ func getHit():
 	if enemyHealth > 0: 
 		enemyHealth -= player.damage 
 	if enemyHealth <= 0:
+		if(player.health < player.maxHealth):
+			player.health += playerRegen
 		playParticleEffect()
 		queue_free()
 		
