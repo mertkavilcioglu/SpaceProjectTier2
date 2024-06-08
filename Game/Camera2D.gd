@@ -16,7 +16,7 @@ func _process(delta):
 	if offset != Vector2(0,0):
 		offset.x = lerpf(offset.x,0,5*delta)
 		offset.y = lerpf(offset.y,0,5*delta)
-	print(character.get_real_velocity().length())
+
 
 func camera_shake():
 	var random_offset_number = randf_range(-2,2)
