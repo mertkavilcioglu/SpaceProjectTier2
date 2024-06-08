@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbyrwi8w2y3bk"]
+
+[ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
+[ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
+[ext_resource type="PackedScene" uid="uid://bm48kc742smsm" path="res://Game/Enemy/hunter.tscn" id="3_dofhr"]
+[ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
+[ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
+[ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
+[ext_resource type="Script" path="res://Game/Economy/resource_ship.gd" id="7_0q5w1"]
+
+[sub_resource type="Environment" id="Environment_v03uc"]
+background_mode = 3
+background_canvas_max_layer = 10
+tonemap_white = 16.0
+glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
+glow_blend_mode = 1
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_j43kv")]
+isScrolling = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Character" parent="." instance=ExtResource("2_eeww8")]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Lasers" type="Node" parent="."]
+
+[node name="Hunter" parent="." instance=ExtResource("3_dofhr")]
+
+[node name="Hunter2" parent="." instance=ExtResource("3_dofhr")]
+
+[node name="WorldEnvironment-forGlow" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v03uc")
+
+[node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
+position = Vector2(570, 122)
+
+[node name="test_resource" parent="." instance=ExtResource("5_612sc")]
+position = Vector2(363, 805)
+
+[node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
+position = Vector2(557, 199)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("7_0q5w1")

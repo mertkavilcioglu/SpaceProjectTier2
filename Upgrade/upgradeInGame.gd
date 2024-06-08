@@ -62,6 +62,9 @@ func open_upgrade_screen():
 				self.visible = true
 			else :
 				self.visible = false
+		if Input.is_action_just_pressed("Pause"):
+			if self.visible == true:
+				self.visible = false
 	elif(character.isDead == true):
 		self.visible = false
 		

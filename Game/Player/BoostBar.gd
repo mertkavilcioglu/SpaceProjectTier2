@@ -7,4 +7,4 @@ func _ready():
 	update()
 	
 func update():
-	value = player.BoostFuel 
+	value = player.BoostFuel

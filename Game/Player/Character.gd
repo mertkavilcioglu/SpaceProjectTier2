@@ -54,6 +54,7 @@ var sprite2
 func _ready():
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
+	boostFuelChanged.emit()
 
 func _process(delta): 
 	if (!isDead):
