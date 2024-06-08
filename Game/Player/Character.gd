@@ -1,11 +1,15 @@
 class_name Player 
 extends CharacterBody2D
 
+signal healthChanged
+signal boostFuelChanged(fuel: float)
 #**************** UPGRADE VARIABLES *****************
-var health:int = 10
+var maxHealth: int = 10
+@onready var health: int = maxHealth
+var isHit : bool = false
 var damage: int = 1
-var fireCD:float = 0.5
-var guns:bool = false
+var fireCD: float = 0.5
+var guns: bool = false
 #var speed: float = 500.0
 #var fuel: float = 100.0
 @onready var body = $body
@@ -55,6 +59,7 @@ func _physics_process(delta):
 	#print(BoostFuel)
 	if BoostFuel <100:
 		BoostFuel += 10*delta
+		boostFuelChanged.emit()
 	
 	var Motion = Vector2()
 	Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
@@ -76,6 +81,7 @@ func _physics_process(delta):
 					ghost_timer.start()
 					instance_ghost()
 					BoostFuel -= 20
+					boostFuelChanged.emit()
 					CanBoost = false
 					await get_tree().create_timer(0.2).timeout
 					ghost_timer.stop()
@@ -83,6 +89,7 @@ func _physics_process(delta):
 					MaxSpeed = Speed*2
 					if BoostFuel > 0:
 						BoostFuel -= 50*delta
+						boostFuelChanged.emit()
 					else: 
 						MaxSpeed = Speed
 			else:
@@ -90,6 +97,7 @@ func _physics_process(delta):
 		elif BoostRefuel == true:
 			if BoostFuel < 100:
 				BoostFuel += 50*delta
+				boostFuelChanged.emit()
 			else:
 				BoostRefuel = false
 	else:
@@ -164,8 +172,10 @@ func _on_get_level_pressed():
 
 func _on_health_pressed():
 	health+=10
+	maxHealth+=10
 	get_tree().paused = false
 	LevelPanel.visible = false
+	healthChanged.emit()
 	LevelUp()
 	
 
@@ -190,10 +200,14 @@ func _on_damage_pressed():
 	
 func playerGetHit(): 
 	emit_signal("hit") 
-	if health > 1: 
+	if health > 0: 
 		health -= 1 #
-	elif health <= 1:
+	
+	elif health <= 0:
+		health = 0
 		print("DEAD")
+	isHit = true
+	healthChanged.emit()
 		
 func instance_ghost():
 	var ghost = ghost_scene.instantiate()
@@ -220,7 +234,8 @@ func upgradeChecker():
 	pass
 	
 func setHealth(newHealth:int):
-	health = newHealth
+	maxHealth = newHealth
+	healthChanged.emit()
 
 func setDamage(newDamage:int):
 	damage = newDamage

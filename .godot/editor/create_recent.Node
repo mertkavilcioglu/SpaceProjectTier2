@@ -1,3 +1,6 @@
+ProgressBar
+Label
+TextureProgressBar
 Node2D
 CanvasLayer
 Node
@@ -9,7 +12,3 @@ Area2D
 Timer
 AnimationPlayer
 WorldEnvironment
-CPUParticles2D
-GPUParticles2D
-Label
-HBoxContainer
