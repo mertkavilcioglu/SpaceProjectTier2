@@ -1,6 +1,8 @@
 class_name Player 
 extends CharacterBody2D
 
+signal healthChanged
+signal boostFuelChanged(fuel: float)
 #**************** UPGRADE VARIABLES *****************
 var maxHealth = 10
 @onready var health:int = maxHealth
@@ -67,6 +69,7 @@ func _physics_process(delta):
 	if(!isDead):
 		if BoostFuel <100:
 			BoostFuel += 10*delta
+			boostFuelChanged.emit()
 		
 		var Motion = Vector2()
 		Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
@@ -88,6 +91,7 @@ func _physics_process(delta):
 						ghost_timer.start()
 						instance_ghost()
 						BoostFuel -= 20
+						boostFuelChanged.emit()
 						CanBoost = false
 						await get_tree().create_timer(0.2).timeout
 						ghost_timer.stop()
@@ -95,6 +99,7 @@ func _physics_process(delta):
 						MaxSpeed = Speed*2
 						if BoostFuel > 0:
 							BoostFuel -= 50*delta
+							boostFuelChanged.emit()
 						else: 
 							MaxSpeed = Speed
 				else:
@@ -102,6 +107,7 @@ func _physics_process(delta):
 			elif BoostRefuel == true:
 				if BoostFuel < 100:
 					BoostFuel += 50*delta
+					boostFuelChanged.emit()
 				else:
 					BoostRefuel = false
 		else:
@@ -182,6 +188,7 @@ func _on_health_pressed():
 	health+=10
 	get_tree().paused = false
 	LevelPanel.visible = false
+	healthChanged.emit()
 	LevelUp()
 	
 
@@ -219,6 +226,7 @@ func playerGetHit():
 			chroma_player.play("chroma")
 			await get_tree().create_timer(0.1).timeout
 			shockwave.play("shockwaveAnim")
+		healthChanged.emit()
 		
 func instance_ghost():
 	var ghost = ghost_scene.instantiate()
@@ -246,6 +254,7 @@ func upgradeChecker():
 	
 func setHealth(newHealth:int):
 	maxHealth = newHealth
+	healthChanged.emit()
 
 func setDamage(newDamage:int):
 	damage = newDamage
