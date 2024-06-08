@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=10 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
+[ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
 [ext_resource type="PackedScene" uid="uid://bm48kc742smsm" path="res://Game/Enemy/hunter.tscn" id="3_dofhr"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
 [ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
@@ -26,6 +27,7 @@ glow_blend_mode = 1
 isScrolling = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_rdm3x")
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 

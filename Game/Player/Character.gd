@@ -20,7 +20,7 @@ const save_path = "user://game_save.save"
 #**************** MOVEMENT-COMBAT VARIABLES and FUNCTIONS *****************
 @export var Speed:float = 500
 @export var MaxSpeed:float = Speed
-@export var Acceleration:float = 100.0
+@export var Acceleration:float = 20.0
 @onready var Cam = $"../Camera2D"
 var MousePosition = null
 @onready var CanBoost:bool = true

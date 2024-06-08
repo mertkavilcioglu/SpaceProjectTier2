@@ -1,13 +1,14 @@
-res://Game/Player/Character.tscn
+res://Game/game.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Menus/pause_menu.gdshader
 res://Game/Player/shockwaveShader.gdshader
 res://Game/Player/DeathChroma.gdshader
+res://Game/Camera2D.gd
 res://Game/DialogueSystem/dialogue.tscn
-res://Game/game.tscn
 res://Upgrade/upgrade.tscn
 res://Game/Enemy/hunter.tscn
+res://Game/Player/Character.tscn
 res://Game/Stations/test_station.tscn
 res://Game/Economy/test_resource_planet.tscn
 res://Game/Economy/economy.tscn
@@ -17,8 +18,4 @@ res://Menus/pause_menu.tscn
 res://Menus/main_menu.tscn
 res://Game/Enemy/explosion_death_particle.tscn
 res://Game/Player/texture_rect.tscn
-res://Game/Player/DeathChroma.gd
-res://Game/Player/HealthBar.gd
-res://Upgrade/upgradeInGame.gd
-res://Game/Player/BoostBar.gd
 res://Game/Player/Character.gd
