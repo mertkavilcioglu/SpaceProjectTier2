@@ -1,10 +1,10 @@
-res://Game/game.tscn
-res://Game/Player/Character.gd
+res://Game/Player/Character.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Menus/pause_menu.gdshader
 res://Game/Player/shockwaveShader.gdshader
 res://Game/Player/DeathChroma.gdshader
-res://Game/Enemy/kamikaze.gd
+res://Upgrade/upgradeInGame.gd
+res://Game/Player/Character.gd
+res://Game/game.tscn
 res://Game/Enemy/kamikaze.tscn
-res://Game/Player/Character.tscn

@@ -48,11 +48,11 @@ var playerDamage
 func _ready():
 	load_data()
 	changeTextures()
+	update_character_attributes()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	update_character_attributes()
 	open_upgrade_screen()
 
 func open_upgrade_screen():
@@ -128,6 +128,7 @@ func _on_health_upgrade_button_pressed():
 		HealthLevel += 1
 	changeTextures()
 	save_data()
+	update_character_attributes()
 
 
 func _on_speed_upgrade_button_pressed():
@@ -135,6 +136,7 @@ func _on_speed_upgrade_button_pressed():
 		SpeedLevel += 1
 	changeTextures()
 	save_data()
+	update_character_attributes()
 
 
 func _on_fuel_upgrade_button_pressed():
@@ -142,6 +144,7 @@ func _on_fuel_upgrade_button_pressed():
 		FuelLevel += 1
 	changeTextures()
 	save_data()
+	update_character_attributes()
 
 
 func _on_damage_upgrade_button_pressed():
@@ -149,6 +152,7 @@ func _on_damage_upgrade_button_pressed():
 		DamageLevel += 1
 	changeTextures()
 	save_data()
+	update_character_attributes()
 
 
 func save_data():

@@ -52,9 +52,11 @@ var sprite2
 @onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
 func _ready():
+	health = maxHealth
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
 	boostFuelChanged.emit()
+	healthChanged.emit()
 
 func _process(delta): 
 	if (!isDead):
@@ -69,7 +71,7 @@ func _process(delta):
 func _physics_process(delta): 
 	if(!isDead):
 		if BoostFuel <100:
-			BoostFuel += 10*delta
+			BoostFuel += 20*delta
 			boostFuelChanged.emit()
 		
 		var Motion = Vector2()
@@ -105,14 +107,15 @@ func _physics_process(delta):
 							MaxSpeed = Speed
 				else:
 					MaxSpeed = Speed
-			elif BoostRefuel == true:
-				if BoostFuel < 100:
-					BoostFuel += 50*delta
-					boostFuelChanged.emit()
-				else:
-					BoostRefuel = false
 		else:
 			MaxSpeed = Speed
+			
+		if BoostRefuel == true:
+			if BoostFuel < 100:
+				BoostFuel += 50*delta
+				boostFuelChanged.emit()
+			else:
+					BoostRefuel = false
 		if Input.is_action_just_released("Turbo"):
 			if BoostFuel > 20:
 				CanBoost = true
