@@ -52,9 +52,11 @@ var sprite2
 @onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
 func _ready():
+	health = maxHealth
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
 	boostFuelChanged.emit()
+	healthChanged.emit()
 
 func _process(delta): 
 	if (!isDead):
