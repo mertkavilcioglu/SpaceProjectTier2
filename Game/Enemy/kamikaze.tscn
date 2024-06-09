@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d5grvcnwwoeu"]
+
+[ext_resource type="Script" path="res://Game/Enemy/kamikaze.gd" id="1_jdpyd"]
+[ext_resource type="Texture2D" uid="uid://dstotwng8jlnc" path="res://Game/Enemy/temporary_kamikaze.png" id="2_g6m0i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aiv2y"]
+
+[node name="Kamikaze" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_jdpyd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aiv2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g6m0i")
