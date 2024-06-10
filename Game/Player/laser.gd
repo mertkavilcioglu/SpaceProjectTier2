@@ -17,4 +17,9 @@ func _on_body_entered(body):
 		var enemy = body
 		enemy.getHit()
 		queue_free()
+		
+	if body is EnemyK:
+		var enemy = body
+		enemy.getHit()
+		queue_free()
 	

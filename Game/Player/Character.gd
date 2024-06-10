@@ -215,12 +215,12 @@ func _on_damage_pressed():
 	get_tree().paused = false
 	LevelPanel.visible = false
 	
-func playerGetHit(): 
+func playerGetHit(damageTaken:int): 
 	if(!isDead):
 		emit_signal("hit") 
 		if health > 0: 
 			hit_flash_anim_player.play("hit_flash")
-			health -= 1 #
+			health -= damageTaken #
 		if health <= 0:
 			hit_flash_anim_player.play("hit_flash")
 			health = 0

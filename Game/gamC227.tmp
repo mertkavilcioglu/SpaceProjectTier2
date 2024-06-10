@@ -31,6 +31,9 @@ script = ExtResource("2_rdm3x")
 
 [node name="Kamikaze" parent="." instance=ExtResource("9_wye4o")]
 position = Vector2(600, -65)
+enemyMaxSpeed = 400.0
+radius = 75
+playerRegen = 1
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 

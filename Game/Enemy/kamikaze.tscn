@@ -1,18 +1,78 @@
-[gd_scene load_steps=4 format=3 uid="uid://d5grvcnwwoeu"]
+[gd_scene load_steps=11 format=3 uid="uid://d5grvcnwwoeu"]
 
 [ext_resource type="Script" path="res://Game/Enemy/kamikaze.gd" id="1_jdpyd"]
-[ext_resource type="Texture2D" uid="uid://dstotwng8jlnc" path="res://Game/Enemy/temporary_kamikaze.png" id="2_g6m0i"]
+[ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_8okkx"]
+[ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_5d0df"]
+[ext_resource type="Texture2D" uid="uid://kvwtd2bdncsm" path="res://Sprites/uzaygemisi/EnemyShips/Kamikze 128x 128.png" id="3_aqcx1"]
+[ext_resource type="PackedScene" uid="uid://d1vtrplp2oebl" path="res://Game/Player/TrailEffectBlue.tscn" id="5_p6gv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jbic"]
-size = Vector2(126, 125)
+size = Vector2(64, 43)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j65rp"]
+resource_local_to_scene = true
+shader = ExtResource("3_5d0df")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_ofvhy"]
+resource_name = "hit_flash_k"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_3orle"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mhaix"]
+_data = {
+"RESET": SubResource("Animation_3orle"),
+"hit_flash_k": SubResource("Animation_ofvhy")
+}
 
 [node name="Kamikaze" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_jdpyd")
+deathParticle = ExtResource("2_8okkx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_6jbic")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g6m0i")
+material = SubResource("ShaderMaterial_j65rp")
+rotation = 1.5708
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_aqcx1")
+
+[node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mhaix")
+}
+
+[node name="Engine" type="Node2D" parent="."]
+position = Vector2(-28, 0)
+
+[node name="Trail2" parent="Engine" instance=ExtResource("5_p6gv2")]
