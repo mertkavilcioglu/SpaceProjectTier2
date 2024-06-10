@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fsvsh65cil4i"
-path="res://.godot/imported/test_card_image.png-57aaed543f138b17625d7d5a460f664f.ctex"
+uid="uid://dac2mul7j6xb"
+path="res://.godot/imported/text7_500.png-54dc0898ac0b7b647438e7bc02b58125.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/DialogueSystem/test_card_image.png"
-dest_files=["res://.godot/imported/test_card_image.png-57aaed543f138b17625d7d5a460f664f.ctex"]
+source_file="res://Sprites/dialogue_sprites/mission_1_sprites/text7_500.png"
+dest_files=["res://.godot/imported/text7_500.png-54dc0898ac0b7b647438e7bc02b58125.ctex"]
 
 [params]
 

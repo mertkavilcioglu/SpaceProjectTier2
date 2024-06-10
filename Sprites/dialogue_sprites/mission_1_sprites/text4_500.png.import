@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqwkq218onry2"
-path="res://.godot/imported/test_profile_image.png-763949c577175c1be85f84a26f1b6b8a.ctex"
+uid="uid://b0hdu4dkqo7ed"
+path="res://.godot/imported/text4_500.png-13ec6c072181bdc83f5285c0857e0dec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/DialogueSystem/test_profile_image.png"
-dest_files=["res://.godot/imported/test_profile_image.png-763949c577175c1be85f84a26f1b6b8a.ctex"]
+source_file="res://Sprites/dialogue_sprites/mission_1_sprites/text4_500.png"
+dest_files=["res://.godot/imported/text4_500.png-13ec6c072181bdc83f5285c0857e0dec.ctex"]
 
 [params]
 

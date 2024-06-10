@@ -1,13 +1,10 @@
 extends Node
 
 @export var card_image : Sprite2D
-@export var one_choise_card_image : Sprite2D
 @export var profile_image : Sprite2D
 @export var right_text : RichTextLabel
 @export var left_text : RichTextLabel
 @export var dialogue_text : RichTextLabel
-@export var background : Sprite2D
-@export var card_background : Sprite2D
 
 
 var dialogues
@@ -38,7 +35,5 @@ func update_card():
 	dialogue_text.text = current_dialogue["question"]
 	card_image.texture = load(current_dialogue["card_image"])
 	profile_image.texture = load(current_dialogue["profile_image"])
-	card_background.texture = load(current_dialogue["card_background"])
-	background.texture = load(current_dialogue["background"])
 	
 

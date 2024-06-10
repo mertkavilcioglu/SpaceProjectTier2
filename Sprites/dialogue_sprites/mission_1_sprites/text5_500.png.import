@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpy1wnm2kibc"
-path="res://.godot/imported/test_card_background.jpg-ec1e7fb0c790c44b8ee63253feb79c09.ctex"
+uid="uid://bqlmc2pfjwiv2"
+path="res://.godot/imported/text5_500.png-c4018b7a1a777d8b665a3c0e965357c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/DialogueSystem/test_card_background.jpg"
-dest_files=["res://.godot/imported/test_card_background.jpg-ec1e7fb0c790c44b8ee63253feb79c09.ctex"]
+source_file="res://Sprites/dialogue_sprites/mission_1_sprites/text5_500.png"
+dest_files=["res://.godot/imported/text5_500.png-c4018b7a1a777d8b665a3c0e965357c4.ctex"]
 
 [params]
 

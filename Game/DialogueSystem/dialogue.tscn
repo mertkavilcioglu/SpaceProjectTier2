@@ -1,28 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdflnfbq0e65b"]
+[gd_scene load_steps=3 format=3 uid="uid://bdflnfbq0e65b"]
 
 [ext_resource type="Script" path="res://Game/DialogueSystem/dialog_manager.gd" id="1_3jwg5"]
-[ext_resource type="Texture2D" uid="uid://bqwkq218onry2" path="res://Game/DialogueSystem/test_profile_image.png" id="2_x6vht"]
-[ext_resource type="Texture2D" uid="uid://fsvsh65cil4i" path="res://Game/DialogueSystem/test_card_image.png" id="3_6ki7l"]
 [ext_resource type="FontFile" uid="uid://5hns1cq7bj0c" path="res://Game/DialogueSystem/OCR A Regular.otf" id="3_xbt0c"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xj2we"]
 
 [node name="Dialogue" type="Node2D"]
 
 [node name="card_image" type="Sprite2D" parent="."]
-position = Vector2(555, 288)
+position = Vector2(500, 288)
 scale = Vector2(0.3, 0.3)
-texture = SubResource("CompressedTexture2D_xj2we")
-
-[node name="card_background" type="Sprite2D" parent="card_image"]
-position = Vector2(-1.27188, -444.667)
-scale = Vector2(1.37199, 1.3037)
-texture = ExtResource("3_6ki7l")
 
 [node name="profile_image" type="Sprite2D" parent="card_image"]
 position = Vector2(9.5129e-05, -440)
-scale = Vector2(0.692188, 0.726971)
-texture = ExtResource("2_x6vht")
 
 [node name="right_text" type="RichTextLabel" parent="card_image"]
 offset_left = 40.0
@@ -65,16 +53,13 @@ offset_right = 447.0
 offset_bottom = 686.0
 flat = true
 
-[node name="dialogue_manager" type="Node2D" parent="." node_paths=PackedStringArray("card_image", "one_choise_card_image", "profile_image", "right_text", "left_text", "dialogue_text", "background", "card_background")]
+[node name="dialogue_manager" type="Node2D" parent="." node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text")]
 script = ExtResource("1_3jwg5")
-card_image = NodePath("../card_image/profile_image")
-one_choise_card_image = NodePath("../card_image/profile_image")
+card_image = NodePath("../card_image")
 profile_image = NodePath("../card_image/profile_image")
 right_text = NodePath("../card_image/right_text")
 left_text = NodePath("../card_image/left_text")
 dialogue_text = NodePath("../card_image/dialogue_text")
-background = NodePath("../card_image/card_background")
-card_background = NodePath("../card_image/card_background")
 
 [connection signal="pressed" from="card_image/select_left" to="dialogue_manager" method="select_left"]
 [connection signal="pressed" from="card_image/select_right" to="dialogue_manager" method="select_right"]
