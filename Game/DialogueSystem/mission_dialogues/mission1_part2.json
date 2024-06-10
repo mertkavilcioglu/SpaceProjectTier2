@@ -1,0 +1,131 @@
+{
+    "text17":
+	{
+		"card_image": "res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image": "res://mission1/text17_500.png",
+		"question":"Siginaga ulastiginda, burasinin eskiden bir Gozcu Istasyonu oldugunu anliyorsun. Pas tutmus duvarlari, kirilmis turret kuleleri, parcalanmis tespit radarlari devasa yapiya uzun zaman once terkedilmis havasi katsa da, tarihin sayfalarindaki tozu sildiginde, bu yapi sanki antik donemlerde insaa edilmis bir kalenin yildizlarin arasina ozenle yerlestirilmis haliymis gibi gorunuyor.",
+		"left_answer": "Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text18",
+		"right_result":"text18"
+	},
+	"text18":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Kapiya doğru ilerlediginde kapinin acik oldugunu goruyorsun. İceride bir grup insan kendi aralarinda konusuyor. Adamlardan birinin eline fuzyon cekirdegini tuttugunu farkediyorsun.",
+		"left_answer":"Saldir: -10 Asker, +5 mühendis",
+		"right_answer":"Dinle",
+		"left_result":"text19",
+		"right_result":"text20"
+	},
+	"text19":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question": "10 Asker kaybettin. Korsanlarin elindeki tutsaklar arasindaki 5 mühendisi gemine aldin.",
+		"left_answer": "Ayril",
+		"right_answer":"Ayril",
+		"left_result":"text21",
+		"right_result":"text21"
+	},
+	"text20":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Korsanlarin aralasindaki konusmayi duymak icin sessizce ilerleyip bir kutunun arkasina saklaniyorsun.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text21",
+		"right_result":"text21"
+	},
+	"text21":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"... gercekten usandim artik Raynor. Bu harabede 1 aydir bekliyoruz ve ne icin? Kim oldugunu bile bilmedigimiz bir adam benden haber gelene kadar burada bekleyin dedigi icin. Kim bu adam ayrica? Bir anda ortaya cikip bize yuklu miktarda odulle beraber bu isi verdi ve ortadan yok oldu. Ve sen de dusunmeden kabul ettin. Neler oluyor dostum?",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text22",
+		"right_result":"text22"
+	},
+	"text22":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Tychus, bilmedigin seyler var, anlatacamayacagim seyler... Bu gorevi kabul etmekten baska carem yoktu. Ben... bu adami taniyorum, Ranger olmaktan usandigim zamandan beri. Bana Imparatorlugun pesimi birakmasi konusunda yardim etti. Imparatorlugun politikasini biliyorsun: ya benim tarafimdasin ya da dusmanimsin. Onun yardimini kabul etmek zorundaydim. Karsiliginda da benden istedigi...",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text23",
+		"right_result":"text23"
+	},
+	"text23":
+	{
+		"card_image": "res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Karanligin perdesini aralayan bir ses duyuyorsun. Konusan kisi diger korsanlardan biri ama sanki karanligin murekkebi onu o anda karalayip ortaya cikarmis gibi bir hali var. Gozleri sonuna kadar acik, hipnotize olmuscasina uzaklara bakarak konusuyor.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text24",
+		"right_result":"text24"
+	},
+	"text24":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Xerebri... Evet... Onlara boyle sesleniliyor. Hatirliyorum. Eski Tanrilarin muritleri... Ruhun ve kanin kazani, onlar icin hep kaynar. Her zaman oradadilar, sana ait olan icin, ta ki olmayana kadar. Gorduysen birini onlarin, kum saati ters cevrilmis demektir. Ruhun kum taneleriyle olan dansinin enstrumanlaridir onlar.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text25",
+		"right_result":"text25"
+	},
+	"text25":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Urkutucu figurun konusmasi bittiginde artik yuzunde bir tebessum vardi. Diger iki korsan gibi sen de olum sessizligi esliginde adami izliyorsun. Ve dudaklari tekrar aralaniyor.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text26",
+		"right_result":"text26"
+	},
+	"text26":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Kaptan, o adamla anlasma yaptiktan sonra neler hissettin?",
+		"left_answer": "Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text27",
+		"right_result":"text27"
+	},
+	"text27":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Sanki goz kapaklarim agirlasmisti, bir parcam artik yerinde degilmis gibi hissettim: benden alinmis gibi.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text28",
+		"right_result":"text28"
+	},
+	"text28":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Evet... İkiniz de anlasmanin uzerinize dusen kisimlarini yerine getirmissiniz. Ama artik cok gec. Bir kafesten digerine girmis durumdasin Kaptan. Ve bu kafes digerlerinden cok daha... ilginc.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text29",
+		"right_result":"text29"
+	},
+	"text29":{ 
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"pp id",
+		"question":"Neler olup bittigini anlayamasan da durumun basit bir yagmadan daha derin bir sey oldugunu seziyorsun. Bir anda silkelenip buraya neden geldigini hatirliyorsun. Dikkati dagilmis korsanlari inceliyorsun.",
+		"left_answer":"Saldir: -10 Asker, +5 Mühendis",
+		"right_answer":"Kac",
+		"left_result":"",
+		"right_result":""
+	}
+}

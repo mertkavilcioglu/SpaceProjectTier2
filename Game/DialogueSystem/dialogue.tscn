@@ -1,25 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdflnfbq0e65b"]
+[gd_scene load_steps=5 format=3 uid="uid://bdflnfbq0e65b"]
 
-[ext_resource type="Script" path="res://Game/DialogueSystem/dialog_manager.gd" id="1_3jwg5"]
+[ext_resource type="Script" path="res://Game/DialogueSystem/dialogue.gd" id="1_hax0q"]
+[ext_resource type="Texture2D" uid="uid://bqlmc2pfjwiv2" path="res://Sprites/dialogue_sprites/mission_1_sprites/text5_500.png" id="3_ukfue"]
 [ext_resource type="FontFile" uid="uid://5hns1cq7bj0c" path="res://Game/DialogueSystem/OCR A Regular.otf" id="3_xbt0c"]
 
-[node name="Dialogue" type="Node2D"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rkwrt"]
+load_path = "res://.godot/imported/imperiassslCARD500.png-e66ee181d530ee2e402e7f176a576981.ctex"
+
+[node name="Dialogue" type="Node2D" node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text")]
+script = ExtResource("1_hax0q")
+card_image = NodePath("card_image")
+profile_image = NodePath("card_image/profile_image")
+right_text = NodePath("card_image/right_text")
+left_text = NodePath("card_image/left_text")
+dialogue_text = NodePath("card_image/dialogue_text")
 
 [node name="card_image" type="Sprite2D" parent="."]
 position = Vector2(500, 288)
 scale = Vector2(0.3, 0.3)
+texture = SubResource("CompressedTexture2D_rkwrt")
 
 [node name="profile_image" type="Sprite2D" parent="card_image"]
-position = Vector2(9.5129e-05, -440)
+position = Vector2(0, -450)
+texture = ExtResource("3_ukfue")
 
 [node name="right_text" type="RichTextLabel" parent="card_image"]
-offset_left = 40.0
+offset_left = 57.0
 offset_top = 463.0
 offset_right = 437.0
 offset_bottom = 690.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_xbt0c")
-theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/normal_font_size = 35
 
 [node name="left_text" type="RichTextLabel" parent="card_image"]
 offset_left = -420.0
@@ -28,7 +40,7 @@ offset_right = -43.0
 offset_bottom = 680.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_xbt0c")
-theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/normal_font_size = 35
 
 [node name="dialogue_text" type="RichTextLabel" parent="card_image"]
 offset_left = -417.0
@@ -47,19 +59,11 @@ offset_bottom = 690.0
 flat = true
 
 [node name="select_right" type="Button" parent="card_image"]
-offset_left = 37.0
-offset_top = 453.0
-offset_right = 447.0
-offset_bottom = 686.0
+offset_left = 36.6666
+offset_top = 456.667
+offset_right = 446.667
+offset_bottom = 689.667
 flat = true
 
-[node name="dialogue_manager" type="Node2D" parent="." node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text")]
-script = ExtResource("1_3jwg5")
-card_image = NodePath("../card_image")
-profile_image = NodePath("../card_image/profile_image")
-right_text = NodePath("../card_image/right_text")
-left_text = NodePath("../card_image/left_text")
-dialogue_text = NodePath("../card_image/dialogue_text")
-
-[connection signal="pressed" from="card_image/select_left" to="dialogue_manager" method="select_left"]
-[connection signal="pressed" from="card_image/select_right" to="dialogue_manager" method="select_right"]
+[connection signal="pressed" from="card_image/select_left" to="." method="select_left"]
+[connection signal="pressed" from="card_image/select_right" to="." method="select_right"]

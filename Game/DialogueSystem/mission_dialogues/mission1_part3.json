@@ -1,0 +1,146 @@
+{
+    "text30":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Istasyona girdiginde yedek guc ışıklarının hala devrede oldugunu goruyorsun. Fakat istasyon kapisinin esiginde, uzerlerine daha once gormedigin bir sembol kazinmis cesitli erzak kutulari mevcut.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text31",
+		"right_result":"text31"
+	},
+	"text31":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Ah hosgeldin Ranger, biz de tam yeni gelen yiyecek ikmalini istasyona tasiyorduk. Fuzyon cekirdegimizi bulabildin mi?",
+		"left_answer":"Evet, iste cekirdeginiz burada.",
+		"right_answer":"Evet, iste cekirdeginiz burada.",
+		"left_result":"text32",
+		"right_result":"text32"
+	},
+	"text32":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Cok tesekkurler Ranger, sana minnettariz. Sayende artik uretime tekrardan baslayabiliriz.",
+		"left_answer":"Bitir",
+		"right_answer":"Bu erzaklar tam olarak nereden geldi?",
+		"left_result":"text33",
+		"right_result":"text36"
+	},
+	"text33":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Onceki seferler gibi, Imparatorumuz bizden yardimini esirgemedi.",
+		"left_answer":"Gecen sefer yardimlarin yakinlardaki Istasyonlardan geldigini soylemistin.",
+		"right_answer":"Gecen sefer yardimlarin yakinlardaki Istasyonlardan geldigini soylemistin.",
+		"left_result":"text34",
+		"right_result":"text34"
+	},
+	"text34":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Oyle mi demistim? Onlardan gelen yardimlar da vardi tabii.",
+		"left_answer":"Ayrica yakinlarda herhangi bir Istasyona da rastlamadim.",
+		"right_answer":"Ayrica yakinlarda herhangi bir Istasyona da rastlamadim.",
+		"left_result":"text35",
+		"right_result":"text35"
+	},
+	"text35":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Belki Istasyonlar çok da yakinda degillerdir. Evet ben yanlis kelimeler kullandim sanirim.",
+		"left_answer":"Onemli olan hayatta kalmis olmaniz.",
+		"right_answer":"Bence yalan soyluyorsun.",
+		"left_result":"text36",
+		"right_result": "text37"
+	},
+	"text36":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Kesinlikle. Senin sayende uretimimize de devam edebilecegiz. Eski Tanrılar seni korusun Ranger.",
+		"left_answer":"Bitir",
+		"right_answer":"Bitir",
+		"left_result":"",
+		"right_result":""
+	},
+	"text37":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Directorun bir seyler sakladigini anliyorsun. Istasyonun Isyanci oldugundan suphelenip elini silahina dogru goturuyorsun.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text38",
+		"right_result":"text38"
+	},
+	"text38":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Hey tamam tamam, sakin ol Ranger. Bak, biz Isyanci degiliz, tamam mi? Sadece... Durumu sana en basindan anlatayim.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text39",
+		"right_result":"tex39"
+	},
+	"text39":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Cekirdegimizin calinmasi uzerinden 20 gun gecmisti, yiyecek stogumuz iki hafta oncesinde bitmisti bile, artik bir parca ekmek icin birbirimize saldiracak duruma gelmistik, ne Imparatorluk ne de diger Istasyonlardan yardim cagrilarimiza bir donus alabilmistik, sanki tum evren bizi unutmustu.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text40",
+		"right_result":"text40"
+	},
+	"text40":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Sonrasinda hicbir yerin ortasindan bir Adam geldi, artik dayanacak gucumuzun kalmadigi bir anda. Eski Tanrilara sukurler olsun, eger gelmeseydi neler olurdu tahmin edemiyorum bile. Bize kendisinin Eski Tanrilarin bir muridi oldugunu soyledi: evrenin dort bir kosesinde yardima muhtac tum insanlarin elinden tutmayi amac edinen bir topluluk.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text41",
+		"right_result":"text41"
+	},
+	"text41":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Yardim icin yaptigimiz broadcasti yakaladigini soyledi. Durumumuzu anlatinca bize yardim etmeyi kabul etti ve erzaklari sıgınaklarindan getirmek icin 4 adamimizi da yanina aldi ve yola ciktilar. Geri donduklerinde sadece 1 adamimiz geri Istasyona varabilmisti, cunku yoldayken korsanlarin saldirisina ugramislar. Kesinlikle bize saldiran o serefsiz korsanlarla ayni kisiler. En azindan yeterli erzakla donebildiler.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text42",
+		"right_result":"text42"
+	},
+	"text42":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Tum bu yardimin karsiliginda ise, Istasyondaki tum calisanlarla beraber Eski Tanrılara minnettarligimizi sergilemek icin bir rituel yapmak istedi. Bizi olumun pencesinden kurtarmasinin yaninda bu hicbirseydi. Ayrica boyle iyiliksever bir toplulugun parcasi olmanin kotu bir yanini da goremiyorum.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text43",
+		"right_result":"text43"
+	},
+	"text43":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Acikcasi rituel biraz... garip hissettirdi. Goz kapaklarimin agirlastigini hatirliyorum. Sanki rituelden sonra bir parca daha yaslanmis gibi hissettim. Ama bu muhtemelen onca sure dogru duzgun bir sey yememekten ve olumun caresizliginin kapimi calmasinin zihnimi yipratmasindan kaynakliydi.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text44",
+		"right_result":"text44"
+	},
+	"text44":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"Her neyse, artik bunlari dusunmenin manasi yok. Fuzyon cekirdegimizi geri getirdigine gore artik uretimimize devam edip tum bu olanlari arkamizda birakabiliriz. Tekrardan cok teskkurler Ranger, Eski Tanrilar seni korusun.",
+		"left_answer":"Bitir",
+		"right_answer":"Bitir",
+		"left_result":"text45",
+		"right_result":"text45"
+	},
+	"text45":{
+		"card_image":"card id",
+		"profile_image":"pp id",
+		"question":"GOREV TAMAMLANDI",
+		"left_answer":"inactive",
+		"right_answer":"inactive",
+		"left_result":"inactive",
+		"right_result":"inactive"
+	}
+}

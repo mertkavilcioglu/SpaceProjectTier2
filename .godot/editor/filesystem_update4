@@ -4,23 +4,11 @@ res://Game/Enemy/hitFlash.tres
 res://Menus/pause_menu.gdshader
 res://Game/Player/shockwaveShader.gdshader
 res://Game/Player/DeathChroma.gdshader
-<<<<<<< Updated upstream
-res://Game/Enemy/kamikaze.gd
-res://Game/game.tscn
-res://Game/Player/Character.tscn
-res://Game/Enemy/hunter.tscn
-res://Game/Enemy/hunter.gd
-res://Game/Player/laser.gd
-res://Game/Player/TrailEffectBlue.tscn
-res://Game/Player/Character.gd
-res://Game/Enemy/laser_enemy.gd
-=======
-res://Game/Enemy/kamikaze.tscn
-res://Game/Player/Character.tscn
-res://Menus/pause_menu.gd
-res://Game/DialogueSystem/dialogue.tscn
-res://Game/DialogueSystem/dialogue.gd
 res://Game/Stations/test_station.tscn
-res://Menus/pause_menu.tscn
+res://Game/DialogueSystem/dialogue.tscn
 res://Game/DialogueSystem/dialog_manager.gd
->>>>>>> Stashed changes
+res://Game/DialogueSystem/mission_dialogues/mission1_part1.json
+res://Menus/pause_menu.tscn
+res://Game/Stations/StationInteraction.gd
+res://Game/DialogueSystem/dialogue.gd
+res://Game/Player/Character.tscn

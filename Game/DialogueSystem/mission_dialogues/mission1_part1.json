@@ -1,0 +1,162 @@
+{
+	"text1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text1_500.png",
+		"question":"Dis kapinin acilmasini beklerken isiklarin kimi zaman gidip geldigini farkediyorsun. Kapinin acilmasi da normalden biraz uzun suruyor.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text2",
+		"right_result":"text2"
+	},
+	"text2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text2(baseCORRIDOR)_500.png",
+		"question":"Istasyonun kapisi açilidiginda yari karanlik bir koridor karsina cikiyor. Ortamin loslugunun sebebinin yedek gucun devreye girmesinden kaynakli oldugunu farkediyorsun. Analog isik metalden koridora normalde oldugundan daha issiz bir gorunum katiyor.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text3",
+		"right_result":"text3"
+	},
+	"text3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text3_500.png",
+		"question":"Etrafini gormeye calisirken sana dogru yaklasan ayak sesleri sessizligi bozuyor.",
+		"left_answer":"Silahini cek",
+		"right_answer":"Bekle",
+		"left_result":"text4",
+		"right_result":"text4"
+	},
+	"text4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text4_500.png",
+		"question":"Sakin ol yabanci. Bizler sadece muhendisiz, silahli degiliz.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text5",
+		"right_result":"text5"
+	},
+	"text5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text5_500.png",
+		"question":"Karanlik siluetler yavasca gorunur hale gelmeye basliyor. Gorunuslerinden muhendis olduklarini anliyorsun.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text6",
+		"right_result":"text6"
+	},
+	"text6":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text6_500.png",
+		"question":"Uniformandan anlasildiği üzere sen bir Ranger'sin. Eski Tanrilara sukurler olsun Impartorluk yardim cagrimizi duydu.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text7",
+		"right_result":"text7"
+	},
+	"text7":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text7_500.png",
+		"question":"Nahos karsilama icin ozur dileriz. Ben Director Nathan, bu istasyondan sorumlu kisiyim. Sizin icin daha iyi bir karsilama yapmak isterdik fakat gordugunuz gibi enerji kaynagimizla ilgili bazi sikintilarimiz var. Daha dogrusu ana enerji kaynagimiz olan fuzyon cekirdegimiz calindi. Fabrikamizdaki tum uretim durmus halde.",
+		"left_answer":"Calindi mi? Yoksa istasyonunzda bir devrimci casusu mu var?",
+		"right_answer":"Sanirim güvenklik ekipmanlarinizi gozden gecirmenizin vakti gelmis.",
+		"left_result":"text8",
+		"right_result":"text9"
+	},
+	"text8":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text8_500.png",
+		"question":"Bizler devrimci değiliz, eger bunu soruyorsan. Biz Imparatorlugumuzun geleceği icin calisan ve ureten bir istasyonuz. Evet, belki uretiklerimizden Imparatorluga gonderdiklerimizi cikarinca elimizde pek bir şey kalmiyor ama buna ragmen bu zamana kadar sadakatimizin sorgulanacagi bir tutum sergilemedik.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text10",
+		"right_result":"text10"
+	},
+	"text9":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text9_500.png",
+		"question":"Kabul ediyorum, belki güvenlik ekipmanlarimiz en yeni teknolojik urunler olmayabilirler ya da doyurabilecegimiz subay sayisi pek fazla olmayabilir, fakat elimizdeki sartlarla en iyisini yapmaya calisiyoruz.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text10",
+		"right_result":"text10"
+	},
+	"text10":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text10_500.png",
+		"question":"Sorunumuza donecek olursak, gectigimiz ay Uzay Korsanlari tarafindan saldiriya ugradik. En yakındaki Gozcu Istasyonundan bir uyari almamıstık bile. Iyi silahlanmıs, islerinin ehli gozuken bir gruptu. Karsi koyacak olursak bizi oldurmekle tehtid ettiler. Subaylarimiz elinden geleni yapti fakat bu hayatlarina mal oldu.",
+		"left_answer":"Buna uzuldum.",
+		"right_answer":"Sessiz Kal",
+		"left_result":"text11",
+		"right_result":"text11"
+	},
+	"text11":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text11_500.png",
+		"question":"Saglam adamlardi. Keske Istasyonu savunmak icin onlara yardım etseydik. Sanirim hayatta kalma icgudusu her zaman agir basiyor.",
+		"left_answer":"Bir ay boyunca enerjiniz olmadan nasıl hayatta kaldınız?",
+		"right_answer":"Kusura bakma ama korkakca davranmissiniz.",
+		"left_result":"text12",
+		"right_result":"text13"
+	},
+	"text12":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text12_500.png",
+		"question":"Ehm... pardon, ne demistin? Evet, hayatta kalma. Yakindaki Istasyonlardan oksijen ve yiyecek yardimi istedik.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text14",
+		"right_result":"text14"
+	},
+	"text13":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text13_500.png",
+		"question":"Hey, Imparatorlugun Istasyonu savunmamiz icin destek kuvvet saglamamasi bizim sucumuz degil, tamam mi?. Biz de boyle olmasini istemezdik.",
+		"left_answer":"Devam et",
+		"right_answer":"Devam et",
+		"left_result":"text14",
+		"right_result":"text14"
+	},
+	"text14":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text14_500.png",
+		"question":"Herneyse. Bize fuzyon cekirdegimizi getirmede yardim edecek misin Ranger?",
+		"left_answer":"Korsanlari bulup cekirdegi geri alacağım.",
+		"right_answer":"Uzgunum buna zamanim yok.",
+		"left_result":"text16",
+		"right_result":"text15"
+	},
+	"text15":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text15_500.png",
+		"question":"Oh, seni gorunce bize yardim edebilecegini dusunmustuk. Baska biri yardima gelene kadar hayatta kalmaya calisacagiz o halde.",
+		"left_answer":"Tekrar dusundum de, size yardim edecegim.",
+		"right_answer":"Ayril",
+		"left_result":"text16",
+		"right_result":""
+	},
+	"text16":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text16_500.png",
+		"question":"Ah çok tesekkurler Ranger, eger cekirdegimizi geri getirebilirsen sana sonsuza kadar minnettar kaliriz. Gelen raporlara gore korsanlarin yakinlarda bir sıginagi oldugundan süpheleniyoruz, bir goz atabilirsin.",
+		"left_answer":"Ayril",
+		"right_answer":"",
+		"left_result":"null",
+		"right_result":"null"
+	}
+}
