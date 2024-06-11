@@ -20,7 +20,7 @@ var calculatedRadius:int
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
 
 func _physics_process(delta):
-	pass#look_at(player.position)
+	look_at(player.position)
 	
 	
 var shoot_bas=false
