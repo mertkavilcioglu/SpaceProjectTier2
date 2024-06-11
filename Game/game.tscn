@@ -29,12 +29,45 @@ glow_blend_mode = 1
 
 [node name="Game" type="Node2D"]
 
-[node name="SpawnerTrigger2" parent="." instance=ExtResource("1_lb4w1")]
+[node name="SpawnerTriggers" type="Node2D" parent="."]
+
+[node name="SpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
 position = Vector2(5546, -3784)
 rotation = 0.96199
 scale = Vector2(21.6991, -94.5291)
 
-[node name="testtrigger" parent="." instance=ExtResource("1_lb4w1")]
+[node name="SpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(8987, 1991)
+rotation = 0.086848
+scale = Vector2(21.6991, -72.2469)
+
+[node name="SpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(17676, 7603)
+rotation = 1.01299
+scale = Vector2(21.6991, -72.2469)
+
+[node name="SpawnerTrigger9" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-6548, 9476)
+rotation = 2.40775
+scale = Vector2(21.6991, -72.2469)
+
+[node name="SpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(5648, 11571)
+scale = Vector2(-19.8772, 22.2816)
+
+[node name="SpawnerTrigger5" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(9550, 11571)
+scale = Vector2(-19.8772, 22.2816)
+
+[node name="SpawnerTrigger6" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(7597, 9599)
+scale = Vector2(-56.7572, 22.2816)
+
+[node name="SpawnerTrigger7" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(7597, 13547)
+scale = Vector2(-56.7572, 22.2816)
+
+[node name="testtrigger" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
 position = Vector2(191, -1)
 
 [node name="Background" parent="." instance=ExtResource("1_j43kv")]

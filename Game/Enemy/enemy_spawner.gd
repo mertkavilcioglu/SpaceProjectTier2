@@ -57,10 +57,8 @@ func _on_timer_2_timeout():
 	
 	
 func set_timer_autostart(isStarted: bool):
-	Timer1.autostart = isStarted
-	Timer2.autostart = isStarted
-	if isStarted:
-		Timer1.start()
-		Timer2.start()
+	if isStarted == true:
+		Timer1.start(10)
+		Timer2.start(0.5)
 
 	

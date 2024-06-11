@@ -29,9 +29,6 @@ func _physics_process(delta):
 	if !body_entered:
 		dialogue.hide()
 		
-	
-			
-
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Character":
@@ -39,10 +36,11 @@ func _on_area_2d_body_entered(body):
 		e_key_pressed_time = 0.0 
 		print("enter")
 
-		
 
 func _on_area_2d_body_exited(body):
+	print("exit")
 	if body.name == "Character":
 		body_entered = false
 		e_key_pressed_time = 0.0 
-		print("exit")
+
+
