@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgl160tuumy2c"]
+[gd_scene load_steps=5 format=3 uid="uid://bxouswost8ppp"]
 
-[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="1_66p3v"]
-[ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_ujcyk"]
-[ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_mb6jl"]
+[ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_kl3j7"]
+[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="2_u5iwm"]
+[ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_kr65m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsk7k"]
 radius = 123.911
 
 [node name="TestStation" type="Node2D"]
-script = ExtResource("1_ujcyk")
+script = ExtResource("1_kl3j7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_66p3v")
+texture = ExtResource("2_u5iwm")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -21,7 +21,7 @@ shape = SubResource("CircleShape2D_lsk7k")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="Dialogue" parent="CanvasLayer" instance=ExtResource("3_mb6jl")]
+[node name="Dialogue" parent="CanvasLayer" instance=ExtResource("3_kr65m")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
