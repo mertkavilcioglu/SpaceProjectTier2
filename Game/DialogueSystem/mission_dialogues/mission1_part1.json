@@ -4,6 +4,7 @@
 		"card_image":"res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png",
 		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text1_500.png",
 		"question":"Dis kapinin acilmasini beklerken isiklarin kimi zaman gidip geldigini farkediyorsun. Kapinin acilmasi da normalden biraz uzun suruyor.",
+		"monologue":"",
 		"left_answer":"Devam et",
 		"right_answer":"Devam et",
 		"left_result":"text2",
@@ -146,8 +147,7 @@
 		"question":"Oh, seni gorunce bize yardim edebilecegini dusunmustuk. Baska biri yardima gelene kadar hayatta kalmaya calisacagiz o halde.",
 		"left_answer":"Tekrar dusundum de, size yardim edecegim.",
 		"right_answer":"Ayril",
-		"left_result":"text16",
-		"right_result":""
+		"left_result":"text16"
 	},
 	"text16":
 	{
@@ -155,8 +155,6 @@
 		"profile_image":"res://Sprites/dialogue_sprites/mission_1_sprites/text16_500.png",
 		"question":"Ah çok tesekkurler Ranger, eger cekirdegimizi geri getirebilirsen sana sonsuza kadar minnettar kaliriz. Gelen raporlara gore korsanlarin yakinlarda bir sıginagi oldugundan süpheleniyoruz, bir goz atabilirsin.",
 		"left_answer":"Ayril",
-		"right_answer":"",
-		"left_result":"null",
-		"right_result":"null"
+		"right_answer":""
 	}
 }

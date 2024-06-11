@@ -1,10 +1,12 @@
-res://Game/game.tscn
+res://Game/DialogueSystem/dialogue.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Menus/pause_menu.gdshader
 res://Game/Player/shockwaveShader.gdshader
 res://Game/Player/DeathChroma.gdshader
+res://Game/game.tscn
 res://Game/Stations/test_station.tscn
+<<<<<<< Updated upstream
 res://Game/DialogueSystem/dialogue.tscn
 res://Menus/pause_menu.tscn
 res://Game/Player/Character.tscn
@@ -12,3 +14,15 @@ res://Game/Enemy/hulk.tscn
 res://Game/Enemy/hunterForHulk.tscn
 res://Game/Enemy/hulk.gd
 res://Game/Enemy/hunterForHulk.gd
+=======
+res://Menus/pause_menu.tscn
+res://Game/Player/Character.tscn
+res://Game/DialogueSystem/dialogue.gd
+res://Game/DialogueSystem/mission_dialogues/mission1_part1.json
+res://Game/Stations/StationInteraction.gd
+res://Game/Player/Character.gd
+res://Game/Economy/test_resource_planet.tscn
+res://Game/DialogueSystem/mission_dialogues/mission1_part2.json
+res://Game/DialogueSystem/mission_dialogues/mission1_part3.json
+res://Game/Economy/resource_ship.gd
+>>>>>>> Stashed changes

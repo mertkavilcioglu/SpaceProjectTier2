@@ -32,6 +32,7 @@ var MousePosition = null
 @onready var lasers=$"../Lasers"
 
 @export var deathParticle : PackedScene 
+@onready var on_dialogue = false
 @onready var isDead = false 
 @onready var shockwave = $ShockwaveAnimationPlayer
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
@@ -60,69 +61,74 @@ func _ready():
 
 func _process(delta): 
 	if (!isDead):
-		upgradeChecker()
-		if Input.is_action_pressed("Shoot"):
-			if !shoot_bas:
-				shoot_bas=true
-				shoot_laser()
-				await get_tree().create_timer(fireCD).timeout
-				shoot_bas=false
+		if (!on_dialogue):
+			upgradeChecker()
+			if Input.is_action_pressed("Shoot"):
+				if !shoot_bas:
+					shoot_bas=true
+					shoot_laser()
+					await get_tree().create_timer(fireCD).timeout
+					shoot_bas=false
 
 func _physics_process(delta): 
 	if(!isDead):
-		if BoostFuel <100:
-			BoostFuel += 20*delta
-			boostFuelChanged.emit()
-		
-		var Motion = Vector2()
-		Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-		Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
-		velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
-		velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
-		
-		if Input.is_action_pressed("Turbo"):
-			if BoostRefuel == false:
-				if BoostFuel <0:
-					BoostRefuel = true
-				if BoostFuel > 0:
-					if CanBoost == true:
-						MaxSpeed = Speed*4
-						velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
-						velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
-						sprite = $body
-						sprite2 = $wing
-						ghost_timer.start()
-						instance_ghost()
-						BoostFuel -= 20
-						boostFuelChanged.emit()
-						CanBoost = false
-						await get_tree().create_timer(0.2).timeout
-						ghost_timer.stop()
-					elif CanBoost == false:
-						MaxSpeed = Speed*2
-						if BoostFuel > 0:
-							BoostFuel -= 50*delta
-							boostFuelChanged.emit()
-						else: 
-							MaxSpeed = Speed
-				else:
-					MaxSpeed = Speed
-		else:
-			MaxSpeed = Speed
-			
-		if BoostRefuel == true:
-			if BoostFuel < 100:
-				BoostFuel += 50*delta
+		if(!on_dialogue):
+			if BoostFuel <100:
+				BoostFuel += 20*delta
 				boostFuelChanged.emit()
+			
+			var Motion = Vector2()
+			Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+			Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
+			velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
+			velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
+			
+			if Input.is_action_pressed("Turbo"):
+				if BoostRefuel == false:
+					if BoostFuel <0:
+						BoostRefuel = true
+					if BoostFuel > 0:
+						if CanBoost == true:
+							MaxSpeed = Speed*4
+							velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
+							velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
+							sprite = $body
+							sprite2 = $wing
+							ghost_timer.start()
+							instance_ghost()
+							BoostFuel -= 20
+							boostFuelChanged.emit()
+							CanBoost = false
+							await get_tree().create_timer(0.2).timeout
+							ghost_timer.stop()
+						elif CanBoost == false:
+							MaxSpeed = Speed*2
+							if BoostFuel > 0:
+								BoostFuel -= 50*delta
+								boostFuelChanged.emit()
+							else: 
+								MaxSpeed = Speed
+					else:
+						MaxSpeed = Speed
 			else:
-					BoostRefuel = false
-		if Input.is_action_just_released("Turbo"):
-			if BoostFuel > 20:
-				CanBoost = true
-		move_and_slide()
-		MousePosition = get_global_mouse_position()
-		look_at(MousePosition)
-		Cam.position = lerp(Cam.position, position, 5 * delta)
+				MaxSpeed = Speed
+				
+			if BoostRefuel == true:
+				if BoostFuel < 100:
+					BoostFuel += 50*delta
+					boostFuelChanged.emit()
+				else:
+						BoostRefuel = false
+			if Input.is_action_just_released("Turbo"):
+				if BoostFuel > 20:
+					CanBoost = true
+			move_and_slide()
+			MousePosition = get_global_mouse_position()
+			look_at(MousePosition)
+			Cam.position = lerp(Cam.position, position, 5 * delta)
+		elif(on_dialogue):
+			velocity.x = move_toward(velocity.x, 0 , Acceleration)
+			velocity.y = move_toward(velocity.y, 0 , Acceleration)
 	elif(isDead):
 		velocity.x = move_toward(velocity.x, 0 , Acceleration)
 		velocity.y = move_toward(velocity.y, 0 , Acceleration)
@@ -160,6 +166,11 @@ func shoot_laser():
 		if muzzle_flash3.is_playing():
 			muzzle_flash3.stop()
 		muzzle_flash3.play("muzzle_flash_anim")
+#****************DIALOGUE FUNCTION********************
+
+func ondialogue(dialogue_bool):
+	on_dialogue = dialogue_bool
+	
 	
 	
 #**************** UPGRADE FUNCTIONS *****************

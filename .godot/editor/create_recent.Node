@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 CollisionShape2D
 CollisionPolygon2D
+=======
+RichTextLabel
+>>>>>>> Stashed changes
 Node2D
 Node
 AnimationPlayer
@@ -10,5 +14,4 @@ CanvasLayer
 ColorRect
 Label
 TextEdit
-RichTextLabel
 Control
