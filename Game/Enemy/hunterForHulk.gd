@@ -48,7 +48,7 @@ func shoot_to_player():
 	var l = laser_scene.instantiate()
 	lasers.add_child(l)
 	l.global_position = muzzle1.global_position
-	l.rotation = rotation + PI/2
+	l.rotation = rotation + hulk.rotation + PI/2
 	emit_signal("laser_shot", l)
 	muzzle_flash.play("muzzle_flash_anim")
 		
