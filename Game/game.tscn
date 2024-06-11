@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=16 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
+[ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/spawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ddnjhsyy5bwau" path="res://Game/Stations/station_3.tscn" id="10_3l1ue"]
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
+[ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner.tscn" id="13_cv7xg"]
 
 [sub_resource type="Environment" id="Environment_v03uc"]
 background_mode = 3
@@ -27,6 +29,14 @@ glow_blend_mode = 1
 
 [node name="Game" type="Node2D"]
 
+[node name="SpawnerTrigger2" parent="." instance=ExtResource("1_lb4w1")]
+position = Vector2(5546, -3784)
+rotation = 0.96199
+scale = Vector2(21.6991, -94.5291)
+
+[node name="testtrigger" parent="." instance=ExtResource("1_lb4w1")]
+position = Vector2(191, -1)
+
 [node name="Background" parent="." instance=ExtResource("1_j43kv")]
 isScrolling = false
 
@@ -35,15 +45,16 @@ script = ExtResource("2_rdm3x")
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 
+[node name="EnemySpawner" parent="Character" instance=ExtResource("13_cv7xg")]
+top_level = true
+scale = Vector2(1.42857, 1.42857)
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Lasers" type="Node" parent="."]
 
 [node name="WorldEnvironment-forGlow" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v03uc")
-
-[node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
-position = Vector2(570, 122)
 
 [node name="test_resource" parent="." instance=ExtResource("5_612sc")]
 position = Vector2(363, 805)
@@ -54,16 +65,19 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("7_0q5w1")
 
 [node name="Station1" parent="." instance=ExtResource("8_3832t")]
-position = Vector2(8608, -2995)
+position = Vector2(9314, -6578)
 
 [node name="Station2" parent="." instance=ExtResource("9_xfbml")]
-position = Vector2(5790, 7932)
+position = Vector2(7640, 11574)
 
 [node name="Station3" parent="." instance=ExtResource("10_3l1ue")]
-position = Vector2(-6066, 18236)
+position = Vector2(-21089, 7246)
 
 [node name="Station4" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(16001, 19075)
+position = Vector2(2946, 30010)
 
 [node name="Station5" parent="." instance=ExtResource("12_fykuj")]
-position = Vector2(64498, 8081)
+position = Vector2(59762, 8721)
+
+[node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
+position = Vector2(-77, 265)

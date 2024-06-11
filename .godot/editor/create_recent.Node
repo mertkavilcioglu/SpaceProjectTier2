@@ -1,7 +1,10 @@
-Node2D
 CollisionShape2D
-CollisionPolygon2D
+Area2D
 Node
+Camera2D
+Timer
+Node2D
+CollisionPolygon2D
 AnimationPlayer
 Sprite2D
 RigidBody2D
@@ -9,6 +12,3 @@ ProgressBar
 CanvasLayer
 ColorRect
 Label
-TextEdit
-RichTextLabel
-Control

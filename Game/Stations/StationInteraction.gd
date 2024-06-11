@@ -6,21 +6,43 @@ extends Node2D
 @onready var resource_ship = $"../resource_ship"
 @onready var flag = true
 @onready var game = $".."
+
+var e_key_pressed_time = 0.0
+const E_KEY_PRESS_DURATION = 2.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
-
-func _on_area_2d_body_entered(body):
-	if(body.name == "Character"):
-		dialogue.show()
-		body_entered = true
+func _physics_process(delta):
+	if body_entered:
+		if Input.is_action_pressed("Interact"):
+			e_key_pressed_time += delta
+			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
+				dialogue.show()
+				
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false
+				
+	if !body_entered:
+		dialogue.hide()
 		
+	
+			
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Character":
+		body_entered = true
+		e_key_pressed_time = 0.0 
+		print("enter")
+
 		
-		
+
+func _on_area_2d_body_exited(body):
+	if body.name == "Character":
+		body_entered = false
+		e_key_pressed_time = 0.0 
+		print("exit")
