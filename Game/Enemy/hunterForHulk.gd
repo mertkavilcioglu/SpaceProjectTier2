@@ -1,19 +1,14 @@
-class_name Enemy
+class_name EnemyHH
 extends RigidBody2D
 
 signal hit() 
 var enemyHealth:int = 3 
 var playerDamage:int = 1 
 
-@onready var player = $"../Character"
-@export var enemyMaxSpeed: float = 400.0
-@export var radius = 200
+@onready var hulk = get_parent()
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
-var distanceToPlayer_x:int
-var distanceToPlayer_y:int
-var calculatedRadius:int
 
 var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 @onready var muzzle1=$Muzzle 
@@ -24,35 +19,28 @@ signal laser_shot(laser)
 @onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
 func _physics_process(delta):
-	look_at(player.position)
+	look_at(hulk.player.position)
 	
 	
 var shoot_bas=false
 
 func _process(delta): 
+	linear_velocity = hulk.linear_velocity
 	if !shoot_bas:
 		shoot_bas=true
 		shoot_to_player()
 		await get_tree().create_timer(0.5).timeout
 		shoot_bas=false
-		
-	var enemyMotion = Vector2()
-	var position = global_position.direction_to(player.global_position) # Player'ın pozisyonunu alır
-	
-	linear_velocity = position * enemyMaxSpeed
-	
-	if(reachPlayerMidRadius()):
-		#print(calculatedRadius)
-		linear_velocity = Vector2.ZERO
 
 func getHit(): 
 	emit_signal("hit") 
 	hit_flash_anim_player.play("hit_flash")
 	if enemyHealth > 0: 
-		enemyHealth -= player.damage 
+		enemyHealth -= hulk.player.damage 
 	if enemyHealth <= 0:
-		if(player.health < player.maxHealth):
-			player.health += playerRegen
+		hulk.hunters -= 1
+		if(hulk.player.health < hulk.player.maxHealth):
+			hulk.player.health += playerRegen
 		playParticleEffect()
 		queue_free()
 		
@@ -63,19 +51,6 @@ func shoot_to_player():
 	l.rotation = rotation + PI/2
 	emit_signal("laser_shot", l)
 	muzzle_flash.play("muzzle_flash_anim")
-	
-	
-func reachPlayerMidRadius():
-	distanceToPlayer_x = self.position.x - player.position.x
-	distanceToPlayer_y = self.position.y - player.position.y
-	
-	calculatedRadius = int(sqrt(int(pow(distanceToPlayer_x,2)) + int(pow(distanceToPlayer_y,2)))) # c^2 = a^2 + b^2
-	
-	if(calculatedRadius <= radius): 
-		return true
-	else:
-		return false
-	
 		
 func playParticleEffect():
 	var _particle = deathParticle.instantiate()

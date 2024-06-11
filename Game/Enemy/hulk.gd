@@ -1,13 +1,13 @@
-class_name Enemy
-extends RigidBody2D
+class_name EnemyH
+extends RigidBody2D 
 
 signal hit() 
-var enemyHealth:int = 3 
+var enemyHealth:int = 50
 var playerDamage:int = 1 
 
 @onready var player = $"../Character"
-@export var enemyMaxSpeed: float = 400.0
-@export var radius = 200
+@export var enemyMaxSpeed: float = 200.0
+@export var radius = 250
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
@@ -15,39 +15,29 @@ var distanceToPlayer_x:int
 var distanceToPlayer_y:int
 var calculatedRadius:int
 
-var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
-@onready var muzzle1=$Muzzle 
-signal laser_shot(laser)
-@onready var lasers=$"../Lasers"
+@onready var hunters:int = 3
 
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
-@onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
 
 func _physics_process(delta):
-	look_at(player.position)
+	pass#look_at(player.position)
 	
 	
 var shoot_bas=false
 
 func _process(delta): 
-	if !shoot_bas:
-		shoot_bas=true
-		shoot_to_player()
-		await get_tree().create_timer(0.5).timeout
-		shoot_bas=false
-		
+	hunterCheck()	
 	var enemyMotion = Vector2()
 	var position = global_position.direction_to(player.global_position) # Player'ın pozisyonunu alır
 	
 	linear_velocity = position * enemyMaxSpeed
 	
 	if(reachPlayerMidRadius()):
-		#print(calculatedRadius)
 		linear_velocity = Vector2.ZERO
 
 func getHit(): 
 	emit_signal("hit") 
-	hit_flash_anim_player.play("hit_flash")
+	#hit_flash_anim_player.play("hit_flash_k")
 	if enemyHealth > 0: 
 		enemyHealth -= player.damage 
 	if enemyHealth <= 0:
@@ -56,14 +46,6 @@ func getHit():
 		playParticleEffect()
 		queue_free()
 		
-func shoot_to_player():
-	var l = laser_scene.instantiate()
-	lasers.add_child(l)
-	l.global_position = muzzle1.global_position
-	l.rotation = rotation + PI/2
-	emit_signal("laser_shot", l)
-	muzzle_flash.play("muzzle_flash_anim")
-	
 	
 func reachPlayerMidRadius():
 	distanceToPlayer_x = self.position.x - player.position.x
@@ -84,3 +66,9 @@ func playParticleEffect():
 	_particle.emitting = true
 	get_tree().current_scene.add_child(_particle)
 	
+func hunterCheck():
+	if (hunters <= 0):
+		if(player.health < player.maxHealth):
+			player.health += playerRegen
+		playParticleEffect()
+		queue_free()

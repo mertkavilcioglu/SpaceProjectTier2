@@ -22,4 +22,14 @@ func _on_body_entered(body):
 		var enemy = body
 		enemy.getHit()
 		queue_free()
+		
+	if body is EnemyH:
+		var enemy = body
+		enemy.getHit()
+		queue_free()
+		
+	if body is EnemyHH:
+		var enemy = body
+		enemy.getHit()
+		queue_free()
 	

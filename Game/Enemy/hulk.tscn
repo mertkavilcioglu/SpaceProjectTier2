@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8hcd31fnjn1h"]
+
+[ext_resource type="Script" path="res://Game/Enemy/hulk.gd" id="1_g2ch8"]
+[ext_resource type="Texture2D" uid="uid://dnsi6cscy7oyt" path="res://icon.svg" id="1_vdp0k"]
+[ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_2slt7"]
+[ext_resource type="PackedScene" uid="uid://by464r5c4grus" path="res://Game/Enemy/hunterForHulk.tscn" id="4_g02ls"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lax2o"]
+size = Vector2(138, 340)
+
+[node name="Hulk" type="RigidBody2D"]
+script = ExtResource("1_g2ch8")
+deathParticle = ExtResource("2_2slt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_lax2o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.17357e-07, 9.54802)
+rotation = 1.5708
+scale = Vector2(2.56766, 1)
+texture = ExtResource("1_vdp0k")
+
+[node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Lasers" type="Node" parent="."]
+
+[node name="Hunter1" parent="." instance=ExtResource("4_g02ls")]
+position = Vector2(-112, -96)
+
+[node name="Hunter2" parent="." instance=ExtResource("4_g02ls")]
+position = Vector2(-112, 0)
+
+[node name="Hunter3" parent="." instance=ExtResource("4_g02ls")]
+position = Vector2(-112, 96)

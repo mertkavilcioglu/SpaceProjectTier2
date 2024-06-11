@@ -1,7 +1,9 @@
+CollisionShape2D
+CollisionPolygon2D
 Node2D
+Node
 AnimationPlayer
 Sprite2D
-CollisionShape2D
 RigidBody2D
 ProgressBar
 CanvasLayer
@@ -10,5 +12,3 @@ Label
 TextEdit
 RichTextLabel
 Control
-TextureRect
-HBoxContainer
