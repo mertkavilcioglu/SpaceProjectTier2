@@ -1,11 +1,9 @@
-res://Game/Enemy/spawner_trigger.tscn
+res://Game/game.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Menus/pause_menu.gdshader
 res://Game/Player/shockwaveShader.gdshader
 res://Game/Player/DeathChroma.gdshader
-res://Game/Enemy/spawner_trigger.gd
-res://Game/game.tscn
 res://Game/Stations/test_station.tscn
 res://Game/DialogueSystem/dialogue.tscn
 res://Menus/pause_menu.tscn
@@ -14,5 +12,8 @@ res://Game/Enemy/hulk.tscn
 res://Game/Enemy/hunterForHulk.tscn
 res://Game/Stations/station_1.tscn
 res://Game/Enemy/enemy_spawner.tscn
-res://Game/Enemy/enemy_spawner.gd
-res://Game/Stations/StationInteraction.gd
+res://Game/Enemy/spawner_trigger.tscn
+res://Game/Stations/station_2.tscn
+res://Game/Stations/station_3.tscn
+res://Game/Stations/station_4.tscn
+res://Game/Stations/station_5.tscn

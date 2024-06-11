@@ -4,7 +4,7 @@ var choise = randi_range(1,4)
 var choise2 
 
 @onready var Timer1 = $Timer
-@onready var Timer2 = $Timer
+@onready var Timer2 = $SpawnCoolDown
 
 func _ready():
 	set_timer_autostart(false)
@@ -57,8 +57,15 @@ func _on_timer_2_timeout():
 	
 	
 func set_timer_autostart(isStarted: bool):
-	if isStarted == true:
-		Timer1.start(10)
-		Timer2.start(0.5)
+	Timer1.autostart = isStarted
+	Timer2.autostart = isStarted
+	
+	if isStarted:
+		Timer1.start()
+		Timer2.start()
+		
+	if !isStarted:
+		Timer1.stop()
+		Timer2.stop()
 
 	
