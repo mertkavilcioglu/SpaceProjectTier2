@@ -27,10 +27,13 @@ texture = ExtResource("1_vdp0k")
 [node name="Lasers" type="Node" parent="."]
 
 [node name="Hunter1" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(-112, -96)
+visible = false
+position = Vector2(34, -98)
 
 [node name="Hunter2" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(-112, 0)
+visible = false
+position = Vector2(39, 0)
 
 [node name="Hunter3" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(-112, 96)
+visible = false
+position = Vector2(39, 96)
