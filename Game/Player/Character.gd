@@ -32,7 +32,7 @@ var MousePosition = null
 @onready var lasers=$"../Lasers"
 
 @export var deathParticle : PackedScene 
-@onready var on_dialogue = false
+@export var on_dialogue = false
 @onready var isDead = false 
 @onready var shockwave = $ShockwaveAnimationPlayer
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer

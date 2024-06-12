@@ -99,12 +99,15 @@ script = ExtResource("7_0q5w1")
 
 [node name="Station1" parent="." instance=ExtResource("8_3832t")]
 position = Vector2(9314, -6578)
+station_id = 1
 
 [node name="Station2" parent="." instance=ExtResource("9_xfbml")]
 position = Vector2(7640, 11574)
+station_id = 2
 
 [node name="Station3" parent="." instance=ExtResource("10_3l1ue")]
 position = Vector2(-21089, 7246)
+station_id = 3
 
 [node name="Station4" parent="." instance=ExtResource("11_og44a")]
 position = Vector2(2946, 30010)

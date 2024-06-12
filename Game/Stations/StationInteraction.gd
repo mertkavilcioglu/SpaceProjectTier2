@@ -6,13 +6,26 @@ extends Node2D
 @onready var resource_ship = $"../resource_ship"
 @onready var flag = true
 @onready var game = $".."
-
+@onready var character = $"../Character"
+@export var station_id: int
+var dialogue_path:String
+var text_id:String
 var e_key_pressed_time = 0.0
 const E_KEY_PRESS_DURATION = 2.0
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if station_id == 1:
+		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		text_id = "text1"
+	elif station_id == 2:
+		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part2.json"
+		text_id = "text2"
+	elif station_id == 3:
+		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
+		text_id ="text3"
+func _process(delta):
+	if dialogue_screen.character_on_dialogue == false and character.on_dialogue == true:
+			character.ondialogue(false)
 
 
 func _physics_process(delta):
@@ -20,7 +33,10 @@ func _physics_process(delta):
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
 			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
+				dialogue_screen.dialogue("res://Game/DialogueSystem/mission_dialogues/mission1_part1.json","text1")
 				dialogue.show()
+				character.ondialogue(true)
+				
 				
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
