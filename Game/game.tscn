@@ -117,3 +117,4 @@ position = Vector2(59762, 8721)
 
 [node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
 position = Vector2(-77, 265)
+station_id = 2

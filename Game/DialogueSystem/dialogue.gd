@@ -9,11 +9,11 @@ var character_on_dialogue = false
 var dialogues
 var current_dialogue
 
-func ondialogue(if_boolean):
-	character_on_dialogue = if_boolean
+func _process(delta):
+	if visible == true:
+		character_on_dialogue = true
 	
 func dialogue(dialogue_path,text_name):
-	ondialogue(true)
 	dialogues = load_dialogue(dialogue_path)
 	current_dialogue =  dialogues[text_name]
 	update_card()
@@ -36,7 +36,7 @@ func select_left():
 		update_card()
 	else:
 		hide()
-		ondialogue(false)
+		character_on_dialogue = false
 	
 func select_right():
 	if "right_result" in current_dialogue:
@@ -44,4 +44,4 @@ func select_right():
 		update_card()
 	else:
 		hide()
-		ondialogue(false)
+		character_on_dialogue = false

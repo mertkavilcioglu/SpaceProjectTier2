@@ -19,25 +19,23 @@ func _ready():
 		text_id = "text1"
 	elif station_id == 2:
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part2.json"
-		text_id = "text2"
+		text_id = "text17"
 	elif station_id == 3:
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
-		text_id ="text3"
+		text_id ="text30"
 func _process(delta):
-	if dialogue_screen.character_on_dialogue == false and character.on_dialogue == true:
-			character.ondialogue(false)
-
+	if character.on_dialogue == true and dialogue_screen.character_on_dialogue == false:
+		character.on_dialogue = false
 
 func _physics_process(delta):
 	if body_entered:
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
 			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
-				dialogue_screen.dialogue("res://Game/DialogueSystem/mission_dialogues/mission1_part1.json","text1")
+				dialogue_screen.dialogue(dialogue_path,text_id)
 				dialogue.show()
-				character.ondialogue(true)
-				
-				
+				character.on_dialogue = true
+					
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false

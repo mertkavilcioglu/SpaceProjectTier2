@@ -166,13 +166,7 @@ func shoot_laser():
 		if muzzle_flash3.is_playing():
 			muzzle_flash3.stop()
 		muzzle_flash3.play("muzzle_flash_anim")
-#****************DIALOGUE FUNCTION********************
 
-func ondialogue(dialogue_bool):
-	on_dialogue = dialogue_bool
-	
-	
-	
 #**************** UPGRADE FUNCTIONS *****************
 func LevelUp():
 	level_counter+=1
