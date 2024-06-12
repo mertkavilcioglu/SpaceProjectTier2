@@ -1,17 +1,14 @@
-<<<<<<< Updated upstream
+ColorRect
+CanvasLayer
 CollisionShape2D
 CollisionPolygon2D
-=======
 RichTextLabel
->>>>>>> Stashed changes
 Node2D
 Node
 AnimationPlayer
 Sprite2D
 RigidBody2D
 ProgressBar
-CanvasLayer
-ColorRect
 Label
 TextEdit
 Control

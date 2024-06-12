@@ -1,10 +1,6 @@
-res://Menus/main_menu.tscn
+res://Game/game.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
-res://Game/game.tscn
-res://Game/Stations/station_1.tscn
-res://Game/Player/Character.tscn
-res://Game/DialogueSystem/dialogue.tscn
-res://Game/Stations/StationInteraction.gd
-res://Game/Player/Character.gd
-res://Game/DialogueSystem/dialogue.gd
+res://Menus/main_menu.tscn
+res://Menus/background.tscn
+res://Game/PlayerVignette.gdshader
