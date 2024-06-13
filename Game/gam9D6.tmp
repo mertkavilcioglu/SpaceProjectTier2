@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=22 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
-[ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
+[ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/spawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
@@ -9,14 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
 [ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
 [ext_resource type="Script" path="res://Game/Economy/resource_ship.gd" id="7_0q5w1"]
-[ext_resource type="PackedScene" uid="uid://bakkhny4k2by4" path="res://Game/Enemy/enemy_spawner_MED.tscn" id="7_2djki"]
 [ext_resource type="PackedScene" uid="uid://b8nwiicw3w1ck" path="res://Game/Stations/station_1.tscn" id="8_3832t"]
-[ext_resource type="PackedScene" uid="uid://bhvmbkkb0hd00" path="res://Game/Enemy/enemy_spawner_HIGH.tscn" id="8_txakh"]
 [ext_resource type="PackedScene" uid="uid://bxouswost8ppp" path="res://Game/Stations/station_2.tscn" id="9_xfbml"]
 [ext_resource type="PackedScene" uid="uid://ddnjhsyy5bwau" path="res://Game/Stations/station_3.tscn" id="10_3l1ue"]
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
-[ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
+[ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner.tscn" id="13_cv7xg"]
 [ext_resource type="Texture2D" uid="uid://cdmc4v6d8d10h" path="res://Sprites/mission_vector.png" id="16_a5y30"]
 [ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
 
@@ -123,11 +121,9 @@ grow_vertical = 2
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 material = SubResource("ShaderMaterial_k7x8h")
 
-[node name="SpawnerLOW" parent="Character" instance=ExtResource("13_cv7xg")]
-
-[node name="SpawnerMED" parent="Character" instance=ExtResource("7_2djki")]
-
-[node name="SpawnerHIGH" parent="Character" instance=ExtResource("8_txakh")]
+[node name="EnemySpawner" parent="Character" instance=ExtResource("13_cv7xg")]
+top_level = true
+scale = Vector2(1.42857, 1.42857)
 
 [node name="Enemies" type="Node" parent="."]
 

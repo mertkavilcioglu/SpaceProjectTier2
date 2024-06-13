@@ -5,7 +5,7 @@ signal hit()
 var enemyHealth:int = 3 
 var playerDamage:int = 1 
 
-@onready var player = $"../Character"
+@onready var player = get_parent().get_parent()
 @export var enemyMaxSpeed: float = 500.0
 @export var radius = 75
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #

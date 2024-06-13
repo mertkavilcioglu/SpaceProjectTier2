@@ -9,6 +9,7 @@
 size = Vector2(138, 340)
 
 [node name="Hulk" type="RigidBody2D"]
+top_level = true
 script = ExtResource("1_g2ch8")
 deathParticle = ExtResource("2_2slt7")
 

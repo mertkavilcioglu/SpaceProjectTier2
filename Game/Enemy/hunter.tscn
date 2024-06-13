@@ -91,6 +91,7 @@ _data = {
 }
 
 [node name="Hunter" type="RigidBody2D"]
+top_level = true
 script = ExtResource("1_6hhyi")
 deathParticle = ExtResource("2_pxmgi")
 

@@ -2,19 +2,35 @@ extends Node2D
 
 var choise = randi_range(1,4)
 var choise2 
+var enemyType
+var enemy
 
-@onready var Timer1 = $Timer
+@onready var Timer1 = $RandomTimer
 @onready var Timer2 = $SpawnCoolDown
-
+@onready var waveTimer = $WaveTimer
+@onready var spawnerCD = $SpawnerCD
+@onready var canSpawn:bool = true
+@onready var isSpawned:bool = false
+@onready var isStopped:bool = false
+	
 func _ready():
-	set_timer_autostart(false)
+	pass
 
 func _on_timer_timeout():
 	choise = randi_range(1,4)
 
 func _on_timer_2_timeout():
-	var enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
-	add_child(enemy)
+	enemyType = randi_range(1,10)
+	if enemyType <= 5:
+		enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+		add_child(enemy)
+	elif enemyType <= 9 and enemyType >= 6:
+		enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+		add_child(enemy)
+	elif enemyType == 10:
+		enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+		add_child(enemy)
+				
 	var randx1 = randi_range(0,575)
 	var randx2 = randi_range(-575,575)
 	var randx3 = randi_range(-575,0)
@@ -56,16 +72,34 @@ func _on_timer_2_timeout():
 	enemy.position = enemy_position
 	
 	
-func set_timer_autostart(isStarted: bool):
-	Timer1.autostart = isStarted
-	Timer2.autostart = isStarted
-	
-	if isStarted:
-		Timer1.start()
-		Timer2.start()
-		
-	if !isStarted:
-		Timer1.stop()
-		Timer2.stop()
+func set_timer_autostart(isStarted: bool): # this func is no longer in need a bool parameter.
+	#print("spawned")
+	if canSpawn:
+		if !isSpawned:
+			Timer1.autostart = true
+			Timer2.autostart = true
+			Timer1.start()
+			Timer2.start()
+			waveTimer.start()
+			isSpawned = true
+	else:
+		if !isStopped:
+			Timer1.autostart = false
+			Timer2.autostart = false
+			Timer1.stop()
+			Timer2.stop()
+			isStopped = true
 
-	
+
+func _on_wave_timer_timeout():
+	#print("stopped")
+	canSpawn = false
+	set_timer_autostart(false)
+	spawnerCD.start()
+
+
+func _on_spawner_cd_timeout():
+	#print("spawner is active again")
+	canSpawn = true
+	isSpawned = false
+	isStopped = false

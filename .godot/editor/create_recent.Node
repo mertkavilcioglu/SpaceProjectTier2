@@ -1,3 +1,4 @@
+Timer
 Sprite2D
 ColorRect
 CanvasLayer
@@ -11,4 +12,3 @@ RigidBody2D
 ProgressBar
 Label
 TextEdit
-Control

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://q2ko4ucq1wi3"]
+
+[ext_resource type="Script" path="res://Game/Enemy/enemy_spawner_LOW.gd" id="1_ihxq6"]
+
+[node name="EnemySpawnerLOW" type="Node2D"]
+script = ExtResource("1_ihxq6")
+
+[node name="RandomTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="SpawnCoolDown" type="Timer" parent="."]
+
+[node name="WaveTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="SpawnerCD" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="Lasers" type="Node" parent="."]
+
+[connection signal="timeout" from="RandomTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnCoolDown" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
+[connection signal="timeout" from="SpawnerCD" to="." method="_on_spawner_cd_timeout"]

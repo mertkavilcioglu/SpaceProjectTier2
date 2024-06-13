@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var spawner = $"../../Character/EnemySpawner"
+@onready var spawner = $"../../Character/SpawnerMED"
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
