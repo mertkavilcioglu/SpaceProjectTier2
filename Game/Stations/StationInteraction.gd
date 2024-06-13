@@ -23,9 +23,9 @@ func _ready():
 	elif station_id == 3:
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
 		text_id ="text30"
+
 func _process(delta):
-	if character.on_dialogue == true and dialogue_screen.character_on_dialogue == false:
-		character.on_dialogue = false
+	pass
 
 func _physics_process(delta):
 	if body_entered:
@@ -33,12 +33,11 @@ func _physics_process(delta):
 			e_key_pressed_time += delta
 			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
 				if character.enemy_nearby == false:
-					print("can open dialogue")
 					dialogue_screen.dialogue(dialogue_path,text_id)
 					dialogue.show()
 					character.on_dialogue = true
 				else:
-					print("cannot open dialogue")	
+					pass
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false

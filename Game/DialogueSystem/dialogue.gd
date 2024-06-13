@@ -5,6 +5,7 @@ extends Node2D
 @export var right_text : RichTextLabel
 @export var left_text : RichTextLabel
 @export var dialogue_text : RichTextLabel
+@onready var station = get_parent().get_parent()
 var character_on_dialogue = false
 var dialogues
 var current_dialogue
@@ -37,6 +38,7 @@ func select_left():
 	else:
 		hide()
 		character_on_dialogue = false
+		station.character.on_dialogue = false
 	
 func select_right():
 	if "right_result" in current_dialogue:
@@ -45,3 +47,4 @@ func select_right():
 	else:
 		hide()
 		character_on_dialogue = false
+		station.character.on_dialogue = false

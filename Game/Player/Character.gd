@@ -74,16 +74,16 @@ func _process(delta):
 					shoot_laser()
 					await get_tree().create_timer(fireCD).timeout
 					shoot_bas=false
-	if is_enemy_nearby() == true:
-		#shader_animation.play("enemy_nearby_true")
+	if is_enemy_nearby() == true and enemy_nearby== false:
+		shader_animation.play("enemy_nearby_true")
 		print(enemy_nearby)
 		enemy_nearby = true
 		canvaslayer2.visible = true
-	elif is_enemy_nearby() == false:
-		#shader_animation.play("enemy_nearby_false")
+	elif is_enemy_nearby() == false and enemy_nearby == true:
+		shader_animation.play("enemy_nearby_false")
 		print(enemy_nearby)
 		enemy_nearby = false
-		canvaslayer2.visible = false
+		#canvaslayer2.visible = false
 		
 		
 func is_enemy_nearby() -> bool:

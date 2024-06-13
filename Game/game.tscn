@@ -40,44 +40,24 @@ shader_parameter/SOFTNESS = 0.55
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s61b3"]
 shader = ExtResource("5_ufmhb")
 shader_parameter/player_position = Vector2(0.5, 0.5)
-shader_parameter/color = Color(0.0431373, 0, 0, 0)
+shader_parameter/color = Color(0.0431373, 0, 0, 1)
 shader_parameter/MULTIPLIER = 0.75
 shader_parameter/SCALE = 0.95
-shader_parameter/SOFTNESS = 0.55
-
-[sub_resource type="Animation" id="Animation_h1l5a"]
-resource_name = "new_animation"
-length = 2.0
+shader_parameter/SOFTNESS = 5.0
 
 [sub_resource type="Animation" id="Animation_f50q7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.0431373, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_3ha08"]
-resource_name = "enemy_nearby_true"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.0431373, 0, 0, 0), Color(0.0431373, 0, 0, 1)]
+"values": [5.0]
 }
 
 [sub_resource type="Animation" id="Animation_0chfe"]
@@ -86,15 +66,35 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0431373, 0, 0, 1), Color(0.0431373, 0, 0, 0)]
+"values": [1.0, 3.0]
 }
+
+[sub_resource type="Animation" id="Animation_3ha08"]
+resource_name = "enemy_nearby_true"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_h1l5a"]
+resource_name = "new_animation"
+length = 2.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_exncb"]
 _data = {
@@ -247,7 +247,7 @@ position = Vector2(59762, 8721)
 
 [node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
 position = Vector2(-77, 265)
-station_id = 2
+station_id = 1
 
 [node name="mission_vector" type="Sprite2D" parent="."]
 scale = Vector2(0.05, 0.05)
