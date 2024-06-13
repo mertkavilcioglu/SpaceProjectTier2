@@ -52,6 +52,11 @@ var sprite2
 @onready var muzzle_flash2 = $Muzzle2/MuzzleFlashAnimationPlayer
 @onready var muzzle_flash3 = $Muzzle3/MuzzleFlashAnimationPlayer
 
+@onready var enemy_nearby_area = $enemy_nearby_area
+var enemy_nearby:bool = false
+@onready var shader_animation = $"../Camera2D/CanvasLayer2/fade_animation"
+@onready var canvaslayer2 = $"../Camera2D/CanvasLayer2"
+
 func _ready():
 	health = maxHealth
 	shockwave.play("RESET")
@@ -69,6 +74,25 @@ func _process(delta):
 					shoot_laser()
 					await get_tree().create_timer(fireCD).timeout
 					shoot_bas=false
+	if is_enemy_nearby() == true:
+		#shader_animation.play("enemy_nearby_true")
+		print(enemy_nearby)
+		enemy_nearby = true
+		canvaslayer2.visible = true
+	elif is_enemy_nearby() == false:
+		#shader_animation.play("enemy_nearby_false")
+		print(enemy_nearby)
+		enemy_nearby = false
+		canvaslayer2.visible = false
+		
+		
+func is_enemy_nearby() -> bool:
+	for body in enemy_nearby_area.get_overlapping_bodies():
+		if body is Enemy or body is EnemyH or body is EnemyHH or body is EnemyK:
+			return true
+			
+	return false
+
 
 func _physics_process(delta): 
 	if(!isDead):
@@ -286,3 +310,4 @@ func playParticleEffect():
 	_particle.rotation = global_rotation
 	_particle.emitting = true
 	get_tree().current_scene.add_child(_particle)
+

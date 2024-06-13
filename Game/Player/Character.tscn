@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=42 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -231,6 +231,9 @@ _data = {
 resource_local_to_scene = true
 shader = ExtResource("15_0p2tx")
 shader_parameter/ca_strength = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yab1j"]
+radius = 7953.48
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -700,6 +703,11 @@ player = NodePath("../..")
 
 [node name="DieMenu" parent="CanvasForChroma" instance=ExtResource("14_m4ht6")]
 visible = false
+
+[node name="enemy_nearby_area" type="Area2D" parent="."]
+
+[node name="enemy_nearby_collision" type="CollisionShape2D" parent="enemy_nearby_area"]
+shape = SubResource("CircleShape2D_yab1j")
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]

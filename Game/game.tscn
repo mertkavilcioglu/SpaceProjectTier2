@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=31 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
@@ -7,6 +7,7 @@
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
 [ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
+[ext_resource type="Shader" path="res://Game/game.gdshader" id="5_ufmhb"]
 [ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
 [ext_resource type="Script" path="res://Game/Economy/resource_ship.gd" id="7_0q5w1"]
 [ext_resource type="PackedScene" uid="uid://bakkhny4k2by4" path="res://Game/Enemy/enemy_spawner_MED.tscn" id="7_2djki"]
@@ -35,6 +36,73 @@ shader_parameter/color = Color(0, 0, 0, 1)
 shader_parameter/MULTIPLIER = 0.75
 shader_parameter/SCALE = 0.95
 shader_parameter/SOFTNESS = 0.55
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s61b3"]
+shader = ExtResource("5_ufmhb")
+shader_parameter/player_position = Vector2(0.5, 0.5)
+shader_parameter/color = Color(0.0431373, 0, 0, 0)
+shader_parameter/MULTIPLIER = 0.75
+shader_parameter/SCALE = 0.95
+shader_parameter/SOFTNESS = 0.55
+
+[sub_resource type="Animation" id="Animation_h1l5a"]
+resource_name = "new_animation"
+length = 2.0
+
+[sub_resource type="Animation" id="Animation_f50q7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0431373, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ha08"]
+resource_name = "enemy_nearby_true"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0431373, 0, 0, 0), Color(0.0431373, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0chfe"]
+resource_name = "enemy_nearby_false"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0431373, 0, 0, 1), Color(0.0431373, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_exncb"]
+_data = {
+"RESET": SubResource("Animation_f50q7"),
+"enemy_nearby_false": SubResource("Animation_0chfe"),
+"enemy_nearby_true": SubResource("Animation_3ha08"),
+"new_animation": SubResource("Animation_h1l5a")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k7x8h"]
 shader = ExtResource("3_mg8ni")
@@ -119,6 +187,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
+
+[node name="enemy_nearby" type="ColorRect" parent="Camera2D/CanvasLayer2"]
+material = SubResource("ShaderMaterial_s61b3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fade_animation" type="AnimationPlayer" parent="Camera2D/CanvasLayer2"]
+libraries = {
+"": SubResource("AnimationLibrary_exncb")
+}
 
 [node name="Character" parent="." instance=ExtResource("2_eeww8")]
 material = SubResource("ShaderMaterial_k7x8h")

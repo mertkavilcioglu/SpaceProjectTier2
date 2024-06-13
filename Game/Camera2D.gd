@@ -4,7 +4,7 @@ extends Camera2D
 var prev_speed = 0.0
 var current_speed = 0.0
 var current_acceleration = 0.0
-
+@onready var canvaslayer2 = get_node("CanvasLayer2")
 
 	
 func _process(delta):

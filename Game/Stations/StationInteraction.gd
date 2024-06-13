@@ -32,10 +32,13 @@ func _physics_process(delta):
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
 			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
-				dialogue_screen.dialogue(dialogue_path,text_id)
-				dialogue.show()
-				character.on_dialogue = true
-					
+				if character.enemy_nearby == false:
+					print("can open dialogue")
+					dialogue_screen.dialogue(dialogue_path,text_id)
+					dialogue.show()
+					character.on_dialogue = true
+				else:
+					print("cannot open dialogue")	
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false
