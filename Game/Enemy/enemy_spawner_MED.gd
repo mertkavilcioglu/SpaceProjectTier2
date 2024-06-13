@@ -50,32 +50,32 @@ func _on_timer_2_timeout():
 	
 	if choise == 1:
 		if choise2 == 1:
-			enemy_position = Vector2(posX+randx1,posY+325)
+			enemy_position = Vector2(posX+randx1,posY+1500)
 		elif choise2 == 2:
-			enemy_position = Vector2(posX+575,posY+randy1)
+			enemy_position = Vector2(posX+2500,posY+randy1)
 		elif choise2 == 3:
-			enemy_position = Vector2(posX+randx1,posY+-325)
+			enemy_position = Vector2(posX+randx1,posY+-1500)
 	elif choise == 2:
 		if choise2 == 1:
-			enemy_position = Vector2(posX+575,posY+randy2)
+			enemy_position = Vector2(posX+2500,posY+randy2)
 		elif choise2 == 2:
-			enemy_position = Vector2(posX+randx2,posY+-325)
+			enemy_position = Vector2(posX+randx2,posY+-1500)
 		elif choise2 == 3:
-			enemy_position = Vector2(posX+-575,posY+randy2)
+			enemy_position = Vector2(posX+-2500,posY+randy2)
 	elif choise == 3:
 		if choise2 == 1:
-			enemy_position = Vector2(posX+randx3,posY+-325)
+			enemy_position = Vector2(posX+randx3,posY+-1500)
 		elif choise2 == 2:
-			enemy_position = Vector2(posX+-575,posY+randy1)
+			enemy_position = Vector2(posX+-2500,posY+randy1)
 		elif choise2 == 3:
-			enemy_position = Vector2(posX+randx3,posY+325)
+			enemy_position = Vector2(posX+randx3,posY+1500)
 	elif choise == 4:
 		if choise2 == 1:
-			enemy_position = Vector2(posX+-575,posY+randy3)
+			enemy_position = Vector2(posX+-2500,posY+randy3)
 		elif choise2 == 2:
-			enemy_position = Vector2(posX+randx2,posY+325)
+			enemy_position = Vector2(posX+randx2,posY+1500)
 		elif choise2 == 3:
-			enemy_position = Vector2(posX+575,posY+randy3)
+			enemy_position = Vector2(posX+2500,posY+randy3)
 	enemy.position = enemy_position
 	
 	
