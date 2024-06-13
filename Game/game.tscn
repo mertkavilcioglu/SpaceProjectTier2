@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=22 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/spawner_trigger.tscn" id="1_lb4w1"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner.tscn" id="13_cv7xg"]
+[ext_resource type="Texture2D" uid="uid://cdmc4v6d8d10h" path="res://Sprites/mission_vector.png" id="16_a5y30"]
+[ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
 shader = ExtResource("3_mg8ni")
@@ -159,3 +161,8 @@ position = Vector2(59762, 8721)
 [node name="TestStation" parent="." instance=ExtResource("4_0au0s")]
 position = Vector2(-77, 265)
 station_id = 2
+
+[node name="mission_vector" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("16_a5y30")
+script = ExtResource("17_c4i5l")

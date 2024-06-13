@@ -1,6 +1,7 @@
-res://Game/game.tscn
+res://Menus/main_menu.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
-res://Menus/main_menu.tscn
-res://Menus/background.tscn
 res://Game/PlayerVignette.gdshader
+res://Game/game.tscn
+res://Menus/background.tscn
+res://Game/mission_vector.gd

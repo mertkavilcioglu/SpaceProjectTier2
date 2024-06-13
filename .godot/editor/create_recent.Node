@@ -1,3 +1,4 @@
+Sprite2D
 ColorRect
 CanvasLayer
 CollisionShape2D
@@ -6,7 +7,6 @@ RichTextLabel
 Node2D
 Node
 AnimationPlayer
-Sprite2D
 RigidBody2D
 ProgressBar
 Label
