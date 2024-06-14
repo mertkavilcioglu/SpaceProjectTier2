@@ -9,6 +9,7 @@ script = ExtResource("1_ihxq6")
 wait_time = 10.0
 
 [node name="SpawnCoolDown" type="Timer" parent="."]
+wait_time = 2.0
 
 [node name="WaveTimer" type="Timer" parent="."]
 wait_time = 10.0

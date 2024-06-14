@@ -6,8 +6,8 @@ var enemyHealth:int = 50
 var playerDamage:int = 1 
 
 @onready var player = get_parent().get_parent()
-@export var enemyMaxSpeed: float = 200.0
-@export var radius = 250
+@export var enemyMaxSpeed: float = 500.0
+@export var radius = 600
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
@@ -42,7 +42,7 @@ func getHit():
 		enemyHealth -= player.damage 
 	if enemyHealth <= 0:
 		if(player.health < player.maxHealth):
-			player.health += playerRegen
+			player.addHealth(playerRegen)
 		playParticleEffect()
 		queue_free()
 		
@@ -59,6 +59,7 @@ func reachPlayerMidRadius():
 		return false
 	
 		
+
 func playParticleEffect():
 	var _particle = deathParticle.instantiate()
 	_particle.position = global_position

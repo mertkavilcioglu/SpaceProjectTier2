@@ -61,10 +61,12 @@ func _ready():
 	health = maxHealth
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
+	shader_animation.play("RESET")
 	boostFuelChanged.emit()
 	healthChanged.emit()
 
 func _process(delta): 
+	print(health)
 	if (!isDead):
 		if (!on_dialogue):
 			upgradeChecker()
@@ -108,19 +110,21 @@ func _physics_process(delta):
 			velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
 			
 			if Input.is_action_pressed("Turbo"):
+				if BoostFuel >= 100:
+					CanBoost = true
 				if BoostRefuel == false:
 					if BoostFuel <0:
 						BoostRefuel = true
 					if BoostFuel > 0:
 						if CanBoost == true:
-							MaxSpeed = Speed*4
+							MaxSpeed = Speed*2
 							velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 							velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 							sprite = $body
 							sprite2 = $wing
 							ghost_timer.start()
 							instance_ghost()
-							BoostFuel -= 20
+							BoostFuel -= 105
 							boostFuelChanged.emit()
 							CanBoost = false
 							await get_tree().create_timer(0.2).timeout
@@ -142,7 +146,7 @@ func _physics_process(delta):
 					BoostFuel += 50*delta
 					boostFuelChanged.emit()
 				else:
-						BoostRefuel = false
+					BoostRefuel = false
 			if Input.is_action_just_released("Turbo"):
 				if BoostFuel > 20:
 					CanBoost = true
@@ -303,6 +307,10 @@ func setGuns():
 
 func addGunsLVL3():
 	pass
+
+func addHealth(addHP:int):
+	health += addHP
+	healthChanged.emit()
 
 func playParticleEffect():
 	var _particle = deathParticle.instantiate()

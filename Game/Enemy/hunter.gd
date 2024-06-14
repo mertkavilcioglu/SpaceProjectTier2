@@ -6,14 +6,25 @@ var enemyHealth:int = 3
 var playerDamage:int = 1 
 
 @onready var player = get_parent().get_parent()
-@export var enemyMaxSpeed: float = 400.0
-@export var radius = 200
+@export var enemyMaxSpeed: float = 800.0
+@export var radius = 500
+@export var radius2 = 700
+@export var shootRadius = 2000
+
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
 var distanceToPlayer_x:int
 var distanceToPlayer_y:int
 var calculatedRadius:int
+
+var distanceToPlayer_x2:int
+var distanceToPlayer_y2:int
+var calculatedRadius2:int
+
+var distanceToPlayer_x3:int
+var distanceToPlayer_y3:int
+var calculatedRadius3:int
 
 var laser_scene = preload("res://Game/Enemy/laser_enemy.tscn")
 @onready var muzzle1=$Muzzle 
@@ -41,6 +52,10 @@ func _process(delta):
 	
 	linear_velocity = position * enemyMaxSpeed
 	
+	if(nearbyAggroRadius()):
+		#print(calculatedRadius)
+		linear_velocity = position * player.MaxSpeed
+		
 	if(reachPlayerMidRadius()):
 		#print(calculatedRadius)
 		linear_velocity = Vector2.ZERO
@@ -52,17 +67,18 @@ func getHit():
 		enemyHealth -= player.damage 
 	if enemyHealth <= 0:
 		if(player.health < player.maxHealth):
-			player.health += playerRegen
+			player.addHealth(playerRegen)
 		playParticleEffect()
 		queue_free()
 		
 func shoot_to_player():
-	var l = laser_scene.instantiate()
-	lasers.add_child(l)
-	l.global_position = muzzle1.global_position
-	l.rotation = rotation + PI/2
-	emit_signal("laser_shot", l)
-	muzzle_flash.play("muzzle_flash_anim")
+	if shootingRadius():
+		var l = laser_scene.instantiate()
+		lasers.add_child(l)
+		l.global_position = muzzle1.global_position
+		l.rotation = rotation + PI/2
+		emit_signal("laser_shot", l)
+		muzzle_flash.play("muzzle_flash_anim")
 	
 	
 func reachPlayerMidRadius():
@@ -75,6 +91,29 @@ func reachPlayerMidRadius():
 		return true
 	else:
 		return false
+
+func nearbyAggroRadius():
+	distanceToPlayer_x2 = self.position.x - player.position.x
+	distanceToPlayer_y2 = self.position.y - player.position.y
+	
+	calculatedRadius2 = int(sqrt(int(pow(distanceToPlayer_x2,2)) + int(pow(distanceToPlayer_y2,2)))) # c^2 = a^2 + b^2
+	
+	if(calculatedRadius2 <= radius2) and (calculatedRadius > radius): 
+		return true
+	else:
+		return false
+		
+func shootingRadius():
+	distanceToPlayer_x3 = self.position.x - player.position.x
+	distanceToPlayer_y3 = self.position.y - player.position.y
+	
+	calculatedRadius3 = int(sqrt(int(pow(distanceToPlayer_x3,2)) + int(pow(distanceToPlayer_y3,2)))) # c^2 = a^2 + b^2
+	
+	if(calculatedRadius3 <= shootRadius):
+		return true
+	else:
+		return false
+
 	
 		
 func playParticleEffect():

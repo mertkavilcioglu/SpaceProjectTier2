@@ -28,10 +28,10 @@ func _on_timer_timeout():
 
 func _on_timer_2_timeout():
 	enemyType = randi_range(1,10)
-	if enemyType <= 5:
+	if enemyType <= 7:
 		enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 		add_child(enemy)
-	elif enemyType <= 9 and enemyType >= 6:
+	elif enemyType <= 9 and enemyType >= 8:
 		enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 		add_child(enemy)
 	elif enemyType == 10:
