@@ -1,0 +1,720 @@
+[gd_scene load_steps=41 format=3 uid="uid://mkh83haqh4di"]
+
+[ext_resource type="Script" path="res://Game/Player/CharacterISO.gd" id="1_51vnt"]
+[ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_14vrn"]
+[ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="4_tegm1"]
+[ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="5_tsf4q"]
+[ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="6_kuce3"]
+[ext_resource type="Texture2D" uid="uid://cl5654k3a2mk3" path="res://Game/Player/muzzle_flash.png" id="7_777vo"]
+[ext_resource type="Shader" path="res://Game/Player/shockwaveShader.gdshader" id="8_13k5y"]
+[ext_resource type="Script" path="res://Upgrade/upgradeInGame.gd" id="9_ak2c0"]
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="10_qw5jh"]
+[ext_resource type="Texture2D" uid="uid://c7wurp75mpiqh" path="res://Sprites/UpgradeEmpty.png" id="11_26d2q"]
+[ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="12_mpq23"]
+[ext_resource type="PackedScene" uid="uid://bwv47xinnqyrs" path="res://Menus/pause_menu.tscn" id="13_18d81"]
+[ext_resource type="Script" path="res://Game/Player/BoostBar.gd" id="14_7x1yd"]
+[ext_resource type="Script" path="res://Game/Player/HealthBar.gd" id="15_1qbf3"]
+[ext_resource type="Shader" path="res://Game/Player/DeathChroma.gdshader" id="16_m5i6b"]
+[ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_1qwnn"]
+[ext_resource type="PackedScene" uid="uid://btgiyvnu75u0q" path="res://Menus/die_menu.tscn" id="18_lpxn3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
+radius = 44.0
+height = 94.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_70htx"]
+resource_local_to_scene = true
+shader = ExtResource("3_14vrn")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l3758"]
+resource_local_to_scene = true
+shader = ExtResource("3_14vrn")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_k8pul"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o7t1v"]
+resource_name = "muzzle_flash_anim"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c0ca8"]
+_data = {
+"RESET": SubResource("Animation_k8pul"),
+"muzzle_flash_anim": SubResource("Animation_o7t1v")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_irjme"]
+radius = 477.151
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oppj"]
+shader = ExtResource("8_13k5y")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/force = 0.05
+shader_parameter/size = 0.0
+shader_parameter/thickness = 0.2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aq6cc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2521"]
+bg_color = Color(0, 0.784314, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6khq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaoa0"]
+bg_color = Color(0.784314, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_q2oqf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/DeathShockwave:material:shader_parameter/size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vi77d"]
+resource_name = "shockwaveAnim"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/DeathShockwave:material:shader_parameter/size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 2.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p70dk"]
+_data = {
+"RESET": SubResource("Animation_q2oqf"),
+"shockwaveAnim": SubResource("Animation_vi77d")
+}
+
+[sub_resource type="Animation" id="Animation_g68aa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:material:shader_parameter/enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_6lwf5"]
+resource_name = "hit_flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wing:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:material:shader_parameter/enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxjqi"]
+_data = {
+"RESET": SubResource("Animation_g68aa"),
+"hit_flash": SubResource("Animation_6lwf5")
+}
+
+[sub_resource type="Animation" id="Animation_wtyn7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_56shq"]
+resource_name = "chroma"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasForChroma/DeathChroma:material:shader_parameter/ca_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 10.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhq4c"]
+_data = {
+"RESET": SubResource("Animation_wtyn7"),
+"chroma": SubResource("Animation_56shq")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_reucl"]
+resource_local_to_scene = true
+shader = ExtResource("16_m5i6b")
+shader_parameter/ca_strength = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yab1j"]
+radius = 7953.48
+
+[node name="Character" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_51vnt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f4uun")
+
+[node name="wing" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_70htx")
+rotation = 1.5708
+texture = ExtResource("4_tegm1")
+
+[node name="body" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_l3758")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_tsf4q")
+
+[node name="Upgrade" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -17.0
+offset_top = -22.0
+offset_right = 23.0
+offset_bottom = 18.0
+
+[node name="NewLevel" type="Panel" parent="Upgrade"]
+process_mode = 2
+layout_mode = 0
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+
+[node name="health" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 125.0
+offset_right = 250.0
+offset_bottom = 200.0
+text = "health"
+
+[node name="speed" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 200.0
+text = "speed"
+
+[node name="fuel" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 375.0
+offset_bottom = 200.0
+text = "fuel"
+
+[node name="damage" type="Button" parent="Upgrade/NewLevel"]
+layout_mode = 0
+offset_left = 375.0
+offset_right = 500.0
+offset_bottom = 200.0
+text = "damage"
+
+[node name="get_level" type="Button" parent="."]
+visible = false
+offset_left = -500.0
+offset_top = -300.0
+offset_right = -350.0
+offset_bottom = -150.0
+text = "get level"
+
+[node name="Engine1" type="Node2D" parent="."]
+position = Vector2(-43, -6)
+rotation = 1.5708
+
+[node name="Trail" parent="Engine1" instance=ExtResource("6_kuce3")]
+
+[node name="Engine2" type="Node2D" parent="."]
+position = Vector2(-43, 6)
+rotation = 1.5708
+
+[node name="Trail" parent="Engine2" instance=ExtResource("6_kuce3")]
+
+[node name="Muzzle" type="Node2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-14, 1.72561e-14)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_777vo")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
+
+[node name="Muzzle2" type="Node2D" parent="."]
+position = Vector2(4.28571, 22.8571)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle2"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.4286, -5.53066e-12)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_777vo")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle2"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
+
+[node name="Muzzle3" type="Node2D" parent="."]
+position = Vector2(4.28572, -22.8571)
+
+[node name="MuzzleFlash" type="Sprite2D" parent="Muzzle3"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-31.429, 0)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_777vo")
+
+[node name="MuzzleFlashAnimationPlayer" type="AnimationPlayer" parent="Muzzle3"]
+libraries = {
+"": SubResource("AnimationLibrary_c0ca8")
+}
+
+[node name="ChaseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseArea"]
+position = Vector2(1.42857, 0)
+shape = SubResource("CircleShape2D_irjme")
+
+[node name="GhostTimer" type="Timer" parent="."]
+wait_time = 0.03
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DeathShockwave" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_3oppj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpgradeScreen" type="Node2D" parent="CanvasLayer"]
+visible = false
+script = ExtResource("9_ak2c0")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UpgradeScreen"]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.356863, 0.282353, 0.352941, 0.392157)
+
+[node name="Health" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 331.0
+offset_top = 57.0
+offset_right = 371.0
+offset_bottom = 97.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Health"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Health: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="HealthUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Health/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Upgrade"
+
+[node name="Speed" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 337.0
+offset_top = 399.0
+offset_right = 377.0
+offset_bottom = 439.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Speed"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Speed: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(110, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(150, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(190, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(230, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/HBoxContainer"]
+position = Vector2(270, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="SpeedUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Speed/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Upgrade"
+
+[node name="Fuel" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 70.0
+offset_top = 237.0
+offset_right = 110.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Fuel"]
+layout_mode = 0
+offset_left = -29.0
+offset_right = 102.0
+offset_bottom = 75.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Fire Rate: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(126, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(166, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(206, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(246, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/HBoxContainer"]
+position = Vector2(286, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="FuelUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Upgrade"
+
+[node name="Damage" type="Control" parent="CanvasLayer/UpgradeScreen"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 608.0
+offset_top = 237.0
+offset_right = 648.0
+offset_bottom = 277.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UpgradeScreen/Damage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Damage: "
+horizontal_alignment = 1
+
+[node name="Lvl1" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(120, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl2" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(160, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl3" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(200, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl4" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(240, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="Lvl5" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/HBoxContainer"]
+position = Vector2(280, -5)
+texture = ExtResource("11_26d2q")
+centered = false
+
+[node name="DamageUpgradeButton" type="Button" parent="CanvasLayer/UpgradeScreen/Damage/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "Upgrade"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UpgradeScreen"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 877.0
+offset_top = 30.0
+offset_right = 937.0
+offset_bottom = 60.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
+position = Vector2(-49, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("12_mpq23")
+centered = false
+
+[node name="Parts" type="Label" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_qw5jh")
+text = "9999"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/UpgradeScreen"]
+offset_left = 757.0
+offset_top = 445.0
+offset_right = 888.0
+offset_bottom = 487.0
+theme = ExtResource("10_qw5jh")
+text = "Back
+"
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_18d81")]
+visible = false
+
+[node name="BoostBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 22.0
+offset_top = 28.0
+offset_right = 272.0
+offset_bottom = 43.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_aq6cc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_p2521")
+value = 100.0
+show_percentage = false
+script = ExtResource("14_7x1yd")
+player = NodePath("../..")
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 272.0
+offset_bottom = 28.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_t6khq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jaoa0")
+value = 100.0
+show_percentage = false
+script = ExtResource("15_1qbf3")
+player = NodePath("../..")
+
+[node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p70dk")
+}
+
+[node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qxjqi")
+}
+
+[node name="ChromaAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uhq4c")
+}
+
+[node name="CanvasForChroma" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="DeathChroma" type="ColorRect" parent="CanvasForChroma" node_paths=PackedStringArray("player")]
+visible = false
+material = SubResource("ShaderMaterial_reucl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("17_1qwnn")
+player = NodePath("../..")
+
+[node name="DieMenu" parent="CanvasForChroma" instance=ExtResource("18_lpxn3")]
+visible = false
+
+[node name="enemy_nearby_area" type="Area2D" parent="."]
+
+[node name="enemy_nearby_collision" type="CollisionShape2D" parent="enemy_nearby_area"]
+shape = SubResource("CircleShape2D_yab1j")
+
+[connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/fuel" to="." method="_on_fuel_pressed"]
+[connection signal="pressed" from="Upgrade/NewLevel/damage" to="." method="_on_damage_pressed"]
+[connection signal="pressed" from="get_level" to="." method="_on_get_level_pressed"]
+[connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Health/VBoxContainer/HealthUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_health_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Speed/VBoxContainer/SpeedUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_speed_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Fuel/VBoxContainer/FuelUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_fuel_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/Damage/VBoxContainer/DamageUpgradeButton" to="CanvasLayer/UpgradeScreen" method="_on_damage_upgrade_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UpgradeScreen/BackButton" to="CanvasLayer/UpgradeScreen" method="_on_back_button_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d31651iysh01n"]
+
+[ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="1_mv5jr"]
+[ext_resource type="Texture2D" uid="uid://c64d68tsfgyg4" path="res://Sprites/uzaygemisi/Diverger/512/Isometric/Diverger_Isometric_dir7.png" id="2_r7ohn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nu6pn"]
+resource_local_to_scene = true
+shader = ExtResource("1_mv5jr")
+shader_parameter/enabled = false
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[node name="body135" type="Node2D"]
+rotation = -0.785398
+
+[node name="body" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_nu6pn")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_r7ohn")
