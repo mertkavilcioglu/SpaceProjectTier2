@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cep87dbpwhpf6"]
+[gd_scene load_steps=5 format=3 uid="uid://cjyvauoxu8sol"]
 
-[ext_resource type="Texture2D" uid="uid://c2qqr1srb3htp" path="res://Sprites/background/SPACE/uzay1verlayer1.png" id="1_ums1r"]
-[ext_resource type="Texture2D" uid="uid://c0qfmdrpcowtq" path="res://Sprites/background/SPACE/uzay1verlayer2.png" id="2_dx2x2"]
-[ext_resource type="Texture2D" uid="uid://cd8qsinw7ip7d" path="res://Sprites/background/SPACE/uzay1verlayer3.png" id="3_m51p1"]
+[ext_resource type="Texture2D" uid="uid://c2qqr1srb3htp" path="res://Sprites/background/SPACE/uzay1verlayer1.png" id="1_yuc3f"]
+[ext_resource type="Texture2D" uid="uid://c0qfmdrpcowtq" path="res://Sprites/background/SPACE/uzay1verlayer2.png" id="2_lnprf"]
+[ext_resource type="Texture2D" uid="uid://cd8qsinw7ip7d" path="res://Sprites/background/SPACE/uzay1verlayer3.png" id="3_st0l2"]
 
 [sub_resource type="GDScript" id="GDScript_nwfkd"]
 script/source = "extends ParallaxBackground
@@ -20,8 +20,9 @@ func _process(delta):
 		$ParallaxLayer2.hide()
 "
 
-[node name="Background" type="ParallaxBackground"]
-follow_viewport_enabled = true
+[node name="BackgroundInGame" type="ParallaxBackground"]
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
 follow_viewport_scale = 1.04
 script = SubResource("GDScript_nwfkd")
 isScrolling = true
@@ -35,7 +36,7 @@ motion_mirroring = Vector2(960, 540)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(480, 270)
-texture = ExtResource("1_ums1r")
+texture = ExtResource("1_yuc3f")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.3, 0.3)
@@ -43,7 +44,7 @@ motion_mirroring = Vector2(960, 540)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(480, 270)
-texture = ExtResource("2_dx2x2")
+texture = ExtResource("2_lnprf")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.5, 0.5)
@@ -52,4 +53,4 @@ motion_mirroring = Vector2(960, 540)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(480, 270)
-texture = ExtResource("3_m51p1")
+texture = ExtResource("3_st0l2")

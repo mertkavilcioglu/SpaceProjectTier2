@@ -1,8 +1,8 @@
 [gd_scene load_steps=31 format=3 uid="uid://bbyrwi8w2y3bk"]
 
-[ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_j43kv"]
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
+[ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_j1piq"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
@@ -167,9 +167,7 @@ scale = Vector2(-56.7572, 22.2816)
 [node name="testtrigger" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
 position = Vector2(191, -1)
 
-[node name="Background" parent="." instance=ExtResource("1_j43kv")]
-visible = false
-isScrolling = false
+[node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 material = SubResource("ShaderMaterial_flxm1")
