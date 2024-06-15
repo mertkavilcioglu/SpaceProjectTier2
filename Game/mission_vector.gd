@@ -7,7 +7,7 @@ extends Sprite2D
 var camera
 var screen_center
 var direction
-var distance_from_center = 200
+var distance_from_center = 300
 var station_position_path
 var counter = 1
 

@@ -40,7 +40,7 @@ shader_parameter/SOFTNESS = 0.55
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s61b3"]
 shader = ExtResource("5_ufmhb")
 shader_parameter/player_position = Vector2(0.5, 0.5)
-shader_parameter/color = Color(0.0431373, 0, 0, 1)
+shader_parameter/color = Color(0.0509804, 0, 0, 1)
 shader_parameter/MULTIPLIER = 0.75
 shader_parameter/SCALE = 0.95
 shader_parameter/SOFTNESS = 5.0
