@@ -66,7 +66,6 @@ func _ready():
 	healthChanged.emit()
 
 func _process(delta): 
-	print(health)
 	if (!isDead):
 		if (!on_dialogue):
 			upgradeChecker()

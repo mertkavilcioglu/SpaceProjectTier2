@@ -35,6 +35,7 @@ var SpeedLevel:int = 1
 var FuelLevel:int = 1
 var DamageLevel:int = 1
 var ScrapParts:int = 0
+var highScore:int = 0
 
 var playerHealth
 var playerSpeed
@@ -126,6 +127,7 @@ func _on_back_button_pressed():
 func _on_health_upgrade_button_pressed():
 	if ScrapParts > 0 and HealthLevel < 6:
 		HealthLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 	update_character_attributes()
@@ -134,6 +136,7 @@ func _on_health_upgrade_button_pressed():
 func _on_speed_upgrade_button_pressed():
 	if ScrapParts > 0 and SpeedLevel < 6:
 		SpeedLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 	update_character_attributes()
@@ -142,6 +145,7 @@ func _on_speed_upgrade_button_pressed():
 func _on_fuel_upgrade_button_pressed():
 	if ScrapParts > 0 and FuelLevel < 6:
 		FuelLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 	update_character_attributes()
@@ -150,10 +154,26 @@ func _on_fuel_upgrade_button_pressed():
 func _on_damage_upgrade_button_pressed():
 	if ScrapParts > 0 and DamageLevel < 6:
 		DamageLevel += 1
+		ScrapParts-=1
+	changeTextures()
+	save_data()
+	update_character_attributes()
+	
+func reset_upgrades():
+	HealthLevel = 1
+	SpeedLevel = 1
+	FuelLevel = 1
+	DamageLevel = 1
+	ScrapParts = 0
 	changeTextures()
 	save_data()
 	update_character_attributes()
 
+func getScrap():
+	ScrapParts += 1
+	changeTextures()
+	save_data()
+	update_character_attributes()
 
 func save_data():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
@@ -162,6 +182,7 @@ func save_data():
 	file.store_var(FuelLevel)
 	file.store_var(DamageLevel)
 	file.store_var(ScrapParts)
+	file.store_var(highScore)
 
 func load_data():
 	if FileAccess.file_exists(save_path):
@@ -176,7 +197,8 @@ func load_data():
 		SpeedLevel = 1
 		FuelLevel = 1
 		DamageLevel = 1
-		ScrapParts = 10
+		ScrapParts = 1
+		highScore = 0
 
 func changeTextures():
 	$HBoxContainer/Parts.text = str(ScrapParts)

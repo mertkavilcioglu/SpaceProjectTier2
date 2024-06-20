@@ -26,7 +26,7 @@ func _on_reset_button_pressed():
 	SpeedLevel = 1
 	FuelLevel = 1
 	DamageLevel = 1
-	ScrapParts = 10
+	ScrapParts = 0
 	save_data()
 	$HBoxContainer/VBoxContainer/Menu/VBoxContainer2/ResetButton.text = "Completed"
 

@@ -1,0 +1,165 @@
+extends Node2D
+
+var choise = randi_range(1,4)
+var choise2 
+var enemyType
+var enemy
+var posX
+var posY
+
+@onready var currentWave:int = 1
+@onready var player = get_parent()
+@onready var upgradeScreen = $"../CanvasLayer/UpgradeScreen"
+@onready var Timer1 = $RandomTimer
+@onready var Timer2 = $SpawnCoolDown
+@onready var waveTimer = $WaveTimer
+@onready var spawnerCD = $SpawnerCD
+@onready var canSpawn:bool = true
+@onready var isSpawned:bool = false
+@onready var isStopped:bool = false
+	
+func _ready():
+	upgradeScreen.reset_upgrades()
+	set_timer_autostart()
+	
+func _process(delta):
+	print(upgradeScreen.highScore)
+	posX = player.global_position.x
+	posY = player.global_position.y
+	
+	if canSpawn == false and player.enemy_nearby == false:
+		canSpawn = true
+		upgradeScreen.getScrap()
+		spawnerCD.start()
+	
+	if (currentWave >= upgradeScreen.highScore):
+		upgradeScreen.highScore = currentWave
+		upgradeScreen.save_data()
+		
+
+func _on_timer_timeout():
+	choise = randi_range(1,4)
+
+func _on_timer_2_timeout():
+	if currentWave < 5 :
+		enemyType = randi_range(1,10)
+		if enemyType <= 7:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 8:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			
+	if currentWave >= 5 and currentWave < 9 :
+		enemyType = randi_range(1,10)
+		if enemyType <= 7:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType <= 9 and enemyType >= 8:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType == 10:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+			
+	if currentWave >= 9 and currentWave < 16:
+		enemyType = randi_range(1,10)
+		if enemyType <= 5:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType <= 8 and enemyType >= 6:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 9:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+			
+	if currentWave >= 16:
+		enemyType = randi_range(1,10)
+		if enemyType <= 3:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType <= 7 and enemyType >= 4:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 8:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+				
+	var randx1 = randi_range(0,575)
+	var randx2 = randi_range(-575,575)
+	var randx3 = randi_range(-575,0)
+	var randy1 =  randi_range(-325,325)
+	var randy2 = randi_range(-325,0)
+	var randy3 = randi_range(0,325)
+	var enemy_position
+
+	choise2 = randi_range(1,3)
+	
+	if choise == 1:
+		if choise2 == 1:
+			enemy_position = Vector2(posX+randx1,posY+1500)
+		elif choise2 == 2:
+			enemy_position = Vector2(posX+2500,posY+randy1)
+		elif choise2 == 3:
+			enemy_position = Vector2(posX+randx1,posY+-1500)
+	elif choise == 2:
+		if choise2 == 1:
+			enemy_position = Vector2(posX+2500,posY+randy2)
+		elif choise2 == 2:
+			enemy_position = Vector2(posX+randx2,posY+-1500)
+		elif choise2 == 3:
+			enemy_position = Vector2(posX+-2500,posY+randy2)
+	elif choise == 3:
+		if choise2 == 1:
+			enemy_position = Vector2(posX+randx3,posY+-1500)
+		elif choise2 == 2:
+			enemy_position = Vector2(posX+-2500,posY+randy1)
+		elif choise2 == 3:
+			enemy_position = Vector2(posX+randx3,posY+1500)
+	elif choise == 4:
+		if choise2 == 1:
+			enemy_position = Vector2(posX+-2500,posY+randy3)
+		elif choise2 == 2:
+			enemy_position = Vector2(posX+randx2,posY+1500)
+		elif choise2 == 3:
+			enemy_position = Vector2(posX+2500,posY+randy3)
+	enemy.position = enemy_position
+	
+	
+func set_timer_autostart(): 
+	#print("spawned")
+	if canSpawn:
+		if !isSpawned:
+			Timer1.autostart = true
+			Timer2.autostart = true
+			Timer1.start()
+			Timer2.start()
+			waveTimer.start()
+			isSpawned = true
+	else:
+		if !isStopped:
+			Timer1.autostart = false
+			Timer2.autostart = false
+			Timer1.stop()
+			Timer2.stop()
+			isStopped = true
+
+
+func _on_wave_timer_timeout():
+	#print("stopped")
+	canSpawn = false
+	set_timer_autostart()
+	#spawnerCD.start()
+	#upgradeScreen.getScrap()
+
+
+func _on_spawner_cd_timeout():
+	#print("spawner is active again")
+	if (Timer2.wait_time > 0.5):
+		Timer2.wait_time -= 0.1
+	canSpawn = true
+	isSpawned = false
+	isStopped = false
+	currentWave += 1
+	set_timer_autostart()

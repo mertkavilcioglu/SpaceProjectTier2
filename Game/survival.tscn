@@ -1,0 +1,159 @@
+[gd_scene load_steps=17 format=3 uid="uid://cetthkk06an7e"]
+
+[ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_h8r2u"]
+[ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_1u3bo"]
+[ext_resource type="Script" path="res://Game/Camera2D.gd" id="4_ng8ic"]
+[ext_resource type="Shader" path="res://Game/game.gdshader" id="5_rcafl"]
+[ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="6_ainam"]
+[ext_resource type="PackedScene" uid="uid://058ddaleep5x" path="res://Game/Enemy/enemy_spawner_SURVIVAL.tscn" id="6_unld7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
+shader = ExtResource("3_1u3bo")
+shader_parameter/player_position = null
+shader_parameter/color = Color(0.305, 0.298, 0.341, 1)
+shader_parameter/MULTIPLIER = 0.56
+shader_parameter/SCALE = 0.5
+shader_parameter/SOFTNESS = 0.45
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5aee6"]
+shader = ExtResource("3_1u3bo")
+shader_parameter/player_position = Vector2(0.5, 0.5)
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/MULTIPLIER = 0.75
+shader_parameter/SCALE = 0.95
+shader_parameter/SOFTNESS = 0.55
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s61b3"]
+shader = ExtResource("5_rcafl")
+shader_parameter/player_position = Vector2(0.5, 0.5)
+shader_parameter/color = Color(0.0509804, 0, 0, 1)
+shader_parameter/MULTIPLIER = 0.75
+shader_parameter/SCALE = 0.95
+shader_parameter/SOFTNESS = 5.0
+
+[sub_resource type="Animation" id="Animation_f50q7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.0]
+}
+
+[sub_resource type="Animation" id="Animation_0chfe"]
+resource_name = "enemy_nearby_false"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 3.0]
+}
+
+[sub_resource type="Animation" id="Animation_3ha08"]
+resource_name = "enemy_nearby_true"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_nearby:material:shader_parameter/SOFTNESS")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_h1l5a"]
+resource_name = "new_animation"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_exncb"]
+_data = {
+"RESET": SubResource("Animation_f50q7"),
+"enemy_nearby_false": SubResource("Animation_0chfe"),
+"enemy_nearby_true": SubResource("Animation_3ha08"),
+"new_animation": SubResource("Animation_h1l5a")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7x8h"]
+shader = ExtResource("3_1u3bo")
+shader_parameter/player_position = null
+shader_parameter/color = Color(0.305, 0.298, 0.341, 1)
+shader_parameter/MULTIPLIER = 0.56
+shader_parameter/SCALE = 0.5
+shader_parameter/SOFTNESS = 0.45
+
+[sub_resource type="Environment" id="Environment_v03uc"]
+background_mode = 3
+background_canvas_max_layer = 10
+tonemap_white = 16.0
+glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
+glow_blend_mode = 1
+
+[node name="SurvivalGame" type="Node2D"]
+
+[node name="BackgroundInGame" parent="." instance=ExtResource("2_h8r2u")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+material = SubResource("ShaderMaterial_flxm1")
+zoom = Vector2(0.25, 0.25)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = ExtResource("4_ng8ic")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+material = SubResource("ShaderMaterial_5aee6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
+
+[node name="enemy_nearby" type="ColorRect" parent="Camera2D/CanvasLayer2"]
+material = SubResource("ShaderMaterial_s61b3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="fade_animation" type="AnimationPlayer" parent="Camera2D/CanvasLayer2"]
+libraries = {
+"": SubResource("AnimationLibrary_exncb")
+}
+
+[node name="Character" parent="." instance=ExtResource("6_ainam")]
+material = SubResource("ShaderMaterial_k7x8h")
+
+[node name="EnemySpawnerSURVIVAL" parent="Character" instance=ExtResource("6_unld7")]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Lasers" type="Node" parent="."]
+
+[node name="WorldEnvironment-forGlow" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v03uc")

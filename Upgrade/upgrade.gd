@@ -57,6 +57,7 @@ func _on_play_button_pressed():
 func _on_health_upgrade_button_pressed():
 	if ScrapParts > 0 and HealthLevel < 6:
 		HealthLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 
@@ -64,6 +65,7 @@ func _on_health_upgrade_button_pressed():
 func _on_speed_upgrade_button_pressed():
 	if ScrapParts > 0 and SpeedLevel < 6:
 		SpeedLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 
@@ -71,6 +73,7 @@ func _on_speed_upgrade_button_pressed():
 func _on_fuel_upgrade_button_pressed():
 	if ScrapParts > 0 and FuelLevel < 6:
 		FuelLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 
@@ -78,6 +81,7 @@ func _on_fuel_upgrade_button_pressed():
 func _on_damage_upgrade_button_pressed():
 	if ScrapParts > 0 and DamageLevel < 6:
 		DamageLevel += 1
+		ScrapParts-=1
 	changeTextures()
 	save_data()
 
@@ -103,7 +107,7 @@ func load_data():
 		SpeedLevel = 1
 		FuelLevel = 1
 		DamageLevel = 1
-		ScrapParts = 10
+		ScrapParts = 1
 
 func changeTextures():
 	$HBoxContainer/Parts.text = str(ScrapParts)
