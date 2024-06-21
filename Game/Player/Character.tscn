@@ -233,7 +233,7 @@ shader = ExtResource("15_0p2tx")
 shader_parameter/ca_strength = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yab1j"]
-radius = 7953.48
+radius = 16000.0
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -625,16 +625,16 @@ grow_horizontal = 2
 size_flags_horizontal = 8
 alignment = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
-position = Vector2(-49, 0)
-scale = Vector2(0.48, 0.48)
-texture = ExtResource("9_m2bku")
-centered = false
-
 [node name="Parts" type="Label" parent="CanvasLayer/UpgradeScreen/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_fk3np")
-text = "9999"
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/UpgradeScreen/HBoxContainer/Parts"]
+position = Vector2(-64, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("9_m2bku")
+centered = false
 
 [node name="BackButton" type="Button" parent="CanvasLayer/UpgradeScreen"]
 offset_left = 757.0

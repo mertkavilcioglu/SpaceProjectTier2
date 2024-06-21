@@ -31,7 +31,13 @@ layout_mode = 2
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_tybw7")
-text = "Play"
+text = "Play Story"
+flat = true
+
+[node name="PlaySurvivalButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_tybw7")
+text = "Play Survival"
 flat = true
 
 [node name="UpgradeButton" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -59,6 +65,7 @@ text = "Quit"
 flat = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlaySurvivalButton" to="." method="_on_play_survival_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]

@@ -74,17 +74,79 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 10:
+	if currentWave >= 10 and currentWave < 13:
 		enemyType = randi_range(1,10)
 		if enemyType <= 4:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
 		elif enemyType <= 7 and enemyType >= 5:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
 		elif enemyType >= 8:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			
+	if currentWave >= 13 and currentWave < 16:
+		enemyType = randi_range(1,10)
+		if enemyType <= 3:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType <= 6 and enemyType >= 4:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+			
+		elif enemyType >= 7:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+			
+	if currentWave >= 16:
+		enemyType = randi_range(1,10)
+		if enemyType <= 3:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+		elif enemyType <= 6 and enemyType >= 4:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+		elif enemyType >= 7:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+			add_child(enemy)
+			add_child(enemy)
+
 				
 	var randx1 = randi_range(0,575)
 	var randx2 = randi_range(-575,575)

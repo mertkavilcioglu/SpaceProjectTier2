@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cetthkk06an7e"]
+[gd_scene load_steps=20 format=3 uid="uid://cetthkk06an7e"]
 
 [ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_h8r2u"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_1u3bo"]
@@ -6,6 +6,9 @@
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_rcafl"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="6_ainam"]
 [ext_resource type="PackedScene" uid="uid://058ddaleep5x" path="res://Game/Enemy/enemy_spawner_SURVIVAL.tscn" id="6_unld7"]
+[ext_resource type="Script" path="res://Game/SurvivalStats.gd" id="7_pusgf"]
+[ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="7_wht8c"]
+[ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="8_g75uf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
 shader = ExtResource("3_1u3bo")
@@ -150,6 +153,72 @@ libraries = {
 material = SubResource("ShaderMaterial_k7x8h")
 
 [node name="EnemySpawnerSURVIVAL" parent="Character" instance=ExtResource("6_unld7")]
+
+[node name="SurvivalStats" type="CanvasLayer" parent="Character"]
+script = ExtResource("7_pusgf")
+
+[node name="ScrapCont" type="HBoxContainer" parent="Character/SurvivalStats"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 877.0
+offset_top = 30.0
+offset_right = -23.0
+offset_bottom = 60.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Parts" type="Label" parent="Character/SurvivalStats/ScrapCont"]
+layout_mode = 2
+theme = ExtResource("8_g75uf")
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="Character/SurvivalStats/ScrapCont/Parts"]
+position = Vector2(-64, 0)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("7_wht8c")
+centered = false
+
+[node name="StatCont" type="VBoxContainer" parent="Character/SurvivalStats"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 811.0
+offset_top = 27.0
+offset_right = -27.355
+offset_bottom = 136.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Waves" type="HBoxContainer" parent="Character/SurvivalStats/StatCont"]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 1
+
+[node name="Wave" type="Label" parent="Character/SurvivalStats/StatCont/Waves"]
+layout_mode = 2
+theme = ExtResource("8_g75uf")
+text = "Wave:"
+
+[node name="WaveNumber" type="Label" parent="Character/SurvivalStats/StatCont/Waves"]
+layout_mode = 2
+theme = ExtResource("8_g75uf")
+text = "1"
+
+[node name="HighScore" type="HBoxContainer" parent="Character/SurvivalStats/StatCont"]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 1
+
+[node name="HS" type="Label" parent="Character/SurvivalStats/StatCont/HighScore"]
+layout_mode = 2
+text = "High Score:"
+
+[node name="hsNumber" type="Label" parent="Character/SurvivalStats/StatCont/HighScore"]
+layout_mode = 2
+text = "1"
+
+[node name="Stats" type="Node2D" parent="Character/SurvivalStats"]
 
 [node name="Enemies" type="Node" parent="."]
 
