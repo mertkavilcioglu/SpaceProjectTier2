@@ -48,8 +48,12 @@ var playerDamage
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_data()
+	await get_tree().create_timer(0.1).timeout
+	load_data()
 	changeTextures()
 	update_character_attributes()
+
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -95,17 +99,19 @@ func update_character_attributes():
 		
 	if DamageLevel == 1:
 		character.setDamage(1)
+		character.setGuns(false)
 	if DamageLevel == 2:
 		character.setDamage(2)
+		character.setGuns(false)
 	if DamageLevel == 3:
 		character.setDamage(2)
-		character.setGuns()
+		character.setGuns(true)
 	if DamageLevel == 4:
 		character.setDamage(3)
-		character.setGuns()
+		character.setGuns(true)
 	if DamageLevel == 5:
 		character.setDamage(4)
-		character.setGuns()
+		character.setGuns(true)
 	
 	if FuelLevel == 1:
 		character.setFireRate(0.50)

@@ -7,6 +7,7 @@ var SpeedLevel:int
 var FuelLevel:int
 var DamageLevel:int
 var ScrapParts:int
+var highScore:int
 
 func _ready():
 	load_data()
@@ -37,6 +38,7 @@ func save_data():
 	file.store_var(FuelLevel)
 	file.store_var(DamageLevel)
 	file.store_var(ScrapParts)
+	file.store_var(highScore)
 
 func load_data():
 	if FileAccess.file_exists(save_path):
@@ -46,9 +48,11 @@ func load_data():
 		FuelLevel = file.get_var(FuelLevel)
 		DamageLevel = file.get_var(DamageLevel)
 		ScrapParts = file.get_var(ScrapParts)
+		highScore = file.get_var(highScore)
 	else:
 		HealthLevel = 1
 		SpeedLevel = 1
 		FuelLevel = 1
 		DamageLevel = 1
 		ScrapParts = 0
+		highScore = 0

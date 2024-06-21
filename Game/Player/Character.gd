@@ -301,8 +301,8 @@ func setSpeed(newSpeed:float):
 func setFireRate(newRate:float):
 	fireCD = newRate
 	
-func setGuns():
-	guns = true
+func setGuns(gunbool:bool):
+	guns = gunbool
 
 func addGunsLVL3():
 	pass
