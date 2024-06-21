@@ -41,7 +41,7 @@ func _on_timer_timeout():
 	choise = randi_range(1,4)
 
 func _on_timer_2_timeout():
-	if currentWave < 5 :
+	if currentWave < 4 :
 		enemyType = randi_range(1,10)
 		if enemyType <= 7:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -50,7 +50,7 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 5 and currentWave < 9 :
+	if currentWave >= 4 and currentWave < 7 :
 		enemyType = randi_range(1,10)
 		if enemyType <= 7:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -62,7 +62,7 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 9 and currentWave < 16:
+	if currentWave >= 7 and currentWave < 10:
 		enemyType = randi_range(1,10)
 		if enemyType <= 5:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -74,12 +74,12 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 16:
+	if currentWave >= 10:
 		enemyType = randi_range(1,10)
-		if enemyType <= 3:
+		if enemyType <= 4:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
-		elif enemyType <= 7 and enemyType >= 4:
+		elif enemyType <= 7 and enemyType >= 5:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
 		elif enemyType >= 8:
@@ -157,7 +157,7 @@ func _on_wave_timer_timeout():
 func _on_spawner_cd_timeout():
 	#print("spawner is active again")
 	if (Timer2.wait_time > 0.5):
-		Timer2.wait_time -= 0.1
+		Timer2.wait_time -= 0.2
 	canSpawn = true
 	isSpawned = false
 	isStopped = false

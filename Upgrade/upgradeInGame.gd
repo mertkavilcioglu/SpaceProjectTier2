@@ -192,6 +192,7 @@ func load_data():
 		FuelLevel = file.get_var(FuelLevel)
 		DamageLevel = file.get_var(DamageLevel)
 		ScrapParts = file.get_var(ScrapParts)
+		highScore = file.get_var(highScore)
 	else:
 		HealthLevel = 1
 		SpeedLevel = 1

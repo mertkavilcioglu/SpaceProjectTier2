@@ -16,7 +16,7 @@ wait_time = 15.0
 one_shot = true
 
 [node name="SpawnerCD" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 7.0
 one_shot = true
 
 [node name="Lasers" type="Node" parent="."]
