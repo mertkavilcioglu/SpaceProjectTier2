@@ -35,9 +35,11 @@ var SpeedLevel:int = 1
 var FuelLevel:int = 1
 var DamageLevel:int = 1
 var ScrapParts:int = 0
+var highScore:int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	save_data()
 	load_data()
 	changeTextures()
 
@@ -102,12 +104,14 @@ func load_data():
 		FuelLevel = file.get_var(FuelLevel)
 		DamageLevel = file.get_var(DamageLevel)
 		ScrapParts = file.get_var(ScrapParts)
+		highScore = file.get_var(highScore)
 	else:
 		HealthLevel = 1
 		SpeedLevel = 1
 		FuelLevel = 1
 		DamageLevel = 1
 		ScrapParts = 1
+		highScore = 0
 
 func changeTextures():
 	$HBoxContainer/Parts.text = str(ScrapParts)

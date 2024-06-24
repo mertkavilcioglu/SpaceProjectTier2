@@ -23,7 +23,6 @@ func _ready():
 	set_timer_autostart()
 	
 func _process(delta):
-	print(upgradeScreen.highScore)
 	posX = player.global_position.x
 	posY = player.global_position.y
 	
@@ -79,19 +78,11 @@ func _on_timer_2_timeout():
 		if enemyType <= 4:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
 		elif enemyType <= 7 and enemyType >= 5:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
-			add_child(enemy)
 		elif enemyType >= 8:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
 			add_child(enemy)
 			
 	if currentWave >= 13 and currentWave < 16:
@@ -99,24 +90,11 @@ func _on_timer_2_timeout():
 		if enemyType <= 3:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
 		elif enemyType <= 6 and enemyType >= 4:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
-			add_child(enemy)
-			
 		elif enemyType >= 7:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
 			
 	if currentWave >= 16:
@@ -124,27 +102,11 @@ func _on_timer_2_timeout():
 		if enemyType <= 3:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
-			add_child(enemy)
 		elif enemyType <= 6 and enemyType >= 4:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
 		elif enemyType >= 7:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			add_child(enemy)
-			add_child(enemy)
-			add_child(enemy)
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
-			add_child(enemy)
 			add_child(enemy)
 
 				
