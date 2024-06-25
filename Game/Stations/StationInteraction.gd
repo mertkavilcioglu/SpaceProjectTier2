@@ -31,7 +31,7 @@ func _physics_process(delta):
 	if body_entered:
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
-			if e_key_pressed_time >= E_KEY_PRESS_DURATION:
+			if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
 				if character.enemy_nearby == false:
 					dialogue_screen.dialogue(dialogue_path,text_id)
 					dialogue.show()

@@ -1,8 +1,104 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdflnfbq0e65b"]
+[gd_scene load_steps=11 format=3 uid="uid://bdflnfbq0e65b"]
 
 [ext_resource type="Script" path="res://Game/DialogueSystem/dialogue.gd" id="1_hax0q"]
 [ext_resource type="Texture2D" uid="uid://cb4yopppgssbs" path="res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png" id="2_ajs0v"]
 [ext_resource type="Texture2D" uid="uid://dgwd0sewgicqo" path="res://Sprites/dialogue_sprites/mission_1_sprites/text2(baseCORRIDOR)_500.png" id="3_2wy48"]
+[ext_resource type="FontFile" uid="uid://dlpbgecp3lyxc" path="res://Sprites/dialogue_sprites/Pixellari.ttf" id="4_h1yk8"]
+[ext_resource type="Shader" path="res://Game/DialogueSystem/dialogue.gdshader" id="5_egknj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ocqmw"]
+shader = ExtResource("5_egknj")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_yob77"]
+resource_name = "card_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_image:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blur:material:shader_parameter/lod")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_8s5w0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_image:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("card_image/dialogue_text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blur:material:shader_parameter/lod")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_lssig"]
+resource_name = "text_anim"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_image/dialogue_text:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cko3o"]
+_data = {
+"RESET": SubResource("Animation_8s5w0"),
+"card_animation": SubResource("Animation_yob77"),
+"text_anim": SubResource("Animation_lssig")
+}
 
 [node name="Dialogue" type="Node2D" node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text")]
 script = ExtResource("1_hax0q")
@@ -12,9 +108,21 @@ right_text = NodePath("card_image/right_text")
 left_text = NodePath("card_image/left_text")
 dialogue_text = NodePath("card_image/dialogue_text")
 
+[node name="blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ocqmw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="card_image" type="Sprite2D" parent="."]
-position = Vector2(525, 257)
-scale = Vector2(0.4, 0.4)
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_ajs0v")
 
 [node name="profile_image" type="Sprite2D" parent="card_image"]
@@ -27,7 +135,8 @@ offset_top = 277.0
 offset_right = 697.0
 offset_bottom = 480.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_fonts/normal_font = ExtResource("4_h1yk8")
+theme_override_font_sizes/normal_font_size = 40
 
 [node name="left_text" type="RichTextLabel" parent="card_image"]
 offset_left = 123.0
@@ -35,12 +144,14 @@ offset_top = 277.0
 offset_right = 397.0
 offset_bottom = 480.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 25
+theme_override_fonts/normal_font = ExtResource("4_h1yk8")
+theme_override_font_sizes/normal_font_size = 40
 
 [node name="monologue_text" type="RichTextLabel" parent="card_image"]
 offset_left = -675.0
 offset_top = 112.0
 offset_bottom = 464.0
+theme_override_fonts/normal_font = ExtResource("4_h1yk8")
 theme_override_font_sizes/normal_font_size = 45
 text = "some monologue text..."
 
@@ -49,8 +160,12 @@ offset_left = 140.0
 offset_top = -463.0
 offset_right = 703.0
 offset_bottom = 247.0
-theme_override_colors/default_color = Color(0, 0.862745, 0, 1)
+theme_override_colors/default_color = Color(0.74902, 0.713726, 0.560784, 1)
+theme_override_fonts/normal_font = ExtResource("4_h1yk8")
 theme_override_font_sizes/normal_font_size = 50
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
 
 [node name="select_left" type="Button" parent="card_image"]
 offset_left = 122.0
@@ -65,6 +180,11 @@ offset_top = 278.0
 offset_right = 699.0
 offset_bottom = 477.0
 flat = true
+
+[node name="card_animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cko3o")
+}
 
 [connection signal="pressed" from="card_image/select_left" to="." method="select_left"]
 [connection signal="pressed" from="card_image/select_right" to="." method="select_right"]

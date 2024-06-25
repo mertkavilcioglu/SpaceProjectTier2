@@ -1,15 +1,14 @@
+AnimationPlayer
+ColorRect
 Control
 Node2D
 Node
-ColorRect
 Label
 HBoxContainer
 VBoxContainer
 CanvasLayer
-AnimationPlayer
 Timer
 Sprite2D
 CollisionShape2D
 Area2D
 Sprite2D
-CollisionPolygon2D
