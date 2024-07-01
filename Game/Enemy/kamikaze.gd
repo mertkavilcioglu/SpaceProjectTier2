@@ -7,7 +7,7 @@ var playerDamage:int = 1
 
 @onready var player = get_parent().get_parent()
 @export var enemyMaxSpeed: float = 900.0
-@export var radius = 75
+@export var radius = 150
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 

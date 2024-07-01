@@ -20,8 +20,8 @@
 [ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_cdtje"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
-radius = 44.0
-height = 94.0
+radius = 107.143
+height = 214.286
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_70htx"]
 resource_local_to_scene = true
@@ -233,7 +233,7 @@ shader = ExtResource("15_0p2tx")
 shader_parameter/ca_strength = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yab1j"]
-radius = 16000.0
+radius = 28145.2
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -241,17 +241,19 @@ script = ExtResource("1_bikhr")
 deathParticle = ExtResource("2_djfga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_f4uun")
 
 [node name="wing" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_70htx")
 rotation = 1.5708
+scale = Vector2(2, 2)
 texture = ExtResource("2_l72di")
 
 [node name="body" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_l3758")
 rotation = 1.5708
-scale = Vector2(1.037, 1)
+scale = Vector2(2, 2)
 texture = ExtResource("3_barr6")
 
 [node name="Upgrade" type="Control" parent="."]
@@ -307,19 +309,19 @@ offset_bottom = -150.0
 text = "get level"
 
 [node name="Engine1" type="Node2D" parent="."]
-position = Vector2(-43, -6)
+position = Vector2(-87.1429, -5.71429)
 rotation = 1.5708
 
 [node name="Trail" parent="Engine1" instance=ExtResource("4_jeax1")]
 
 [node name="Engine2" type="Node2D" parent="."]
-position = Vector2(-43, 6)
+position = Vector2(-87.1429, 5.71429)
 rotation = 1.5708
 
 [node name="Trail" parent="Engine2" instance=ExtResource("4_jeax1")]
 
 [node name="Muzzle" type="Node2D" parent="."]
-position = Vector2(64, 0)
+position = Vector2(95.7143, 0)
 
 [node name="MuzzleFlash" type="Sprite2D" parent="Muzzle"]
 modulate = Color(1, 1, 1, 0)
@@ -334,7 +336,7 @@ libraries = {
 }
 
 [node name="Muzzle2" type="Node2D" parent="."]
-position = Vector2(4.28571, 22.8571)
+position = Vector2(34.2857, 22.8571)
 
 [node name="MuzzleFlash" type="Sprite2D" parent="Muzzle2"]
 modulate = Color(1, 1, 1, 0)
@@ -349,7 +351,7 @@ libraries = {
 }
 
 [node name="Muzzle3" type="Node2D" parent="."]
-position = Vector2(4.28572, -22.8571)
+position = Vector2(34.2857, -22.8571)
 
 [node name="MuzzleFlash" type="Sprite2D" parent="Muzzle3"]
 modulate = Color(1, 1, 1, 0)
@@ -364,6 +366,7 @@ libraries = {
 }
 
 [node name="ChaseArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaseArea"]
 position = Vector2(1.42857, 0)
@@ -705,6 +708,7 @@ player = NodePath("../..")
 visible = false
 
 [node name="enemy_nearby_area" type="Area2D" parent="."]
+visible = false
 
 [node name="enemy_nearby_collision" type="CollisionShape2D" parent="enemy_nearby_area"]
 shape = SubResource("CircleShape2D_yab1j")
