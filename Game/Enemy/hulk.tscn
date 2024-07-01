@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8hcd31fnjn1h"]
 
 [ext_resource type="Script" path="res://Game/Enemy/hulk.gd" id="1_g2ch8"]
-[ext_resource type="Texture2D" uid="uid://dnsi6cscy7oyt" path="res://icon.svg" id="1_vdp0k"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_2slt7"]
+[ext_resource type="Texture2D" uid="uid://rb20ojo4ek01" path="res://Sprites/uzaygemisi/dman gemiler/HarbingerHulk/Harbinger/1024/Top down/Harbinger_Top_dir7.png" id="3_ljv1m"]
 [ext_resource type="PackedScene" uid="uid://by464r5c4grus" path="res://Game/Enemy/hunterForHulk.tscn" id="4_g02ls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lax2o"]
-size = Vector2(138, 340)
+size = Vector2(390, 203)
 
 [node name="Hulk" type="RigidBody2D"]
 top_level = true
@@ -14,14 +14,13 @@ script = ExtResource("1_g2ch8")
 deathParticle = ExtResource("2_2slt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(1, 11.5)
 shape = SubResource("RectangleShape2D_lax2o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-4.17357e-07, 9.54802)
-rotation = 1.5708
-scale = Vector2(2.56766, 1)
-texture = ExtResource("1_vdp0k")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ljv1m")
 
 [node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -29,12 +28,13 @@ texture = ExtResource("1_vdp0k")
 
 [node name="Hunter1" parent="." instance=ExtResource("4_g02ls")]
 visible = false
-position = Vector2(34, -98)
+top_level = true
+position = Vector2(-116, 8)
 
 [node name="Hunter2" parent="." instance=ExtResource("4_g02ls")]
 visible = false
-position = Vector2(39, 0)
+position = Vector2(-3, 5)
 
 [node name="Hunter3" parent="." instance=ExtResource("4_g02ls")]
 visible = false
-position = Vector2(39, 96)
+position = Vector2(124, 5)

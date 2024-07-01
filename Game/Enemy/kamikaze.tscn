@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Game/Enemy/kamikaze.gd" id="1_jdpyd"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_8okkx"]
 [ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_5d0df"]
-[ext_resource type="Texture2D" uid="uid://kvwtd2bdncsm" path="res://Sprites/uzaygemisi/EnemyShips/Kamikze 128x 128.png" id="3_aqcx1"]
+[ext_resource type="Texture2D" uid="uid://dvbpyi8i0yho1" path="res://Sprites/uzaygemisi/dman gemiler/SwitchBladeKamikaze/SwitchBlade/1024/TopDown/SwitchBlade_Top_dir1.png" id="4_kwgwl"]
 [ext_resource type="PackedScene" uid="uid://d1vtrplp2oebl" path="res://Game/Player/TrailEffectBlue.tscn" id="5_p6gv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jbic"]
@@ -65,8 +65,8 @@ shape = SubResource("RectangleShape2D_6jbic")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_j65rp")
 rotation = 1.5708
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_aqcx1")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_kwgwl")
 
 [node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -74,6 +74,6 @@ libraries = {
 }
 
 [node name="Engine" type="Node2D" parent="."]
-position = Vector2(-28, 0)
+position = Vector2(-7, 0)
 
 [node name="Trail2" parent="Engine" instance=ExtResource("5_p6gv2")]

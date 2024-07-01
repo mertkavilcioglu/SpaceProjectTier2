@@ -1,3 +1,4 @@
+CollisionShape2D
 AnimationPlayer
 ColorRect
 Control
@@ -9,6 +10,5 @@ VBoxContainer
 CanvasLayer
 Timer
 Sprite2D
-CollisionShape2D
 Area2D
 Sprite2D

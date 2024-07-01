@@ -13,9 +13,6 @@ shader = ExtResource("3_kodjg")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1vit"]
-size = Vector2(65, 56)
-
 [sub_resource type="Animation" id="Animation_k8pul"]
 length = 0.001
 tracks/0/type = "value"
@@ -90,6 +87,9 @@ _data = {
 "hit_flash": SubResource("Animation_8eewg")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkbej"]
+size = Vector2(64, 55)
+
 [node name="HunterHulk" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_y6beg")
@@ -100,11 +100,6 @@ material = SubResource("ShaderMaterial_osjsk")
 rotation = 1.5708
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_fp7ag")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.5, 0)
-shape = SubResource("RectangleShape2D_b1vit")
-one_way_collision_margin = 0.0
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -134,3 +129,7 @@ rotation = 1.5708
 libraries = {
 "": SubResource("AnimationLibrary_k77pc")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0.5)
+shape = SubResource("RectangleShape2D_jkbej")
