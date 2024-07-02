@@ -88,15 +88,15 @@ func update_character_attributes():
 		character.setHealth(18)
 	
 	if SpeedLevel == 1:
-		character.setSpeed(500)
+		character.setSpeed(400)
 	if SpeedLevel == 2:
-		character.setSpeed(550)
+		character.setSpeed(450)
 	if SpeedLevel == 3:
-		character.setSpeed(600)
+		character.setSpeed(500)
 	if SpeedLevel == 4:
-		character.setSpeed(650)
+		character.setSpeed(550)
 	if SpeedLevel == 5:
-		character.setSpeed(700)
+		character.setSpeed(600)
 		
 	if DamageLevel == 1:
 		character.setDamage(1)
