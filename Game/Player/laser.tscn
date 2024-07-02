@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://12s1k8x2uk2a"]
 
 [ext_resource type="Script" path="res://Game/Player/laser.gd" id="1_gm8xq"]
-[ext_resource type="Texture2D" uid="uid://or0eucopyc11" path="res://Sprites/uzaygemisi/laserRed01.png" id="2_7b7y6"]
+[ext_resource type="Texture2D" uid="uid://bn11s6t2uiqnw" path="res://Sprites/uzaygemisi/laserBlue01.png" id="2_mitts"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5bg7"]
 radius = 4.0
@@ -14,7 +14,7 @@ collision_mask = 5
 script = ExtResource("1_gm8xq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7b7y6")
+texture = ExtResource("2_mitts")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_o5bg7")

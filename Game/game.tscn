@@ -168,10 +168,12 @@ scale = Vector2(-56.7572, 22.2816)
 position = Vector2(191, -1)
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
+scale = Vector2(2.5, 2.5)
+transform = Transform2D(2.5, 0, 0, 2.5, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 material = SubResource("ShaderMaterial_flxm1")
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.4, 0.4)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 script = ExtResource("2_rdm3x")

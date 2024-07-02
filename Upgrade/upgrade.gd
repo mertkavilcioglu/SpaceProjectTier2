@@ -95,6 +95,7 @@ func save_data():
 	file.store_var(FuelLevel)
 	file.store_var(DamageLevel)
 	file.store_var(ScrapParts)
+	file.store_var(highScore)
 
 func load_data():
 	if FileAccess.file_exists(save_path):

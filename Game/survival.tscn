@@ -116,10 +116,12 @@ glow_blend_mode = 1
 [node name="SurvivalGame" type="Node2D"]
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_h8r2u")]
+scale = Vector2(3.33, 3.33)
+transform = Transform2D(3.33, 0, 0, 3.33, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 material = SubResource("ShaderMaterial_flxm1")
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.3, 0.3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 script = ExtResource("4_ng8ic")
