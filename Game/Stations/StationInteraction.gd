@@ -13,7 +13,14 @@ var text_id:String
 var e_key_pressed_time = 0.0
 const E_KEY_PRESS_DURATION = 2.0
 
+@onready var e_interaction_sprite:Sprite2D
+
 func _ready():
+	e_interaction_sprite= Sprite2D.new()
+	add_child(e_interaction_sprite)
+	e_interaction_sprite.texture = load("res://Sprites/e_interaction_sprite.jpg")
+	e_interaction_sprite.scale = Vector2(0.05,0.05)
+	e_interaction_sprite.hide()
 	if station_id == 1:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
 		text_id = "text1"
@@ -25,10 +32,11 @@ func _ready():
 		text_id ="text30"
 
 func _process(delta):
-	pass
+	e_interaction_sprite.global_position = character.global_position + Vector2(50,-50)
 
 func _physics_process(delta):
 	if body_entered:
+		e_interaction_sprite.show()
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
 			if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
@@ -36,14 +44,13 @@ func _physics_process(delta):
 					dialogue_screen.dialogue(dialogue_path,text_id)
 					dialogue.show()
 					character.on_dialogue = true
-				else:
-					pass
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false
 				
 	if !body_entered:
 		dialogue.hide()
+		e_interaction_sprite.hide()
 		
 
 func _on_area_2d_body_entered(body):

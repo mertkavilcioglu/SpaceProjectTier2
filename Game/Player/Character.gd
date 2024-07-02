@@ -18,9 +18,9 @@ var level_counter = 1
 const save_path = "user://game_save.save"
 
 #**************** MOVEMENT-COMBAT VARIABLES and FUNCTIONS *****************
-@export var Speed:float = 500
+@export var Speed:float = 400
 @export var MaxSpeed:float = Speed
-@export var Acceleration:float = 10.0
+@export var Acceleration:float = 5.0
 @onready var Cam = $"../Camera2D"
 var MousePosition = null
 @onready var CanBoost:bool = true
@@ -56,6 +56,7 @@ var sprite2
 var enemy_nearby:bool = false
 @onready var shader_animation = $"../Camera2D/CanvasLayer2/fade_animation"
 @onready var canvaslayer2 = $"../Camera2D/CanvasLayer2"
+@onready var enemy_alert = $"../Camera2D/CanvasLayer2/enemy_alert"
 
 func _ready():
 	health = maxHealth
