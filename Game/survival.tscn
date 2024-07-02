@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://cetthkk06an7e"]
+[gd_scene load_steps=21 format=3 uid="uid://cetthkk06an7e"]
 
 [ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_h8r2u"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_1u3bo"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="4_ng8ic"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_rcafl"]
+[ext_resource type="Texture2D" uid="uid://dijae0twlo3ps" path="res://Sprites/enemy_alert.png" id="5_umgfi"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="6_ainam"]
 [ext_resource type="PackedScene" uid="uid://058ddaleep5x" path="res://Game/Enemy/enemy_spawner_SURVIVAL.tscn" id="6_unld7"]
 [ext_resource type="Script" path="res://Game/SurvivalStats.gd" id="7_pusgf"]
@@ -150,6 +151,11 @@ grow_vertical = 2
 libraries = {
 "": SubResource("AnimationLibrary_exncb")
 }
+
+[node name="enemy_alert" type="Sprite2D" parent="Camera2D/CanvasLayer2"]
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_umgfi")
 
 [node name="Character" parent="." instance=ExtResource("6_ainam")]
 material = SubResource("ShaderMaterial_k7x8h")
