@@ -29,7 +29,7 @@ func _process(delta):
 	if !shoot_bas:
 		shoot_bas=true
 		shoot_to_player()
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(0.8).timeout
 		shoot_bas=false
 
 func getHit(): 
