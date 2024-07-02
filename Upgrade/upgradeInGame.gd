@@ -88,15 +88,15 @@ func update_character_attributes():
 		character.setHealth(18)
 	
 	if SpeedLevel == 1:
-		character.setSpeed(500)
+		character.setSpeed(200)
 	if SpeedLevel == 2:
-		character.setSpeed(550)
+		character.setSpeed(250)
 	if SpeedLevel == 3:
-		character.setSpeed(600)
+		character.setSpeed(300)
 	if SpeedLevel == 4:
-		character.setSpeed(650)
+		character.setSpeed(350)
 	if SpeedLevel == 5:
-		character.setSpeed(700)
+		character.setSpeed(400)
 		
 	if DamageLevel == 1:
 		character.setDamage(1)
@@ -115,15 +115,15 @@ func update_character_attributes():
 		character.setGuns(true)
 	
 	if FuelLevel == 1:
-		character.setFireRate(0.50)
+		character.setFireRate(1.0)
 	if FuelLevel == 2:
-		character.setFireRate(0.45)
+		character.setFireRate(0.9)
 	if FuelLevel == 3:
-		character.setFireRate(0.40)
+		character.setFireRate(0.8)
 	if FuelLevel == 4:
-		character.setFireRate(0.35)
+		character.setFireRate(0.7)
 	if FuelLevel == 5:
-		character.setFireRate(0.30)
+		character.setFireRate(0.6)
 		
 
 

@@ -18,7 +18,7 @@ var level_counter = 1
 const save_path = "user://game_save.save"
 
 #**************** MOVEMENT-COMBAT VARIABLES and FUNCTIONS *****************
-@export var Speed:float = 400
+@export var Speed:float = 200
 @export var MaxSpeed:float = Speed
 @export var Acceleration:float = 5.0
 @onready var Cam = $"../Camera2D"
@@ -117,7 +117,7 @@ func _physics_process(delta):
 						BoostRefuel = true
 					if BoostFuel > 0:
 						if CanBoost == true:
-							MaxSpeed = Speed*2
+							MaxSpeed = Speed*2.5
 							velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
 							velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
 							sprite = $body
