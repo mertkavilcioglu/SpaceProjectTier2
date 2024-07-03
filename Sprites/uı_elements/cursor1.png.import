@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dijae0twlo3ps"
-path="res://.godot/imported/enemy_alert.png-b38f2b118349634c0fe0475743658e98.ctex"
+uid="uid://mu5c35e3xhj4"
+path="res://.godot/imported/cursor1.png-8b2c8918a5d4f21f43892f36023365cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/enemy_alert.png"
-dest_files=["res://.godot/imported/enemy_alert.png-b38f2b118349634c0fe0475743658e98.ctex"]
+source_file="res://Sprites/uı_elements/cursor1.png"
+dest_files=["res://.godot/imported/cursor1.png-8b2c8918a5d4f21f43892f36023365cf.ctex"]
 
 [params]
 

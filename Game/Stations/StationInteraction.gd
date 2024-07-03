@@ -18,8 +18,6 @@ const E_KEY_PRESS_DURATION = 2.0
 func _ready():
 	e_interaction_sprite= Sprite2D.new()
 	add_child(e_interaction_sprite)
-	e_interaction_sprite.texture = load("res://Sprites/e_interaction_sprite.jpg")
-	e_interaction_sprite.scale = Vector2(0.05,0.05)
 	e_interaction_sprite.hide()
 	if station_id == 1:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
@@ -32,18 +30,29 @@ func _ready():
 		text_id ="text30"
 
 func _process(delta):
-	e_interaction_sprite.global_position = character.global_position + Vector2(50,-50)
+	e_interaction_sprite.global_position = character.global_position + Vector2(60,-60)
 
 func _physics_process(delta):
 	if body_entered:
+		e_interaction_sprite.texture=load("res://Sprites/uı_elements/E_0.png")
 		e_interaction_sprite.show()
 		if Input.is_action_pressed("Interact"):
 			e_key_pressed_time += delta
-			if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
-				if character.enemy_nearby == false:
-					dialogue_screen.dialogue(dialogue_path,text_id)
-					dialogue.show()
-					character.on_dialogue = true
+			if character.enemy_nearby == false:
+				if e_key_pressed_time >= 0.3 and e_key_pressed_time<0.7:
+					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_1.png")
+				elif e_key_pressed_time >= 0.7 and e_key_pressed_time<1.1:
+					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_2.png")
+				elif e_key_pressed_time >= 1.1 and e_key_pressed_time<1.5:
+					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3.png")
+				elif  e_key_pressed_time >= 1.5:
+					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3_LightedUp.png")
+				if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
+						dialogue_screen.dialogue(dialogue_path,text_id)
+						dialogue.show()
+						character.on_dialogue = true
+		elif Input.is_action_just_released("Interact"):
+			e_key_pressed_time = 0
 		if flag:
 			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
 			flag = false

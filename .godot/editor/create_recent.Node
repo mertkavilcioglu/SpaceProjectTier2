@@ -1,13 +1,14 @@
 Sprite2D
+AnimatedSprite2D
+Node2D
+CanvasLayer
 AnimationPlayer
 ColorRect
 Control
-Node2D
 Node
 Label
 HBoxContainer
 VBoxContainer
-CanvasLayer
 Timer
 CollisionShape2D
 Area2D

@@ -4,7 +4,7 @@
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_1u3bo"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="4_ng8ic"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_rcafl"]
-[ext_resource type="Texture2D" uid="uid://dijae0twlo3ps" path="res://Sprites/enemy_alert.png" id="5_umgfi"]
+[ext_resource type="Texture2D" uid="uid://dijae0twlo3ps" path="res://Sprites/uı_elements/enemy_alert.png" id="5_umgfi"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="6_ainam"]
 [ext_resource type="PackedScene" uid="uid://058ddaleep5x" path="res://Game/Enemy/enemy_spawner_SURVIVAL.tscn" id="6_unld7"]
 [ext_resource type="Script" path="res://Game/SurvivalStats.gd" id="7_pusgf"]

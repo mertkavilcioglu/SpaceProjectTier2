@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdmc4v6d8d10h"
-path="res://.godot/imported/mission_vector.png-c2b0536c754445ac90a55e4b9aeefc11.ctex"
+uid="uid://c7nmrikndd72p"
+path="res://.godot/imported/E_2.png-b588ef84a71b39aaf014ad5925842696.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/mission_vector.png"
-dest_files=["res://.godot/imported/mission_vector.png-c2b0536c754445ac90a55e4b9aeefc11.ctex"]
+source_file="res://Sprites/uı_elements/E_2.png"
+dest_files=["res://.godot/imported/E_2.png-b588ef84a71b39aaf014ad5925842696.ctex"]
 
 [params]
 

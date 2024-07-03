@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq3gdqurym2cu"
-path="res://.godot/imported/e_interaction_sprite.jpg-64acd5eab06873435503d3bad61dcbe2.ctex"
+uid="uid://tmkktwhomclj"
+path="res://.godot/imported/E_3_LightedUp.png-874a2bffe8a0ffdf3eaea986aa71bc07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/e_interaction_sprite.jpg"
-dest_files=["res://.godot/imported/e_interaction_sprite.jpg-64acd5eab06873435503d3bad61dcbe2.ctex"]
+source_file="res://Sprites/uı_elements/E_3_LightedUp.png"
+dest_files=["res://.godot/imported/E_3_LightedUp.png-874a2bffe8a0ffdf3eaea986aa71bc07.ctex"]
 
 [params]
 
