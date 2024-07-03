@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cetthkk06an7e"]
+[gd_scene load_steps=22 format=3 uid="uid://cetthkk06an7e"]
 
 [ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_h8r2u"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_1u3bo"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://Game/SurvivalStats.gd" id="7_pusgf"]
 [ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="7_wht8c"]
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="8_g75uf"]
-[ext_resource type="PackedScene" uid="uid://b8hcd31fnjn1h" path="res://Game/Enemy/hulk.tscn" id="8_skx3f"]
 [ext_resource type="PackedScene" uid="uid://dv3v2y2c2ua6m" path="res://Game/final_battle.tscn" id="11_n27da"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
@@ -163,8 +162,6 @@ texture = ExtResource("5_umgfi")
 material = SubResource("ShaderMaterial_k7x8h")
 
 [node name="EnemySpawnerSURVIVAL" parent="Character" instance=ExtResource("6_unld7")]
-
-[node name="Hulk" parent="Character/EnemySpawnerSURVIVAL" instance=ExtResource("8_skx3f")]
 
 [node name="SurvivalStats" type="CanvasLayer" parent="Character"]
 script = ExtResource("7_pusgf")

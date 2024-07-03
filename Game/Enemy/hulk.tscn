@@ -54,16 +54,18 @@ position = Vector2(-181, 75)
 [node name="Trail" parent="Engine5" instance=ExtResource("5_wmhkr")]
 
 [node name="Gun" type="Node2D" parent="."]
-position = Vector2(-97, -57)
+position = Vector2(-110, 8)
 
 [node name="Hunter1" parent="Gun" instance=ExtResource("4_g02ls")]
+visible = false
 
 [node name="Lasers" type="Node" parent="Gun"]
 
 [node name="Gun2" type="Node2D" parent="."]
-position = Vector2(-96, 71)
+position = Vector2(7, 8)
 
 [node name="Hunter1" parent="Gun2" instance=ExtResource("4_g02ls")]
+visible = false
 
 [node name="Lasers" type="Node" parent="Gun2"]
 
@@ -71,5 +73,6 @@ position = Vector2(-96, 71)
 position = Vector2(130, 9)
 
 [node name="Hunter1" parent="Gun3" instance=ExtResource("4_g02ls")]
+visible = false
 
 [node name="Lasers" type="Node" parent="Gun3"]
