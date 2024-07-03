@@ -17,6 +17,7 @@ var posY
 @onready var canSpawn:bool = true
 @onready var isSpawned:bool = false
 @onready var isStopped:bool = false
+@onready var eldenRing = $"../FinalBattle"
 	
 func _ready():
 	upgradeScreen.reset_upgrades()
@@ -49,7 +50,7 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 4 and currentWave < 7 :
+	if currentWave >= 4 and currentWave < 6 :
 		enemyType = randi_range(1,10)
 		if enemyType <= 7:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -61,7 +62,7 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 7 and currentWave < 10:
+	if currentWave >= 6 and currentWave < 8:
 		enemyType = randi_range(1,10)
 		if enemyType <= 5:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -73,39 +74,15 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 10 and currentWave < 13:
+	if currentWave >= 8:
 		enemyType = randi_range(1,10)
-		if enemyType <= 4:
+		if enemyType <= 2:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 			add_child(enemy)
-		elif enemyType <= 7 and enemyType >= 5:
+		elif enemyType <= 5 and enemyType >= 3:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
-		elif enemyType >= 8:
-			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			add_child(enemy)
-			
-	if currentWave >= 13 and currentWave < 16:
-		enemyType = randi_range(1,10)
-		if enemyType <= 3:
-			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
-			add_child(enemy)
-		elif enemyType <= 6 and enemyType >= 4:
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
-		elif enemyType >= 7:
-			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			add_child(enemy)
-			
-	if currentWave >= 16:
-		enemyType = randi_range(1,10)
-		if enemyType <= 3:
-			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
-			add_child(enemy)
-		elif enemyType <= 6 and enemyType >= 4:
-			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
-			add_child(enemy)
-		elif enemyType >= 7:
+		elif enemyType >= 6:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 
@@ -187,3 +164,5 @@ func _on_spawner_cd_timeout():
 	isStopped = false
 	currentWave += 1
 	set_timer_autostart()
+	if currentWave == 8:
+		eldenRing.play()

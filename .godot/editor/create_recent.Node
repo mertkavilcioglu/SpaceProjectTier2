@@ -1,8 +1,10 @@
+StaticBody2D
+Node2D
+AudioStreamPlayer2D
 Sprite2D
 AnimationPlayer
 ColorRect
 Control
-Node2D
 Node
 Label
 HBoxContainer
@@ -10,4 +12,3 @@ VBoxContainer
 CanvasLayer
 Timer
 CollisionShape2D
-Area2D
