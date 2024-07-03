@@ -31,22 +31,23 @@ func _ready():
 
 func _process(delta):
 	e_interaction_sprite.global_position = character.global_position + Vector2(60,-60)
+	#sprites.global_position = character.global_position + Vector2(60,-60)
 
 func _physics_process(delta):
 	if body_entered:
 		e_interaction_sprite.texture=load("res://Sprites/uı_elements/E_0.png")
 		e_interaction_sprite.show()
 		if Input.is_action_pressed("Interact"):
+			if e_key_pressed_time >= 0 and e_key_pressed_time<=0.5:
+				e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_1.png")
+			elif e_key_pressed_time >= 0.5 and e_key_pressed_time<=1:
+				e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_2.png")
+			elif e_key_pressed_time >= 1 and e_key_pressed_time<=1.5:
+				e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3.png")
+			elif e_key_pressed_time >= 1.5 and e_key_pressed_time<=2:
+				e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3_LightedUp.png")
 			e_key_pressed_time += delta
 			if character.enemy_nearby == false:
-				if e_key_pressed_time >= 0.3 and e_key_pressed_time<0.7:
-					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_1.png")
-				elif e_key_pressed_time >= 0.7 and e_key_pressed_time<1.1:
-					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_2.png")
-				elif e_key_pressed_time >= 1.1 and e_key_pressed_time<1.5:
-					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3.png")
-				elif  e_key_pressed_time >= 1.5:
-					e_interaction_sprite.texture = load("res://Sprites/uı_elements/E_3_LightedUp.png")
 				if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
 						dialogue_screen.dialogue(dialogue_path,text_id)
 						dialogue.show()

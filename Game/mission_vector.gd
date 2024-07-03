@@ -7,24 +7,22 @@ extends Sprite2D
 var camera
 var screen_center
 var direction
-var distance_from_center = 700
+var distance_from_center = 450
 var station_position_path
 var counter = 1
 
 func _process(delta):
 	station_changer()
-	if station1.body_entered == false:
-		if counter != 4:
-			direct_to_mission(station_position_path)
-			show()
+	direct_to_mission(station_position_path)
+	show()
+	if station1.body_entered == true or station2.body_entered == true or station3.body_entered == true:
+		hide()
 		if station1.dialogue.visible == true:
 			counter = 2
 		elif station2.dialogue.visible == true:
 			counter = 3
 		elif station3.dialogue.visible == true:
 			counter = 4
-	else:
-		hide()
 
 
 func station_changer():

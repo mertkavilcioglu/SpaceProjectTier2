@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://btgiyvnu75u0q" path="res://Menus/die_menu.tscn" id="14_m4ht6"]
 [ext_resource type="Script" path="res://Game/Player/BoostBar.gd" id="15_0jhy6"]
 [ext_resource type="Shader" path="res://Game/Player/DeathChroma.gdshader" id="15_0p2tx"]
-[ext_resource type="Texture2D" uid="uid://c0epl47tt01kw" path="res://Sprites/uı_elements/HB_Bars1000.png" id="16_v5e6y"]
+[ext_resource type="Texture2D" uid="uid://v6qjxrxtu8lr" path="res://Sprites/uı_elements/HB_BarsUZUNCANA.png" id="16_nopqo"]
 [ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_cdtje"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
@@ -652,7 +652,7 @@ visible = false
 [node name="BoostBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 offset_left = 21.0
 offset_top = 42.0
-offset_right = 107.0
+offset_right = 253.0
 offset_bottom = 57.0
 theme_override_styles/background = SubResource("StyleBoxEmpty_aq6cc")
 theme_override_styles/fill = SubResource("StyleBoxFlat_p2521")
@@ -664,7 +664,7 @@ player = NodePath("../..")
 [node name="HealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 offset_left = 21.0
 offset_top = 19.0
-offset_right = 107.0
+offset_right = 253.0
 offset_bottom = 34.0
 theme_override_styles/background = SubResource("StyleBoxEmpty_t6khq")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jaoa0")
@@ -674,9 +674,9 @@ script = ExtResource("14_difn7")
 player = NodePath("../..")
 
 [node name="hb_bars" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(63.945, 40)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("16_v5e6y")
+position = Vector2(136.95, 40)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_nopqo")
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
