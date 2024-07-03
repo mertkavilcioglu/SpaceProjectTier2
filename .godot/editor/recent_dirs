@@ -1,12 +1,11 @@
-res://Sprites/uı_elements
-res://Sprites
+res://Game
 res://Game/Enemy
 res://
 res://Game/Player
 res://Menus
 res://Game/Stations
+res://Sprites
 res://Game/DialogueSystem
-res://Game
 res://Sprites/uzaygemisi/EnemyShips
 res://Sprites/uzaygemisi
 res://Sprites/uzaygemisi/Bodies

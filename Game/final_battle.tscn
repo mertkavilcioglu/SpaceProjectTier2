@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv3v2y2c2ua6m"]
+
+[ext_resource type="AudioStream" uid="uid://cd84s0vdp8urj" path="res://Game/final battle.mp3" id="1_gq6rl"]
+
+[node name="FinalBattle" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_gq6rl")

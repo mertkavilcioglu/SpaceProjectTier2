@@ -5,7 +5,7 @@ signal hit()
 var enemyHealth:int = 3 
 var playerDamage:int = 1 
 
-@onready var hulk = get_parent()
+@onready var hulk = get_parent().get_parent()
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
@@ -29,7 +29,7 @@ func _process(delta):
 	if !shoot_bas:
 		shoot_bas=true
 		shoot_to_player()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.6).timeout
 		shoot_bas=false
 
 func getHit(): 

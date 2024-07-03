@@ -6,7 +6,7 @@ var enemyHealth:int = 3
 var playerDamage:int = 1 
 
 @onready var player = get_parent().get_parent()
-@export var enemyMaxSpeed: float = 800.0
+@export var enemyMaxSpeed: float = 750.0
 @export var radius = 500
 @export var radius2 = 700
 @export var shootRadius = 2000
@@ -44,7 +44,7 @@ func _process(delta):
 	if !shoot_bas:
 		shoot_bas=true
 		shoot_to_player()
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(0.6).timeout
 		shoot_bas=false
 		
 	var enemyMotion = Vector2()
