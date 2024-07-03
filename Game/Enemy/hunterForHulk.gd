@@ -5,7 +5,7 @@ signal hit()
 var enemyHealth:int = 3 
 var playerDamage:int = 1 
 
-@onready var hulk = get_parent()
+@onready var hulk = get_parent().get_parent()
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 

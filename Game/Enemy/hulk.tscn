@@ -28,15 +28,6 @@ texture = ExtResource("3_wfoss")
 
 [node name="Lasers" type="Node" parent="."]
 
-[node name="Hunter1" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(-100, -51)
-
-[node name="Hunter2" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(-98, 74)
-
-[node name="Hunter3" parent="." instance=ExtResource("4_g02ls")]
-position = Vector2(153, 7)
-
 [node name="Engine" type="Node2D" parent="."]
 position = Vector2(-182, -57)
 
@@ -61,3 +52,24 @@ position = Vector2(-188, 42)
 position = Vector2(-181, 75)
 
 [node name="Trail" parent="Engine5" instance=ExtResource("5_wmhkr")]
+
+[node name="Gun" type="Node2D" parent="."]
+position = Vector2(-97, -57)
+
+[node name="Hunter1" parent="Gun" instance=ExtResource("4_g02ls")]
+
+[node name="Lasers" type="Node" parent="Gun"]
+
+[node name="Gun2" type="Node2D" parent="."]
+position = Vector2(-96, 71)
+
+[node name="Hunter1" parent="Gun2" instance=ExtResource("4_g02ls")]
+
+[node name="Lasers" type="Node" parent="Gun2"]
+
+[node name="Gun3" type="Node2D" parent="."]
+position = Vector2(130, 9)
+
+[node name="Hunter1" parent="Gun3" instance=ExtResource("4_g02ls")]
+
+[node name="Lasers" type="Node" parent="Gun3"]

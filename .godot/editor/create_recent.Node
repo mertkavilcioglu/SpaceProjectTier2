@@ -1,5 +1,5 @@
-StaticBody2D
 Node2D
+StaticBody2D
 AudioStreamPlayer2D
 Sprite2D
 AnimationPlayer
