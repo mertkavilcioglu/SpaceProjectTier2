@@ -1,10 +1,12 @@
-[gd_scene load_steps=32 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=34 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_j1piq"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
+[ext_resource type="PackedScene" uid="uid://4gdymh7wacm0" path="res://Game/Enemy/MEDspawner_trigger.tscn" id="2_wrk50"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
+[ext_resource type="PackedScene" uid="uid://cb72bp87umm38" path="res://Game/Enemy/HIGHspawner_trigger.tscn" id="3_sdaca"]
 [ext_resource type="PackedScene" uid="uid://cgl160tuumy2c" path="res://Game/Stations/test_station.tscn" id="4_0au0s"]
 [ext_resource type="PackedScene" uid="uid://bt1gwyu5mr3q8" path="res://Game/Economy/test_resource_planet.tscn" id="5_612sc"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_ufmhb"]
@@ -166,43 +168,236 @@ glow_blend_mode = 1
 [node name="SpawnerTriggers" type="Node2D" parent="."]
 
 [node name="SpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(5546, -3784)
-rotation = 0.96199
+position = Vector2(0, -1800)
+rotation = 1.5708
 scale = Vector2(21.6991, -94.5291)
 
+[node name="SpawnerTrigger10" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(0, 1800)
+rotation = 1.5708
+scale = Vector2(21.6991, -94.5291)
+
+[node name="SpawnerTrigger15" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-817, -5492)
+rotation = 1.5708
+scale = Vector2(21.699, -112)
+
+[node name="SpawnerTrigger16" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(0, 5492)
+rotation = 1.5708
+scale = Vector2(21.6991, -131.209)
+
+[node name="SpawnerTrigger19" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-2794, -9766)
+rotation = 1.5708
+scale = Vector2(21.699, -158)
+
+[node name="SpawnerTrigger17" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-3646, 9785)
+rotation = 1.5708
+scale = Vector2(21.6991, -138.329)
+
+[node name="SpawnerTrigger11" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-2979, 1.00001)
+rotation = 1.5708
+scale = Vector2(12.0191, -26.9291)
+
+[node name="SpawnerTrigger12" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(2979, 1)
+rotation = 1.5708
+scale = Vector2(12.0191, -26.9291)
+
 [node name="SpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(8987, 1991)
-rotation = 0.086848
-scale = Vector2(21.6991, -72.2469)
+position = Vector2(6980, 2471)
+scale = Vector2(21.699, -95)
 
-[node name="SpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(17676, 7603)
-rotation = 1.01299
-scale = Vector2(21.6991, -72.2469)
+[node name="SpawnerTrigger13" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-6951, 0)
+scale = Vector2(21.6991, -151.052)
 
-[node name="SpawnerTrigger9" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(-6548, 9476)
-rotation = 2.40775
-scale = Vector2(21.6991, -72.2469)
+[node name="SpawnerTrigger14" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(-10923, 0)
+scale = Vector2(21.6991, -248.172)
+
+[node name="SpawnerTrigger18" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(10938, 2667)
+scale = Vector2(21.699, -100)
 
 [node name="SpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(5648, 11571)
-scale = Vector2(-19.8772, 22.2816)
+position = Vector2(3534, 11805)
+scale = Vector2(-19.8772, 106.522)
 
 [node name="SpawnerTrigger5" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(9550, 11571)
-scale = Vector2(-19.8772, 22.2816)
+position = Vector2(11700, 11811)
+scale = Vector2(-19.8772, 106.962)
 
 [node name="SpawnerTrigger6" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(7597, 9599)
+position = Vector2(7597, 8089)
 scale = Vector2(-56.7572, 22.2816)
 
 [node name="SpawnerTrigger7" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(7597, 13547)
+position = Vector2(7597, 15540)
 scale = Vector2(-56.7572, 22.2816)
 
-[node name="testtrigger" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(191, -1)
+[node name="SpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(5232, -6500)
+scale = Vector2(-19.8772, 106.522)
+
+[node name="SpawnerTrigger9" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(13398, -6494)
+scale = Vector2(-19.8772, 106.962)
+
+[node name="SpawnerTrigger20" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(9295, -10216)
+scale = Vector2(-56.7572, 22.2816)
+
+[node name="SpawnerTrigger21" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(9295, -2765)
+scale = Vector2(-56.7572, 22.2816)
+
+[node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-21148, 11089)
+scale = Vector2(57, 22.659)
+
+[node name="MEDSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-21148, 3544)
+scale = Vector2(57, 22.659)
+
+[node name="MEDSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-17117, 7313)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="MEDSpawnerTrigger13" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-17117, 14494)
+rotation = 1.5708
+scale = Vector2(45, 22.659)
+
+[node name="MEDSpawnerTrigger9" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-17117, -7184)
+rotation = 1.5708
+scale = Vector2(183, 22.91)
+
+[node name="MEDSpawnerTrigger11" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(17117, 0)
+rotation = 1.5708
+scale = Vector2(318.5, 22.91)
+
+[node name="MEDSpawnerTrigger17" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(24889, 1.42769e-10)
+rotation = 1.5708
+scale = Vector2(472, 22.91)
+
+[node name="MEDSpawnerTrigger20" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(33081, -2.63541e-11)
+rotation = 1.5708
+scale = Vector2(630, 22.91)
+
+[node name="MEDSpawnerTrigger21" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-33081, 0)
+rotation = 1.5708
+scale = Vector2(630, 22.91)
+
+[node name="MEDSpawnerTrigger18" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-24889, -11247)
+rotation = 1.5708
+scale = Vector2(260, 22.91)
+
+[node name="MEDSpawnerTrigger19" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-24889, 18558)
+rotation = 1.5708
+scale = Vector2(122, 22.91)
+
+[node name="MEDSpawnerTrigger10" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(0, -15887)
+scale = Vector2(303, 22.659)
+
+[node name="MEDSpawnerTrigger15" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(0, 24025)
+scale = Vector2(450, 22.659)
+
+[node name="MEDSpawnerTrigger16" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(0, -24025)
+scale = Vector2(450, 22.659)
+
+[node name="MEDSpawnerTrigger22" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(0, -32393)
+scale = Vector2(605, 22.659)
+
+[node name="MEDSpawnerTrigger23" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-17114, 32393)
+scale = Vector2(280, 22.659)
+
+[node name="MEDSpawnerTrigger24" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(19948, 32393)
+scale = Vector2(228, 22.659)
+
+[node name="MEDSpawnerTrigger12" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-6802, 15879)
+scale = Vector2(175, 22.659)
+
+[node name="MEDSpawnerTrigger14" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(14433, 15887)
+scale = Vector2(31, 22.659)
+
+[node name="MEDSpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-25182, 7313)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="MEDSpawnerTrigger5" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(2787, 33804)
+scale = Vector2(57, 22.659)
+
+[node name="MEDSpawnerTrigger6" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(2787, 26259)
+scale = Vector2(57, 22.659)
+
+[node name="MEDSpawnerTrigger7" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(6818, 30028)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="MEDSpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(-1247, 30028)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="HIGHSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(55747, 8795)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="HIGHSpawnerTrigger5" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(44911, 0)
+rotation = 1.5708
+scale = Vector2(825, 22.659)
+
+[node name="HIGHSpawnerTrigger6" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(-44911, 0)
+rotation = 1.5708
+scale = Vector2(825, 22.659)
+
+[node name="HIGHSpawnerTrigger7" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(0, -42728)
+scale = Vector2(828, 22.659)
+
+[node name="HIGHSpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(0, 42728)
+scale = Vector2(828, 22.659)
+
+[node name="HIGHSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(63812, 8795)
+rotation = 1.5708
+scale = Vector2(90, 22.659)
+
+[node name="HIGHSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(59781, 5026)
+scale = Vector2(57, 22.659)
+
+[node name="HIGHSpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(59781, 12571)
+scale = Vector2(57, 22.659)
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
 scale = Vector2(2.5, 2.5)

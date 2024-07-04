@@ -1,40 +1,12 @@
-<<<<<<< Updated upstream
-=======
-res://Game/Stations/station_1.tscn
->>>>>>> Stashed changes
+res://Game/survival.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
-res://Menus/pause_menu.gdshader
 res://Game/PlayerVignette.gdshader
-res://Game/DialogueSystem/dialogue.gdshader
-res://Game/game.gdshader
-<<<<<<< Updated upstream
-res://Game/final_battle.tscn
-res://Game/survival.tscn
-res://Game/Enemy/enemy_spawner_SURVIVAL.gd
-=======
-res://Game/Stations/StationInteraction.gd
->>>>>>> Stashed changes
-res://Menus/main_menu.tscn
+res://Game/Enemy/enemy_spawner_HIGH.gd
 res://Game/game.tscn
-res://Game/survival.tscn
-res://Menus/backgroundInGame.tscn
-<<<<<<< Updated upstream
-res://Game/Enemy/hulk.tscn
-res://Game/Enemy/hunter.tscn
-res://Game/Enemy/hunterForHulk.tscn
-res://Game/Enemy/kamikaze.tscn
+res://Game/Enemy/enemy_spawner_MED.gd
+res://Game/Enemy/enemy_spawner_LOW.gd
+res://Menus/main_menu.tscn
 res://Game/Player/Character.tscn
-res://Game/Enemy/enemy_spawner_SURVIVAL.tscn
-res://Game/Enemy/hunterForHulk.gd
-=======
-res://Game/Economy/resource_ship.tscn
-res://Game/DialogueSystem/dialogue.tscn
-res://Menus/pause_menu.tscn
-res://Game/Player/laser.tscn
-res://Game/Stations/station_5.tscn
-res://Game/Stations/test_station.tscn
-res://Game/Player/Character.tscn
-res://Game/Stations/station_4.tscn
-res://Game/mission_vector.gd
->>>>>>> Stashed changes
+res://Upgrade/upgradeInGame.gd
+res://Upgrade/upgrade.gd

@@ -8,6 +8,7 @@ var posX
 var posY
 
 @onready var player = get_parent()
+@onready var upgradeScreen = $"../CanvasLayer/UpgradeScreen"
 @onready var Timer1 = $RandomTimer
 @onready var Timer2 = $SpawnCoolDown
 @onready var waveTimer = $WaveTimer
@@ -28,13 +29,13 @@ func _on_timer_timeout():
 
 func _on_timer_2_timeout():
 	enemyType = randi_range(1,10)
-	if enemyType <= 3:
+	if enemyType <= 4:
 		enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
 		add_child(enemy)
-	elif enemyType <= 7 and enemyType >= 4:
+	elif enemyType <= 8 and enemyType >= 5:
 		enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 		add_child(enemy)
-	elif enemyType >= 8:
+	elif enemyType >= 9:
 		enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 		add_child(enemy)
 				
@@ -100,6 +101,7 @@ func set_timer_autostart(isStarted: bool): # this func is no longer in need a bo
 
 func _on_wave_timer_timeout():
 	#print("stopped")
+	upgradeScreen.getScrap()
 	canSpawn = false
 	set_timer_autostart(false)
 	spawnerCD.start()
