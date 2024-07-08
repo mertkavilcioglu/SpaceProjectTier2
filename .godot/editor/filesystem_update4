@@ -1,6 +1,7 @@
 res://Menus/main_menu.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
+res://Game/Stations/StationInteraction.gd
 res://Game/PlayerVignette.gdshader
 res://Game/game.tscn
 res://Game/Stations/station_1.tscn
@@ -13,8 +14,5 @@ res://Game/Enemy/enemy_spawner_HIGH.tscn
 res://Game/Enemy/enemy_spawner_LOW.tscn
 res://Game/Enemy/MEDspawner_trigger.tscn
 res://Game/Economy/resource_ship.tscn
-res://Game/Stations/StationInteraction.gd
-res://Game/Economy/resource_ship.gd
-res://Game/Camera2D.gd
-res://Game/Player/Character.gd
 res://Game/Player/Character.tscn
+res://Game/Player/Character.gd
