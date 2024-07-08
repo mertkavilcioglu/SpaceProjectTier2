@@ -7,6 +7,9 @@ var current_acceleration = 0.0
 @onready var canvaslayer2 = get_node("CanvasLayer2")
 @onready var enemy_alert = $CanvasLayer2/enemy_alert
 
+
+
+
 func _ready():
 	enemy_alert.global_position = get_viewport_rect().size/2 + Vector2(0,-200)
 	
@@ -19,6 +22,7 @@ func _process(delta):
 	if offset != Vector2(0,0):
 		offset.x = lerpf(offset.x,0,5*delta)
 		offset.y = lerpf(offset.y,0,5*delta)
+
 
 
 func camera_shake():

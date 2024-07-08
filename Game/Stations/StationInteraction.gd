@@ -8,6 +8,9 @@ extends Node2D
 @onready var game = $".."
 @onready var character = $"../Character"
 @export var station_id: int
+var angle = 0.0
+var safezone_bool = false
+
 var dialogue_path:String
 var text_id:String
 var e_key_pressed_time = 0.0
@@ -22,14 +25,23 @@ func _ready():
 	if station_id == 1:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
 		text_id = "text1"
+		var safezone_area = $safezone
 	elif station_id == 2:
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part2.json"
 		text_id = "text17"
 	elif station_id == 3:
+		print(global_position)
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
 		text_id ="text30"
+		resource_ship.start_collecting(global_position,global_position + Vector2(0,-1300))
 
 func _process(delta):
+	if station_id == 1:
+		var shields = get_node("shields")
+		shields.look_at(global_position)
+		shields.rotation+= PI
+		shields.global_position = global_position + Vector2(cos(angle), sin(angle)) * 100.0
+	angle +=0.0002
 	e_interaction_sprite.global_position = character.global_position + Vector2(60,-60)
 	#sprites.global_position = character.global_position + Vector2(60,-60)
 
@@ -77,3 +89,16 @@ func _on_area_2d_body_exited(body):
 		e_key_pressed_time = 0.0 
 
 
+
+
+
+
+
+func _on_safezone_body_entered(body):
+	if body.name == "Character":
+		safezone_bool = true
+
+
+func _on_safezone_body_exited(body):
+	if body.name == "Character":
+		safezone_bool =false

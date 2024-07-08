@@ -1,6 +1,6 @@
 extends Sprite2D
 
-@onready var station1 = $"../Station1"
+@onready var station1 = $"../karagünes_atolyesi"
 @onready var station2 = $"../Station2"
 @onready var station3 = $"../Station3"
 @onready var character = $"../Character"
@@ -15,25 +15,25 @@ func _process(delta):
 	station_changer()
 	direct_to_mission(station_position_path)
 	show()
-	if station1.body_entered == true or station2.body_entered == true or station3.body_entered == true:
+	if station1.body_entered == true:
 		hide()
-		if station1.dialogue.visible == true:
-			counter = 2
-		elif station2.dialogue.visible == true:
-			counter = 3
-		elif station3.dialogue.visible == true:
-			counter = 4
+	#	if station1.dialogue.visible == true:
+		#	counter = 2
+		#if station2.dialogue.visible == true:
+		#	counter = 3
+		#elif station3.dialogue.visible == true:
+		#	counter = 4
 
 
 func station_changer():
 	if counter == 1:
 		station_position_path = station1.global_position
-	elif counter == 2:
-		station_position_path = station2.global_position
-	elif counter == 3:
-		station_position_path = station3.global_position
-	elif counter == 4:
-		station_position_path = Vector2(0,0)
+	#elif counter == 2:
+		#station_position_path = station2.global_position
+	#elif counter == 3:
+		#station_position_path = station3.global_position
+	#elif counter == 4:
+	#	station_position_path = Vector2(0,0)
 		hide()
 	
 	

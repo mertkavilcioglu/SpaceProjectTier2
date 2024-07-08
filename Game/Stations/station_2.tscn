@@ -1,27 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxouswost8ppp"]
+[gd_scene load_steps=6 format=3 uid="uid://bxouswost8ppp"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_kl3j7"]
-[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="2_u5iwm"]
+[ext_resource type="Texture2D" uid="uid://cb17kiidps85m" path="res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png" id="2_rukt1"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_kr65m"]
+[ext_resource type="Texture2D" uid="uid://cddac5klpybc" path="res://Sprites/gezegenler/station_sprites/korsan_istasyon_001.png" id="4_tr3fh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lsk7k"]
-radius = 123.911
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gs81g"]
+radius = 320.874
+height = 802.807
 
 [node name="TestStation" type="Node2D"]
 script = ExtResource("1_kl3j7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_u5iwm")
+texture = ExtResource("2_rukt1")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lsk7k")
+rotation = 1.63311
+shape = SubResource("CapsuleShape2D_gs81g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
 [node name="Dialogue" parent="CanvasLayer" instance=ExtResource("3_kr65m")]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(31, 866)
+rotation = 3.2306
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_tr3fh")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D"]
+position = Vector2(595, -428)
+rotation = 0.300197
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_tr3fh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D"]
+position = Vector2(-986, -9.00002)
+rotation = -1.55509
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_tr3fh")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

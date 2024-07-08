@@ -1,22 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://byt5we2qhx1t0"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_cdj4w"]
-[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="2_00tni"]
+[ext_resource type="Texture2D" uid="uid://dfvoyj767tibj" path="res://Sprites/gezegenler/station_sprites/istasyonDEVRIMCI1_a.png" id="2_tclvu"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_da3j1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lsk7k"]
-radius = 123.911
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1cvn"]
+radius = 207.0
+height = 752.253
 
 [node name="TestStation" type="Node2D"]
 script = ExtResource("1_cdj4w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_00tni")
+texture = ExtResource("2_tclvu")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lsk7k")
+rotation = -1.55509
+shape = SubResource("CapsuleShape2D_h1cvn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

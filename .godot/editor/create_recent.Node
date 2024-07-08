@@ -1,22 +1,14 @@
-<<<<<<< Updated upstream
+CollisionShape2D
+Area2D
 Node2D
+Sprite2D
 StaticBody2D
 AudioStreamPlayer2D
-Sprite2D
 AnimatedSprite2D
-=======
->>>>>>> Stashed changes
-Node2D
 AnimationPlayer
-Sprite2D
 CanvasLayer
 CanvasGroup
 AnimatedSprite2D
 ColorRect
 Control
 Node
-Label
-HBoxContainer
-VBoxContainer
-Timer
-CollisionShape2D

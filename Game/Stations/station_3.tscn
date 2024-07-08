@@ -1,27 +1,93 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddnjhsyy5bwau"]
+[gd_scene load_steps=7 format=3 uid="uid://ddnjhsyy5bwau"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_b5irn"]
-[ext_resource type="Texture2D" uid="uid://cq3vsv5p5s4hr" path="res://Sprites/gezegenler/gezegen1.png" id="2_7ft05"]
+[ext_resource type="Texture2D" uid="uid://cb17kiidps85m" path="res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png" id="2_l6ego"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_0m4lw"]
+[ext_resource type="Texture2D" uid="uid://c5ujcvt65lgt3" path="res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png" id="4_jjb4n"]
+[ext_resource type="Texture2D" uid="uid://bbiaes4dgeof0" path="res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png" id="5_1wo3u"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lsk7k"]
-radius = 123.911
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qajxd"]
+radius = 310.708
+height = 621.417
 
 [node name="TestStation" type="Node2D"]
 script = ExtResource("1_b5irn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ft05")
+texture = ExtResource("2_l6ego")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lsk7k")
+rotation = 0.124866
+shape = SubResource("CapsuleShape2D_qajxd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
 [node name="Dialogue" parent="CanvasLayer" instance=ExtResource("3_0m4lw")]
+
+[node name="sprites" type="Node2D" parent="."]
+
+[node name="Sprite2D3" type="Sprite2D" parent="sprites"]
+position = Vector2(1000, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D5" type="Sprite2D" parent="sprites"]
+position = Vector2(-1800, 0)
+rotation = 3.14159
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D4" type="Sprite2D" parent="sprites"]
+position = Vector2(756, 1331)
+rotation = 1.13446
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D7" type="Sprite2D" parent="sprites"]
+position = Vector2(-1250, -1250)
+rotation = -2.35619
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D8" type="Sprite2D" parent="sprites"]
+position = Vector2(1524, -1606)
+rotation = -0.785398
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D9" type="Sprite2D" parent="sprites"]
+position = Vector2(-1000, 1000)
+rotation = 2.35619
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jjb4n")
+
+[node name="Sprite2D10" type="Sprite2D" parent="sprites"]
+position = Vector2(-1067, 402)
+rotation = 2.35619
+texture = ExtResource("5_1wo3u")
+
+[node name="Sprite2D11" type="Sprite2D" parent="sprites"]
+position = Vector2(-305, -748)
+rotation = 0.977384
+texture = ExtResource("5_1wo3u")
+
+[node name="Sprite2D12" type="Sprite2D" parent="sprites"]
+position = Vector2(777, 746)
+rotation = 3.37023
+texture = ExtResource("5_1wo3u")
+
+[node name="Sprite2D13" type="Sprite2D" parent="sprites"]
+position = Vector2(1165, -539)
+rotation = -4.26209
+texture = ExtResource("5_1wo3u")
+
+[node name="titanium1" type="Sprite2D" parent="sprites"]
+position = Vector2(0, -1300)
+rotation = -1.5708
+texture = ExtResource("4_jjb4n")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

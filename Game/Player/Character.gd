@@ -57,6 +57,9 @@ var enemy_nearby:bool = false
 @onready var shader_animation = $"../Camera2D/CanvasLayer2/fade_animation"
 @onready var canvaslayer2 = $"../Camera2D/CanvasLayer2"
 @onready var enemy_alert = $"../Camera2D/CanvasLayer2/enemy_alert"
+@onready var karagünes_atolyesi = $"../karagünes_atolyesi"
+@onready var safezone_animation = $"../Camera2D/CanvasLayer3/safezone_animation"
+var safezone = false
 
 func _ready():
 	health = maxHealth
@@ -86,7 +89,13 @@ func _process(delta):
 		print(enemy_nearby)
 		enemy_nearby = false
 		#canvaslayer2.visible = false
-		
+	if karagünes_atolyesi.safezone_bool == true and safezone == false:
+		safezone_animation.play("enemy_nearby_true")
+		safezone = true
+	elif  karagünes_atolyesi.safezone_bool == false and safezone == true:
+		safezone = false
+		safezone_animation.play("enemy_nearby_false")
+	print(karagünes_atolyesi.safezone_bool)
 		
 func is_enemy_nearby() -> bool:
 	for body in enemy_nearby_area.get_overlapping_bodies():
