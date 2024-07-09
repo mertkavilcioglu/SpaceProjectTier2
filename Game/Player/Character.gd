@@ -95,6 +95,7 @@ func _process(delta):
 		print(enemy_nearby)
 		enemy_nearby = false
 		#canvaslayer2.visible = false
+
 	if karagünes_atolyesi.safezone_bool == true or themis.safezone_bool == true:
 		if safezone == false:
 			safezone_animation.play("safezone_true")
@@ -103,6 +104,7 @@ func _process(delta):
 		if safezone == true:
 			safezone = false
 			safezone_animation.play("safezone_false")
+
 		
 func is_enemy_nearby() -> bool:
 	for body in enemy_nearby_area.get_overlapping_bodies():
