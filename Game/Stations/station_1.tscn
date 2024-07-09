@@ -94,13 +94,11 @@ position = Vector2(-496, -649)
 rotation = 2.11534
 texture = ExtResource("5_bj0f6")
 
-[node name="safezone" type="Area2D" parent="."]
+[node name="karagunes_safezone" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="safezone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="karagunes_safezone"]
 scale = Vector2(50, 50)
 shape = SubResource("CircleShape2D_u5u28")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="safezone" to="." method="_on_safezone_body_entered"]
-[connection signal="body_exited" from="safezone" to="." method="_on_safezone_body_exited"]

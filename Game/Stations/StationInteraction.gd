@@ -10,30 +10,38 @@ extends Node2D
 @export var station_id: int
 var angle = 0.0
 var safezone_bool = false
-
 var dialogue_path:String
 var text_id:String
 var e_key_pressed_time = 0.0
 const E_KEY_PRESS_DURATION = 2.0
-
 @onready var e_interaction_sprite:Sprite2D
+@onready var themis_safezone = $themis_safezone
+@onready var karagunes_safezone = $karagunes_safezone
 
 func _ready():
+	
+	
 	e_interaction_sprite= Sprite2D.new()
 	add_child(e_interaction_sprite)
 	e_interaction_sprite.hide()
+	
+	
 	if station_id == 1:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
 		text_id = "text1"
-		var safezone_area = $safezone
+		karagunes_safezone.connect("body_entered",_on_safezone_body_entered)
+		karagunes_safezone.connect("body_exited",_on_safezone_body_exited)
+			
 	elif station_id == 2:
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part2.json"
 		text_id = "text17"
 	elif station_id == 3:
-		print(global_position)
 		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
 		text_id ="text30"
-		resource_ship.start_collecting(global_position,global_position + Vector2(0,-1300))
+		themis_safezone.connect("body_entered",_on_safezone_body_entered)
+		themis_safezone.connect("body_exited",_on_safezone_body_exited)
+		
+		
 
 func _process(delta):
 	if station_id == 1:
@@ -89,11 +97,6 @@ func _on_area_2d_body_exited(body):
 		e_key_pressed_time = 0.0 
 
 
-
-
-
-
-
 func _on_safezone_body_entered(body):
 	if body.name == "Character":
 		safezone_bool = true
@@ -101,4 +104,5 @@ func _on_safezone_body_entered(body):
 
 func _on_safezone_body_exited(body):
 	if body.name == "Character":
-		safezone_bool =false
+		safezone_bool = false
+

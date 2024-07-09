@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0epl47tt01kw"
-path="res://.godot/imported/HB_Bars1000.png-e7a0e748f6a1c81808580fe07c470f66.ctex"
+uid="uid://bnr3fvjdajr70"
+path="res://.godot/imported/CanBar1CAMSIZ_a.png-5cb4ae7b7dce876e02a9c7c0c20138b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uı_elements/HB_Bars1000.png"
-dest_files=["res://.godot/imported/HB_Bars1000.png-e7a0e748f6a1c81808580fe07c470f66.ctex"]
+source_file="res://Sprites/uı_elements/CanBar1CAMSIZ_a.png"
+dest_files=["res://.godot/imported/CanBar1CAMSIZ_a.png-5cb4ae7b7dce876e02a9c7c0c20138b9.ctex"]
 
 [params]
 

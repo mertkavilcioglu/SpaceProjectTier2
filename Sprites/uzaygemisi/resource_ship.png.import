@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v6qjxrxtu8lr"
-path="res://.godot/imported/HB_BarsUZUNCANA.png-f91bd9c48d1798662ddc6b90339019db.ctex"
+uid="uid://cbs2pnprf0u1s"
+path="res://.godot/imported/resource_ship.png-1cebb444324659a94e396674afd80b1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uı_elements/HB_BarsUZUNCANA.png"
-dest_files=["res://.godot/imported/HB_BarsUZUNCANA.png-f91bd9c48d1798662ddc6b90339019db.ctex"]
+source_file="res://Sprites/uzaygemisi/resource_ship.png"
+dest_files=["res://.godot/imported/resource_ship.png-1cebb444324659a94e396674afd80b1a.ctex"]
 
 [params]
 

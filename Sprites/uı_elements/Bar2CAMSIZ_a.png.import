@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbs2pnprf0u1s"
-path="res://.godot/imported/resource_ship.png-7ce460fb8245991eef03558a3d8da6d2.ctex"
+uid="uid://btm7ov7g0rmq8"
+path="res://.godot/imported/Bar2CAMSIZ_a.png-807b4d9ba8a94d1c80cca46925361310.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uzaygemisi/resource ships/resource_ship.png"
-dest_files=["res://.godot/imported/resource_ship.png-7ce460fb8245991eef03558a3d8da6d2.ctex"]
+source_file="res://Sprites/uı_elements/Bar2CAMSIZ_a.png"
+dest_files=["res://.godot/imported/Bar2CAMSIZ_a.png-807b4d9ba8a94d1c80cca46925361310.ctex"]
 
 [params]
 

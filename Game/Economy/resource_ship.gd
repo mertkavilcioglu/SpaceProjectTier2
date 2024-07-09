@@ -3,6 +3,7 @@ extends Node2D
 var new_path:Path2D
 var new_path_follow:PathFollow2D
 var resource_ship_sprite:Sprite2D
+@onready var themis = $"../themis"
 
 
 
@@ -19,6 +20,7 @@ func start_collecting(start_position:Vector2,destination_position:Vector2):
 	
 	resource_ship_sprite.texture = load("res://Sprites/uzaygemisi/resource ships/resource_ship.png")
 	resource_ship_sprite.rotate(1.5)
+	resource_ship_sprite.scale = Vector2(0.2,0.2)
 	
 	new_path.curve.add_point(start_position)
 	new_path.curve.add_point(destination_position)
