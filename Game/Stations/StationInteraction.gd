@@ -33,15 +33,19 @@ func _ready():
 		karagunes_safezone.connect("body_exited",_on_safezone_body_exited)
 			
 	elif station_id == 2:
-		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part2.json"
-		text_id = "text17"
+		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		text_id = "text1"
 	elif station_id == 3:
-		dialogue_path = "res://Game/DialogueSystem/mission_dialogues/mission1_part3.json"
-		text_id ="text30"
+		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		text_id = "text1"
 		themis_safezone.connect("body_entered",_on_safezone_body_entered)
 		themis_safezone.connect("body_exited",_on_safezone_body_exited)
-		
-		
+	elif station_id == 4:
+		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		text_id = "text1"
+	elif station_id == 5:
+		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		text_id = "text1"	
 
 func _process(delta):
 	if station_id == 1:
