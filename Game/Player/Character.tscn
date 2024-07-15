@@ -95,6 +95,21 @@ bg_color = Color(0, 0.784314, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaoa0"]
 bg_color = Color(0.784314, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_fhujl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_bljo2"]
 resource_name = "upgrade_message_anim"
 length = 2.0
@@ -109,21 +124,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_fhujl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:theme_override_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8vqiu"]
@@ -689,9 +689,6 @@ theme = ExtResource("7_fk3np")
 text = "Back
 "
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
-visible = false
-
 [node name="BoostBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
 offset_left = 31.0
 offset_top = 56.0
@@ -744,6 +741,9 @@ libraries = {
 "": SubResource("AnimationLibrary_8vqiu")
 }
 playback_default_blend_time = 1.0
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_gbvmw")]
+visible = false
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
