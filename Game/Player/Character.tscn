@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=53 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -21,6 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://btm7ov7g0rmq8" path="res://Sprites/uı_elements/Bar2CAMSIZ_a.png" id="16_ljj72"]
 [ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_cdtje"]
 [ext_resource type="Texture2D" uid="uid://bnr3fvjdajr70" path="res://Sprites/uı_elements/CanBar1CAMSIZ_a.png" id="17_fiwew"]
+[ext_resource type="AudioStream" uid="uid://davbglrp5jgbd" path="res://Game/Sounds/Effect/engine start VUTUTUTUTU.mp3" id="22_lajy3"]
+[ext_resource type="AudioStream" uid="uid://dxvagi36ip3tu" path="res://Game/Sounds/Effect/shoot ersin korkut.mp3" id="23_shhq3"]
+[ext_resource type="AudioStream" uid="uid://ir2tp8lv4bta" path="res://Game/Sounds/Effect/die yamete kudasai.mp3" id="24_fdalt"]
+[ext_resource type="AudioStream" uid="uid://bvwpevqppo5bd" path="res://Game/Sounds/Effect/dash fart.mp3" id="25_hwah7"]
+[ext_resource type="AudioStream" uid="uid://5e1ixar8283d" path="res://Game/Sounds/Effect/die laugh.mp3" id="26_o6sgl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -273,7 +278,7 @@ shader = ExtResource("15_0p2tx")
 shader_parameter/ca_strength = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yab1j"]
-radius = 16000.0
+radius = 50000.0
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.7, 0.7)
@@ -782,6 +787,30 @@ visible = false
 [node name="enemy_nearby_collision" type="CollisionShape2D" parent="enemy_nearby_area"]
 position = Vector2(0, 13.5714)
 shape = SubResource("CircleShape2D_yab1j")
+
+[node name="SoundEffects" type="Node2D" parent="."]
+
+[node name="Kill" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("24_fdalt")
+volume_db = -15.0
+
+[node name="Dash" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("25_hwah7")
+volume_db = -15.0
+
+[node name="EngineStart" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("22_lajy3")
+volume_db = -20.0
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("23_shhq3")
+volume_db = -25.0
+
+[node name="Die" type="AudioStreamPlayer2D" parent="SoundEffects"]
+process_mode = 3
+process_priority = 1
+stream = ExtResource("26_o6sgl")
+volume_db = -20.0
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]

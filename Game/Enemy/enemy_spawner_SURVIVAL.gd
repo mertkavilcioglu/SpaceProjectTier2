@@ -18,8 +18,10 @@ var posY
 @onready var isSpawned:bool = false
 @onready var isStopped:bool = false
 @onready var eldenRing = $"../FinalBattle"
+@onready var DangerTheme = $"../BGMusicDanger"
 	
 func _ready():
+	DangerTheme.play()
 	upgradeScreen.reset_upgrades()
 	set_timer_autostart()
 	
@@ -165,4 +167,5 @@ func _on_spawner_cd_timeout():
 	currentWave += 1
 	set_timer_autostart()
 	if currentWave == 8:
+		DangerTheme.stop()
 		eldenRing.play()

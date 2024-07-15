@@ -14,6 +14,8 @@ var playerDamage:int = 1
 @export var deathParticle : PackedScene # ****** FOR EXPLOSION EFFECT ****** #
 @export var playerRegen:int = 1
 
+@onready var DieSoundPlayer = $Die
+
 var distanceToPlayer_x:int
 var distanceToPlayer_y:int
 var calculatedRadius:int
@@ -66,8 +68,9 @@ func getHit():
 	if enemyHealth > 0: 
 		enemyHealth -= player.damage 
 	if enemyHealth <= 0:
-		if(player.health < player.maxHealth):
+		if(player.health < player.maxHealth):	
 			player.addHealth(playerRegen)
+		player.playKillSound()
 		playParticleEffect()
 		queue_free()
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=39 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4gdymh7wacm0" path="res://Game/Enemy/MEDspawner_trigger.tscn" id="2_wrk50"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
 [ext_resource type="PackedScene" uid="uid://cb72bp87umm38" path="res://Game/Enemy/HIGHspawner_trigger.tscn" id="3_sdaca"]
+[ext_resource type="AudioStream" uid="uid://da4wmit2xc78j" path="res://Game/Sounds/Music/chill tofas.mp3" id="4_cbjyg"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_ufmhb"]
 [ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
 [ext_resource type="Texture2D" uid="uid://dijae0twlo3ps" path="res://Sprites/uı_elements/enemy_alert.png" id="6_q17fi"]
@@ -19,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
+[ext_resource type="AudioStream" uid="uid://bjayxmyh0krpe" path="res://Game/Sounds/Music/danger undertale.mp3" id="14_8rq0o"]
 [ext_resource type="Texture2D" uid="uid://cdmc4v6d8d10h" path="res://Sprites/uı_elements/mission_vector.png" id="16_a5y30"]
 [ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
 
@@ -314,6 +316,16 @@ material = SubResource("ShaderMaterial_k7x8h")
 [node name="SpawnerMED" parent="Character" instance=ExtResource("7_2djki")]
 
 [node name="SpawnerHIGH" parent="Character" instance=ExtResource("8_txakh")]
+
+[node name="BGMusicChill" type="AudioStreamPlayer2D" parent="Character"]
+scale = Vector2(1.42857, 1.42857)
+stream = ExtResource("4_cbjyg")
+volume_db = -25.0
+
+[node name="BGMusicDanger" type="AudioStreamPlayer2D" parent="Character"]
+scale = Vector2(1.42857, 1.42857)
+stream = ExtResource("14_8rq0o")
+volume_db = -25.0
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 position = Vector2(22021, -28393)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://davbglrp5jgbd"
+path="res://.godot/imported/engine start VUTUTUTUTU.mp3-95bcded68365fa2d21e595af59d0d2a7.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Effect/engine start VUTUTUTUTU.mp3"
+dest_files=["res://.godot/imported/engine start VUTUTUTUTU.mp3-95bcded68365fa2d21e595af59d0d2a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=8

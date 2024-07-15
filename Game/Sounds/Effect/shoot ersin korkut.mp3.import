@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxvagi36ip3tu"
+path="res://.godot/imported/shoot ersin korkut.mp3-7fc2465a3c18a641aac85e6996cb9f19.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Effect/shoot ersin korkut.mp3"
+dest_files=["res://.godot/imported/shoot ersin korkut.mp3-7fc2465a3c18a641aac85e6996cb9f19.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=8

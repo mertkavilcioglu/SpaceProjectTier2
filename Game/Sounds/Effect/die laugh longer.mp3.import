@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbg5bq3i0jr4d"
+path="res://.godot/imported/die laugh longer.mp3-0e3e73c69a809e0ecbc180303d630e5c.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Effect/die laugh longer.mp3"
+dest_files=["res://.godot/imported/die laugh longer.mp3-0e3e73c69a809e0ecbc180303d630e5c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=8

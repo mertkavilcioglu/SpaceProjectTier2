@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjayxmyh0krpe"
+path="res://.godot/imported/danger undertale.mp3-8e3a90f4b0736113617a1be72dedfc96.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Music/danger undertale.mp3"
+dest_files=["res://.godot/imported/danger undertale.mp3-8e3a90f4b0736113617a1be72dedfc96.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

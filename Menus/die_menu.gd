@@ -16,6 +16,7 @@ func pause():
 	if(animPlayed == false):
 		$AnimationPlayer.play("blurAnim")
 		animPlayed = true
+		player.DieSoundPlayer.play()
 
 func testDeath():
 	if (player.isDead) and !get_tree().paused:

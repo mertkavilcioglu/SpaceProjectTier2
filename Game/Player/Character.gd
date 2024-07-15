@@ -71,8 +71,23 @@ var safezone = false
 @onready var Engine2_red = $Engine2/Trail
 @onready var Engine2_blue = $Engine2/TrailBlue
 
+@onready var BGChillMusicPlayer =$BGMusicChill
+@onready var BGDangerMusicPlayer = $BGMusicDanger
+@onready var EngineSoundPlayer = $SoundEffects/EngineStart
+@onready var ShootSoundPlayer = $SoundEffects/Shoot
+@onready var DieSoundPlayer = $SoundEffects/Die
+@onready var DashSoundPlayer = $SoundEffects/Dash
+@onready var KillSoundPlayer = $SoundEffects/Kill
+
+var isChillMusic:bool
+var isDangerMusic:bool
+var isEngineStart:bool
+
 
 func _ready():
+	if get_tree().current_scene.name != "SurvivalGame":
+		playChillMusic()
+	isEngineStart = false
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
 	shader_animation.play("RESET")
@@ -85,8 +100,18 @@ func _ready():
 	await get_tree().create_timer(0.11).timeout
 	health = maxHealth
 	
+	
 
 func _process(delta): 
+	playCameraShakeEngineSound()
+	if enemy_nearby:
+		if isChillMusic == true:
+			if get_tree().current_scene.name != "SurvivalGame":
+				playDangerMusic()
+	if !enemy_nearby:
+		if isChillMusic == false:
+			if get_tree().current_scene.name != "SurvivalGame":
+				playChillMusic()
 	if (!isDead):
 		if (!on_dialogue):
 			upgradeChecker()
@@ -149,6 +174,7 @@ func _physics_process(delta):
 					if BoostFuel > 0:
 						if CanBoost == true:
 							if enemy_nearby:
+								DashSoundPlayer.play()
 								Engine1_red.visible = true
 								Engine2_red.visible = true
 								Engine1_blue.visible = false
@@ -203,6 +229,12 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0 , Acceleration)
 		move_and_slide()
 		Cam.position = lerp(Cam.position, position, 5 * delta)
+		if EngineSoundPlayer.playing: 
+			EngineSoundPlayer.stop()
+		if BGChillMusicPlayer.playing:
+			BGChillMusicPlayer.stop()
+		if BGDangerMusicPlayer.playing:
+			BGDangerMusicPlayer.stop()
 	
 func Boost_True():
 	CanBoost = true
@@ -217,6 +249,7 @@ func shoot_laser():
 	if muzzle_flash1.is_playing():
 		muzzle_flash1.stop()
 	muzzle_flash1.play("muzzle_flash_anim")
+	ShootSoundPlayer.play()
 	
 	if(guns):
 		var l2 = laser_scene.instantiate()
@@ -360,3 +393,27 @@ func playParticleEffect():
 	_particle.emitting = true
 	get_tree().current_scene.add_child(_particle)
 
+func playCameraShakeEngineSound():
+	if get_real_velocity().length() < 300 and get_real_velocity().length() != 0:
+		if isEngineStart == false:
+			EngineSoundPlayer.play()
+			isEngineStart = true;
+			await get_tree().create_timer(2).timeout
+			isEngineStart = false
+
+func playKillSound():
+	KillSoundPlayer.play()
+	
+func playChillMusic():
+	isDangerMusic = false
+	if BGDangerMusicPlayer.playing:
+		BGDangerMusicPlayer.stop()
+	isChillMusic = true
+	BGChillMusicPlayer.play()
+	
+func playDangerMusic():
+	isChillMusic = false
+	if BGChillMusicPlayer.playing:
+		BGChillMusicPlayer.stop()
+	isDangerMusic = true
+	BGDangerMusicPlayer.play()

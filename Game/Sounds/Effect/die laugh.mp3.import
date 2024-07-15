@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5e1ixar8283d"
+path="res://.godot/imported/die laugh.mp3-ef7d66226d83835776f507b6b638c69d.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Effect/die laugh.mp3"
+dest_files=["res://.godot/imported/die laugh.mp3-ef7d66226d83835776f507b6b638c69d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=8

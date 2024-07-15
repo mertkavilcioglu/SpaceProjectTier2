@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvwpevqppo5bd"
+path="res://.godot/imported/dash fart.mp3-20c067c10383d09a487f79e11901b4b1.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Effect/dash fart.mp3"
+dest_files=["res://.godot/imported/dash fart.mp3-20c067c10383d09a487f79e11901b4b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=8

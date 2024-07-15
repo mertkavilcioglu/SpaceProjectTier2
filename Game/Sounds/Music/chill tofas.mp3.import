@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da4wmit2xc78j"
+path="res://.godot/imported/chill tofas.mp3-02bfda44a3042a5d99bcf2a6fb972057.mp3str"
+
+[deps]
+
+source_file="res://Game/Sounds/Music/chill tofas.mp3"
+dest_files=["res://.godot/imported/chill tofas.mp3-02bfda44a3042a5d99bcf2a6fb972057.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

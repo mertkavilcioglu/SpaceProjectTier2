@@ -44,6 +44,7 @@ func getHit():
 	if enemyHealth <= 0:
 		if(player.health < player.maxHealth):
 			player.addHealth(playerRegen)
+		player.playKillSound()
 		playParticleEffect()
 		queue_free()
 		
