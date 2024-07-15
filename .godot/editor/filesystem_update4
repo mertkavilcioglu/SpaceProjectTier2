@@ -1,26 +1,6 @@
-<<<<<<< Updated upstream
 res://Game/Enemy/hulk.tscn
-=======
-res://Game/DialogueSystem/dialogue.tscn
->>>>>>> Stashed changes
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Game/Stations/StationInteraction.gd
 res://Game/PlayerVignette.gdshader
-<<<<<<< Updated upstream
 res://Game/game.tscn
-=======
-res://Game/DialogueSystem/dialogue.gd
-res://Game/DialogueSystem/mission_dialogues/mission1_part1.json
-res://Menus/main_menu.tscn
-res://Game/Player/Character.tscn
-res://Game/game.tscn
-res://Game/Player/TrailEffectTurbo.tscn
-res://Game/Player/TrailEffect.tscn
-res://Game/survival.tscn
-res://Game/mission_vector.gd
-res://Game/Stations/station_2.tscn
-res://Game/Stations/station_1.tscn
-res://Game/Enemy/MEDspawner_trigger.tscn
-res://Game/Stations/station_4.tscn
->>>>>>> Stashed changes
