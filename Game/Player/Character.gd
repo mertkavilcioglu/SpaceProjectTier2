@@ -71,8 +71,8 @@ var safezone = false
 @onready var Engine2_red = $Engine2/Trail
 @onready var Engine2_blue = $Engine2/TrailBlue
 
+
 func _ready():
-	health = maxHealth
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
 	shader_animation.play("RESET")
@@ -82,6 +82,9 @@ func _ready():
 	Engine2_red.visible = true
 	Engine1_blue.visible = false
 	Engine2_blue.visible = false
+	await get_tree().create_timer(0.11).timeout
+	health = maxHealth
+	
 
 func _process(delta): 
 	if (!isDead):

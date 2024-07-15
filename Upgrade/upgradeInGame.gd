@@ -29,6 +29,8 @@ const save_path = "user://game_save.save"
 @onready var ship_body = $"../../body"
 @onready var ship_wing = $"../../wing"
 
+@onready var Upgrade_Message = $"../UpgradeMessage"
+@onready var Upgrade_Message_Animator = $"../UpgradeMessage/UpgradeMessageAnim"
 
 var HealthLevel:int = 1
 var SpeedLevel:int = 1
@@ -53,6 +55,11 @@ func _ready():
 	load_data()
 	changeTextures()
 	update_character_attributes()
+	Upgrade_Message.visible = false
+	print("upgrade max health")
+	await get_tree().create_timer(0).timeout #eger oyun basinda can eksik gozukuyorsa buradaki 0'i 1 yap
+	changeTextures()
+	update_character_attributes()
 
 	
 
@@ -60,6 +67,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	open_upgrade_screen()
+	if ScrapParts > 0 :
+		Upgrade_Message.visible = true
+		Upgrade_Message_Animator.play("upgrade_message_anim")
+	else:
+		Upgrade_Message.visible = false
+		Upgrade_Message_Animator.stop()
 
 func open_upgrade_screen():
 	if(character.isDead == false):

@@ -1,9 +1,10 @@
-Sprite2D
 AnimationPlayer
+Label
+Node2D
+Sprite2D
 ColorRect
 PathFollow2D
 Path2D
-Node2D
 CollisionShape2D
 Area2D
 StaticBody2D
@@ -11,4 +12,3 @@ AudioStreamPlayer2D
 AnimatedSprite2D
 CanvasLayer
 CanvasGroup
-AnimatedSprite2D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=48 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -94,6 +94,43 @@ bg_color = Color(0, 0.784314, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaoa0"]
 bg_color = Color(0.784314, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_bljo2"]
+resource_name = "upgrade_message_anim"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fhujl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8vqiu"]
+_data = {
+"RESET": SubResource("Animation_fhujl"),
+"upgrade_message_anim": SubResource("Animation_bljo2")
+}
 
 [sub_resource type="Animation" id="Animation_q2oqf"]
 length = 0.001
@@ -688,6 +725,25 @@ texture = ExtResource("16_ljj72")
 position = Vector2(137, 28.5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_fiwew")
+
+[node name="UpgradeMessage" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 28.0
+offset_top = 84.0
+offset_right = 411.0
+offset_bottom = 142.0
+scale = Vector2(0.6, 0.6)
+theme = ExtResource("7_fk3np")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Yukseltme Mevcut!
+Kullanmak icin TAB tusuna bas"
+horizontal_alignment = 1
+
+[node name="UpgradeMessageAnim" type="AnimationPlayer" parent="CanvasLayer/UpgradeMessage"]
+libraries = {
+"": SubResource("AnimationLibrary_8vqiu")
+}
+playback_default_blend_time = 1.0
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

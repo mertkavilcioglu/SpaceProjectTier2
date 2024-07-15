@@ -1,6 +1,7 @@
 extends Control
 
 @onready var player = get_parent().get_parent()
+@onready var upgrade_screen = $"../UpgradeScreen"
 
 func _ready():
 	$AnimationPlayer.play("RESET")
@@ -29,6 +30,8 @@ func _on_resume_pressed():
 
 func _on_quit_pressed():
 	resume()
+	if get_tree().current_scene.name == "SurvivalGame":
+		upgrade_screen.reset_upgrades()
 	get_tree().change_scene_to_file("res://Menus/main_menu.tscn")
 
 func _process(delta):

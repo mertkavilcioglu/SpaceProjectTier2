@@ -6,7 +6,7 @@ var enemyHealth:int = 3
 var playerDamage:int = 1 
 
 @onready var player = get_parent().get_parent()
-@export var enemyMaxSpeed: float = 750.0
+@export var enemyMaxSpeed: float = 900
 @export var radius = 500
 @export var radius2 = 700
 @export var shootRadius = 2000
