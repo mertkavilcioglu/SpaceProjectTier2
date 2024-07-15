@@ -20,9 +20,13 @@
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
+<<<<<<< Updated upstream
 [ext_resource type="AudioStream" uid="uid://bjayxmyh0krpe" path="res://Game/Sounds/Music/danger undertale.mp3" id="14_8rq0o"]
 [ext_resource type="Texture2D" uid="uid://cdmc4v6d8d10h" path="res://Sprites/uı_elements/mission_vector.png" id="16_a5y30"]
+=======
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
+[ext_resource type="Texture2D" uid="uid://d14oyimy6hc6p" path="res://Sprites/uı_elements/naviC1000.png" id="20_7laeh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
 shader = ExtResource("3_mg8ni")
@@ -196,54 +200,44 @@ shader_parameter/SOFTNESS = 0.45
 [node name="LOWSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
 position = Vector2(9498, -10113)
 rotation = 0.598648
-scale = Vector2(176.05, 100.665)
+scale = Vector2(176.05, 98.6814)
 
 [node name="LOWSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(2234, -28283)
+position = Vector2(1978, -30587)
 rotation = 1.58476
-scale = Vector2(176.05, 50)
+scale = Vector2(216.76, 49.965)
 
 [node name="HIGHSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
-position = Vector2(0, 10000)
-scale = Vector2(10000, 100)
+position = Vector2(1280, 16016)
+scale = Vector2(2000, 100)
 
-[node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(22150, -36742)
-scale = Vector2(23, 7.205)
+[node name="HIGHSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(512, -84112)
+scale = Vector2(2000, 100)
 
-[node name="MEDSpawnerTrigger5" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(24461, -37707)
-rotation = 2.35619
-scale = Vector2(23, 7.205)
+[node name="HIGHSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(95744, -43920)
+rotation = 1.5708
+scale = Vector2(2000, 100)
 
-[node name="MEDSpawnerTrigger6" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(24448, -42343)
-rotation = 0.785398
-scale = Vector2(23, 7.205)
-
-[node name="MEDSpawnerTrigger7" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(19788, -42356)
-rotation = 2.35619
-scale = Vector2(23, 7.205)
+[node name="HIGHSpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
+position = Vector2(-85570, -39159)
+rotation = 1.5708
+scale = Vector2(2000, 100)
 
 [node name="MEDSpawnerTrigger8" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(19802, -37696)
-rotation = -2.35619
-scale = Vector2(23, 7.205)
+position = Vector2(32959, -63181)
+scale = Vector2(36.885, 41.93)
+
+[node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
+position = Vector2(49200, -33408)
+rotation = -0.958186
+scale = Vector2(239.56, 32.605)
 
 [node name="MEDSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(25405, -40009)
-rotation = 1.5708
-scale = Vector2(23, 7.205)
-
-[node name="MEDSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(22124, -43301)
-scale = Vector2(23, 7.205)
-
-[node name="MEDSpawnerTrigger4" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(18828, -40028)
-rotation = 1.5708
-scale = Vector2(23, 7.205)
+position = Vector2(-33104, -37760)
+rotation = -0.958186
+scale = Vector2(239.56, 32.605)
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
 scale = Vector2(2.5, 2.5)
@@ -255,6 +249,7 @@ zoom = Vector2(0.4, 0.4)
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 rotation_smoothing_enabled = true
+rotation_smoothing_speed = 20.0
 script = ExtResource("2_rdm3x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
@@ -329,22 +324,22 @@ stream = ExtResource("14_8rq0o")
 volume_db = -10.0
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
-position = Vector2(22021, -28393)
+position = Vector2(33279, -41438)
 station_id = 1
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
-position = Vector2(22056, -39992)
+position = Vector2(32936, -63288)
 station_id = 2
 
 [node name="themis" parent="." instance=ExtResource("10_3l1ue")]
-position = Vector2(42919, -25136)
+position = Vector2(71852, -23132)
 
 [node name="iroh" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(-13392, -26624)
+position = Vector2(-21968, -29184)
 station_id = 4
 
 [node name="devrimci" parent="." instance=ExtResource("12_fykuj")]
-position = Vector2(-28368, -34176)
+position = Vector2(-51152, -48640)
 station_id = 5
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
@@ -352,6 +347,6 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("7_0q5w1")
 
 [node name="mission_vector" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("16_a5y30")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_7laeh")
 script = ExtResource("17_c4i5l")
