@@ -232,19 +232,19 @@ text = "1"
 [node name="Stats" type="Node2D" parent="Character/SurvivalStats"]
 
 [node name="FinalBattle" parent="Character" instance=ExtResource("11_n27da")]
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="BGMusicChill" parent="Character" instance=ExtResource("11_n27da")]
 stream = ExtResource("12_aprkf")
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="BGMusicDanger" parent="Character" instance=ExtResource("11_n27da")]
 stream = ExtResource("13_4etl1")
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="SurvivalTheme" parent="Character" instance=ExtResource("11_n27da")]
 stream = ExtResource("13_4etl1")
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="Enemies" type="Node" parent="."]
 

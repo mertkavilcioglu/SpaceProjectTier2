@@ -320,12 +320,12 @@ material = SubResource("ShaderMaterial_k7x8h")
 [node name="BGMusicChill" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
 stream = ExtResource("4_cbjyg")
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="BGMusicDanger" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
 stream = ExtResource("14_8rq0o")
-volume_db = -25.0
+volume_db = -10.0
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 position = Vector2(22021, -28393)

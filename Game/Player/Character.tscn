@@ -792,25 +792,25 @@ shape = SubResource("CircleShape2D_yab1j")
 
 [node name="Kill" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("24_fdalt")
-volume_db = -15.0
+volume_db = -10.0
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("25_hwah7")
-volume_db = -15.0
+volume_db = -5.0
 
 [node name="EngineStart" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("22_lajy3")
-volume_db = -20.0
+volume_db = -5.0
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("23_shhq3")
-volume_db = -25.0
+volume_db = -15.0
 
 [node name="Die" type="AudioStreamPlayer2D" parent="SoundEffects"]
 process_mode = 3
 process_priority = 1
 stream = ExtResource("26_o6sgl")
-volume_db = -20.0
+volume_db = -5.0
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]
