@@ -66,6 +66,11 @@ var safezone = false
 @onready var iroh = $"../iroh"
 @onready var devrimci = $"../devrimci"
 
+@onready var Engine1_red = $Engine1/Trail
+@onready var Engine1_blue = $Engine1/TrailBlue
+@onready var Engine2_red = $Engine2/Trail
+@onready var Engine2_blue = $Engine2/TrailBlue
+
 func _ready():
 	health = maxHealth
 	shockwave.play("RESET")
@@ -73,6 +78,10 @@ func _ready():
 	shader_animation.play("RESET")
 	boostFuelChanged.emit()
 	healthChanged.emit()
+	Engine1_red.visible = true
+	Engine2_red.visible = true
+	Engine1_blue.visible = false
+	Engine2_blue.visible = false
 
 func _process(delta): 
 	if (!isDead):
@@ -96,14 +105,15 @@ func _process(delta):
 		enemy_nearby = false
 		#canvaslayer2.visible = false
 
-	if karagünes_atolyesi.safezone_bool == true or themis.safezone_bool == true:
-		if safezone == false:
-			safezone_animation.play("safezone_true")
-			safezone = true
-	elif  karagünes_atolyesi.safezone_bool == false or themis.safezone_bool == false:
-		if safezone == true:
-			safezone = false
-			safezone_animation.play("safezone_false")
+	if karagünes_atolyesi != null and themis != null:
+		if karagünes_atolyesi.safezone_bool == true or themis.safezone_bool == true:
+			if safezone == false:
+				safezone_animation.play("safezone_true")
+				safezone = true
+		elif  karagünes_atolyesi.safezone_bool == false or themis.safezone_bool == false:
+			if safezone == true:
+				safezone = false
+				safezone_animation.play("safezone_false")
 
 		
 func is_enemy_nearby() -> bool:
@@ -135,29 +145,39 @@ func _physics_process(delta):
 						BoostRefuel = true
 					if BoostFuel > 0:
 						if CanBoost == true:
-							MaxSpeed = Speed*2
-							velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
-							velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
-							sprite = $body
-							sprite2 = $wing
-							ghost_timer.start()
-							instance_ghost()
-							BoostFuel -= 105
-							boostFuelChanged.emit()
-							CanBoost = false
-							await get_tree().create_timer(0.2).timeout
-							ghost_timer.stop()
-						elif CanBoost == false:
-							MaxSpeed = Speed*2
-							if BoostFuel > 0:
-								BoostFuel -= 50*delta
+							if enemy_nearby:
+								Engine1_red.visible = true
+								Engine2_red.visible = true
+								Engine1_blue.visible = false
+								Engine2_blue.visible = false
+								MaxSpeed = Speed*2
+								velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
+								velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
+								sprite = $body
+								sprite2 = $wing
+								ghost_timer.start()
+								instance_ghost()
+								BoostFuel -= 105
 								boostFuelChanged.emit()
-							else: 
-								MaxSpeed = Speed
+								CanBoost = false
+								await get_tree().create_timer(0.2).timeout
+								ghost_timer.stop()
+							else:
+								Engine1_red.visible = false
+								Engine2_red.visible = false
+								Engine1_blue.visible = true
+								Engine2_blue.visible = true
+								MaxSpeed = Speed*2
+								BoostFuel -= 25*delta
+								boostFuelChanged.emit()
 					else:
 						MaxSpeed = Speed
 			else:
 				MaxSpeed = Speed
+				Engine1_red.visible = true
+				Engine2_red.visible = true
+				Engine1_blue.visible = false
+				Engine2_blue.visible = false
 				
 			if BoostRefuel == true:
 				if BoostFuel < 100:

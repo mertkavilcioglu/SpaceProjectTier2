@@ -8,7 +8,7 @@ point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_u5ess"]
 offsets = PackedFloat32Array(0, 0.32, 1)
-colors = PackedColorArray(0.996078, 0, 0.0823529, 1, 0.819996, 0.436486, 0, 1, 1, 1, 0, 1)
+colors = PackedColorArray(0.996078, 0, 0.0823529, 1, 0.819608, 0.435294, 0, 1, 1, 1, 0, 1)
 
 [node name="Trail" type="Line2D"]
 top_level = true
