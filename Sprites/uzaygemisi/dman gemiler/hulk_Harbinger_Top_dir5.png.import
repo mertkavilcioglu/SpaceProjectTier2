@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn2j68thnvc73"
-path="res://.godot/imported/Harbinger_Top_dir5.png-3cc40f2608764d5a709bea028fc8b71d.ctex"
+path="res://.godot/imported/hulk_Harbinger_Top_dir5.png-56d16b83b8d03e1dad0abee21c1008bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uzaygemisi/dman gemiler/Harbinger_Top_dir5.png"
-dest_files=["res://.godot/imported/Harbinger_Top_dir5.png-3cc40f2608764d5a709bea028fc8b71d.ctex"]
+source_file="res://Sprites/uzaygemisi/dman gemiler/hulk_Harbinger_Top_dir5.png"
+dest_files=["res://.godot/imported/hulk_Harbinger_Top_dir5.png-56d16b83b8d03e1dad0abee21c1008bb.ctex"]
 
 [params]
 

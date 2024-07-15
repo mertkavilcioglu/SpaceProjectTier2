@@ -1,8 +1,6 @@
-res://Menus/main_menu.tscn
+res://Game/Enemy/hulk.tscn
 res://Game/Player/TrailEffect.gd
 res://Game/Enemy/hitFlash.tres
 res://Game/Stations/StationInteraction.gd
 res://Game/PlayerVignette.gdshader
-res://Game/Player/Character.tscn
 res://Game/game.tscn
-res://Game/survival.tscn
