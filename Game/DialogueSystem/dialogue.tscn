@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bdflnfbq0e65b"]
+[gd_scene load_steps=14 format=3 uid="uid://bdflnfbq0e65b"]
 
 [ext_resource type="Script" path="res://Game/DialogueSystem/dialogue.gd" id="1_hax0q"]
 [ext_resource type="Texture2D" uid="uid://cb4yopppgssbs" path="res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png" id="2_ajs0v"]
@@ -100,13 +100,51 @@ _data = {
 "text_anim": SubResource("Animation_lssig")
 }
 
-[node name="Dialogue" type="Node2D" node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text")]
+[sub_resource type="Animation" id="Animation_3fms1"]
+resource_name = "monologue_animation_true"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_image/monologue_text:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0o187"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("card_image/monologue_text:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4tsc"]
+_data = {
+"RESET": SubResource("Animation_0o187"),
+"monologue_animation_true": SubResource("Animation_3fms1")
+}
+
+[node name="Dialogue" type="Node2D" node_paths=PackedStringArray("card_image", "profile_image", "right_text", "left_text", "dialogue_text", "monologue_text")]
 script = ExtResource("1_hax0q")
 card_image = NodePath("card_image")
 profile_image = NodePath("card_image/profile_image")
 right_text = NodePath("card_image/right_text")
 left_text = NodePath("card_image/left_text")
 dialogue_text = NodePath("card_image/dialogue_text")
+monologue_text = NodePath("card_image/monologue_text")
 
 [node name="blur" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ocqmw")
@@ -148,6 +186,7 @@ theme_override_fonts/normal_font = ExtResource("4_h1yk8")
 theme_override_font_sizes/normal_font_size = 40
 
 [node name="monologue_text" type="RichTextLabel" parent="card_image"]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = -675.0
 offset_top = 112.0
 offset_bottom = 464.0
@@ -184,6 +223,11 @@ flat = true
 [node name="card_animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cko3o")
+}
+
+[node name="monologue_animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g4tsc")
 }
 
 [connection signal="pressed" from="card_image/select_left" to="." method="select_left"]

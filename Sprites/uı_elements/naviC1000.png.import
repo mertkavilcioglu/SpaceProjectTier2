@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdmc4v6d8d10h"
-path="res://.godot/imported/mission_vector.png-9bfb61ba552b93239be0b326042cb1a1.ctex"
+uid="uid://det8m7f1rud6g"
+path="res://.godot/imported/naviC1000.png-2713bc08d6add5bb785a072ab6dbf7fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/uı_elements/mission_vector.png"
-dest_files=["res://.godot/imported/mission_vector.png-9bfb61ba552b93239be0b326042cb1a1.ctex"]
+source_file="res://Sprites/uı_elements/naviC1000.png"
+dest_files=["res://.godot/imported/naviC1000.png-2713bc08d6add5bb785a072ab6dbf7fc.ctex"]
 
 [params]
 
