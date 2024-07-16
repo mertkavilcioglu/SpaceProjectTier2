@@ -9,7 +9,8 @@
 		"right_answer":"",
 		"left_result":"text2",
 		"right_result":"null",
-		"order":"d"
+		"order":"d",
+		"video":""
 	},
 	"text2":
 	{
@@ -21,7 +22,8 @@
 		"right_answer":"",
 		"left_result":"text3",
 		"right_result":"null",
-		"order":"m"
+		"order":"m",
+		"video":"true"
 	},
 	"text3":
 	{
@@ -33,7 +35,8 @@
 		"right_answer":"Bekle",
 		"left_result":"text4",
 		"right_result":"text4",
-		"order":"d"
+		"order":"d",
+		"video":""
 	},
 	"text4":
 	{
@@ -44,6 +47,7 @@
 		"left_answer":"Devam et",
 		"right_answer":"",
 		"right_result":"null",
-		"order":"d"
+		"order":"d",
+		"video":""
 	}
 }

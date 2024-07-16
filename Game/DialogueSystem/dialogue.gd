@@ -9,6 +9,9 @@ extends Node2D
 @onready var station = get_parent().get_parent()
 @onready var card_animation = $card_animation
 @onready var monologue_animation = $monologue_animation
+@onready var left_button = $card_image/select_left
+@onready var right_button = $card_image/select_right
+@onready var cinematic_video = $card_image/cinematic_video
 var character_on_dialogue = false
 var dialogues
 var current_dialogue
@@ -25,6 +28,9 @@ func _ready():
 func _process(delta):
 	if visible == true:
 		character_on_dialogue = true
+		left_button.disabled = false
+		right_button.disabled = false
+		
 		
 func dialogue(dialogue_path,text_name):
 	dialogues = load_dialogue(dialogue_path)
@@ -51,6 +57,9 @@ func update_card():
 	if current_dialogue["order"] == "m":
 		monologue_animation.stop()
 		monologue_animation.play("monologue_animation_true")
+	if current_dialogue["video"] == "true":
+		cinematic_video.visible = true
+		cinematic_video.play()
 
 func select_left():
 	if "left_result" in current_dialogue and current_dialogue["left_result"] !="null":
@@ -79,9 +88,11 @@ func select_left():
 				update_card()
 				
 	elif "left_result" not in current_dialogue:
-		card_animation.play_backwards("card_animation")
+		if left_button.disabled == false:
+			card_animation.play_backwards("card_animation")
 		character_on_dialogue = false
 		station.character.on_dialogue = false
+		left_button.disabled = true
 	
 func select_right():
 	if "right_result" in current_dialogue and current_dialogue["right_result"] !="null":
@@ -109,9 +120,11 @@ func select_right():
 				current_dialogue = dialogues[current_dialogue["right_result"]]
 				update_card()
 	elif "right_result" not in current_dialogue:
-		card_animation.play_backwards("card_animation")
-		character_on_dialogue = false
-		station.character.on_dialogue = false
+		if right_button.disabled == false:
+			card_animation.play_backwards("card_animation")
+			character_on_dialogue = false
+			station.character.on_dialogue = false
+			right_button.disabled = true
 
 func text_():
 	dialogue_text.visible_characters+=1

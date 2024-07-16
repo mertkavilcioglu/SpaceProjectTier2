@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cftg1ylk4cq3e"
+path="res://.godot/imported/Comet Trail Loop_1.wav-26cd9676c4114dec5d68391159ecc482.sample"
+
+[deps]
+
+source_file="res://Game/Sounds/Music/Comet Trail Loop_1.wav"
+dest_files=["res://.godot/imported/Comet Trail Loop_1.wav-26cd9676c4114dec5d68391159ecc482.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

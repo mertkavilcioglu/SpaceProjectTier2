@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://4gdymh7wacm0" path="res://Game/Enemy/MEDspawner_trigger.tscn" id="2_wrk50"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
 [ext_resource type="PackedScene" uid="uid://cb72bp87umm38" path="res://Game/Enemy/HIGHspawner_trigger.tscn" id="3_sdaca"]
-[ext_resource type="AudioStream" uid="uid://da4wmit2xc78j" path="res://Game/Sounds/Music/chill tofas.mp3" id="4_cbjyg"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_ufmhb"]
 [ext_resource type="PackedScene" uid="uid://sb6tcfo61bah" path="res://Game/Economy/resource_ship.tscn" id="6_6cuy6"]
 [ext_resource type="Texture2D" uid="uid://dijae0twlo3ps" path="res://Sprites/uı_elements/enemy_alert.png" id="6_q17fi"]
@@ -19,8 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://ddnjhsyy5bwau" path="res://Game/Stations/station_3.tscn" id="10_3l1ue"]
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
+[ext_resource type="AudioStream" uid="uid://cftg1ylk4cq3e" path="res://Game/Sounds/Music/Comet Trail Loop_1.wav" id="13_223k1"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
-[ext_resource type="AudioStream" uid="uid://bjayxmyh0krpe" path="res://Game/Sounds/Music/danger undertale.mp3" id="14_8rq0o"]
+[ext_resource type="AudioStream" uid="uid://bq08qot182dga" path="res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav" id="14_rx2pw"]
 [ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
 [ext_resource type="Texture2D" uid="uid://det8m7f1rud6g" path="res://Sprites/uı_elements/naviC1000.png" id="22_73iy5"]
 
@@ -310,16 +310,15 @@ material = SubResource("ShaderMaterial_k7x8h")
 
 [node name="BGMusicChill" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
-stream = ExtResource("4_cbjyg")
-volume_db = -10.0
+stream = ExtResource("13_223k1")
 
 [node name="BGMusicDanger" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
-stream = ExtResource("14_8rq0o")
-volume_db = -10.0
+stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
-position = Vector2(32517, -37353)
+show_behind_parent = true
+position = Vector2(3205, -105)
 station_id = 1
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]

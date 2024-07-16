@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://btm7ov7g0rmq8" path="res://Sprites/uı_elements/Bar2CAMSIZ_a.png" id="16_ljj72"]
 [ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_cdtje"]
 [ext_resource type="Texture2D" uid="uid://bnr3fvjdajr70" path="res://Sprites/uı_elements/CanBar1CAMSIZ_a.png" id="17_fiwew"]
-[ext_resource type="AudioStream" uid="uid://davbglrp5jgbd" path="res://Game/Sounds/Effect/engine start VUTUTUTUTU.mp3" id="22_lajy3"]
+[ext_resource type="AudioStream" uid="uid://b10drvfq1tjqa" path="res://Game/Sounds/Music/Breaker Cannon.wav" id="22_xo1dv"]
+[ext_resource type="AudioStream" uid="uid://u6imtikbq2ed" path="res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3" id="23_s5fxp"]
 [ext_resource type="AudioStream" uid="uid://dxvagi36ip3tu" path="res://Game/Sounds/Effect/shoot ersin korkut.mp3" id="23_shhq3"]
-[ext_resource type="AudioStream" uid="uid://ir2tp8lv4bta" path="res://Game/Sounds/Effect/die yamete kudasai.mp3" id="24_fdalt"]
 [ext_resource type="AudioStream" uid="uid://bvwpevqppo5bd" path="res://Game/Sounds/Effect/dash fart.mp3" id="25_hwah7"]
 [ext_resource type="AudioStream" uid="uid://5e1ixar8283d" path="res://Game/Sounds/Effect/die laugh.mp3" id="26_o6sgl"]
 
@@ -791,7 +791,7 @@ shape = SubResource("CircleShape2D_yab1j")
 [node name="SoundEffects" type="Node2D" parent="."]
 
 [node name="Kill" type="AudioStreamPlayer2D" parent="SoundEffects"]
-stream = ExtResource("24_fdalt")
+stream = ExtResource("22_xo1dv")
 volume_db = -10.0
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="SoundEffects"]
@@ -799,8 +799,7 @@ stream = ExtResource("25_hwah7")
 volume_db = -5.0
 
 [node name="EngineStart" type="AudioStreamPlayer2D" parent="SoundEffects"]
-stream = ExtResource("22_lajy3")
-volume_db = -5.0
+stream = ExtResource("23_s5fxp")
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("23_shhq3")

@@ -85,8 +85,8 @@ var isEngineStart:bool
 
 
 func _ready():
-	if get_tree().current_scene.name != "SurvivalGame":
-		playChillMusic()
+	#if get_tree().current_scene.name != "SurvivalGame":
+		#bgmusic()
 	isEngineStart = false
 	shockwave.play("RESET")
 	chroma_player.play("RESET")
@@ -104,14 +104,27 @@ func _ready():
 
 func _process(delta): 
 	playCameraShakeEngineSound()
+	if isChillMusic:
+		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,0.0,delta)
+		BGDangerMusicPlayer.volume_db = lerp(BGDangerMusicPlayer.volume_db,-80.0,4*delta)
+		if not BGChillMusicPlayer.playing:
+			BGChillMusicPlayer.play()
+			
+	if isDangerMusic:
+		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,-80.0,4*delta)
+		BGDangerMusicPlayer.volume_db = lerp(BGDangerMusicPlayer.volume_db,0.0,1)
+		if not BGDangerMusicPlayer.playing:
+			BGDangerMusicPlayer.play()
 	if enemy_nearby:
-		if isChillMusic == true:
-			if get_tree().current_scene.name != "SurvivalGame":
-				playDangerMusic()
+		if get_tree().current_scene.name != "SurvivalGame":
+			isDangerMusic = true
+			isChillMusic=false
 	if !enemy_nearby:
-		if isChillMusic == false:
-			if get_tree().current_scene.name != "SurvivalGame":
-				playChillMusic()
+		if get_tree().current_scene.name != "SurvivalGame":
+			await get_tree().create_timer(2).timeout
+			if !enemy_nearby:
+				isChillMusic = true
+				isDangerMusic=false
 	if (!isDead):
 		if (!on_dialogue):
 			upgradeChecker()
@@ -394,26 +407,11 @@ func playParticleEffect():
 	get_tree().current_scene.add_child(_particle)
 
 func playCameraShakeEngineSound():
-	if get_real_velocity().length() < 300 and get_real_velocity().length() != 0:
-		if isEngineStart == false:
-			EngineSoundPlayer.play()
-			isEngineStart = true;
-			await get_tree().create_timer(2).timeout
-			isEngineStart = false
+	if isEngineStart == false:
+		EngineSoundPlayer.play()
+		isEngineStart = true;
+	EngineSoundPlayer.volume_db = get_real_velocity().length() /25 - 50
 
 func playKillSound():
 	KillSoundPlayer.play()
-	
-func playChillMusic():
-	isDangerMusic = false
-	if BGDangerMusicPlayer.playing:
-		BGDangerMusicPlayer.stop()
-	isChillMusic = true
-	BGChillMusicPlayer.play()
-	
-func playDangerMusic():
-	isChillMusic = false
-	if BGChillMusicPlayer.playing:
-		BGChillMusicPlayer.stop()
-	isDangerMusic = true
-	BGDangerMusicPlayer.play()
+

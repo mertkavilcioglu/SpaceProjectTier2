@@ -76,6 +76,7 @@ func _physics_process(delta):
 						dialogue_screen.dialogue(dialogue_path,text_id)
 						dialogue.show()
 						character.on_dialogue = true
+					
 		elif Input.is_action_just_released("Interact"):
 			e_key_pressed_time = 0
 		if flag:
