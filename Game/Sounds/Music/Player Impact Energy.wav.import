@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3s74knb8qx5m"
+path="res://.godot/imported/Player Impact Energy.wav-ef7a1fb40821a8b0a2a1ab6f426c03a1.sample"
+
+[deps]
+
+source_file="res://Game/Sounds/Music/Player Impact Energy.wav"
+dest_files=["res://.godot/imported/Player Impact Energy.wav-ef7a1fb40821a8b0a2a1ab6f426c03a1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

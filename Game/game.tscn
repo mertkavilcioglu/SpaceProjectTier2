@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=38 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
@@ -17,9 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://bxouswost8ppp" path="res://Game/Stations/station_2.tscn" id="9_xfbml"]
 [ext_resource type="PackedScene" uid="uid://ddnjhsyy5bwau" path="res://Game/Stations/station_3.tscn" id="10_3l1ue"]
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
-[ext_resource type="PackedScene" uid="uid://byt5we2qhx1t0" path="res://Game/Stations/station_5.tscn" id="12_fykuj"]
-[ext_resource type="AudioStream" uid="uid://cftg1ylk4cq3e" path="res://Game/Sounds/Music/Comet Trail Loop_1.wav" id="13_223k1"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
+[ext_resource type="AudioStream" uid="uid://b07ump11ij1r4" path="res://Game/Sounds/Music/Grav Nebula Loop.mp3" id="13_erprr"]
 [ext_resource type="AudioStream" uid="uid://bq08qot182dga" path="res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav" id="14_rx2pw"]
 [ext_resource type="Script" path="res://Game/mission_vector.gd" id="17_c4i5l"]
 [ext_resource type="Texture2D" uid="uid://det8m7f1rud6g" path="res://Sprites/uı_elements/naviC1000.png" id="22_73iy5"]
@@ -310,7 +309,7 @@ material = SubResource("ShaderMaterial_k7x8h")
 
 [node name="BGMusicChill" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
-stream = ExtResource("13_223k1")
+stream = ExtResource("13_erprr")
 
 [node name="BGMusicDanger" type="AudioStreamPlayer2D" parent="Character"]
 scale = Vector2(1.42857, 1.42857)
@@ -331,10 +330,6 @@ position = Vector2(62341, -24138)
 [node name="iroh" parent="." instance=ExtResource("11_og44a")]
 position = Vector2(-20176, -27520)
 station_id = 4
-
-[node name="devrimci" parent="." instance=ExtResource("12_fykuj")]
-position = Vector2(-46416, -50816)
-station_id = 5
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
 scale = Vector2(0.3, 0.3)

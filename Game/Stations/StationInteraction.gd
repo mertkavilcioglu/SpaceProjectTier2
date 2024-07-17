@@ -17,6 +17,8 @@ const E_KEY_PRESS_DURATION = 2.0
 @onready var e_interaction_sprite:Sprite2D
 @onready var themis_safezone = $themis_safezone
 @onready var karagunes_safezone = $karagunes_safezone
+@onready var bgmusicchill = $"../Character/BGMusicChill"
+@onready var bgmusicdanger = $"../Character/BGMusicDanger"
 
 func _ready():
 	
@@ -55,7 +57,9 @@ func _process(delta):
 		shields.global_position = global_position + Vector2(cos(angle), sin(angle)) * 100.0
 	angle +=0.0002
 	e_interaction_sprite.global_position = character.global_position + Vector2(60,-60)
-	#sprites.global_position = character.global_position + Vector2(60,-60)
+	if dialogue_screen.cinematic_video.is_playing() == true:
+		bgmusicchill.stop()
+		bgmusicchill.stop()
 
 func _physics_process(delta):
 	if body_entered:
@@ -75,17 +79,17 @@ func _physics_process(delta):
 				if e_key_pressed_time >= E_KEY_PRESS_DURATION and character.on_dialogue == false:
 						dialogue_screen.dialogue(dialogue_path,text_id)
 						dialogue.show()
+						character.canvaslayer.visible = false
 						character.on_dialogue = true
 					
 		elif Input.is_action_just_released("Interact"):
 			e_key_pressed_time = 0
-		if flag:
-			resource_ship.start_collecting(Vector2(570,122),Vector2(500,1000))
-			flag = false
 				
 	if !body_entered:
 		dialogue.hide()
 		e_interaction_sprite.hide()
+	if character.on_dialogue == false:
+		character.canvaslayer.visible = true
 		
 
 func _on_area_2d_body_entered(body):

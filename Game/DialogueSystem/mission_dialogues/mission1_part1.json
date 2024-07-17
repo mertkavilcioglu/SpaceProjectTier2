@@ -9,8 +9,7 @@
 		"right_answer":"",
 		"left_result":"text2",
 		"right_result":"null",
-		"order":"d",
-		"video":""
+		"order":"d"
 	},
 	"text2":
 	{
@@ -23,7 +22,7 @@
 		"left_result":"text3",
 		"right_result":"null",
 		"order":"m",
-		"video":"true"
+		"video":"res://avelion_death.ogv"
 	},
 	"text3":
 	{
@@ -35,8 +34,7 @@
 		"right_answer":"Bekle",
 		"left_result":"text4",
 		"right_result":"text4",
-		"order":"d",
-		"video":""
+		"order":"d"
 	},
 	"text4":
 	{
@@ -47,7 +45,6 @@
 		"left_answer":"Devam et",
 		"right_answer":"",
 		"right_result":"null",
-		"order":"d",
-		"video":""
+		"order":"d"
 	}
 }

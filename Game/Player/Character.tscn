@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
-[ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="2_l72di"]
 [ext_resource type="Shader" uid="uid://o4gtx8d1ohwq" path="res://Game/Enemy/hitFlash.tres" id="3_5jlhn"]
 [ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_barr6"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="4_jeax1"]
@@ -22,10 +21,10 @@
 [ext_resource type="Script" path="res://Game/Player/DeathChroma.gd" id="17_cdtje"]
 [ext_resource type="Texture2D" uid="uid://bnr3fvjdajr70" path="res://Sprites/uı_elements/CanBar1CAMSIZ_a.png" id="17_fiwew"]
 [ext_resource type="AudioStream" uid="uid://b10drvfq1tjqa" path="res://Game/Sounds/Music/Breaker Cannon.wav" id="22_xo1dv"]
+[ext_resource type="AudioStream" uid="uid://8gqnnotk7kkb" path="res://Game/Sounds/Music/Enemy Impact Energy.wav" id="22_y1x88"]
 [ext_resource type="AudioStream" uid="uid://u6imtikbq2ed" path="res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3" id="23_s5fxp"]
-[ext_resource type="AudioStream" uid="uid://dxvagi36ip3tu" path="res://Game/Sounds/Effect/shoot ersin korkut.mp3" id="23_shhq3"]
-[ext_resource type="AudioStream" uid="uid://bvwpevqppo5bd" path="res://Game/Sounds/Effect/dash fart.mp3" id="25_hwah7"]
-[ext_resource type="AudioStream" uid="uid://5e1ixar8283d" path="res://Game/Sounds/Effect/die laugh.mp3" id="26_o6sgl"]
+[ext_resource type="AudioStream" uid="uid://3s74knb8qx5m" path="res://Game/Sounds/Music/Player Impact Energy.wav" id="24_3ux0y"]
+[ext_resource type="AudioStream" uid="uid://cisqms6m5vs62" path="res://Game/Sounds/Music/Ship Collision S.wav" id="25_hyh7t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -36,6 +35,9 @@ resource_local_to_scene = true
 shader = ExtResource("3_5jlhn")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5blvv"]
+load_path = "res://.godot/imported/Wing_lvl1.png-c838362a276a06ac4e0f1d47d4279c6e.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3758"]
 resource_local_to_scene = true
@@ -291,7 +293,7 @@ shape = SubResource("CapsuleShape2D_f4uun")
 [node name="wing" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_70htx")
 rotation = 1.5708
-texture = ExtResource("2_l72di")
+texture = SubResource("CompressedTexture2D_5blvv")
 
 [node name="body" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_l3758")
@@ -695,6 +697,7 @@ text = "Back
 "
 
 [node name="BoostBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+show_behind_parent = true
 offset_left = 31.0
 offset_top = 56.0
 offset_right = 248.0
@@ -707,6 +710,7 @@ script = ExtResource("15_0jhy6")
 player = NodePath("../..")
 
 [node name="HealthBar" type="ProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+show_behind_parent = true
 offset_left = 31.0
 offset_top = 26.0
 offset_right = 248.0
@@ -719,11 +723,13 @@ script = ExtResource("14_difn7")
 player = NodePath("../..")
 
 [node name="energy_bar" type="Sprite2D" parent="CanvasLayer"]
+show_behind_parent = true
 position = Vector2(137, 58.2)
 scale = Vector2(0.3, 0.296667)
 texture = ExtResource("16_ljj72")
 
 [node name="health_bar" type="Sprite2D" parent="CanvasLayer"]
+show_behind_parent = true
 position = Vector2(137, 28.5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_fiwew")
@@ -795,20 +801,20 @@ stream = ExtResource("22_xo1dv")
 volume_db = -10.0
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="SoundEffects"]
-stream = ExtResource("25_hwah7")
+stream = ExtResource("22_y1x88")
 volume_db = -5.0
 
 [node name="EngineStart" type="AudioStreamPlayer2D" parent="SoundEffects"]
 stream = ExtResource("23_s5fxp")
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="SoundEffects"]
-stream = ExtResource("23_shhq3")
+stream = ExtResource("24_3ux0y")
 volume_db = -15.0
 
 [node name="Die" type="AudioStreamPlayer2D" parent="SoundEffects"]
 process_mode = 3
 process_priority = 1
-stream = ExtResource("26_o6sgl")
+stream = ExtResource("25_hyh7t")
 volume_db = -5.0
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]

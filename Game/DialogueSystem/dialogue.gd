@@ -26,7 +26,7 @@ func _ready():
 	text_anim_timer.timeout.connect(text_)
 
 func _process(delta):
-	if visible == true:
+	if visible == true and cinematic_video.is_playing() == false:
 		character_on_dialogue = true
 		left_button.disabled = false
 		right_button.disabled = false
@@ -57,9 +57,12 @@ func update_card():
 	if current_dialogue["order"] == "m":
 		monologue_animation.stop()
 		monologue_animation.play("monologue_animation_true")
-	if current_dialogue["video"] == "true":
+	if "video" in current_dialogue:
+		cinematic_video.stream = load(current_dialogue["video"])
 		cinematic_video.visible = true
 		cinematic_video.play()
+		left_button.disabled = true
+		right_button.disabled = true
 
 func select_left():
 	if "left_result" in current_dialogue and current_dialogue["left_result"] !="null":

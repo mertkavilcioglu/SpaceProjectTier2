@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdflnfbq0e65b"]
+[gd_scene load_steps=14 format=3 uid="uid://bdflnfbq0e65b"]
 
 [ext_resource type="Script" path="res://Game/DialogueSystem/dialogue.gd" id="1_hax0q"]
 [ext_resource type="Texture2D" uid="uid://cb4yopppgssbs" path="res://Sprites/dialogue_sprites/mission_1_sprites/imperiassslCARD500.png" id="2_ajs0v"]
 [ext_resource type="Texture2D" uid="uid://dgwd0sewgicqo" path="res://Sprites/dialogue_sprites/mission_1_sprites/text2(baseCORRIDOR)_500.png" id="3_2wy48"]
 [ext_resource type="FontFile" uid="uid://dlpbgecp3lyxc" path="res://Sprites/dialogue_sprites/Pixellari.ttf" id="4_h1yk8"]
 [ext_resource type="Shader" path="res://Game/DialogueSystem/dialogue.gdshader" id="5_egknj"]
-[ext_resource type="VideoStream" path="res://random-video.ogv" id="6_tb0k3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ocqmw"]
 shader = ExtResource("5_egknj")
@@ -207,6 +206,20 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
+[node name="cinematic_video" type="VideoStreamPlayer" parent="card_image"]
+anchors_preset = -1
+anchor_left = -0.381
+anchor_top = -0.263
+anchor_right = 1.382
+anchor_bottom = 1.26
+offset_left = -787.546
+offset_top = -511.286
+offset_right = -1556.12
+offset_bottom = -946.286
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.425, 1.425)
+
 [node name="select_left" type="Button" parent="card_image"]
 offset_left = 122.0
 offset_top = 278.0
@@ -220,19 +233,6 @@ offset_top = 278.0
 offset_right = 699.0
 offset_bottom = 477.0
 flat = true
-
-[node name="cinematic_video" type="VideoStreamPlayer" parent="card_image"]
-top_level = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1828.57
-offset_top = -1028.57
-offset_right = -1828.57
-offset_bottom = -1028.57
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("6_tb0k3")
 
 [node name="card_animation" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,9 +1,9 @@
+Sprite2D
 VideoStreamPlayer
 AnimationPlayer
 AudioStreamPlayer2D
 Node2D
 Label
-Sprite2D
 ColorRect
 PathFollow2D
 Path2D

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbqxtk247b6wv"]
+[gd_scene load_steps=5 format=3 uid="uid://bbqxtk247b6wv"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_c84iv"]
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_v8b5e"]
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="2_tybw7"]
+[ext_resource type="Texture2D" uid="uid://8ipe1retfqng" path="res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png" id="4_wlkmq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -63,6 +64,12 @@ layout_mode = 2
 theme = ExtResource("2_tybw7")
 text = "Quit"
 flat = true
+
+[node name="karagünes" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.65098)
+position = Vector2(659, 334)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_wlkmq")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlaySurvivalButton" to="." method="_on_play_survival_button_pressed"]

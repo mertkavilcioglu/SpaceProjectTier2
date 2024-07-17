@@ -1,9 +1,14 @@
 extends Control
 
 @onready var play_button = $MarginContainer/VBoxContainer/PlayButton
+@onready var karagünes = $"karagünes"
 
 func _ready():
 	play_button.grab_focus()
+	
+func _process(delta):
+	if karagünes.scale > Vector2(0.05,0.05):
+		karagünes.scale-=Vector2(0.00007,0.00007)
 
 
 func _on_options_button_pressed():

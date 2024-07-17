@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8gqnnotk7kkb"
+path="res://.godot/imported/Enemy Impact Energy.wav-8779857d2c3e15a416bc9ffba15b869c.sample"
+
+[deps]
+
+source_file="res://Game/Sounds/Music/Enemy Impact Energy.wav"
+dest_files=["res://.godot/imported/Enemy Impact Energy.wav-8779857d2c3e15a416bc9ffba15b869c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
