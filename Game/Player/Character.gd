@@ -105,13 +105,17 @@ func _ready():
 func _process(delta): 
 	playCameraShakeEngineSound()
 	if enemy_nearby:
-		if isChillMusic == true:
-			if get_tree().current_scene.name != "SurvivalGame":
-				playDangerMusic()
+		await get_tree().create_timer(1).timeout
+		if enemy_nearby:
+			if isChillMusic == true:
+				if get_tree().current_scene.name != "SurvivalGame":
+					playDangerMusic()
 	if !enemy_nearby:
-		if isChillMusic == false:
-			if get_tree().current_scene.name != "SurvivalGame":
-				playChillMusic()
+		await get_tree().create_timer(2).timeout
+		if !enemy_nearby:
+			if isChillMusic == false:
+				if get_tree().current_scene.name != "SurvivalGame":
+					playChillMusic()
 	if (!isDead):
 		if (!on_dialogue):
 			upgradeChecker()
