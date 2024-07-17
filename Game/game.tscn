@@ -197,11 +197,6 @@ position = Vector2(9498, -10113)
 rotation = 0.598648
 scale = Vector2(176.05, 100.665)
 
-[node name="LOWSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
-position = Vector2(2234, -31388.8)
-rotation = 1.58476
-scale = Vector2(220.31, 42.14)
-
 [node name="HIGHSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
 position = Vector2(0, 10000)
 scale = Vector2(1500, 30)
@@ -223,11 +218,6 @@ scale = Vector2(750, 30)
 [node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
 position = Vector2(32622, -54361)
 scale = Vector2(22.87, 27.748)
-
-[node name="MEDSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(-28961, -37034)
-rotation = 0.837758
-scale = Vector2(22.87, 284.463)
 
 [node name="MEDSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
 position = Vector2(49887, -30762)
@@ -317,7 +307,7 @@ stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 show_behind_parent = true
-position = Vector2(3205, -105)
+position = Vector2(16261, -28649)
 station_id = 1
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]

@@ -1,0 +1,277 @@
+{
+	"iv1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/istasyonKARAGUNESATOLYESI1_a.png",
+		"monologue":"Aegis istasyonu. Tehdit savar Kara Güneşin mutfağı… Cerebris savaşında bile bu kadar büyük bir atölyeye denk gelmemiştim. Tek bir silah için bunca kaynak ve emek… Buna değecek sanırım.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"iv2",
+		"right_result":"null",
+		"order":"m"
+	},
+	"iv2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text1_500.png",
+		"monologue":"Neydi o direktörün ismi? Hah Nathan, tamam. Umarım ukala biri değildir, diplomasiyle uğraşmak istemiyorum.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"iv3",
+		"right_result":"null",
+		"order":"m"
+	},
+	"iv3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text1_500.png",
+		"monologue":"Hala bu kapı niye açılmadı? Ayrıca bu ışıkların nesi var? Geldiğimizden beri yanıp sönmesi başımı ağrıttı.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"iv4",
+		"right_result":"null",
+		"order":"m"
+	},
+	"iv4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text2(baseCORRIDOR)_500.png",
+		"monologue":"Yedek güç mü? Kralımız yolculuk boyunca birçok sorunla karşılaşacağımızı söylemişti ama bu kadar erken olacağını düşünmemiştim.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text1",
+		"right_result":"null",
+		"order":"m"
+	},
+	"text1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text2(baseCORRIDOR)_500.png",
+		"question":"North:  “Conner, beladan koruyan tılsımın hala üzerinde mi?”",
+		"left_answer":"Evet kemerime takılı",
+		"right_answer":"Silahını çek",
+		"left_result":"text2",
+		"right_result":"text3",
+		"order":"d"
+	},
+	"text2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text2(baseCORRIDOR)_500.png",
+		"question":"North:  “Dikkat et de düşmesin, kazasız belasız ilerliyoruz görevimizde sonuçta.”",
+		"left_answer":"Tılsımın çalışma şekli öyle değil",
+		"right_answer":"Onu neden taktığımı biliyorsun",
+		"left_result":"text5",
+		"right_result":"text5",
+		"order":"d"
+	},
+	"text3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text2(baseCORRIDOR)_500.png",
+		"question":"North:  “Belayı kendinden uzak tutma şeklini her zaman sevmişimdir.”",
+		"left_answer":"Nelerle karşılaşacağını bilemezsin",
+		"right_answer":"Savaş hepimizi değiştirdi",
+		"left_result":"text4",
+		"right_result":"text4",
+		"order":"d"
+	},
+	"text4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text3_500.png",
+		"question":"Sen onu metal bacaklarıma anl..",
+		"monologue":"Sıradan bir elektrik kesintisi… Hiç sanmıyorum. Bunun olması için fazla önemli bir yer. Tetikte olmalıyım.",
+		"left_answer":"Şşş sessiz ol. Ayak sesleri",
+		"right_answer":"",
+		"left_result":"iv6",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text3_500.png",
+		"question":"North:  “Biliyorum biliyorum, o konuyu..”",
+		"monologue":"Sıradan bir elektrik kesintisi… Hiç sanmıyorum. Bunun olması için fazla önemli bir yer. Tetikte olmalıyım.",
+		"left_answer":"Şşş sessiz ol. Ayak sesleri",
+		"right_answer":"",
+		"left_result":"iv6",
+		"right_result":"null",
+		"order":"d"
+	},
+	"iv6":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text3_500.png",
+		"monologue":"Görüşüm yok ama ayak sesleri birden fazla. Eğer saldırganlarsa attığımızı kaçırmamamız lazım.",
+		"left_answer":"North, eğer saldırganlarsa..",
+		"right_answer":"",
+		"left_result":"text6",
+		"right_result":"null",
+		"order":"m"
+	},
+	"text6":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text3_500.png",
+		"question":"North:  “Farkındayım, sıktığımızı indirmeliyiz.”",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text7",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text7":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text4_500.png",
+		"question":"???: “Sakin ol yabancı. Bizler sadece mühendisiz, silahlı değiliz.”",
+		"left_answer":"Bu karanlıkta buna inanmamı beklemeyin",
+		"right_answer":"Silahını indir",
+		"left_result":"iv7",
+		"right_result":"iv8",
+		"order":"d"
+	},
+	"iv7":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text4_500.png",
+		"question":"İsyancı mühendisi mi, imparatorluk mühendisi mi, merak ettiğim bu.",
+		"monologue":"İstasyon biz gelemeden önce pusuya düşmüş olabilir. İsyancıların bu kadar hızlı hareket etmesi zor ama ihtimal dahilinde.",
+		"left_answer":"Bekle",
+		"right_answer":"",
+		"left_result":"text9",
+		"right_result":"null",
+		"order":"m"
+	},
+	"text9":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text4_500.png",
+		"question":"???: “Yanınıza doğru geliyoruz, ateş etmeyin.”",
+		"monologue":"İstasyon biz gelemeden önce pusuya düşmüş olabilir. İsyancıların bu kadar hızlı hareket etmesi zor ama ihtimal dahilinde.",
+		"left_answer":"Sakince",
+		"right_answer":"",
+		"left_result":"text11",
+		"right_result":"null",
+		"order":"m"
+	},
+	"iv8":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text4_500.png",
+		"question":"North: “Bunu beğenmedim Connor, burnuma kötü kokular geliyor.”",
+		"monologue":"Zararsız gözüküyorlar. Ama bu karanlık neyin nesi anlamış değilim.",
+		"left_answer":"Sakince",
+		"right_answer":"",
+		"left_result":"text11",
+		"right_result":"null",
+		"order":"m"
+	},
+	"text11":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text5_500.png",
+		"question":"Nathan: “Nahoş karşılama için özür dileriz. Ben Direktör Nathan, bu istasyondan sorumlu kişiyim.”",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text12",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text12":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text5_500.png",
+		"question":"North: “Ranger birimi komutanları Conner ve North. Kralın emriyle buradayız.”",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text13",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text13":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text5_500.png",
+		"question":"Tanrıya şükür İmparatorluk sesimizi duydu. Tam zamanında.",
+		"left_answer":"Burada ne oluyor?",
+		"right_answer":"",
+		"left_result":"text14",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text14":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text11_500.png",
+		"question":"Başımızdan o kadar çok şey geçti ki. En başından anlatmama izin verin.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"iv9",
+		"right_result":"null",
+		"order":"d"
+	},
+	"iv9":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text13_500.png",
+		"question":"Bu sorumsuzluk için kimi suçlayacağımı bile bilmiyorum. Ama olan oldu artık.",
+		"monologue":"Bu kadar amatör bir ekibin Aegis istasyonunda ne işi var?",
+		"left_answer":"İstasyonda korsanlara çalışan bir köstebek olabilir mi?",
+		"right_answer":"",
+		"left_result":"text15",
+		"right_result":"null",
+		"order":"m",
+		"video":"res://Game/videos/1.1.ogv"
+	},
+	"text15":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text12_500.png",
+		"question":"Nathan: Bunu ben de düşündüm. Fakat elimizde buna dair herhangi bir kanıt yok.",
+		"monologue":"Oturmayan parçalar var. Daha önce böyle bir işe kalkışmamış bir ekip ama zamanlamaları mükemmel.",
+		"left_answer":"İstasyonda korsanlara çalışan bir köstebek olabilir mi?",
+		"right_answer":"",
+		"left_result":"text16",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text16":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text12_500.png",
+		"question":"North: “Conner şuna bir göz atsana.”",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text17",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text17":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text12_500.png",
+		"question":"North: “İstasyon kayıtlarını incelediğimde korsanlardan birinin kaskını çıkardığı bir kareye rastladım. Adamın yüzünü veri tabanında tarattığımda ise listesi epey kabarık çıktı. Gemi yağmalamadan tut da kaçakçılığa kadar. Ama hepsi küçük çaplı.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"text18",
+		"right_result":"null",
+		"order":"d"
+	},
+	"text18":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text11_500.png",
+		"question":"Nathan: “Her kim olurlarsa olsunlar füzyon çekirdeği geri getirilmeli Ranger. Evrende onun bir tane daha eşi yok.”",
+		"left_answer":"Merak etmeyin, çekirdeğinizi geri getireceğiz.",
+		"right_answer":"",
+		"right_result":"null",
+		"order":"d"
+	},
+	
+	
+
+	
+}

@@ -47,16 +47,20 @@ func load_dialogue(file_path:String):
 func update_card():
 	right_text.text = current_dialogue["right_answer"]
 	left_text.text = current_dialogue["left_answer"]
-	dialogue_text.text = current_dialogue["question"]
-	monologue_text.text = current_dialogue["monologue"]
+	if "question" in current_dialogue:
+		dialogue_text.text = current_dialogue["question"]
+	if "monologue" in current_dialogue:
+		monologue_text.text = current_dialogue["monologue"]
 	card_image.texture = load(current_dialogue["card_image"])
 	profile_image.texture = load(current_dialogue["profile_image"])
 	text_order_flag = false
 	if current_dialogue["order"] == "d":
 		text_anim_timer.start()
+		monologue_animation.stop()
 	if current_dialogue["order"] == "m":
 		monologue_animation.stop()
 		monologue_animation.play("monologue_animation_true")
+		text_anim_timer.stop()
 	if "video" in current_dialogue:
 		cinematic_video.stream = load(current_dialogue["video"])
 		cinematic_video.visible = true
@@ -66,7 +70,7 @@ func update_card():
 
 func select_left():
 	if "left_result" in current_dialogue and current_dialogue["left_result"] !="null":
-		if current_dialogue["order"] == "d":
+		if current_dialogue["order"] == "d" and "monologue" in current_dialogue:
 			if text_order_flag == false:
 				text_order_flag = true
 				dialogue_text.visible_characters = -1
@@ -76,9 +80,9 @@ func select_left():
 				text_order_flag = false
 				current_dialogue = dialogues[current_dialogue["left_result"]]
 				monologue_animation.stop()
-				update_card()
 				dialogue_text.visible_characters=0
-		elif current_dialogue["order"] =="m":
+				update_card()
+		elif current_dialogue["order"] =="m" and "question" in current_dialogue:
 			if text_order_flag == false:
 				text_order_flag = true
 				dialogue_text.visible_characters = 0
@@ -89,6 +93,10 @@ func select_left():
 				monologue_animation.stop()
 				current_dialogue = dialogues[current_dialogue["left_result"]]
 				update_card()
+		else:
+			dialogue_text.visible_characters=0
+			current_dialogue = dialogues[current_dialogue["left_result"]]
+			update_card()
 				
 	elif "left_result" not in current_dialogue:
 		if left_button.disabled == false:
@@ -99,7 +107,7 @@ func select_left():
 	
 func select_right():
 	if "right_result" in current_dialogue and current_dialogue["right_result"] !="null":
-		if current_dialogue["order"] == "d":
+		if current_dialogue["order"] == "d" and "monologue" in current_dialogue:
 			if text_order_flag == false:
 				text_order_flag = true
 				dialogue_text.visible_characters = -1
@@ -111,7 +119,7 @@ func select_right():
 				monologue_animation.stop()
 				update_card()
 				dialogue_text.visible_characters=0
-		elif current_dialogue["order"] == "m":
+		elif current_dialogue["order"] == "m" and "question" in current_dialogue:
 			if text_order_flag == false:
 				text_order_flag = true
 				dialogue_text.visible_characters = 0
@@ -122,6 +130,10 @@ func select_right():
 				monologue_animation.stop()
 				current_dialogue = dialogues[current_dialogue["right_result"]]
 				update_card()
+		else:
+			dialogue_text.visible_characters=0
+			current_dialogue = dialogues[current_dialogue["right_result"]]
+			update_card()
 	elif "right_result" not in current_dialogue:
 		if right_button.disabled == false:
 			card_animation.play_backwards("card_animation")

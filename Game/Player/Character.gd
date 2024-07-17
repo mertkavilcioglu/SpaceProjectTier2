@@ -107,14 +107,14 @@ func _ready():
 func _process(delta): 
 	playCameraShakeEngineSound()
 	if isChillMusic:
-		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,0.0,0.1*delta)
+		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,-20.0,0.1*delta)
 		BGDangerMusicPlayer.volume_db = lerp(BGDangerMusicPlayer.volume_db,-80.0,4*delta)
 		if not BGChillMusicPlayer.playing:
 			BGChillMusicPlayer.play()
 			
 	if isDangerMusic:
 		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,-80.0,4*delta)
-		BGDangerMusicPlayer.volume_db = lerp(BGDangerMusicPlayer.volume_db,0.0,0.1*delta)
+		BGDangerMusicPlayer.volume_db = lerp(BGDangerMusicPlayer.volume_db,-20.0,0.1*delta)
 		if not BGDangerMusicPlayer.playing:
 			BGDangerMusicPlayer.play()
 	if enemy_nearby:

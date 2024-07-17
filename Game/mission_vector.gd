@@ -32,14 +32,14 @@ func _process(delta):
 func station_changer():
 	if counter == 1:
 		station_position_path = station1.global_position
-	elif counter == 2:
-		station_position_path = station2.global_position
-	elif counter == 3:
-		station_position_path = station3.global_position
-	elif counter == 4:
-		station_position_path = station4.global_position
-	elif counter == 5:
-		station_position_path = station5.global_position
+	#elif counter == 2:
+	#	station_position_path = station2.global_position
+	#elif counter == 3:
+	#	station_position_path = station3.global_position
+	#elif counter == 4:
+	#	station_position_path = station4.global_position
+	#elif counter == 5:
+		#station_position_path = station5.global_position
 	
 	
 func direct_to_mission(target_position):

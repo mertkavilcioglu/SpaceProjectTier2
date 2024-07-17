@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Game/Enemy/hulk.gd" id="1_g2ch8"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_2slt7"]
-[ext_resource type="Texture2D" uid="uid://dcwcbpcktr0il" path="res://Sprites/takla.jpg" id="3_16p00"]
+[ext_resource type="Texture2D" uid="uid://cn2j68thnvc73" path="res://Sprites/uzaygemisi/dman gemiler/hulk_Harbinger_Top_dir5.png" id="3_f23jc"]
 [ext_resource type="PackedScene" uid="uid://by464r5c4grus" path="res://Game/Enemy/hunterForHulk.tscn" id="4_g02ls"]
 [ext_resource type="PackedScene" uid="uid://caq61xx2lvglr" path="res://Game/Player/TrailEffect.tscn" id="5_wmhkr"]
 
@@ -22,7 +22,8 @@ shape = SubResource("RectangleShape2D_lax2o")
 position = Vector2(-4.17357e-07, 9.54802)
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_16p00")
+texture = ExtResource("3_f23jc")
+flip_v = true
 
 [node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
 

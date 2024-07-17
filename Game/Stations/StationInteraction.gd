@@ -29,14 +29,14 @@ func _ready():
 	
 	
 	if station_id == 1:
-		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
-		text_id = "text1"
+		dialogue_path ="res://Game/Player/texts/nathan_text.json"
+		text_id = "iv1"
 		karagunes_safezone.connect("body_entered",_on_safezone_body_entered)
 		karagunes_safezone.connect("body_exited",_on_safezone_body_exited)
 			
 	elif station_id == 2:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
-		text_id = "text1"
+		text_id = ""
 	elif station_id == 3:
 		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
 		text_id = "text1"

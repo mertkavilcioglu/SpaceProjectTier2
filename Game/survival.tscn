@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="7_wht8c"]
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="8_g75uf"]
 [ext_resource type="PackedScene" uid="uid://dv3v2y2c2ua6m" path="res://Game/final_battle.tscn" id="11_n27da"]
-[ext_resource type="AudioStream" uid="uid://da4wmit2xc78j" path="res://Game/Sounds/Music/chill tofas.mp3" id="12_aprkf"]
-[ext_resource type="AudioStream" uid="uid://bjayxmyh0krpe" path="res://Game/Sounds/Music/danger undertale.mp3" id="13_4etl1"]
+[ext_resource type="AudioStream" uid="uid://cd0w731hxwrv3" path="res://Game/Sounds/Music/epic_war_theme.mp3" id="12_1an6r"]
+[ext_resource type="AudioStream" uid="uid://nj8ot8qcfy50" path="res://Game/Sounds/Music/Menu Music.wav" id="13_ip4sp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_flxm1"]
 shader = ExtResource("3_1u3bo")
@@ -232,18 +232,19 @@ text = "1"
 [node name="Stats" type="Node2D" parent="Character/SurvivalStats"]
 
 [node name="FinalBattle" parent="Character" instance=ExtResource("11_n27da")]
+stream = ExtResource("12_1an6r")
 volume_db = -10.0
 
 [node name="BGMusicChill" parent="Character" instance=ExtResource("11_n27da")]
-stream = ExtResource("12_aprkf")
+stream = ExtResource("13_ip4sp")
 volume_db = -10.0
 
 [node name="BGMusicDanger" parent="Character" instance=ExtResource("11_n27da")]
-stream = ExtResource("13_4etl1")
+stream = ExtResource("12_1an6r")
 volume_db = -10.0
 
 [node name="SurvivalTheme" parent="Character" instance=ExtResource("11_n27da")]
-stream = ExtResource("13_4etl1")
+stream = ExtResource("12_1an6r")
 volume_db = -10.0
 
 [node name="Enemies" type="Node" parent="."]

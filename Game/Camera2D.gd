@@ -6,6 +6,7 @@ var current_speed = 0.0
 var current_acceleration = 0.0
 @onready var canvaslayer2 = get_node("CanvasLayer2")
 @onready var enemy_alert = $CanvasLayer2/enemy_alert
+@onready var intro = $"../intro"
 
 
 
