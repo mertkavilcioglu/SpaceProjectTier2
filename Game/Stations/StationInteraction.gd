@@ -19,7 +19,8 @@ const E_KEY_PRESS_DURATION = 2.0
 @onready var karagunes_safezone = $karagunes_safezone
 @onready var bgmusicchill = $"../Character/BGMusicChill"
 @onready var bgmusicdanger = $"../Character/BGMusicDanger"
-
+@onready var videoplayer = $"../Camera2D/CanvasLayer4/VideoStreamPlayer"
+var video_flag = true
 func _ready():
 	
 	
@@ -35,10 +36,10 @@ func _ready():
 		karagunes_safezone.connect("body_exited",_on_safezone_body_exited)
 			
 	elif station_id == 2:
-		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		dialogue_path ="res://Game/Player/texts/nathan_text.json"
 		text_id = ""
 	elif station_id == 3:
-		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
+		dialogue_path ="res://Game/Player/texts/nathan_text.json"
 		text_id = "text1"
 		themis_safezone.connect("body_entered",_on_safezone_body_entered)
 		themis_safezone.connect("body_exited",_on_safezone_body_exited)
@@ -57,10 +58,17 @@ func _process(delta):
 		shields.global_position = global_position + Vector2(cos(angle), sin(angle)) * 100.0
 	angle +=0.0002
 	e_interaction_sprite.global_position = character.global_position + Vector2(60,-60)
-	if dialogue_screen.cinematic_video.is_playing() == true:
+	if videoplayer.isplaying == true:
 		bgmusicchill.stop()
 		bgmusicchill.stop()
-
+	
+	
+	if videoplayer.isplaying and video_flag == false:
+		dialogue.hide()
+		video_flag = true
+	elif !videoplayer.isplaying and video_flag == true:
+		dialogue.show()
+		video_flag = false
 func _physics_process(delta):
 	if body_entered:
 		e_interaction_sprite.texture=load("res://Sprites/uı_elements/E_0.png")

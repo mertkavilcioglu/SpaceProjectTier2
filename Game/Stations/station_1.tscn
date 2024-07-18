@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8nwiicw3w1ck"]
+[gd_scene load_steps=9 format=3 uid="uid://b8nwiicw3w1ck"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_0hk5h"]
 [ext_resource type="Texture2D" uid="uid://8ipe1retfqng" path="res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png" id="2_64thd"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_pgjxh"]
 [ext_resource type="Texture2D" uid="uid://b07dx03rg3igq" path="res://Sprites/gezegenler/station_sprites/istasyonetrafindaucansey1_c.png" id="4_b4bvi"]
 [ext_resource type="Texture2D" uid="uid://bbiaes4dgeof0" path="res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png" id="5_bj0f6"]
+[ext_resource type="PackedScene" uid="uid://c7ovbs8i5shd4" path="res://videoplayer.tscn" id="6_pluvb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_18q65"]
 radius = 311.13
@@ -99,6 +100,8 @@ texture = ExtResource("5_bj0f6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="karagunes_safezone"]
 scale = Vector2(50, 50)
 shape = SubResource("CircleShape2D_u5u28")
+
+[node name="videoplayer" parent="." instance=ExtResource("6_pluvb")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

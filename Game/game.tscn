@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=39 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://b8nwiicw3w1ck" path="res://Game/Stations/station_1.tscn" id="8_3832t"]
 [ext_resource type="PackedScene" uid="uid://bhvmbkkb0hd00" path="res://Game/Enemy/enemy_spawner_HIGH.tscn" id="8_txakh"]
 [ext_resource type="PackedScene" uid="uid://bxouswost8ppp" path="res://Game/Stations/station_2.tscn" id="9_xfbml"]
+[ext_resource type="Script" path="res://videoplayer.gd" id="9_yacug"]
 [ext_resource type="PackedScene" uid="uid://ddnjhsyy5bwau" path="res://Game/Stations/station_3.tscn" id="10_3l1ue"]
 [ext_resource type="PackedScene" uid="uid://cwj8utn1vy426" path="res://Game/Stations/station_4.tscn" id="11_og44a"]
 [ext_resource type="PackedScene" uid="uid://q2ko4ucq1wi3" path="res://Game/Enemy/enemy_spawner_LOW.tscn" id="13_cv7xg"]
@@ -281,6 +282,12 @@ libraries = {
 "": SubResource("AnimationLibrary_6dbh8")
 }
 
+[node name="CanvasLayer4" type="CanvasLayer" parent="Camera2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Camera2D/CanvasLayer4"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("9_yacug")
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Lasers" type="Node" parent="."]
@@ -307,7 +314,7 @@ stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 show_behind_parent = true
-position = Vector2(16261, -28649)
+position = Vector2(584, 26)
 station_id = 1
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
@@ -315,10 +322,10 @@ position = Vector2(32647, -54388)
 station_id = 2
 
 [node name="themis" parent="." instance=ExtResource("10_3l1ue")]
-position = Vector2(62341, -24138)
+position = Vector2(-2555, -74)
 
-[node name="iroh" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(-20176, -27520)
+[node name="themis_uydu" parent="." instance=ExtResource("11_og44a")]
+position = Vector2(-3731, -1335)
 station_id = 4
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]

@@ -80,10 +80,23 @@ var safezone = false
 @onready var KillSoundPlayer = $SoundEffects/Kill
 
 @onready var canvaslayer = $CanvasLayer
+@onready var videoplayer = $"../Camera2D/CanvasLayer4/VideoStreamPlayer"
+
+@onready var bbar = $CanvasLayer/BoostBar
+@onready var hbar = $CanvasLayer/HealthBar
+@onready var bbartexture = $CanvasLayer/energy_bar
+@onready var hbartexture = $CanvasLayer/health_bar
+@onready var colorrect = $"../Camera2D/CanvasLayer"
+@onready var safezone_shader = $"../Camera2D/CanvasLayer3/safezone"
+
+@onready var karagünes = $"../karagünes_atolyesi"
+
 
 var isChillMusic:bool
 var isDangerMusic:bool
 var isEngineStart:bool
+
+
 
 
 func _ready():
@@ -101,10 +114,15 @@ func _ready():
 	Engine2_blue.visible = false
 	await get_tree().create_timer(0.11).timeout
 	health = maxHealth
-	
+	if get_tree().current_scene.name != "SurvivalGame":
+		videoplayer.playvideo("res://Game/videos/intro.ogv")
 	
 
 func _process(delta): 
+	print(videoplayer.global_position,global_position)
+	if videoplayer.isplaying == true:
+		BGChillMusicPlayer.stop()
+		BGChillMusicPlayer.stop()
 	playCameraShakeEngineSound()
 	if isChillMusic:
 		BGChillMusicPlayer.volume_db = lerp(BGChillMusicPlayer.volume_db,-20.0,0.1*delta)
@@ -129,13 +147,14 @@ func _process(delta):
 				isDangerMusic=false
 	if (!isDead):
 		if (!on_dialogue):
-			upgradeChecker()
-			if Input.is_action_pressed("Shoot"):
-				if !shoot_bas:
-					shoot_bas=true
-					shoot_laser()
-					await get_tree().create_timer(fireCD).timeout
-					shoot_bas=false
+			if !videoplayer.isplaying:
+				upgradeChecker()
+				if Input.is_action_pressed("Shoot"):
+					if !shoot_bas:
+						shoot_bas=true
+						shoot_laser()
+						await get_tree().create_timer(fireCD).timeout
+						shoot_bas=false
 	if is_enemy_nearby() == true and enemy_nearby== false:
 		print("enemy nearby")
 		shader_animation.play("enemy_nearby_true")
@@ -170,72 +189,82 @@ func is_enemy_nearby() -> bool:
 func _physics_process(delta): 
 	if(!isDead):
 		if(!on_dialogue):
-			if BoostFuel <100:
-				BoostFuel += 20*delta
-				boostFuelChanged.emit()
-			
-			var Motion = Vector2()
-			Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-			Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
-			velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
-			velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
-			
-			if Input.is_action_pressed("Turbo"):
-				if BoostFuel >= 100:
-					CanBoost = true
-				if BoostRefuel == false:
-					if BoostFuel <0:
-						BoostRefuel = true
-					if BoostFuel > 0:
-						if CanBoost == true:
-							if enemy_nearby:
-								DashSoundPlayer.play()
-								Engine1_red.visible = true
-								Engine2_red.visible = true
-								Engine1_blue.visible = false
-								Engine2_blue.visible = false
-								MaxSpeed = Speed*2
-								velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
-								velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
-								sprite = $body
-								sprite2 = $wing
-								ghost_timer.start()
-								instance_ghost()
-								BoostFuel -= 105
-								boostFuelChanged.emit()
-								CanBoost = false
-								await get_tree().create_timer(0.2).timeout
-								ghost_timer.stop()
-							else:
-								Engine1_red.visible = false
-								Engine2_red.visible = false
-								Engine1_blue.visible = true
-								Engine2_blue.visible = true
-								MaxSpeed = Speed*2
-								BoostFuel -= 25*delta
-								boostFuelChanged.emit()
-					else:
-						MaxSpeed = Speed
-			else:
-				MaxSpeed = Speed
-				Engine1_red.visible = true
-				Engine2_red.visible = true
-				Engine1_blue.visible = false
-				Engine2_blue.visible = false
-				
-			if BoostRefuel == true:
-				if BoostFuel < 100:
-					BoostFuel += 50*delta
+			if !videoplayer.isplaying:
+				if BoostFuel <100:
+					BoostFuel += 20*delta
 					boostFuelChanged.emit()
+			
+				var Motion = Vector2()
+				Motion.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+				Motion.y = Input.get_action_strength("Down") - Input.get_action_strength("Up")
+				velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration)
+				velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration)
+				
+				if Input.is_action_pressed("Turbo"):
+					if BoostFuel >= 100:
+						CanBoost = true
+					if BoostRefuel == false:
+						if BoostFuel <0:
+							BoostRefuel = true
+						if BoostFuel > 0:
+							if CanBoost == true:
+								if enemy_nearby:
+									DashSoundPlayer.play()
+									Engine1_red.visible = true
+									Engine2_red.visible = true
+									Engine1_blue.visible = false
+									Engine2_blue.visible = false
+									MaxSpeed = Speed*2
+									velocity.x = move_toward(velocity.x, Motion.x * MaxSpeed , Acceleration*100)
+									velocity.y = move_toward(velocity.y, Motion.y * MaxSpeed , Acceleration*100)
+									sprite = $body
+									sprite2 = $wing
+									ghost_timer.start()
+									instance_ghost()
+									BoostFuel -= 105
+									boostFuelChanged.emit()
+									CanBoost = false
+									await get_tree().create_timer(0.2).timeout
+									ghost_timer.stop()
+								else:
+									Engine1_red.visible = false
+									Engine2_red.visible = false
+									Engine1_blue.visible = true
+									Engine2_blue.visible = true
+									MaxSpeed = Speed*2
+									BoostFuel -= 25*delta
+									boostFuelChanged.emit()
+						else:
+							MaxSpeed = Speed
 				else:
-					BoostRefuel = false
-			if Input.is_action_just_released("Turbo"):
-				if BoostFuel > 20:
-					CanBoost = true
-			move_and_slide()
-			MousePosition = get_global_mouse_position()
-			look_at(MousePosition)
-			Cam.position = lerp(Cam.position, position, 5 * delta)
+					MaxSpeed = Speed
+					Engine1_red.visible = true
+					Engine2_red.visible = true
+					Engine1_blue.visible = false
+					Engine2_blue.visible = false
+					
+					
+				if BoostRefuel == true:
+					if BoostFuel < 100:
+						BoostFuel += 50*delta
+						boostFuelChanged.emit()
+					else:
+						BoostRefuel = false
+				if Input.is_action_just_released("Turbo"):
+					if BoostFuel > 20:
+						CanBoost = true
+				move_and_slide()
+				MousePosition = get_global_mouse_position()
+				look_at(MousePosition)
+				Cam.position = lerp(Cam.position, position, 5 * delta)
+			elif videoplayer.isplaying:
+				bbar.visible = false
+				hbar.visible = false
+				bbartexture.visible = false
+				hbartexture.visible = false
+				colorrect.visible = false
+				safezone_shader.visible = false
+			
 		elif(on_dialogue):
 			velocity.x = move_toward(velocity.x, 0 , Acceleration)
 			velocity.y = move_toward(velocity.y, 0 , Acceleration)

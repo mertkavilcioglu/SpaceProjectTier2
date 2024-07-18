@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://inmklbs8atec"]
+[gd_scene load_steps=54 format=3 uid="uid://inmklbs8atec"]
 
 [ext_resource type="Script" path="res://Game/Player/Character.gd" id="1_bikhr"]
 [ext_resource type="PackedScene" uid="uid://ci1g58cucklej" path="res://Game/Enemy/explosion_death_particle.tscn" id="2_djfga"]
@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://u6imtikbq2ed" path="res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3" id="23_s5fxp"]
 [ext_resource type="AudioStream" uid="uid://3s74knb8qx5m" path="res://Game/Sounds/Music/Player Impact Energy.wav" id="24_3ux0y"]
 [ext_resource type="AudioStream" uid="uid://cisqms6m5vs62" path="res://Game/Sounds/Music/Ship Collision S.wav" id="25_hyh7t"]
+[ext_resource type="PackedScene" uid="uid://c7ovbs8i5shd4" path="res://videoplayer.tscn" id="26_uyt4d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4uun"]
 radius = 44.0
@@ -283,7 +284,7 @@ shader_parameter/ca_strength = 0.0
 radius = 50000.0
 
 [node name="Character" type="CharacterBody2D"]
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_bikhr")
 deathParticle = ExtResource("2_djfga")
 
@@ -816,6 +817,8 @@ process_mode = 3
 process_priority = 1
 stream = ExtResource("25_hyh7t")
 volume_db = -5.0
+
+[node name="videoplayer" parent="." instance=ExtResource("26_uyt4d")]
 
 [connection signal="pressed" from="Upgrade/NewLevel/health" to="." method="_on_health_pressed"]
 [connection signal="pressed" from="Upgrade/NewLevel/speed" to="." method="_on_speed_pressed"]

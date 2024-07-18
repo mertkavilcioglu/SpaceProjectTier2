@@ -11,7 +11,6 @@ extends Node2D
 @onready var monologue_animation = $monologue_animation
 @onready var left_button = $card_image/select_left
 @onready var right_button = $card_image/select_right
-@onready var cinematic_video = $card_image/cinematic_video
 var character_on_dialogue = false
 var dialogues
 var current_dialogue
@@ -26,7 +25,7 @@ func _ready():
 	text_anim_timer.timeout.connect(text_)
 
 func _process(delta):
-	if visible == true and cinematic_video.is_playing() == false:
+	if visible == true and station.videoplayer.isplaying == false:
 		character_on_dialogue = true
 		left_button.disabled = false
 		right_button.disabled = false
@@ -62,9 +61,7 @@ func update_card():
 		monologue_animation.play("monologue_animation_true")
 		text_anim_timer.stop()
 	if "video" in current_dialogue:
-		cinematic_video.stream = load(current_dialogue["video"])
-		cinematic_video.visible = true
-		cinematic_video.play()
+		station.videoplayer.playvideo(current_dialogue["video"])
 		left_button.disabled = true
 		right_button.disabled = true
 

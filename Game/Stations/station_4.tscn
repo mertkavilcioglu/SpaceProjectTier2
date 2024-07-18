@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwj8utn1vy426"]
+[gd_scene load_steps=4 format=3 uid="uid://cwj8utn1vy426"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_p644h"]
-[ext_resource type="Texture2D" uid="uid://drvxylvn328r3" path="res://Sprites/gezegenler/station_sprites/istasyon1_a.png" id="2_oyox8"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_r504s"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ryqqn"]
@@ -12,7 +11,6 @@ height = 616.005
 script = ExtResource("1_p644h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_oyox8")
 
 [node name="Area2D" type="Area2D" parent="."]
 

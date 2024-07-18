@@ -5,7 +5,8 @@ extends CanvasLayer
 @onready var scrapCont = $ScrapCont
 
 func _process(delta):
-	$StatCont/HighScore/hsNumber.text = str(upgradeScreen.highScore)
+	if upgradeScreen.highScore != null:
+		$StatCont/HighScore/hsNumber.text = str(upgradeScreen.highScore)
 	$StatCont/Waves/WaveNumber.text = str($"../EnemySpawnerSURVIVAL".currentWave)
 	$ScrapCont/Parts.text = str(upgradeScreen.ScrapParts)
 	

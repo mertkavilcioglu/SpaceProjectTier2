@@ -208,17 +208,6 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
-[node name="cinematic_video" type="VideoStreamPlayer" parent="card_image"]
-offset_left = -1200.0
-offset_top = -680.0
-offset_right = -1200.0
-offset_bottom = -680.0
-scale = Vector2(2.8, 2.8)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-volume_db = -10.0
-buffering_msec = 350
-
 [node name="select_left" type="Button" parent="card_image"]
 offset_left = 122.0
 offset_top = 278.0
