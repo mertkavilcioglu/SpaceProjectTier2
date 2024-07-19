@@ -120,7 +120,6 @@ func _ready():
 	
 
 func _process(delta): 
-	print(videoplayer.global_position,global_position)
 	if videoplayer.isplaying == true:
 		BGChillMusicPlayer.stop()
 		BGChillMusicPlayer.stop()

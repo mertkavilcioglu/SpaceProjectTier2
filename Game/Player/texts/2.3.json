@@ -1,0 +1,13 @@
+{
+	"iv1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/istasyonKARAGUNESATOLYESI1_a.png",
+		"question":"GÖREV TAMAMLANDI",
+		"left_answer":"devam et",
+		"right_answer":"",
+		"right_result":"null",
+		"order":"d",
+		"video":"res://Game/videos/2.3.ogv"
+	}
+}

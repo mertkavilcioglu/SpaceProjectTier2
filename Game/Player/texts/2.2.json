@@ -52,6 +52,8 @@
 		"left_answer":"(North beklemeden gitti) Peşinden git.",
 		"right_answer":"Merak etme Chrone bu işle yakından ilgileneceğim.",
 		"order":"m",
-		"video":"res://Game/videos/2.2.ogv"
+		"video":"res://Game/videos/2.2.ogv",
+		"missionvector":"3",
+		"nextdialogue":"2.3"
 	},
 }

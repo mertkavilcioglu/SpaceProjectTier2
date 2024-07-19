@@ -16,9 +16,9 @@ var dialogues
 var current_dialogue
 var text_anim_timer
 var text_order_flag = false
-var missionvectorpath
+static var missionvectorpath
 var dialogue_path
-var nextdialogue
+static var nextdialogue
 
 func _ready():
 	position = get_viewport_rect().size/2
@@ -29,6 +29,7 @@ func _ready():
 	nextdialogue = "1.1"
 
 func _process(delta):
+	print(left_button.disabled)
 	if visible == true and station.videoplayer.isplaying == false:
 		character_on_dialogue = true
 		left_button.disabled = false

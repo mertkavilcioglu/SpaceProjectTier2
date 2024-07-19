@@ -225,25 +225,20 @@ func changeTextures():
 	$HBoxContainer/Parts.text = str(ScrapParts)
 	
 	if HealthLevel == 1:
-		ship_body.texture = load("res://Sprites/uzaygemisi/Bodies/Body_lvl1.png")
 		H_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 	if HealthLevel == 2:
-		ship_body.texture = load("res://Sprites/uzaygemisi/Bodies/Body_lvl2.png")
 		H_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 	if HealthLevel == 3:
-		ship_body.texture = load("res://Sprites/uzaygemisi/Bodies/Body_lvl3.png")
 		H_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_3. texture = load("res://Sprites/UpgradeFilled.png")
 	if HealthLevel == 4:
-		ship_body.texture = load("res://Sprites/uzaygemisi/Bodies/Body_lvl4.png")
 		H_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_3. texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_4.texture = load("res://Sprites/UpgradeFilled.png")
 	if HealthLevel == 5:
-		ship_body.texture = load("res://Sprites/uzaygemisi/Bodies/Body_lvl5.png")
 		H_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		H_lvl_3. texture = load("res://Sprites/UpgradeFilled.png")
@@ -254,40 +249,20 @@ func changeTextures():
 		HealthLevel = 5
 	
 	if SpeedLevel == 1:
-		if HealthLevel <= 1:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/Wing_lvl1.png")
-		else:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/Wing_lvl1.png")
 		S_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 	if SpeedLevel == 2:
-		if HealthLevel <= 1:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/wing_lvl_2_body_lvl1.png")
-		else:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/kanat lvl2.png")
 		S_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 	if SpeedLevel == 3:
-		if HealthLevel <= 1:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/wing_lvl3_body_lvl1.png")
-		else:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/kanat lvl3.png")
 		S_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_3.texture = load("res://Sprites/UpgradeFilled.png")
 	if SpeedLevel == 4:
-		if HealthLevel <= 1:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/wing_lvl4_body_lvl1.png")
-		else:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/kanat lvl4.png")
 		S_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_3.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_4.texture = load("res://Sprites/UpgradeFilled.png")
 	if SpeedLevel == 5:
-		if HealthLevel <= 1:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/wing_lvl5_body_lvl1.png")
-		else:
-			ship_wing.texture = load("res://Sprites/uzaygemisi/Wings/kanat lvl5.png")
 		S_lvl_1.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_2.texture = load("res://Sprites/UpgradeFilled.png")
 		S_lvl_3.texture = load("res://Sprites/UpgradeFilled.png")

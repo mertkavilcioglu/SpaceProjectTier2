@@ -57,6 +57,9 @@ func _process(delta):
 	elif dialogue_screen.nextdialogue == "2.2":
 		dialogue_path = "res://Game/Player/texts/2.2.json"
 		text_id = "iv1"
+	elif dialogue_screen.nextdialogue == "2.3":
+		dialogue_path = "res://Game/Player/texts/2.3.json"
+		text_id = "iv1"
 	if station_id == "1":
 		var shields = get_node("shields")
 		shields.look_at(global_position)
