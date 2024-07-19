@@ -18,3 +18,4 @@ res://Upgrade/upgrade.gd
 res://Upgrade/upgrade.tscn
 res://Upgrade/upgradeInGame.gd
 res://Menus/options_menu.gd
+res://videoplayer.gd

@@ -44,7 +44,6 @@ var BoostCD:int = 3
 var shoot_bas=false
 
 var ghost_scene = preload("res://Game/Player/dash_ghost.tscn")
-var ghost_scene2 = preload("res://Game/Player/dash_ghost2.tscn")
 var sprite 
 var sprite2
 @onready var ghost_timer = $GhostTimer
@@ -100,6 +99,8 @@ var isEngineStart:bool
 
 
 func _ready():
+	if get_tree().current_scene.name != "SurvivalGame":
+		videoplayer.playvideo("res://Game/videos/intro (1).ogv")
 	#if get_tree().current_scene.name != "SurvivalGame":
 		#bgmusic()
 	isEngineStart = false
@@ -114,8 +115,6 @@ func _ready():
 	Engine2_blue.visible = false
 	await get_tree().create_timer(0.11).timeout
 	health = maxHealth
-	if get_tree().current_scene.name != "SurvivalGame":
-		videoplayer.playvideo("res://Game/videos/intro (1).ogv")
 	
 
 func _process(delta): 
@@ -189,6 +188,12 @@ func _physics_process(delta):
 	if(!isDead):
 		if(!on_dialogue):
 			if !videoplayer.isplaying:
+				bbar.visible = true
+				hbar.visible = true
+				bbartexture.visible = true
+				hbartexture.visible = true
+				colorrect.visible = true
+				safezone_shader.visible = true
 				if BoostFuel <100:
 					BoostFuel += 20*delta
 					boostFuelChanged.emit()
@@ -263,7 +268,6 @@ func _physics_process(delta):
 				hbartexture.visible = false
 				colorrect.visible = false
 				safezone_shader.visible = false
-			
 		elif(on_dialogue):
 			velocity.x = move_toward(velocity.x, 0 , Acceleration)
 			velocity.y = move_toward(velocity.y, 0 , Acceleration)
@@ -389,15 +393,9 @@ func instance_ghost():
 	ghost.global_position = global_position
 	ghost.texture = sprite.texture
 	ghost.rotation = rotation + PI/2
-	ghost.scale = scale
+	ghost.scale = scale*0.4
 	
-	var ghost2 = ghost_scene2.instantiate()
-	get_parent().get_parent().add_child(ghost2)
-	
-	ghost2.global_position = global_position
-	ghost2.texture = sprite2.texture
-	ghost2.rotation = rotation + PI/2
-	ghost2.scale = scale
+
 
 
 func _on_ghost_timer_timeout():

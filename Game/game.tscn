@@ -1,10 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://bbyrwi8w2y3bk"]
+[gd_scene load_steps=38 format=3 uid="uid://bbyrwi8w2y3bk"]
 
 [ext_resource type="PackedScene" uid="uid://dqts467tlka71" path="res://Game/Enemy/LOWspawner_trigger.tscn" id="1_lb4w1"]
 [ext_resource type="PackedScene" uid="uid://inmklbs8atec" path="res://Game/Player/Character.tscn" id="2_eeww8"]
 [ext_resource type="PackedScene" uid="uid://cjyvauoxu8sol" path="res://Menus/backgroundInGame.tscn" id="2_j1piq"]
 [ext_resource type="Script" path="res://Game/Camera2D.gd" id="2_rdm3x"]
-[ext_resource type="PackedScene" uid="uid://4gdymh7wacm0" path="res://Game/Enemy/MEDspawner_trigger.tscn" id="2_wrk50"]
 [ext_resource type="Shader" path="res://Game/PlayerVignette.gdshader" id="3_mg8ni"]
 [ext_resource type="PackedScene" uid="uid://cb72bp87umm38" path="res://Game/Enemy/HIGHspawner_trigger.tscn" id="3_sdaca"]
 [ext_resource type="Shader" path="res://Game/game.gdshader" id="5_ufmhb"]
@@ -198,6 +197,16 @@ position = Vector2(9498, -10113)
 rotation = 0.598648
 scale = Vector2(176.05, 100.665)
 
+[node name="LOWSpawnerTrigger2" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(34094, -49836)
+rotation = 0.598648
+scale = Vector2(28, 28.59)
+
+[node name="LOWSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("1_lb4w1")]
+position = Vector2(262, -32229)
+rotation = 1.55683
+scale = Vector2(234.771, 77.125)
+
 [node name="HIGHSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("3_sdaca")]
 position = Vector2(0, 10000)
 scale = Vector2(1500, 30)
@@ -215,14 +224,6 @@ scale = Vector2(750, 30)
 position = Vector2(-63104, -28256)
 rotation = 1.5708
 scale = Vector2(750, 30)
-
-[node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(33998, -49535)
-scale = Vector2(22.87, 27.748)
-
-[node name="MEDSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(3010, -32574)
-scale = Vector2(22.87, 284.463)
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
 scale = Vector2(2.5, 2.5)
@@ -313,7 +314,7 @@ stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 show_behind_parent = true
-position = Vector2(24047, -30625)
+position = Vector2(1004, 149)
 station_id = "1"
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
@@ -325,7 +326,7 @@ position = Vector2(-16570, -34385)
 station_id = "3"
 
 [node name="themis_uydu" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(-3731, -1335)
+position = Vector2(-17733, -35640)
 station_id = "4"
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]

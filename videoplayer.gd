@@ -5,6 +5,8 @@ extends VideoStreamPlayer
 var isplaying:bool
 var counter = 1
 var videopath
+
+
 func _process(delta):
 	if is_playing() == false:
 		isplaying = false

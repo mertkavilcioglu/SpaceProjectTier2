@@ -1,22 +1,22 @@
 [gd_scene load_steps=17 format=3 uid="uid://ddnjhsyy5bwau"]
 
 [ext_resource type="Script" path="res://Game/Stations/StationInteraction.gd" id="1_b5irn"]
-[ext_resource type="Texture2D" uid="uid://cb17kiidps85m" path="res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png" id="2_l6ego"]
 [ext_resource type="PackedScene" uid="uid://bdflnfbq0e65b" path="res://Game/DialogueSystem/dialogue.tscn" id="3_0m4lw"]
 [ext_resource type="Texture2D" uid="uid://c5ujcvt65lgt3" path="res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png" id="4_jjb4n"]
+[ext_resource type="Texture2D" uid="uid://esfvwdrh1tea" path="res://Sprites/gezegenler/station_sprites/tenis_istasyonu1.png" id="4_ueel0"]
 [ext_resource type="Texture2D" uid="uid://bbiaes4dgeof0" path="res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png" id="5_1wo3u"]
 [ext_resource type="Script" path="res://Game/Stations/themis_paths.gd" id="6_im4vg"]
 [ext_resource type="Texture2D" uid="uid://cbs2pnprf0u1s" path="res://Sprites/uzaygemisi/resource_ship.png" id="6_tw64p"]
 
 [sub_resource type="Curve2D" id="Curve2D_dljkg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1553.53, -1554.47, 0, 0, 0, 0, -241.827, 183.229, 0, 0, 0, 0, 1550.53, -1551.47)
+"points": PackedVector2Array(0, 0, 0, 0, 1553.53, -1554.47, 0, 0, 0, 0, -123.948, 55.1173, 0, 0, 0, 0, 1550.53, -1551.47)
 }
 point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_01rok"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 125, 227, 0, 0, 0, 0, 46, -1269, 0, 0, 0, 0, 127, 229)
+"points": PackedVector2Array(0, 0, 0, 0, 115, 45, 0, 0, 0, 0, 46, -1269, 0, 0, 0, 0, 115, 46)
 }
 point_count = 3
 
@@ -69,7 +69,7 @@ curve = SubResource("Curve2D_dljkg")
 
 [node name="ship1" type="PathFollow2D" parent="themis_paths/Path2D"]
 position = Vector2(1553.53, -1554.47)
-rotation = 2.37251
+rotation = 2.37685
 
 [node name="Sprite2D" type="Sprite2D" parent="themis_paths/Path2D/ship1"]
 rotation = 1.6057
@@ -80,10 +80,11 @@ texture = ExtResource("6_tw64p")
 curve = SubResource("Curve2D_01rok")
 
 [node name="ship2" type="PathFollow2D" parent="themis_paths/Path2D2"]
-position = Vector2(125, 227)
-rotation = -1.62355
+position = Vector2(115, 45)
+rotation = -1.62326
 
 [node name="Sprite2D" type="Sprite2D" parent="themis_paths/Path2D2/ship2"]
+position = Vector2(193.836, 8.23318)
 rotation = 1.5708
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_tw64p")
@@ -149,7 +150,7 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_tw64p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_l6ego")
+texture = ExtResource("4_ueel0")
 
 [node name="Area2D" type="Area2D" parent="."]
 
