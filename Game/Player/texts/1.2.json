@@ -1,0 +1,234 @@
+{
+	"text1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Krallığın gizli bilgilerine ulaşan itler burada kalıyorlar demek. Füzyon çekirdeğinden çok bu adilerin, bilgileri nasıl aldıklarını öğreneceğim için heyecanlıyım.",
+		"monologue":"North’u bir çok kez bu yüz ifadesinde gördüm. Gülmeyle karışık sinir. Aklından geçenleri tahmin edebiliyorum. “Zorla bilgi alma” adı altında korsanları ölmekten beter etmek istiyor.",
+		"left_answer":"Sessiz kal",
+		"right_answer":"Aklındakini yapmayacağız North, Krallıktan uzakta da olsak kurallarımız aynı.",
+		"left_result":"text2",
+		"right_result":"text2",
+		"order":"d"
+	},
+	"text2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Merak etme Krallığın gizli bilgilerine nasıl ulaştıklarını onlardan öğreneceğim. Sadece sorgu, başka bir şey düşündüğüm yok.",
+		"left_answer":"Sadece Sorgu, başka bir şey yok, söz ver.",
+		"right_answer":"Böyle düşünmene sevindim.",
+		"left_result":"text3",
+		"right_result":"text3",
+		"order":"d"
+	},
+	"text3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Connor sakinleş, ama şunu da anlaman lazım. Bu herifler gezegen yok edebielcek bir silahın parçasını çaldılar. Sadece sorgu falan değil. Bu bilgiyi nereden aldıklarını öğrenene kadar her 15 saniyede bir, bir kemiklerini kıracağım, hepsi bu.",
+		"monologue":"Oldukça basit de olsa savunmasına hak verdim. Bu bilgileri almak bu serserilerin kemiklerinden çok daha kıymetli. ",
+		"left_answer":"15 saniye çok kısa.",
+		"right_answer":"Sorguya benden sonra gireceksin.",
+		"left_result":"text4",
+		"right_result":"text4",
+		"order":"d"
+	},
+	"text4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Sorgunun ne zaman yaşanacağını asla tahmin edemeyeceksin.",
+		"monologue":"Şakayı bırakıp üzerine düşünmemiz gereken şey, bu adamlar kamera kayıtlarında her ne kadar acemi gibi duruyor olsalar da sonuçta Kara Güneşe girmeyi başardılar. Bu işi ciddiye almamız gerekiyor.",
+		"left_answer":"Rahatlığını bir kenara bırakman lazım North",
+		"right_answer":"İş ciddi dostum, neyle karşılaşacağımızı bilemeyiz.",
+		"left_result":"text5",
+		"right_result":"text5",
+		"order":"d"
+	},
+	"text5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Merak etme ciddiyetin farkındayım, sadece ortamı yumu…",
+		"monologue":"İnsan sesleri geliyor ve Northun gözündeki ciddiyeti görünce rahatlıyorsun. Konuştuğu kadar ciddiye almıyor değilmiş bu işi.",
+		"left_answer":"Sağ kaşını kaldırıp sol gözünü kırp",
+		"right_answer":"Sol kaşını kaldırıp sağ gözünü kırp",
+		"left_result":"iv5",
+		"right_result":"iv6",
+		"order":"d"
+	},
+	"iv5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Noldu lan garip bir şey mi oldu? Yanlış mı yaptım hareketi? Yoo, sağ kaş sol göz öldürmeden alaşağı et demek.",
+		"left_answer":"Sol kaşını kaldırıp sağ gözünü kırp",
+		"right_answer":"Tekrar sağ kaşını kaldırıp sol gözünü kırp",
+		"left_result":"iv6",
+		"right_result":"iv7",
+		"order":"m"
+	},
+	"iv7":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Aklında tut artık şu iletişim şekillerini be adam.",
+		"left_answer":"Sessizce benimle gel ",
+		"right_answer":"Sol kaşını kaldırıp sağ gözünü kırp",
+		"left_result":"iv6",
+		"right_result":"iv6",
+		"order":"m"
+	},
+	"iv6":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Bak yanlışı yapınca anladı. Ters anlamış hareketleri. ",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"iv8",
+		"right_result":"null",
+		"order":"m"
+	},
+	"iv8":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"İki kişi aralarında konuşuyorlar, önemlidir belki dinleyelim, önemli değilse etkisiz hale getiririz herifleri. Bize canlı lazımlar.",
+		"left_answer":"Sessizce dinle",
+		"right_answer":"",
+		"left_result":"2.iv1",
+		"right_result":"null",
+		"order":"m"
+	},
+	"2.iv1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Bu deli neler zırvaladı böyle? Sonuçta deli, North’a işaret verip adamları canlı ele geçirmek için ani bir saldırı yapmalıyız.",
+		"left_answer":"Sağ gözünü kırp",
+		"right_answer":"Sol gözünü kırp",
+		"left_result":"2.text1",
+		"right_result":"2.text1",
+		"order":"m",
+		"video":"res://Game/videos/1.2.ogv"
+	},
+	"2.text1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: AAAAHHHH, geberin lan.",
+		"left_answer":"Geberin mi?",
+		"right_answer":"Ne?",
+		"left_result":"2.iv2",
+		"right_result":"2.iv2",
+		"order":"d"
+	},
+	"2.iv2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Bu yaşanıyor olamaz. ",
+		"left_answer":"North, sen ne…",
+		"right_answer":"Sağ kaş Sol g…",
+		"left_result":"2.text2",
+		"right_result":"2.text2",
+		"order":"d"
+	},
+	"2.text2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Dediğin gibi ikisini de öldürdüm, deli gitti gidip onu da öldürebilirim. Ama bence sorgulamak için hayatta kalmaları daha iyi olurdu.",
+		"left_answer":"North sağ kaş sol gözün anlamı öldürmeden halledeceğiz demekti…",
+		"right_answer":"Dur. Sadece dur… Öldürmeyecektik…",
+		"left_result":"2.text3",
+		"right_result":"2.text3",
+		"order":"d"
+	},
+	"2.text3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Hareketleri karıştırıp beni mis suçluyorsun? Ben zaten öldürmeyecektim, sen öyle dedin. ",
+		"monologue":"Üstelemek anlamsız, olan oldu, istasyonu arayıp başka hayatta kalan var mı bunu kontrol etmeliyiz. Şefleri öldü ama.",
+		"left_answer":"Sen istasyonu araştır, hepsi acemi şunların tiplerine bak, acil durumda sinyal gönder.",
+		"right_answer":"Ben şu delinin yanına gidiyorum kaçmasın.",
+		"left_result":"2.text4",
+		"right_result":"2.text4",
+		"order":"d"
+	},
+	"2.text4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Tamamdır gerisi bende meraklanma.",
+		"monologue":"Yeni prosedüre göre askeri iletişimin değişmesi çok yanlış bir karardı. Bunu kraliyet generaliyle görüşmek gerek, şu deliye bakmalıyım.",
+		"left_answer":"Delinin gittiği yöne doğru yürü.",
+		"right_answer":"",
+		"left_result":"2.iv5",
+		"right_result":"null",
+		"order":"d"
+	},
+	"2.iv5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Delinin korkmuş sesi geliyor, adamın ödü patladı North ayı gibi bağırınca. Yüzünde garip bir gülümsemeyle bana bakıyor. Tuhaf sesler çıkartıyor.",
+		"left_answer":"Hey sen Kraliyet adına tutuklusun. Sorgu için benimle gemiye geliyorsun. HEMEN.",
+		"right_answer":"Silahın varsa at ve kim olduğunu söyle.",
+		"left_result":"2.text5",
+		"right_result":"2.text5",
+		"order":"m"
+	},
+	"2.text5":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"Hehehe… Hehe . Heeeee",
+		"monologue":"Ne bu gülüyo mu? Aptalca sesler çıkartıyor.",
+		"left_answer":"Duymadın mı? Zor kullanmaya zorlama beni.",
+		"right_answer":"Kendine gelmen için 15 saniyen var.",
+		"left_result":"2.iv7",
+		"right_result":"2.iv7",
+		"order":"d"
+	},
+	"2.iv7":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"Heheheheeee. Söylemişti, o geleceğinizi söylemişti. Hoşgeldiniz, hoşgeldiniz.",
+		"monologue":"North gibi konuştum.",
+		"left_answer":"O da kim?",
+		"right_answer":"Gemiye geliyorsun derhal.",
+		"left_result":"2.iv8",
+		"right_result":"2.iv8",
+		"order":"m"
+	},
+	"2.iv8":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Delinin ağzından hiçbir laf alamadım. Sadece gülüp hoşgeldiniz diyor, Tütüncünün geleceğimizi söylediğini söylüyor. Tütüncü ne dediğimdeyse yine gülüyor.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"left_result":"2.iv9",
+		"right_result":"null",
+		"order":"m"
+	},
+	"2.iv9":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"North deliyi zorla konuşturabileceğini söylüyor ama hiçbir şeyin değişmeyeceğinden eminim. Bu fikir reddedildi. Füzyon çekirdeğini vermek için Kara Güneşe dönüyoruz.",
+		"left_answer":"Devam et",
+		"right_answer":"",
+		"right_result":"null",
+		"order":"m",
+		"missionvector":"1",
+		"nextdialogue":"1.3"
+	},
+
+
+}

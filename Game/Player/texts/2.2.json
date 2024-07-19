@@ -1,0 +1,57 @@
+{
+	"iv1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"Burası ne kadar değişmiş, eskiden daha iyi haldeydi, resmen çöplüğe dönmüş. İçeri girdiğimizden beri de insanlar çok gergin gözüküyor. North’un kafasından neler geçiyor acaba, çok kötü hissettiğine emi…",
+		"question":"North: Hey Chrone, vay arkadaş ya şu tipine bak, ne değişmişsin, ses ver bakıyım nasıl olmuş şu yeni makinen. ",
+		"left_answer":"En azından çok da kötü değilmiş.",
+		"right_answer":"Evet kafasından başka şeyler geçiyormuş.",
+		"left_result":"text2",
+		"right_result":"text2",
+		"order":"m",
+	},
+	"text2":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"Chrone: North! Hoş geldin, ııııı… seni beklemiyordum, neden buradasın? Krallık uzun süreli izin vermiyor diye biliyordum. Sen de hoş geldin Connor. ",
+		"left_answer":"Selam Chrone, North’un dediği gibi çok değişmişsin. ",
+		"right_answer":"İzinde değiliz görev için buraya geldik. ",
+		"left_result":"text3",
+		"right_result":"text3",
+		"order":"d",
+	},
+	"text3":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"North: Chrone çok garip bir şey duydum, buradan bazıları devrimcilere katılmış, nedir bu durum? Yanlış anlaşılma mı? Başka bir şey mi?",
+		"left_answer":"Sessiz kal",
+		"right_answer":"Bunu nerede konuşabiliriz?",
+		"left_result":"text4",
+		"right_result":"text4",
+		"order":"d",
+	},
+	"text4":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"question":"Chrone: Bu konuyu burada açmayın, beni takip edin.",
+		"left_answer":"Chrone ve North’u takip et.",
+		"right_answer":"",
+		"left_result":"2.iv1",
+		"right_result":"null",
+		"order":"d",
+	},
+	"2.iv1":
+	{
+		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"monologue":"North’un kafasından geçenleri az çok tahmin ediyorum. Olacak olay görevi tehlikeyi atacak olsa bile buna engel olmayacağım, North’un aklındaki her neyse inisiyatif alacağım.",
+		"left_answer":"(North beklemeden gitti) Peşinden git.",
+		"right_answer":"Merak etme Chrone bu işle yakından ilgileneceğim.",
+		"order":"m",
+		"video":""
+	},
+}

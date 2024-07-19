@@ -16,6 +16,9 @@ var dialogues
 var current_dialogue
 var text_anim_timer
 var text_order_flag = false
+var missionvectorpath
+var dialogue_path
+var nextdialogue
 
 func _ready():
 	position = get_viewport_rect().size/2
@@ -23,6 +26,7 @@ func _ready():
 	add_child(text_anim_timer)
 	text_anim_timer.wait_time = 0.03
 	text_anim_timer.timeout.connect(text_)
+	nextdialogue = "1.1"
 
 func _process(delta):
 	if visible == true and station.videoplayer.isplaying == false:
@@ -64,6 +68,10 @@ func update_card():
 		station.videoplayer.playvideo(current_dialogue["video"])
 		left_button.disabled = true
 		right_button.disabled = true
+	if "missionvector" in current_dialogue:
+		missionvectorpath = current_dialogue["missionvector"]
+	if "nextdialogue" in current_dialogue:
+		nextdialogue = current_dialogue["nextdialogue"]
 
 func select_left():
 	if "left_result" in current_dialogue and current_dialogue["left_result"] !="null":

@@ -7,7 +7,7 @@ extends Node2D
 @onready var flag = true
 @onready var game = $".."
 @onready var character = $"../Character"
-@export var station_id: int
+@export var station_id: String
 var angle = 0.0
 var safezone_bool = false
 var dialogue_path:String
@@ -20,6 +20,7 @@ const E_KEY_PRESS_DURATION = 2.0
 @onready var bgmusicchill = $"../Character/BGMusicChill"
 @onready var bgmusicdanger = $"../Character/BGMusicDanger"
 @onready var videoplayer = $"../Camera2D/CanvasLayer4/VideoStreamPlayer"
+@onready var mission_vector = $"../mission_vector"
 var video_flag = true
 func _ready():
 	
@@ -29,29 +30,34 @@ func _ready():
 	e_interaction_sprite.hide()
 	
 	
-	if station_id == 1:
-		dialogue_path ="res://Game/Player/texts/nathan_text.json"
-		text_id = "iv1"
+	if station_id == "1":
 		karagunes_safezone.connect("body_entered",_on_safezone_body_entered)
 		karagunes_safezone.connect("body_exited",_on_safezone_body_exited)
 			
-	elif station_id == 2:
-		dialogue_path ="res://Game/Player/texts/nathan_text.json"
-		text_id = ""
-	elif station_id == 3:
-		dialogue_path ="res://Game/Player/texts/nathan_text.json"
-		text_id = "text1"
+	elif station_id == "3":
 		themis_safezone.connect("body_entered",_on_safezone_body_entered)
 		themis_safezone.connect("body_exited",_on_safezone_body_exited)
-	elif station_id == 4:
-		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
-		text_id = "text1"
-	elif station_id == 5:
-		dialogue_path ="res://Game/DialogueSystem/mission_dialogues/mission1_part1.json"
-		text_id = "text1"	
+		
+		
+
 
 func _process(delta):
-	if station_id == 1:
+	if dialogue_screen.nextdialogue == "1.1":
+		dialogue_path = "res://Game/Player/texts/1.1.json"
+		text_id = "iv1"
+	elif dialogue_screen.nextdialogue == "1.2":
+		dialogue_path = "res://Game/Player/texts/1.2.json"
+		text_id = "text1"
+	elif dialogue_screen.nextdialogue == "1.3":
+		dialogue_path = "res://Game/Player/texts/1.3.json"
+		text_id = "iv1"
+	elif dialogue_screen.nextdialogue == "2.1":
+		dialogue_path = "res://Game/Player/texts/2.1.json"
+		text_id = "iv1"
+	elif dialogue_screen.nextdialogue == "2.2":
+		dialogue_path = "res://Game/Player/texts/2.2.json"
+		text_id = "iv1"
+	if station_id == "1":
 		var shields = get_node("shields")
 		shields.look_at(global_position)
 		shields.rotation+= PI
@@ -61,6 +67,8 @@ func _process(delta):
 	if videoplayer.isplaying == true:
 		bgmusicchill.stop()
 		bgmusicchill.stop()
+	if dialogue_screen.missionvectorpath != null:
+		mission_vector.station_changer(dialogue_screen.missionvectorpath)
 	
 	
 	if videoplayer.isplaying and video_flag == false:

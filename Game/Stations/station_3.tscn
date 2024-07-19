@@ -59,7 +59,6 @@ radius = 2146.06
 
 [node name="TestStation" type="Node2D"]
 script = ExtResource("1_b5irn")
-station_id = 3
 
 [node name="themis_paths" type="Node2D" parent="."]
 script = ExtResource("6_im4vg")

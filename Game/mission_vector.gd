@@ -10,24 +10,25 @@ var screen_center
 var direction
 var distance_from_center = 450
 var station_position_path
-var stationid = 1
 
+
+func _ready():
+	station_changer("1")
 
 func _process(delta):
-	station_changer()
 	direct_to_mission(station_position_path)
 	show()
 	if station1.body_entered == true:
 		hide()
 
-func station_changer():
-	if stationid == 1:
+func station_changer(stationid:String):
+	if stationid == "1":
 		station_position_path = station1.global_position
-	if stationid ==2:
+	if stationid =="2":
 		station_position_path = station2.global_position
-	if stationid ==3:
+	if stationid =="3":
 		station_position_path = station3.global_position
-	if stationid ==4:
+	if stationid =="4":
 		station_position_path = station4.global_position
 	
 	
