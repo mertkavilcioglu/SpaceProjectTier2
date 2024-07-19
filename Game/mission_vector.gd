@@ -3,7 +3,7 @@ extends Sprite2D
 @onready var station1 = $"../karagünes_atolyesi"
 @onready var station2 = $"../korsan_istasyonu"
 @onready var station3 = $"../themis"
-@onready var station4 = $"../iroh"
+@onready var station4 = $"../themis_uydu"
 @onready var character = $"../Character"
 var camera
 var screen_center

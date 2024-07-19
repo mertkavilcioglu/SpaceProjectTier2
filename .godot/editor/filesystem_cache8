@@ -1,27 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721351513
+::res://::1721353012
 export_presets.cfg::TextFile::-1::1721206686::0::1::::<><>::
 icon.svg::CompressedTexture2D::8109417046477381051::1720391953::1721058385::1::::<><>::
 Kahpe Karı sinematik.ogv::VideoStreamTheora::-1::1721182774::0::1::::<><>::
 README.md::TextFile::-1::1720391953::0::1::::<><>::
 videoplayer.gd::GDScript::-1::1721310661::0::1::::<>VideoStreamPlayer<>::
-videoplayer.tscn::PackedScene::7049063491805213391::1721351513::0::1::::<><>::
-::res://Game/::1721352502
-1.2.ogv::VideoStreamTheora::-1::1721352502::0::1::::<><>::
+videoplayer.tscn::PackedScene::7049063491805213391::1721352605::0::1::::<><>::
+::res://Game/::1721352605
 Camera2D.gd::GDScript::-1::1721204747::0::1::::<>Camera2D<>::
 final battle.mp3::AudioStreamMP3::5053326646947105843::1720391957::1720391957::1::::<><>::
 final_battle.tscn::PackedScene::8692354920273046650::1721055653::0::1::::<><>::uid://cd84s0vdp8urj::::res://Game/final battle.mp3
 game.gdshader::Shader::-1::1720391957::0::1::::<><>::
-game.tscn::PackedScene::2507226541973488652::1721351513::0::1::::<><>::uid://dqts467tlka71::::res://Game/Enemy/LOWspawner_trigger.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/Camera2D.gd<>uid://4gdymh7wacm0::::res://Game/Enemy/MEDspawner_trigger.tscn<>res://Game/PlayerVignette.gdshader<>uid://cb72bp87umm38::::res://Game/Enemy/HIGHspawner_trigger.tscn<>res://Game/game.gdshader<>uid://sb6tcfo61bah::::res://Game/Economy/resource_ship.tscn<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://Game/Economy/resource_ship.gd<>uid://bakkhny4k2by4::::res://Game/Enemy/enemy_spawner_MED.tscn<>uid://b8nwiicw3w1ck::::res://Game/Stations/station_1.tscn<>uid://bhvmbkkb0hd00::::res://Game/Enemy/enemy_spawner_HIGH.tscn<>uid://bxouswost8ppp::::res://Game/Stations/station_2.tscn<>res://videoplayer.gd<>uid://ddnjhsyy5bwau::::res://Game/Stations/station_3.tscn<>uid://cwj8utn1vy426::::res://Game/Stations/station_4.tscn<>uid://q2ko4ucq1wi3::::res://Game/Enemy/enemy_spawner_LOW.tscn<>uid://b07ump11ij1r4::::res://Game/Sounds/Music/Grav Nebula Loop.mp3<>uid://bq08qot182dga::::res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav<>res://Game/mission_vector.gd<>uid://det8m7f1rud6g::::res://Sprites/uı_elements/naviC1000.png
+game.tscn::PackedScene::2507226541973488652::1721352605::0::1::::<><>::uid://dqts467tlka71::::res://Game/Enemy/LOWspawner_trigger.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/Camera2D.gd<>uid://4gdymh7wacm0::::res://Game/Enemy/MEDspawner_trigger.tscn<>res://Game/PlayerVignette.gdshader<>uid://cb72bp87umm38::::res://Game/Enemy/HIGHspawner_trigger.tscn<>res://Game/game.gdshader<>uid://sb6tcfo61bah::::res://Game/Economy/resource_ship.tscn<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://Game/Economy/resource_ship.gd<>uid://bakkhny4k2by4::::res://Game/Enemy/enemy_spawner_MED.tscn<>uid://b8nwiicw3w1ck::::res://Game/Stations/station_1.tscn<>uid://bhvmbkkb0hd00::::res://Game/Enemy/enemy_spawner_HIGH.tscn<>uid://bxouswost8ppp::::res://Game/Stations/station_2.tscn<>res://videoplayer.gd<>uid://ddnjhsyy5bwau::::res://Game/Stations/station_3.tscn<>uid://cwj8utn1vy426::::res://Game/Stations/station_4.tscn<>uid://q2ko4ucq1wi3::::res://Game/Enemy/enemy_spawner_LOW.tscn<>uid://b07ump11ij1r4::::res://Game/Sounds/Music/Grav Nebula Loop.mp3<>uid://bq08qot182dga::::res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav<>res://Game/mission_vector.gd<>uid://det8m7f1rud6g::::res://Sprites/uı_elements/naviC1000.png
 mission_vector.gd::GDScript::-1::1721350647::0::1::::<>Sprite2D<>::
 PlayerVignette.gdshader::Shader::-1::1721347668::0::1::::<><>::
 safezone.gdshader::Shader::-1::1720562128::0::1::::<><>::
-survival.tscn::PackedScene::5093986584544238216::1721351512::0::1::::<><>::uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/PlayerVignette.gdshader<>res://Game/Camera2D.gd<>res://Game/game.gdshader<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://videoplayer.gd<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://058ddaleep5x::::res://Game/Enemy/enemy_spawner_SURVIVAL.tscn<>res://Game/SurvivalStats.gd<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://dv3v2y2c2ua6m::::res://Game/final_battle.tscn<>uid://cd0w731hxwrv3::::res://Game/Sounds/Music/epic_war_theme.mp3<>uid://nj8ot8qcfy50::::res://Game/Sounds/Music/Menu Music.wav
+survival.tscn::PackedScene::5093986584544238216::1721352605::0::1::::<><>::uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/PlayerVignette.gdshader<>res://Game/Camera2D.gd<>res://Game/game.gdshader<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://videoplayer.gd<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://058ddaleep5x::::res://Game/Enemy/enemy_spawner_SURVIVAL.tscn<>res://Game/SurvivalStats.gd<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://dv3v2y2c2ua6m::::res://Game/final_battle.tscn<>uid://cd0w731hxwrv3::::res://Game/Sounds/Music/epic_war_theme.mp3<>uid://nj8ot8qcfy50::::res://Game/Sounds/Music/Menu Music.wav
 SurvivalStats.gd::GDScript::-1::1721290839::0::1::::<>CanvasLayer<>::
-::res://Game/DialogueSystem/::1721351513
+::res://Game/DialogueSystem/::1721352605
 dialogue.gd::GDScript::-1::1721350942::0::1::::<>Node2D<>::
 dialogue.gdshader::Shader::-1::1720391957::0::1::::<><>::
-dialogue.tscn::PackedScene::2608000470540816233::1721351513::0::1::::<><>::res://Game/DialogueSystem/dialogue.gd<>uid://cb4yopppgssbs::::res://Sprites/dialogue_sprites/imperiassslCARD500.png<>uid://dlpbgecp3lyxc::::res://Sprites/dialogue_sprites/Pixellari.ttf<>res://Game/DialogueSystem/dialogue.gdshader
+dialogue.tscn::PackedScene::2608000470540816233::1721352605::0::1::::<><>::res://Game/DialogueSystem/dialogue.gd<>uid://cb4yopppgssbs::::res://Sprites/dialogue_sprites/imperiassslCARD500.png<>uid://dlpbgecp3lyxc::::res://Sprites/dialogue_sprites/Pixellari.ttf<>res://Game/DialogueSystem/dialogue.gdshader
 OCR A Regular.otf::FontFile::2120938788082134784::1720391953::1720391953::1::::<><>::
 ::res://Game/DialogueSystem/mission_dialogues/::1721296506
 mission1_part1.json::JSON::-1::1721296506::0::1::::<><>::
@@ -64,10 +63,10 @@ MEDspawner_trigger.tscn::PackedScene::2048088384636483033::1721059286::0::1::::<
 survival_spawner_trigger.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
 survival_spawner_trigger.tscn::PackedScene::3504980076784644815::1720391957::0::1::::<><>::res://Game/Enemy/survival_spawner_trigger.gd
 temporary_kamikaze.png::CompressedTexture2D::8462769557787184448::1720391957::1720391957::1::::<><>::
-::res://Game/Player/::1721351513
+::res://Game/Player/::1721352606
 BoostBar.gd::GDScript::-1::1720564590::0::1::::<>ProgressBar<>::
-Character.gd::GDScript::-1::1721345671::0::1::::Player<>CharacterBody2D<>::
-Character.tscn::PackedScene::589094701922897510::1721351513::0::1::::<><>::res://Game/Player/Character.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>res://Upgrade/upgradeInGame.gd<>uid://u6klu5dwo002::::res://Game/Player/TrailEffectTurbo.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://bwv47xinnqyrs::::res://Menus/pause_menu.tscn<>res://Game/Player/shockwaveShader.gdshader<>res://Game/Player/HealthBar.gd<>uid://btgiyvnu75u0q::::res://Menus/die_menu.tscn<>res://Game/Player/BoostBar.gd<>res://Game/Player/DeathChroma.gdshader<>uid://btm7ov7g0rmq8::::res://Sprites/uı_elements/Bar2CAMSIZ_a.png<>res://Game/Player/DeathChroma.gd<>uid://bnr3fvjdajr70::::res://Sprites/uı_elements/CanBar1CAMSIZ_a.png<>uid://b10drvfq1tjqa::::res://Game/Sounds/Music/Breaker Cannon.wav<>uid://8gqnnotk7kkb::::res://Game/Sounds/Music/Enemy Impact Energy.wav<>uid://u6imtikbq2ed::::res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3<>uid://3s74knb8qx5m::::res://Game/Sounds/Music/Player Impact Energy.wav<>uid://cisqms6m5vs62::::res://Game/Sounds/Music/Ship Collision S.wav<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
+Character.gd::GDScript::-1::1721352605::0::1::::Player<>CharacterBody2D<>::
+Character.tscn::PackedScene::589094701922897510::1721352606::0::1::::<><>::res://Game/Player/Character.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>res://Upgrade/upgradeInGame.gd<>uid://u6klu5dwo002::::res://Game/Player/TrailEffectTurbo.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://bwv47xinnqyrs::::res://Menus/pause_menu.tscn<>res://Game/Player/shockwaveShader.gdshader<>res://Game/Player/HealthBar.gd<>uid://btgiyvnu75u0q::::res://Menus/die_menu.tscn<>res://Game/Player/BoostBar.gd<>res://Game/Player/DeathChroma.gdshader<>uid://btm7ov7g0rmq8::::res://Sprites/uı_elements/Bar2CAMSIZ_a.png<>res://Game/Player/DeathChroma.gd<>uid://bnr3fvjdajr70::::res://Sprites/uı_elements/CanBar1CAMSIZ_a.png<>uid://b10drvfq1tjqa::::res://Game/Sounds/Music/Breaker Cannon.wav<>uid://8gqnnotk7kkb::::res://Game/Sounds/Music/Enemy Impact Energy.wav<>uid://u6imtikbq2ed::::res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3<>uid://3s74knb8qx5m::::res://Game/Sounds/Music/Player Impact Energy.wav<>uid://cisqms6m5vs62::::res://Game/Sounds/Music/Ship Collision S.wav<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
 dash_ghost2.tscn::PackedScene::9141263625724374750::1720391953::0::1::::<><>::uid://dnsi6cscy7oyt::::res://icon.svg<>res://Game/Player/dash_ghost.gd
 dash_ghost.gd::GDScript::-1::1720391953::0::1::::<>Sprite2D<>::
 dash_ghost.tscn::PackedScene::596018892802009348::1720391953::0::1::::<><>::res://Game/Player/dash_ghost.gd<>uid://dnsi6cscy7oyt::::res://icon.svg
@@ -84,12 +83,12 @@ TrailEffect.gd::GDScript::-1::1721347667::0::1::::Trails<>Line2D<>::
 TrailEffect.tscn::PackedScene::4807801313678289943::1721055651::0::1::::<><>::res://Game/Player/TrailEffect.gd
 TrailEffectBlue.tscn::PackedScene::9028708705423614589::1720391957::0::1::::<><>::res://Game/Player/TrailEffect.gd
 TrailEffectTurbo.tscn::PackedScene::1468400493774540289::1721055651::0::1::::<><>::res://Game/Player/TrailEffect.gd
-::res://Game/Player/texts/::1721351512
+::res://Game/Player/texts/::1721352605
 1.1.json::JSON::-1::1721349826::0::1::::<><>::
-1.2.json::JSON::-1::1721351512::0::1::::<><>::
-1.3.json::JSON::-1::1721351378::0::1::::<><>::
-2.1.json::JSON::-1::1721351378::0::1::::<><>::
-2.2.json::JSON::-1::1721347511::0::1::::<><>::
+1.2.json::JSON::-1::1721352605::0::1::::<><>::
+1.3.json::JSON::-1::1721352605::0::1::::<><>::
+2.1.json::JSON::-1::1721352605::0::1::::<><>::
+2.2.json::JSON::-1::1721352605::0::1::::<><>::
 ::res://Game/Sounds/::1721180043
 ::res://Game/Sounds/Effect/::1721055653
 dash fart.mp3::AudioStreamMP3::3906721737157597789::1721055653::1721055653::1::::<><>::
@@ -113,18 +112,20 @@ Menu Music.wav::AudioStreamWAV::933064078608984061::1721144146::1721144146::1:::
 Player Impact Energy.wav::AudioStreamWAV::2004441698635901396::1721178959::1721178959::1::::<><>::
 Ship Collision S.wav::AudioStreamWAV::5372504811370061257::1721179065::1721179066::1::::<><>::
 Space Shooter Battle Theme 1 Intro.wav::AudioStreamWAV::3563084625121556160::1721144207::1721144207::1::::<><>::
-::res://Game/Stations/::1721351513
+::res://Game/Stations/::1721352606
 resource_ship.gd::GDScript::-1::1720391961::0::1::::<>Node2D<>::
 StationInteraction.gd::GDScript::-1::1721350818::0::1::::<>Node2D<>::
-station_1.tscn::PackedScene::4730839919057349734::1721351513::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://b07dx03rg3igq::::res://Sprites/gezegenler/station_sprites/istasyonetrafindaucansey1_c.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
-station_2.tscn::PackedScene::4030913038055808065::1721351513::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://cddac5klpybc::::res://Sprites/gezegenler/station_sprites/korsan_istasyon_001.png
-station_3.tscn::PackedScene::7397225429914623444::1721351513::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://c5ujcvt65lgt3::::res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>res://Game/Stations/themis_paths.gd<>uid://cbs2pnprf0u1s::::res://Sprites/uzaygemisi/resource_ship.png
-station_4.tscn::PackedScene::6337615723085315769::1721351513::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
+station_1.tscn::PackedScene::4730839919057349734::1721352606::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://b07dx03rg3igq::::res://Sprites/gezegenler/station_sprites/istasyonetrafindaucansey1_c.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
+station_2.tscn::PackedScene::4030913038055808065::1721352605::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://cddac5klpybc::::res://Sprites/gezegenler/station_sprites/korsan_istasyon_001.png
+station_3.tscn::PackedScene::7397225429914623444::1721352606::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://c5ujcvt65lgt3::::res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>res://Game/Stations/themis_paths.gd<>uid://cbs2pnprf0u1s::::res://Sprites/uzaygemisi/resource_ship.png
+station_4.tscn::PackedScene::6337615723085315769::1721352606::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
 station_5.tscn::PackedScene::4112037158122291311::1721059286::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://dfvoyj767tibj::::res://Sprites/gezegenler/station_sprites/istasyonDEVRIMCI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
 test_station.tscn::PackedScene::5218317929303006808::1720391957::0::1::::<><>::uid://cq3vsv5p5s4hr::::res://Sprites/gezegenler/gezegen1.png<>res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
 themis_paths.gd::GDScript::-1::1720545506::0::1::::<>Node2D<>::
-::res://Game/videos/::1721352304
-::res://Menus/::1721351512
+::res://Game/videos/::1721352574
+1.2.ogv::VideoStreamTheora::-1::1721352502::0::1::::<><>::
+1.3.ogv::VideoStreamTheora::-1::1721352574::0::1::::<><>::
+::res://Menus/::1721352605
 background.tscn::PackedScene::5086623374241556541::1720391957::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
 backgroundInGame.tscn::PackedScene::5455362156241348439::1720391957::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
 credits.gd::GDScript::-1::1720391953::0::1::::<>Control<>::
@@ -132,7 +133,7 @@ credits.tscn::PackedScene::2050627466389793228::1720391953::0::1::::<><>::res://
 die_menu.gd::GDScript::-1::1721055653::0::1::::<>Control<>::
 die_menu.tscn::PackedScene::3732924698361408994::1720391957::0::1::::<><>::res://Menus/die_menu.gd<>res://Menus/pause_menu.gdshader<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
 main_menu.gd::GDScript::-1::1721347667::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::2491070560617598181::1721351512::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png
+main_menu.tscn::PackedScene::2491070560617598181::1721352605::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png
 options_menu.gd::GDScript::-1::1720391957::0::1::::<>Control<>::
 options_menu.tscn::PackedScene::5921788066902643366::1720391953::0::1::::<><>::res://Menus/options_menu.gd
 pause_menu.gd::GDScript::-1::1721045322::0::1::::<>Control<>::
