@@ -180,10 +180,10 @@ func _on_damage_upgrade_button_pressed():
 	update_character_attributes()
 	
 func reset_upgrades():
-	HealthLevel = 1
-	SpeedLevel = 1
-	FuelLevel = 1
-	DamageLevel = 1
+	HealthLevel = 2
+	SpeedLevel = 2
+	FuelLevel = 2
+	DamageLevel = 2
 	ScrapParts = 0
 	changeTextures()
 	save_data()

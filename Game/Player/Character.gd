@@ -115,8 +115,7 @@ func _ready():
 	await get_tree().create_timer(0.11).timeout
 	health = maxHealth
 	if get_tree().current_scene.name != "SurvivalGame":
-		#videoplayer.playvideo("res://Game/videos/intro0.0.ogv")
-		pass
+		videoplayer.playvideo("res://Game/videos/intro (1).ogv")
 	
 
 func _process(delta): 

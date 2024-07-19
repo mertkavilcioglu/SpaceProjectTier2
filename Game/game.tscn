@@ -217,12 +217,11 @@ rotation = 1.5708
 scale = Vector2(750, 30)
 
 [node name="MEDSpawnerTrigger" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(32622, -54361)
+position = Vector2(33998, -49535)
 scale = Vector2(22.87, 27.748)
 
 [node name="MEDSpawnerTrigger3" parent="SpawnerTriggers" instance=ExtResource("2_wrk50")]
-position = Vector2(49887, -30762)
-rotation = 0.471239
+position = Vector2(3010, -32574)
 scale = Vector2(22.87, 284.463)
 
 [node name="BackgroundInGame" parent="." instance=ExtResource("2_j1piq")]
@@ -314,15 +313,15 @@ stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 show_behind_parent = true
-position = Vector2(584, 26)
+position = Vector2(24047, -30625)
 station_id = "1"
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
-position = Vector2(-121, -3444)
+position = Vector2(34070, -49716)
 station_id = "2"
 
 [node name="themis" parent="." instance=ExtResource("10_3l1ue")]
-position = Vector2(-2555, -74)
+position = Vector2(-16570, -34385)
 station_id = "3"
 
 [node name="themis_uydu" parent="." instance=ExtResource("11_og44a")]
@@ -330,6 +329,7 @@ position = Vector2(-3731, -1335)
 station_id = "4"
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
+position = Vector2(6766, -4108)
 scale = Vector2(0.3, 0.3)
 script = ExtResource("7_0q5w1")
 

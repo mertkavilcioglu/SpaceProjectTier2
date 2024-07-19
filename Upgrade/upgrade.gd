@@ -107,11 +107,11 @@ func load_data():
 		ScrapParts = file.get_var(ScrapParts)
 		highScore = file.get_var(highScore)
 	else:
-		HealthLevel = 1
-		SpeedLevel = 1
-		FuelLevel = 1
-		DamageLevel = 1
-		ScrapParts = 1
+		HealthLevel = 2
+		SpeedLevel = 2
+		FuelLevel = 2
+		DamageLevel = 2
+		ScrapParts = 2
 		highScore = 0
 
 func changeTextures():

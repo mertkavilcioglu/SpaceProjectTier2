@@ -34,7 +34,9 @@ func _process(delta):
 		character_on_dialogue = true
 		left_button.disabled = false
 		right_button.disabled = false
-		
+	elif visible == false:
+		left_button.disabled = true
+		right_button.disabled = true
 		
 func dialogue(dialogue_path,text_name):
 	dialogues = load_dialogue(dialogue_path)
@@ -110,6 +112,8 @@ func select_left():
 		character_on_dialogue = false
 		station.character.on_dialogue = false
 		left_button.disabled = true
+		await get_tree().create_timer(0.5).timeout
+		hide()
 	
 func select_right():
 	if "right_result" in current_dialogue and current_dialogue["right_result"] !="null":
@@ -146,6 +150,8 @@ func select_right():
 			character_on_dialogue = false
 			station.character.on_dialogue = false
 			right_button.disabled = true
+			await get_tree().create_timer(0.5).timeout
+			hide()
 
 func text_():
 	dialogue_text.visible_characters+=1

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_5y7i4"]
 [ext_resource type="Script" path="res://Upgrade/upgrade.gd" id="1_m760t"]
 [ext_resource type="Texture2D" uid="uid://borymgvjaafis" path="res://Sprites/uzaygemisi/Bodies/Body_lvl1.png" id="3_6da6h"]
-[ext_resource type="Texture2D" uid="uid://bq6hdkhfcxw2k" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="4_7ec4c"]
+[ext_resource type="Texture2D" uid="uid://csvxgdecwj7d6" path="res://Sprites/uzaygemisi/Wings/Wing_lvl1.png" id="4_7ec4c"]
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="5_cipow"]
 [ext_resource type="Texture2D" uid="uid://c7wurp75mpiqh" path="res://Sprites/UpgradeEmpty.png" id="6_h752f"]
 [ext_resource type="Texture2D" uid="uid://byn7bqsuq56bs" path="res://Resources/Metal.png" id="8_adlnu"]
