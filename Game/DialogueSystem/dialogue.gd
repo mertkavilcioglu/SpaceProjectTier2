@@ -29,7 +29,7 @@ func _ready():
 	nextdialogue = "1.1"
 
 func _process(delta):
-	print(left_button.disabled)
+	print(get_parent().visible)
 	if visible == true and station.videoplayer.isplaying == false:
 		character_on_dialogue = true
 		left_button.disabled = false
@@ -42,6 +42,7 @@ func dialogue(dialogue_path,text_name):
 	dialogues = load_dialogue(dialogue_path)
 	current_dialogue =  dialogues[text_name]
 	update_card()
+	show()
 	card_animation.play("card_animation")
 
 	

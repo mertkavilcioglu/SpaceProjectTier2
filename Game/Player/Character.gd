@@ -87,6 +87,8 @@ var safezone = false
 @onready var hbartexture = $CanvasLayer/health_bar
 @onready var colorrect = $"../Camera2D/CanvasLayer"
 @onready var safezone_shader = $"../Camera2D/CanvasLayer3/safezone"
+@onready var radar = $CanvasLayer/radar
+@onready var radar_frame = $CanvasLayer/radar_frame
 
 @onready var karagünes = $"../karagünes_atolyesi"
 
@@ -99,6 +101,7 @@ var isEngineStart:bool
 
 
 func _ready():
+	radar.play()
 	if get_tree().current_scene.name != "SurvivalGame":
 		videoplayer.playvideo("res://Game/videos/intro (1).ogv")
 	#if get_tree().current_scene.name != "SurvivalGame":
@@ -193,7 +196,10 @@ func _physics_process(delta):
 				bbartexture.visible = true
 				hbartexture.visible = true
 				colorrect.visible = true
-				safezone_shader.visible = true
+				radar.visible = true
+				radar_frame.visible = true
+				if safezone_shader != null:
+					safezone_shader.visible = true
 				if BoostFuel <100:
 					BoostFuel += 20*delta
 					boostFuelChanged.emit()
@@ -268,6 +274,8 @@ func _physics_process(delta):
 				hbartexture.visible = false
 				colorrect.visible = false
 				safezone_shader.visible = false
+				radar.visible = false
+				radar_frame.visible = false
 		elif(on_dialogue):
 			velocity.x = move_toward(velocity.x, 0 , Acceleration)
 			velocity.y = move_toward(velocity.y, 0 , Acceleration)

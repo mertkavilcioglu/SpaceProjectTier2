@@ -1,3 +1,5 @@
+AnimatedSprite2D
+Sprite2D
 VideoStreamPlayer
 CanvasLayer
 Control
@@ -7,7 +9,6 @@ Button
 Node2D
 RichTextLabel
 Camera2D
-Sprite2D
 AnimationPlayer
 AudioStreamPlayer2D
 Label

@@ -267,11 +267,63 @@
 		"question":"Nathan: “Her kim olurlarsa olsunlar füzyon çekirdeği geri getirilmeli Ranger. Evrende onun bir tane daha eşi yok.”",
 		"left_answer":"Merak etmeyin, çekirdeğinizi geri getireceğiz.",
 		"right_answer":"",
+		"left_result":"text20",
 		"right_result":"null",
 		"order":"d",
-		"missionvector":"2",
-		"nextdialogue":"1.2"
 	},
+	"text20":
+	{
+	"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+	"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text14_500.png",
+	"question":"North: Çekirdeği geri getireceğiz ama benim canımı asıl sıkan etraftaki başıboş yağmacılar. Buraya gelene kadar bile kim bilir kaç gemiyi indirmişizdir. Beni yanlış anlamayın hepsinin kökünü kurutmaktan gayet memnunum ama korsanları bunların arasından bulmak zor olabilir.",
+	"monologue":"North haklı, güvenli olması gereken bölgelerde bile bu aşağılıklar rahatça kol geziyor. İmparatorluğun ne kadar zayıfladığını şimdi daha iyi anlıyorum.",
+	"left_answer":"Hatta ayırt etmesi imkansız bile denilebilir ",
+	"right_answer":"",
+	"left_result":"text21",
+	"right_result":"null",
+	"order":"d"
+	},
+
+	"text21":
+		{
+	"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+	"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text12_500.png",
+	"question":" Nathan: Bize saldıran korsanların niyetini tam olarak bilmiyorum ama füzyon çekirdeğini çalıp etrafta diğer gemileri yağmalayacakları fikri mantıklı gelmiyor.",
+	"monologue":"",
+	"left_answer":"Haklısın, acemiliklerini de düşünürsek bir yere saklanmaları çok olası",
+	"right_answer":"",
+	"left_result":"text22",
+	"right_result":"null",
+	"order":"d"
+	},
+
+	"text22":
+	{
+	"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+	"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text12_500.png",
+	"question":" North: O zaman aramaya saklanabilecekleri yerlerden başlayalım.",
+	"monologue":"",
+	"left_answer":"Yola koyulalım",
+	"right_answer":"",
+	"left_result":"text23",
+	"right_result":"null",
+	"order":"d"
+	},
+	"text23":
+	{
+	"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
+	"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/text11_500.png",
+	"question":"Nathan: Size güveniyorum. Yolunuz açık olsun.",
+	"monologue":"",
+	"left_answer":"Bitir",
+	"right_answer":"",
+	"right_result":"null",
+	"order":"d",
+	"missionvector":"2",
+	"nextdialogue":"1.2"
+	}
+
+
 	
 	
 

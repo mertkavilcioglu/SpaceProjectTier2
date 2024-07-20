@@ -318,15 +318,17 @@ position = Vector2(1004, 149)
 station_id = "1"
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
-position = Vector2(34070, -49716)
+show_behind_parent = true
+position = Vector2(534, -2740)
 station_id = "2"
 
 [node name="themis" parent="." instance=ExtResource("10_3l1ue")]
-position = Vector2(-16570, -34385)
+show_behind_parent = true
+position = Vector2(-2106, -977)
 station_id = "3"
 
 [node name="themis_uydu" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(-17733, -35640)
+position = Vector2(-3269, -2232)
 station_id = "4"
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
