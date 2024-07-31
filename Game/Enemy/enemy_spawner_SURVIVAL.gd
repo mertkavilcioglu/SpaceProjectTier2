@@ -54,6 +54,10 @@ func _on_timer_2_timeout():
 			add_child(enemy)
 			
 	if currentWave >= 4 and currentWave < 6 :
+		if DangerTheme.playing == true:
+			DangerTheme.stop()
+			print("zaaa")
+		survivalhalay.play()
 		enemyType = randi_range(1,10)
 		if enemyType <= 7:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -93,11 +97,11 @@ func _on_timer_2_timeout():
 		enemyType = randi_range(1,10)
 		if enemyType <= 4:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
 			enemy.playerDamage = 2
 			enemy.enemyHealth = 6
 			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
 			enemy.sprite.scale = Vector2(0.06,0.06)
-			add_child(enemy)
 		elif enemyType <= 6 and enemyType >= 5:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
@@ -108,21 +112,19 @@ func _on_timer_2_timeout():
 		enemyType = randi_range(1,10)
 		if enemyType <= 2:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			add_child(enemy)
 			enemy.playerDamage = 2
 			enemy.enemyHealth = 7
 			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
 			enemy.sprite.scale = Vector2(0.06,0.06)
-			add_child(enemy)
 		elif enemyType <= 5 and enemyType >= 3:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
 		elif enemyType >= 6:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			enemy.playerDamage = 1.5
 			add_child(enemy)
+			enemy.playerDamage = 1.5
 	if currentWave >=14 and currentWave <16:
-		DangerTheme.stop()
-		survivalhalay.play()
 		enemyType = randi_range(1,10)
 		if enemyType <= 1:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
