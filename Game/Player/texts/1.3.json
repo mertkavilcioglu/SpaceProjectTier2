@@ -2,7 +2,7 @@
 	"iv1":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"monologue":"Nathan’ın anlattıklarında bir eksiklik var. Bu adamlarda bunu yapacak yetenek yok.",
 		"question":"North: “Çekirdeği bu kadar kolay alacağımızı düşünmüyordum. Çalanlar gerçekten acemilermiş.”",
 		"left_answer":"Sessiz kal",
@@ -14,7 +14,7 @@
 	"text2":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"North: “Abi neden bu kadar sessizsin? Aldık işte çekirdeği, sorun ne?”",
 		"left_answer":"Adamlara baksana North, bunlar mı çaldı çekirdeği?",
 		"right_answer":"Nathan bizden bir şey saklıyor. Bu adamlarda bunu yapacak vasıf yoktu.",
@@ -25,7 +25,7 @@
 	"text3":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"North: “Nathan’ın anlattığına göre bunlarmış, çekirdek de onlardaydı. Ama kafana bu kadar takıldıysa Nathan’ı sorguya çekebiliriz.”",
 		"left_answer":"Bu gerekebilir.",
 		"right_answer":"Ben hallederim.",
@@ -36,7 +36,7 @@
 	"iv2":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"monologue":"İçeri girince her şeyi öğrenmeliyim. Bu belirsizlikle iş yapılmaz.",
 		"left_answer":"İçeri gir.",
 		"right_answer":"",
@@ -47,7 +47,7 @@
 	"text4":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"Nathan: “Sorularınız olduğunu görüyorum. Sorun ne?”",
 		"left_answer":"Bu adamların çekirdeği çaldığına inanmıyorum.",
 		"right_answer":"Bize tam olarak ne sakladığını söyle.",
@@ -58,7 +58,7 @@
 	"text5":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"Nathan: “Size her şeyi anlattım. Daha fazlası yok.”",
 		"monologue":"Yalan söylüyor. Bir şeyler gizliyor.",
 		"left_answer":"Bu adamların bu işi yapabilecek yetenekleri yok.",
@@ -70,7 +70,7 @@
 	"text6":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"Nathan: “Tamam, bir şeyler daha var. Ama bunu burada konuşmamız tehlikeli.”",
 		"monologue":"İşte geldik. Gerçekler açığa çıkıyor.",
 		"left_answer":"Nerede konuşacağız?",
@@ -82,7 +82,7 @@
 	"text7":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"Nathan: “Güvenli bir yerde. Beni takip edin.”",
 		"left_answer":"Devam et",
 		"right_answer":"",
@@ -93,7 +93,7 @@
 	"text2.1":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/nathan1 (1).png",
 		"question":"North: Kraliyetten bu bilgileri sakladın demek. ",
 		"monologue":"Şu an buna vaktimiz yok bir an önce Kara Güneşi tamamlamalıyız. Ama bu tarikat ve Ayin de ne anlama geliyor?  Bunu daha sonra araştırmalıyım.",
 		"left_answer":"Tamam North, Nathan ile daha sonra bunu konuşacağız.",

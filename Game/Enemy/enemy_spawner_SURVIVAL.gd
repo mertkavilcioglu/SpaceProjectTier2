@@ -19,6 +19,7 @@ var posY
 @onready var isStopped:bool = false
 @onready var eldenRing = $"../FinalBattle"
 @onready var DangerTheme = $"../BGMusicDanger"
+@onready var survivalhalay = $"../survivalhalay"
 	
 func _ready():
 	DangerTheme.play()
@@ -43,7 +44,7 @@ func _on_timer_timeout():
 	choise = randi_range(1,4)
 
 func _on_timer_2_timeout():
-	if currentWave < 4 :
+	if currentWave <= 3 :
 		enemyType = randi_range(1,10)
 		if enemyType <= 7:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
@@ -76,19 +77,105 @@ func _on_timer_2_timeout():
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
 			add_child(enemy)
 			
-	if currentWave >= 8:
+	if currentWave >=8 and currentWave<10:
+		enemyType = randi_range(1,10)
+		if enemyType <= 5:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.playerDamage = 1.3
+			add_child(enemy)
+		elif enemyType <= 7 and enemyType >= 6:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 8:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+	if currentWave >=10 and currentWave < 12:	
+		enemyType = randi_range(1,10)
+		if enemyType <= 4:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.enemyHealth = 6
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
+			enemy.sprite.scale = Vector2(0.06,0.06)
+			add_child(enemy)
+		elif enemyType <= 6 and enemyType >= 5:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 7:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			add_child(enemy)
+	if currentWave >=12 and currentWave <14:	
 		enemyType = randi_range(1,10)
 		if enemyType <= 2:
 			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.enemyHealth = 7
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
+			enemy.sprite.scale = Vector2(0.06,0.06)
 			add_child(enemy)
 		elif enemyType <= 5 and enemyType >= 3:
 			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
 			add_child(enemy)
 		elif enemyType >= 6:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			enemy.playerDamage = 1.5
 			add_child(enemy)
-
-				
+	if currentWave >=14 and currentWave <16:
+		DangerTheme.stop()
+		survivalhalay.play()
+		enemyType = randi_range(1,10)
+		if enemyType <= 1:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.enemyHealth = 11
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
+			enemy.sprite.scale = Vector2(0.06,0.06)
+			add_child(enemy)
+		elif enemyType <= 5 and enemyType >= 2:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 6:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Diablo_Top_dir5.png")
+			enemy.sprite.scale = Vector2(1,1)
+			add_child(enemy)
+	if currentWave >=16 and currentWave <18:
+		enemyType = randi_range(1,10)
+		if enemyType <= 1:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
+			enemy.sprite.scale = Vector2(0.06,0.06)
+			enemy.playerDamage = 2
+			add_child(enemy)
+		elif enemyType <= 6 and enemyType >= 2:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			add_child(enemy)
+		elif enemyType >= 7:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Diablo_Top_dir5.png")
+			enemy.sprite.scale = Vector2(1,1)
+			add_child(enemy)
+	if currentWave >=17:
+		enemyType = randi_range(1,10)
+		if enemyType <= 1:
+			enemy = preload("res://Game/Enemy/hunter.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Bison_Top_dir5.png")
+			enemy.sprite.scale = Vector2(0.06,0.06)
+			add_child(enemy)
+		elif enemyType <= 8 and enemyType >= 2:
+			enemy = preload("res://Game/Enemy/kamikaze.tscn").instantiate()
+			enemy.playerDamage = 3
+			enemy.enemyMaxSpeed = 1700
+			add_child(enemy)
+		elif enemyType >= 9:
+			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
+			enemy.playerDamage = 2
+			enemy.sprite.texture = load("res://Sprites/uzaygemisi/EnemyShips/Diablo_Top_dir5.png")
+			enemy.sprite.scale = Vector2(1,1)
+			add_child(enemy)
 	var randx1 = randi_range(0,575)
 	var randx2 = randi_range(-575,575)
 	var randx3 = randi_range(-575,0)

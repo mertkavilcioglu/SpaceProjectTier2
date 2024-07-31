@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbqxtk247b6wv"]
+[gd_scene load_steps=6 format=3 uid="uid://bbqxtk247b6wv"]
 
 [ext_resource type="PackedScene" uid="uid://cep87dbpwhpf6" path="res://Menus/background.tscn" id="1_c84iv"]
 [ext_resource type="Script" path="res://Menus/main_menu.gd" id="1_v8b5e"]
 [ext_resource type="Theme" uid="uid://b0ej5l3e8y73e" path="res://Resources/PixelTheme.tres" id="2_tybw7"]
 [ext_resource type="Texture2D" uid="uid://8ipe1retfqng" path="res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png" id="4_wlkmq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u0321"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -32,16 +34,19 @@ layout_mode = 2
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_tybw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u0321")
 text = "Play Story"
 flat = true
 
 [node name="PlaySurvivalButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_tybw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u0321")
 text = "Play Survival"
 flat = true
 
 [node name="UpgradeButton" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_tybw7")
 text = "Upgrade"
@@ -50,10 +55,12 @@ flat = true
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_tybw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u0321")
 text = "Options"
 flat = true
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_tybw7")
 text = "Credits"
@@ -62,6 +69,7 @@ flat = true
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_tybw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u0321")
 text = "Quit"
 flat = true
 

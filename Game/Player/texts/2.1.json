@@ -2,7 +2,7 @@
 	"iv1":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"question":"North: Vay arkadaş ne mekan yapmış adamlar. ",
 		"monologue":"Vay be kraliyet bunca zorluğun arasında bu gezegene bu kadar özen gösterebilmiş demek. Gördüğüm en lüks istasyon. ",
 		"left_answer":"Şu arkadaş bize mi bakıyor?",
@@ -14,7 +14,7 @@
 	"text3":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"question":"Arthur: Selam Ranger’lar umarım yolculuğunuz iyi geçmiştir. Madam Avalion beni sizleri karşılamam için görevlendirdi. Buyrun vakit kaybetmeyelim. Sizi onunla tanıştırayım.",
 		"left_answer":"Evet sorunsuz geldik güvenlik harika, hiç uzay gemileri ile zorluk yaşamadık.",
 		"right_answer":"Uzay korsanları resmen uzayın bu kısmını ele geçirmiş, her yerdeler.",
@@ -25,7 +25,7 @@
 	"text4":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"question":"Evet kusura bakmayın, ilgilenmeye çalışıyoruz ancak sadece Themis çevresinde güvenlik sistemi kurabilecek maddi durumumuz var. Buyurun Madam Avalion içeride sizleri bekliyor.",
 		"left_answer":"İçeri gir",
 		"right_answer":"",
@@ -36,7 +36,7 @@
 	"iv2":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"monologue":"Avalion’un dosyalarını okuduğumda kendini beğenmiş birisi olduğunu tahmin etmiştim, ama duvara resmini asacak kadar kendini beğenir mi bir insan.",
 		"question":"Avalion: Ahh Hoşgeldiniz Rangerlar, Kraliyetten haber aldığımdan beri sizleri bekliyorum. Gözlerim yollarda kaldı. Ne diyeceğinizi biliyorum. Kara Güneşin yapımı için sizlere Titanyum rezervlerimizi bağlamamızı söyleyecektiniz.",
 		"left_answer":"Evet bunlar doğru ve fazla vaktimiz yok hemen çalışanlarınızla konuşup gerekeni yapın",
@@ -48,7 +48,7 @@
 	"iv3":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"monologue":"Kraliyetin yönettiği bu kadar gizli bir proje için çok fazla şey biliyor. Bizden haberdar olması imkansız.",
 		"question":"Avalion: Üzülerek söylemeliyim ki Ranger’lar ilk kez Kraliyetin bir isteğini yerine getiremeyeceğim. Bunun için sizden çok özür dilerim.",
 		"left_answer":"Titanyumlarda sorun mu var?",
@@ -60,7 +60,7 @@
 	"2.iv1":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"monologue":"Bu nasıl olur? Ta buraya kadar sıçramış bu İsyancılar. Bu kadar büyük bir şeyle karşılaşacağımızı düşünmüyordum.",
 		"question":"North: Ne dedin sen? Devrimcilere mi katılmışlar? Bu imkansız. Buradaki tüm istasyonları tanırım. Hepsi Kraliyetine sadık insanlardır. Kim bu söyledikleriniz isimleri verin bana.",
 		"left_answer":"North, bekle eminim tanıdığımız birisi değildir. ",
@@ -73,7 +73,7 @@
 	"2.text2":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"monologue":"Kara Güneş’den bile haberdar, kim bu kadın? Kraliyetle birebir iletişim halinde olması gerekiyor bu bilgilere sahip olması için.",
 		"question":"Avalion: Ben size bütün bilgileri atacağım. Gidip istasyonları incelerseniz süreci çok hızlandırırsınız. Kara Güneş projesine bir an önce başlamamız gerekiyor. ",
 		"left_answer":"Her şey için teşekkürler, elimizden geleni yapacağız.",
@@ -85,7 +85,7 @@
 	"2.iv2":
 	{
 		"card_image":"res://Sprites/dialogue_sprites/imperiassslCARD500.png",
-		"profile_image":"res://Sprites/dialogue_sprites/PART 1 PNG/greybgdialogue.png",
+		"profile_image":"res://Sprites/dialogue_sprites/avelion_dialogue.png",
 		"monologue":"Dışarı çıktığımızdan beri North çok sessizleşti, oradaki insanları onun kadar olamasa da ben de tanırım. Söylediği gibi o insanlar İsyancılara katılmış olamazlar.",
 		"left_answer":"Seni anlıyorum North gidip göreceğiz telaşlanma.",
 		"right_answer":"Toparla kendini, iş ciddi.",

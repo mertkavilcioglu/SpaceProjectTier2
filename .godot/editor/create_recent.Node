@@ -1,3 +1,7 @@
+AudioStreamPlayer2D
+RichTextLabel
+Label
+ColorRect
 AnimatedSprite2D
 Sprite2D
 VideoStreamPlayer
@@ -7,9 +11,5 @@ CollisionShape2D
 CharacterBody2D
 Button
 Node2D
-RichTextLabel
 Camera2D
 AnimationPlayer
-AudioStreamPlayer2D
-Label
-ColorRect

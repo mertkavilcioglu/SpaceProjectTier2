@@ -35,6 +35,7 @@ signal laser_shot(laser)
 
 @onready var hit_flash_anim_player = $HitFlashAnimationPlayer
 @onready var muzzle_flash = $Muzzle/MuzzleFlashAnimationPlayer
+@onready var sprite = $Sprite2D
 
 func _physics_process(delta):
 	look_at(player.position)

@@ -828,8 +828,8 @@ sprite_frames = SubResource("SpriteFrames_hsr4u")
 frame_progress = 0.733836
 
 [node name="radar_frame" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(868.4, 463.4)
-scale = Vector2(1.56, 1.16)
+position = Vector2(868, 465.2)
+scale = Vector2(1.56, 1.205)
 texture = ExtResource("19_seev2")
 
 [node name="ShockwaveAnimationPlayer" type="AnimationPlayer" parent="."]
@@ -867,7 +867,7 @@ visible = false
 [node name="enemy_nearby_area" type="Area2D" parent="."]
 
 [node name="enemy_nearby_collision" type="CollisionShape2D" parent="enemy_nearby_area"]
-position = Vector2(0, 13.5714)
+position = Vector2(18, 24)
 shape = SubResource("CircleShape2D_yab1j")
 
 [node name="SoundEffects" type="Node2D" parent="."]

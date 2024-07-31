@@ -98,7 +98,6 @@ deathParticle = ExtResource("2_pxmgi")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_osjsk")
 rotation = 1.5708
-scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_2vssp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

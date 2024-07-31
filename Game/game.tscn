@@ -314,21 +314,21 @@ stream = ExtResource("14_rx2pw")
 
 [node name="karagünes_atolyesi" parent="." instance=ExtResource("8_3832t")]
 show_behind_parent = true
-position = Vector2(1004, 149)
+position = Vector2(22286, -31928)
 station_id = "1"
 
 [node name="korsan_istasyonu" parent="." instance=ExtResource("9_xfbml")]
 show_behind_parent = true
-position = Vector2(534, -2740)
+position = Vector2(34098, -49832)
 station_id = "2"
 
 [node name="themis" parent="." instance=ExtResource("10_3l1ue")]
 show_behind_parent = true
-position = Vector2(-2106, -977)
+position = Vector2(-20695, -37157)
 station_id = "3"
 
 [node name="themis_uydu" parent="." instance=ExtResource("11_og44a")]
-position = Vector2(-3269, -2232)
+position = Vector2(-21858, -38412)
 station_id = "4"
 
 [node name="resource_ship" parent="." instance=ExtResource("6_6cuy6")]
