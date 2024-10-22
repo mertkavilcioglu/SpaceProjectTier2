@@ -1,271 +1,270 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722419653
-export_presets.cfg::TextFile::-1::1721493100::0::1::::<><>::
-globalvariables.gd::GDScript::-1::1721466867::0::1::::<>Node<>::
-icon.svg::CompressedTexture2D::8109417046477381051::1720391953::1721058385::1::::<><>::
-Kahpe Karı sinematik.ogv::VideoStreamTheora::-1::1721182774::0::1::::<><>::
-README.md::TextFile::-1::1720391953::0::1::::<><>::
-videoplayer.gd::GDScript::-1::1721423448::0::1::::<>VideoStreamPlayer<>::
-videoplayer.tscn::PackedScene::7049063491805213391::1721415054::0::1::::<><>::
-::res://Game/::1722428872
-Camera2D.gd::GDScript::-1::1721204747::0::1::::<>Camera2D<>::
-dsouls.MP3::AudioStreamMP3::2800681896436664230::1722428872::1722428872::1::::<><>::
-final battle.mp3::AudioStreamMP3::5053326646947105843::1720391957::1720391957::1::::<><>::
-final_battle.tscn::PackedScene::8692354920273046650::1721055653::0::1::::<><>::uid://cd84s0vdp8urj::::res://Game/final battle.mp3
-game.gdshader::Shader::-1::1720391957::0::1::::<><>::
-game.tscn::PackedScene::2507226541973488652::1722424850::0::1::::<><>::uid://dqts467tlka71::::res://Game/Enemy/LOWspawner_trigger.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/Camera2D.gd<>res://Game/PlayerVignette.gdshader<>uid://cb72bp87umm38::::res://Game/Enemy/HIGHspawner_trigger.tscn<>res://Game/game.gdshader<>uid://sb6tcfo61bah::::res://Game/Economy/resource_ship.tscn<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://Game/Economy/resource_ship.gd<>uid://bakkhny4k2by4::::res://Game/Enemy/enemy_spawner_MED.tscn<>uid://b8nwiicw3w1ck::::res://Game/Stations/station_1.tscn<>uid://bhvmbkkb0hd00::::res://Game/Enemy/enemy_spawner_HIGH.tscn<>uid://bxouswost8ppp::::res://Game/Stations/station_2.tscn<>res://videoplayer.gd<>uid://ddnjhsyy5bwau::::res://Game/Stations/station_3.tscn<>uid://cwj8utn1vy426::::res://Game/Stations/station_4.tscn<>uid://q2ko4ucq1wi3::::res://Game/Enemy/enemy_spawner_LOW.tscn<>uid://b07ump11ij1r4::::res://Game/Sounds/Music/Grav Nebula Loop.mp3<>uid://bq08qot182dga::::res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav<>res://Game/mission_vector.gd<>uid://det8m7f1rud6g::::res://Sprites/uı_elements/naviC1000.png
-mission_vector.gd::GDScript::-1::1721396126::0::1::::<>Sprite2D<>::
-PlayerVignette.gdshader::Shader::-1::1722420665::0::1::::<><>::
-safezone.gdshader::Shader::-1::1720562128::0::1::::<><>::
-survival.tscn::PackedScene::5093986584544238216::1722424850::0::1::::<><>::uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/PlayerVignette.gdshader<>res://Game/Camera2D.gd<>res://Game/game.gdshader<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://videoplayer.gd<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://058ddaleep5x::::res://Game/Enemy/enemy_spawner_SURVIVAL.tscn<>res://Game/SurvivalStats.gd<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://dv3v2y2c2ua6m::::res://Game/final_battle.tscn<>uid://cd0w731hxwrv3::::res://Game/Sounds/Music/epic_war_theme.mp3<>uid://nj8ot8qcfy50::::res://Game/Sounds/Music/Menu Music.wav
-SurvivalStats.gd::GDScript::-1::1721290839::0::1::::<>CanvasLayer<>::
-::res://Game/DialogueSystem/::1722424850
-dialogue.gd::GDScript::-1::1721467185::0::1::::<>Node2D<>::
-dialogue.gdshader::Shader::-1::1720391957::0::1::::<><>::
-dialogue.tscn::PackedScene::2608000470540816233::1722424850::0::1::::<><>::res://Game/DialogueSystem/dialogue.gd<>uid://cb4yopppgssbs::::res://Sprites/dialogue_sprites/imperiassslCARD500.png<>uid://dlpbgecp3lyxc::::res://Sprites/dialogue_sprites/Pixellari.ttf<>res://Game/DialogueSystem/dialogue.gdshader
-OCR A Regular.otf::FontFile::2120938788082134784::1720391953::1720391953::1::::<><>::
-::res://Game/DialogueSystem/mission_dialogues/::1721296506
-mission1_part1.json::JSON::-1::1721296506::0::1::::<><>::
-mission1_part2.json::JSON::-1::1720391957::0::1::::<><>::
-mission1_part3.json::JSON::-1::1720391957::0::1::::<><>::
-::res://Game/Economy/::1721349193
-economy.gd::GDScript::-1::1720391953::0::1::::<>Node<>::
-economy.tscn::PackedScene::4456821559663239828::1720391953::0::1::::<><>::res://Game/Economy/economy.gd
-resource_ship.gd::GDScript::-1::1721349193::0::1::::<>Node2D<>::
-resource_ship.tscn::PackedScene::1267379833547863883::1721205315::0::1::::<><>::
-test_resource_planet.tscn::PackedScene::3774087416680068665::1720562942::0::1::::<><>::uid://cbbyeie2hopdg::::res://Sprites/gezegenler/gezegen2.png
-::res://Game/Enemy/::1722424851
-enemy_spawner_HIGH.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-enemy_spawner_HIGH.tscn::PackedScene::2921825452462354399::1720562942::0::1::::<><>::res://Game/Enemy/enemy_spawner_HIGH.gd
-enemy_spawner_LOW.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-enemy_spawner_LOW.tscn::PackedScene::1179393422797007636::1720562942::0::1::::<><>::res://Game/Enemy/enemy_spawner_LOW.gd
-enemy_spawner_MED.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-enemy_spawner_MED.tscn::PackedScene::2407684852929609449::1720391957::0::1::::<><>::res://Game/Enemy/enemy_spawner_MED.gd
-enemy_spawner_SURVIVAL.gd::GDScript::-1::1722424846::0::1::::<>Node2D<>::
-enemy_spawner_SURVIVAL.tscn::PackedScene::1818661599790971919::1722424851::0::1::::<><>::res://Game/Enemy/enemy_spawner_SURVIVAL.gd
-explosion_death_particle.gd::GDScript::-1::1720391953::0::1::::<>GPUParticles2D<>::
-explosion_death_particle.tscn::PackedScene::5388445551141711661::1720391953::0::1::::<><>::res://Game/Enemy/explosion_death_particle.gd
-HIGHspawner_trigger.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-HIGHspawner_trigger.tscn::PackedScene::4910732284062691433::1720391957::0::1::::<><>::res://Game/Enemy/HIGHspawner_trigger.gd
-hitFlash.tres::VisualShader::1042910257028187848::1722420665::0::1::::<><>::
-hulk.gd::GDScript::-1::1721045322::0::1::::EnemyH<>RigidBody2D<>::
-hulk.tscn::PackedScene::4717231470457473767::1722424851::0::1::::<><>::res://Game/Enemy/hulk.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://cn2j68thnvc73::::res://Sprites/uzaygemisi/dman gemiler/hulk_Harbinger_Top_dir5.png<>uid://by464r5c4grus::::res://Game/Enemy/hunterForHulk.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn
-hunter.gd::GDScript::-1::1722424846::0::1::::Enemy<>RigidBody2D<>::
-hunter.tscn::PackedScene::3290575436752437376::1722424850::0::1::::<><>::uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>res://Game/Enemy/hunter.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png
-hunterForHulk.gd::GDScript::-1::1720391957::0::1::::EnemyHH<>RigidBody2D<>::
-hunterForHulk.tscn::PackedScene::4132754840043579838::1720391957::0::1::::<><>::res://Game/Enemy/hunterForHulk.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn
-kamikaze.gd::GDScript::-1::1721055653::0::1::::EnemyK<>RigidBody2D<>::
-kamikaze.tscn::PackedScene::272893630689775236::1722424851::0::1::::<><>::res://Game/Enemy/kamikaze.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://kvwtd2bdncsm::::res://Sprites/uzaygemisi/EnemyShips/Kamikze 128x 128.png<>uid://d1vtrplp2oebl::::res://Game/Player/TrailEffectBlue.tscn
-laser_enemy.gd::GDScript::-1::1720391957::0::1::::<>Area2D<>::
-laser_enemy.tscn::PackedScene::8982958392345640664::1720391953::0::1::::<><>::res://Game/Enemy/laser_enemy.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
-LOWspawner_trigger.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-LOWspawner_trigger.tscn::PackedScene::8322653099043958074::1720391957::0::1::::<><>::res://Game/Enemy/LOWspawner_trigger.gd
-MEDspawner_trigger.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-MEDspawner_trigger.tscn::PackedScene::2048088384636483033::1721059286::0::1::::<><>::res://Game/Enemy/MEDspawner_trigger.gd
-survival_spawner_trigger.gd::GDScript::-1::1720391957::0::1::::<>Node2D<>::
-survival_spawner_trigger.tscn::PackedScene::3504980076784644815::1720391957::0::1::::<><>::res://Game/Enemy/survival_spawner_trigger.gd
-temporary_kamikaze.png::CompressedTexture2D::8462769557787184448::1720391957::1720391957::1::::<><>::
-::res://Game/Player/::1722420665
-BoostBar.gd::GDScript::-1::1720564590::0::1::::<>ProgressBar<>::
-Character.gd::GDScript::-1::1721492083::0::1::::Player<>CharacterBody2D<>::
-Character.tscn::PackedScene::589094701922897510::1721492133::0::1::::<><>::res://Game/Player/Character.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://bjotcnhdcymeo::::res://Sprites/StarSparrow_Top_dir5.png<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>res://Upgrade/upgradeInGame.gd<>uid://u6klu5dwo002::::res://Game/Player/TrailEffectTurbo.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://bwv47xinnqyrs::::res://Menus/pause_menu.tscn<>res://Game/Player/shockwaveShader.gdshader<>res://Game/Player/HealthBar.gd<>uid://btgiyvnu75u0q::::res://Menus/die_menu.tscn<>res://Game/Player/BoostBar.gd<>res://Game/Player/DeathChroma.gdshader<>uid://btm7ov7g0rmq8::::res://Sprites/uı_elements/Bar2CAMSIZ_a.png<>res://Game/Player/DeathChroma.gd<>uid://bnr3fvjdajr70::::res://Sprites/uı_elements/CanBar1CAMSIZ_a.png<>uid://begsq0a1m2yfd::::res://Sprites/radar-export.png<>uid://b18wgg1guj5xf::::res://Sprites/radar.png<>uid://b10drvfq1tjqa::::res://Game/Sounds/Music/Breaker Cannon.wav<>uid://8gqnnotk7kkb::::res://Game/Sounds/Music/Enemy Impact Energy.wav<>uid://u6imtikbq2ed::::res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3<>uid://3s74knb8qx5m::::res://Game/Sounds/Music/Player Impact Energy.wav<>uid://cisqms6m5vs62::::res://Game/Sounds/Music/Ship Collision S.wav<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
-dash_ghost2.tscn::PackedScene::9141263625724374750::1720391953::0::1::::<><>::uid://dnsi6cscy7oyt::::res://icon.svg<>res://Game/Player/dash_ghost.gd
-dash_ghost.gd::GDScript::-1::1720391953::0::1::::<>Sprite2D<>::
-dash_ghost.tscn::PackedScene::596018892802009348::1720391953::0::1::::<><>::res://Game/Player/dash_ghost.gd<>uid://dnsi6cscy7oyt::::res://icon.svg
-DeathChroma.gd::GDScript::-1::1720564590::0::1::::<>ColorRect<>::
-DeathChroma.gdshader::Shader::-1::1720391957::0::1::::<><>::
-HealthBar.gd::GDScript::-1::1720391957::0::1::::<>ProgressBar<>::
-laser.gd::GDScript::-1::1720391957::0::1::::<>Area2D<>::
-laser.tscn::PackedScene::1881788047753721134::1720391957::0::1::::<><>::res://Game/Player/laser.gd<>uid://bn11s6t2uiqnw::::res://Sprites/uzaygemisi/laserBlue01.png
-laser_enemy.tscn::PackedScene::8668903748600545563::1720391953::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
-muzzle_flash.png::CompressedTexture2D::5608787320517724536::1720391953::1720391953::1::::<><>::
-shockwaveShader.gdshader::Shader::-1::1720391957::0::1::::<><>::
-texture_rect.tscn::PackedScene::2956359452697985705::1720391957::0::1::::<><>::res://Game/Player/shockwaveShader.gdshader<>uid://dnsi6cscy7oyt::::res://icon.svg
-TrailEffect.gd::GDScript::-1::1722420665::0::1::::Trails<>Line2D<>::
-TrailEffect.tscn::PackedScene::4807801313678289943::1721055651::0::1::::<><>::res://Game/Player/TrailEffect.gd
-TrailEffectBlue.tscn::PackedScene::9028708705423614589::1720391957::0::1::::<><>::res://Game/Player/TrailEffect.gd
-TrailEffectTurbo.tscn::PackedScene::1468400493774540289::1721055651::0::1::::<><>::res://Game/Player/TrailEffect.gd
-::res://Game/Player/texts/::1721492548
-1.1.json::JSON::-1::1721467294::0::1::::<><>::
-1.2.json::JSON::-1::1721425727::0::1::::<><>::
-1.3.json::JSON::-1::1721492548::0::1::::<><>::
-2.1.json::JSON::-1::1721492548::0::1::::<><>::
-2.2.json::JSON::-1::1721417864::0::1::::<><>::
-2.3.json::JSON::-1::1721416821::0::1::::<><>::
-::res://Game/Sounds/::1721180043
-::res://Game/Sounds/Effect/::1721055653
-dash fart.mp3::AudioStreamMP3::3906721737157597789::1721055653::1721055653::1::::<><>::
-die laugh longer.mp3::AudioStreamMP3::7243661340843985145::1721055653::1721055653::1::::<><>::
-die laugh.mp3::AudioStreamMP3::2115516957175032775::1721055653::1721055653::1::::<><>::
-die yamete kudasai.mp3::AudioStreamMP3::598279299169955042::1721055653::1721055653::1::::<><>::
-engine start VUTUTUTUTU.mp3::AudioStreamMP3::7202686020411263109::1721055653::1721055653::1::::<><>::
-shoot ersin korkut.mp3::AudioStreamMP3::8816968567213868898::1721055653::1721055653::1::::<><>::
-::res://Game/Sounds/Music/::1721194750
-028301_spaceship-ambience-61038.mp3::AudioStreamMP3::1468280759363930055::1721142840::1721142785::1::::<><>::
-airplane-atmos-22955.mp3::AudioStreamMP3::6347547128338486991::1721140782::1721140783::1::::<><>::
-Breaker Cannon.wav::AudioStreamWAV::4263153683084964412::1721154562::1721154562::1::::<><>::
-chill tofas.mp3::AudioStreamMP3::7220486660110451595::1721055653::1721055653::1::::<><>::
-chill_theme.mp3::AudioStreamMP3::8540802820955234802::1721140141::1721140164::1::::<><>::
-Comet Trail Loop_1.wav::AudioStreamWAV::5163420773548083932::1721154694::1721140575::1::::<><>::
-danger undertale.mp3::AudioStreamMP3::3019619225228977542::1721055653::1721055653::1::::<><>::
-Enemy Impact Energy.wav::AudioStreamWAV::2329613499093174141::1721178840::1721178884::1::::<><>::
-epic_war_theme.mp3::AudioStreamMP3::5036411772566000170::1721140141::1721194750::1::::<><>::
-Grav Nebula Loop.mp3::AudioStreamMP3::4208438461363574607::1721180040::1721180077::1::::<><>::
-Menu Music.wav::AudioStreamWAV::933064078608984061::1721144146::1721144146::1::::<><>::
-Player Impact Energy.wav::AudioStreamWAV::2004441698635901396::1721178959::1721178959::1::::<><>::
-Ship Collision S.wav::AudioStreamWAV::5372504811370061257::1721179065::1721179066::1::::<><>::
-Space Shooter Battle Theme 1 Intro.wav::AudioStreamWAV::3563084625121556160::1721144207::1721144207::1::::<><>::
-::res://Game/Stations/::1722420665
-resource_ship.gd::GDScript::-1::1720391961::0::1::::<>Node2D<>::
-StationInteraction.gd::GDScript::-1::1722420665::0::1::::<>Node2D<>::
-station_1.tscn::PackedScene::4730839919057349734::1721492133::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://b07dx03rg3igq::::res://Sprites/gezegenler/station_sprites/istasyonetrafindaucansey1_c.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
-station_2.tscn::PackedScene::4030913038055808065::1721492132::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://cddac5klpybc::::res://Sprites/gezegenler/station_sprites/korsan_istasyon_001.png
-station_3.tscn::PackedScene::7397225429914623444::1721492133::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://c5ujcvt65lgt3::::res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png<>uid://esfvwdrh1tea::::res://Sprites/gezegenler/station_sprites/tenis_istasyonu1.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>res://Game/Stations/themis_paths.gd<>uid://cbs2pnprf0u1s::::res://Sprites/uzaygemisi/resource_ship.png
-station_4.tscn::PackedScene::6337615723085315769::1721492133::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
-station_5.tscn::PackedScene::4112037158122291311::1721059286::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://dfvoyj767tibj::::res://Sprites/gezegenler/station_sprites/istasyonDEVRIMCI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
-test_station.tscn::PackedScene::5218317929303006808::1720391957::0::1::::<><>::uid://cq3vsv5p5s4hr::::res://Sprites/gezegenler/gezegen1.png<>res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
-themis_paths.gd::GDScript::-1::1720545506::0::1::::<>Node2D<>::
-::res://Game/videos/::1721419031
-1.1.ogv::VideoStreamTheora::-1::1721354286::0::1::::<><>::
-1.2.ogv::VideoStreamTheora::-1::1721352502::0::1::::<><>::
-1.3.ogv::VideoStreamTheora::-1::1721352574::0::1::::<><>::
-2.1.ogv::VideoStreamTheora::-1::1721353340::0::1::::<><>::
-2.2.ogv::VideoStreamTheora::-1::1721353390::0::1::::<><>::
-2.3.ogv::VideoStreamTheora::-1::1721411467::0::1::::<><>::
-intro (1).ogv::VideoStreamTheora::-1::1721419021::0::1::::<><>::
-::res://Menus/::1722424850
-background.tscn::PackedScene::5086623374241556541::1720391957::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
-backgroundInGame.tscn::PackedScene::5455362156241348439::1722424850::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
-credits.gd::GDScript::-1::1720391953::0::1::::<>Control<>::
-credits.tscn::PackedScene::2050627466389793228::1720391953::0::1::::<><>::res://Menus/credits.gd<>uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
-die_menu.gd::GDScript::-1::1721055653::0::1::::<>Control<>::
-die_menu.tscn::PackedScene::3732924698361408994::1720391957::0::1::::<><>::res://Menus/die_menu.gd<>res://Menus/pause_menu.gdshader<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
-main_menu.gd::GDScript::-1::1722420665::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::2491070560617598181::1722424850::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png
-options_menu.gd::GDScript::-1::1721421183::0::1::::<>Control<>::
-options_menu.tscn::PackedScene::5921788066902643366::1720391953::0::1::::<><>::res://Menus/options_menu.gd
-pause_menu.gd::GDScript::-1::1721045322::0::1::::<>Control<>::
-pause_menu.gdshader::Shader::-1::1720391957::0::1::::<><>::
-pause_menu.tscn::PackedScene::3975746335764431652::1721492133::0::1::::<><>::uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>res://Menus/pause_menu.gdshader<>res://Menus/pause_menu.gd
-Untitled-Project.ogv::VideoStreamTheora::-1::1720391953::0::1::::<><>::
-::res://Resources/::1720391953
-ChiKareGo2.ttf::FontFile::6772442393733449730::1720391953::1720391953::1::::<><>::
-Metal.png::CompressedTexture2D::4099735440482473760::1720391953::1720391953::1::::<><>::
-PixelTheme.tres::Theme::4149999933650392076::1720391953::0::1::::<><>::uid://c3qvewdfn0r3o::::res://Resources/ChiKareGo2.ttf
-::res://Sprites/::1721471833
-BGStatic.png::CompressedTexture2D::5877160624191961755::1720391953::1720391953::1::::<><>::
-radar-export.png::CompressedTexture2D::2680685117624063717::1721467508::1721467518::1::::<><>::
-radar.png::CompressedTexture2D::4280801928374951379::1721467544::1721467544::1::::<><>::
-StarSparrow_Top_dir5.png::CompressedTexture2D::3048179453199721030::1721414090::1721414101::1::::<><>::
-takla.jpg::CompressedTexture2D::7345180060144423799::1721055653::1721055653::1::::<><>::
-UpgradeEmpty.png::CompressedTexture2D::7065546211407957567::1720391953::1720391953::1::::<><>::
-UpgradeFilled.png::CompressedTexture2D::2685171465560284814::1720391953::1720391953::1::::<><>::
-::res://Sprites/background/::1720391957
-nebula max znr.png::CompressedTexture2D::9087597484868003410::1720391953::1720391953::1::::<><>::
-starsLayer1.png::CompressedTexture2D::8313554038122753234::1720391953::1720391953::1::::<><>::
-starsLayer2.png::CompressedTexture2D::4111155254277764700::1720391953::1720391953::1::::<><>::
-starsLayer3.png::CompressedTexture2D::3172365180236665011::1720391953::1720391953::1::::<><>::
-starsLayer3_512x512.png::CompressedTexture2D::3340511738728731244::1720391953::1720391953::1::::<><>::
-uzay arkaplan max znrlk.png::CompressedTexture2D::2656228473320750957::1720391953::1720391953::1::::<><>::
-uzay ve nebula max znrkl.png::CompressedTexture2D::5393830554240215564::1720391953::1720391953::1::::<><>::
-::res://Sprites/background/SPACE/::1720391957
-uzay1.png::CompressedTexture2D::8223417577961264938::1720391957::1720391957::1::::<><>::
-uzay1ver2.png::CompressedTexture2D::5482937988923463824::1720391957::1720391957::1::::<><>::
-uzay1verlayer1.png::CompressedTexture2D::6701973414247110593::1720391957::1720391957::1::::<><>::
-uzay1verlayer2.png::CompressedTexture2D::6560917701409165086::1720391957::1720391957::1::::<><>::
-uzay1verlayer3.png::CompressedTexture2D::5052536421670756927::1720391957::1720391957::1::::<><>::
-::res://Sprites/dialogue_sprites/::1721492485
-avelion_dialogue.png::CompressedTexture2D::6468911932288977472::1721472219::1721472219::1::::<><>::
-imperiassslCARD500.png::CompressedTexture2D::4904380186545627788::1720391957::1721189013::1::::<><>::
-nathan1 (1).png::CompressedTexture2D::879705876502398053::1721492485::1721492485::1::::<><>::
-Pixellari.ttf::FontFile::7962376643067170920::1720391957::1720391957::1::::<><>::
-::res://Sprites/dialogue_sprites/PART 1 PNG/::1721471926
-greybgdialogue.png::CompressedTexture2D::8608622287674584562::1721351491::1721351491::1::::<><>::
-istasyonKARAGUNESATOLYESI1_a.png::CompressedTexture2D::6725096122846919183::1721189047::1721189051::1::::<><>::
-Sprite-010ahh_be_ab.png::CompressedTexture2D::1578871006989363219::1721189047::1721189051::1::::<><>::
-text1_500.png::CompressedTexture2D::7501273885370412798::1721189047::1721189051::1::::<><>::
-text2(baseCORRIDOR)_500.png::CompressedTexture2D::760178128008530983::1721189047::1721189051::1::::<><>::
-text3_500.png::CompressedTexture2D::6348230795997758047::1721189047::1721189051::1::::<><>::
-text4_500.png::CompressedTexture2D::1368923463953605353::1721189047::1721189051::1::::<><>::
-text5_500.png::CompressedTexture2D::7230190718527053739::1721189047::1721189051::1::::<><>::
-text6_500.png::CompressedTexture2D::9211445752741790049::1721189047::1721189051::1::::<><>::
-text7_500.png::CompressedTexture2D::3948526424682590221::1721189047::1721189051::1::::<><>::
-text8_500.png::CompressedTexture2D::5886371514730025021::1721189047::1721189051::1::::<><>::
-text9_500.png::CompressedTexture2D::887097514862802522::1721189047::1721189051::1::::<><>::
-text10(alternative_500).png::CompressedTexture2D::7628242413144712260::1721189047::1721189051::1::::<><>::
-text10_500.png::CompressedTexture2D::8553076968096647031::1721189047::1721189051::1::::<><>::
-text11_500.png::CompressedTexture2D::6358730089698375157::1721189047::1721189051::1::::<><>::
-text12_500.png::CompressedTexture2D::2316186673755395110::1721189047::1721189051::1::::<><>::
-text13_500.png::CompressedTexture2D::8481249584568672189::1721189047::1721189051::1::::<><>::
-text14_500.png::CompressedTexture2D::5072514633769146263::1721189047::1721189051::1::::<><>::
-text15_500.png::CompressedTexture2D::5161071663317495084::1721189047::1721189051::1::::<><>::
-text16_500.png::CompressedTexture2D::7391154217473566758::1721189047::1721189051::1::::<><>::
-::res://Sprites/gezegenler/::1720391961
-gezegen1.png::CompressedTexture2D::5954973793903626051::1720391953::1720391953::1::::<><>::
-gezegen2.png::CompressedTexture2D::4846559367383006312::1720391953::1720391953::1::::<><>::
-gezegen 3.png::CompressedTexture2D::5334084285625302017::1720391953::1720391953::1::::<><>::
-::res://Sprites/gezegenler/station_sprites/::1721422642
-istasyon1_a.png::CompressedTexture2D::8397264286475377370::1720391961::1720391961::1::::<><>::
-istasyon1_b.png::CompressedTexture2D::8151273674184073605::1720391961::1720391961::1::::<><>::
-istasyon1_uydu diski_a.png::CompressedTexture2D::2473132682903359771::1720391961::1720391961::1::::<><>::
-istasyonDEVRIMCI1_a.png::CompressedTexture2D::7554451622653077955::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_acikmavi.png::CompressedTexture2D::5761783388766624518::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_b.png::CompressedTexture2D::7003435674089372848::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_c.png::CompressedTexture2D::4207426444131742940::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_d.png::CompressedTexture2D::8214865717610207718::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_siyah.png::CompressedTexture2D::5148401509158805870::1720391961::1720391961::1::::<><>::
-istasyonetrafindaucansey1_turuncu.png::CompressedTexture2D::4078660369348240448::1720391961::1720391961::1::::<><>::
-istasyonKARAGUNESATOLYESI1_a.png::CompressedTexture2D::2333666152230789784::1720391961::1720391961::1::::<><>::
-korsanistasyonu1_a.png::CompressedTexture2D::4898665267039698924::1720391961::1720391961::1::::<><>::
-korsan_istasyon_001.png::CompressedTexture2D::146753123377047532::1720391961::1720391961::1::::<><>::
-tenis_istasyonu1.png::CompressedTexture2D::318256421691957620::1721422642::1721422642::1::::<><>::
-titanyumfabrikasi1_a.png::CompressedTexture2D::6920345389921742226::1720391961::1720391961::1::::<><>::
-::res://Sprites/uı_elements/::1721425710
-Bar2CAMSIZ_a.png::CompressedTexture2D::3746750343478426953::1720563293::1720563307::1::::<><>::
-CanBar1CAMSIZ_a.png::CompressedTexture2D::3335680194603797253::1720563293::1720563307::1::::<><>::
-cursor1.png::CompressedTexture2D::885380277326395875::1720391958::1720391958::1::::<><>::
-enemy_alert.png::CompressedTexture2D::7739360686595619488::1720391958::1720391958::1::::<><>::
-E_0.png::CompressedTexture2D::2443041529323598748::1720391957::1720391957::1::::<><>::
-E_1.png::CompressedTexture2D::2726793433150905980::1720391957::1720391957::1::::<><>::
-E_2.png::CompressedTexture2D::7046480673245266957::1720391957::1720391957::1::::<><>::
-E_3.png::CompressedTexture2D::8422527779041715619::1720391957::1720391957::1::::<><>::
-E_3_LightedUp.png::CompressedTexture2D::1358986622304627111::1720391957::1720391957::1::::<><>::
-naviC1000.png::CompressedTexture2D::7481267382922776544::1721059193::1721059223::1::::<><>::
-::res://Sprites/uzaygemisi/::1721173229
-laserBlue01.png::CompressedTexture2D::3354161917524247344::1720391957::1720391957::1::::<><>::
-laserGreen11.png::CompressedTexture2D::3926770430275004464::1720391957::1720391957::1::::<><>::
-laserRed01.png::CompressedTexture2D::1019264354959949958::1720391953::1720391953::1::::<><>::
-resource_ship.png::CompressedTexture2D::4881855863066287054::1720391953::1720537559::1::::<><>::
-::res://Sprites/uzaygemisi/Bodies/::1721170550
-Body_lvl1.png::CompressedTexture2D::3405637901787742998::1721170456::1721170456::1::::<><>::
-Body_lvl2.png::CompressedTexture2D::1033537567746915865::1721170480::1721170480::1::::<><>::
-Body_lvl3.png::CompressedTexture2D::4588034963519242340::1721170486::1721170487::1::::<><>::
-Body_lvl4.png::CompressedTexture2D::318161191919175179::1721170494::1721170494::1::::<><>::
-Body_lvl5.png::CompressedTexture2D::2513689915473210479::1721170498::1721170499::1::::<><>::
-::res://Sprites/uzaygemisi/dman gemiler/::1721055653
-healer max znrlk.png::CompressedTexture2D::7331522764654350510::1720391953::1720391953::1::::<><>::
-hulk_Harbinger_Top_dir5.png::CompressedTexture2D::5741638109544274812::1721055653::1721055653::1::::<><>::
-Kamikze mzx znrlk.png::CompressedTexture2D::3401038335667345941::1720391953::1720391953::1::::<><>::
-::res://Sprites/uzaygemisi/EnemyShips/::1722429145
-Bison_Top_dir5.png::CompressedTexture2D::5366231235071231649::1722422011::1722422012::1::::<><>::
-Cruxio__Top_dir5.png::CompressedTexture2D::6051705632304903071::1722344095::1722344119::1::::<><>::
-Diablo_Top_dir5.png::CompressedTexture2D::589202820313624045::1722429145::1722429145::1::::<><>::
-healer 128x128.png::CompressedTexture2D::1981629833367384770::1720391953::1720391953::1::::<><>::
-HUNTER.png::CompressedTexture2D::4935940230936888260::1720391953::1720391953::1::::<><>::
-Kamikze 128x 128.png::CompressedTexture2D::746610272470362352::1720391953::1720391953::1::::<><>::
-SwitchBlade_Top_dir1.png::CompressedTexture2D::1048770618615391010::1722344612::1722344619::1::::<><>::
-::res://Sprites/uzaygemisi/resource ships/::1720537558
-::res://Sprites/uzaygemisi/Wings/::1721173704
-kanat lvl2.png::CompressedTexture2D::805025060197733088::1721173666::1721173667::1::::<><>::
-kanat lvl3.png::CompressedTexture2D::2213642321372846988::1721173690::1721173690::1::::<><>::
-kanat lvl4.png::CompressedTexture2D::5721946825437076786::1721173703::1721173704::1::::<><>::
-kanat lvl5.png::CompressedTexture2D::4463369325067316570::1721173219::1721173229::1::::<><>::
-Wing_lvl1.png::CompressedTexture2D::6080999855173027565::1721173219::1721173229::1::::<><>::
-wing_lvl3_body_lvl1.png::CompressedTexture2D::5722792222200353783::1721173219::1721173229::1::::<><>::
-wing_lvl4_body_lvl1.png::CompressedTexture2D::2099624895185056603::1721173219::1721173229::1::::<><>::
-wing_lvl5_body_lvl1.png::CompressedTexture2D::3669213841212512227::1721173219::1721173229::1::::<><>::
-wing_lvl_2_body_lvl1.png::CompressedTexture2D::6592560055222990073::1721173219::1721173229::1::::<><>::
-::res://Upgrade/::1722424850
-upgrade.gd::GDScript::-1::1721421044::0::1::::<>Node2D<>::
-upgrade.tscn::PackedScene::5837162084311246330::1722424850::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Upgrade/upgrade.gd<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://csvxgdecwj7d6::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png
-upgradeInGame.gd::GDScript::-1::1721421044::0::1::::<>Node2D<>::
+::res://::1729620491
+export_presets.cfg::TextFile::-1::1729620345::0::1::::<><>::
+globalvariables.gd::GDScript::-1::1729620345::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::8109417046477381051::1717603892::1729620493::1::::<><>::
+Kahpe Karı sinematik.ogv::VideoStreamTheora::-1::1729620345::0::1::::<><>::
+README.md::TextFile::-1::1717603892::0::1::::<><>::
+videoplayer.gd::GDScript::-1::1729620345::0::1::::<>VideoStreamPlayer<>::
+videoplayer.tscn::PackedScene::7049063491805213391::1729620345::0::1::::<><>::
+::res://Game/::1729620339
+Camera2D.gd::GDScript::-1::1729620339::0::1::::<>Camera2D<>::
+dsouls.MP3::AudioStreamMP3::2800681896436664230::1729620339::1729620339::1::::<><>::
+final battle.mp3::AudioStreamMP3::5053326646947105843::1720000074::1721047179::1::::<><>::
+final_battle.tscn::PackedScene::8692354920273046650::1721053301::0::1::::<><>::uid://cd84s0vdp8urj::::res://Game/final battle.mp3
+game.gdshader::Shader::-1::1720000224::0::1::::<><>::
+game.tscn::PackedScene::2507226541973488652::1729620339::0::1::::<><>::uid://dqts467tlka71::::res://Game/Enemy/LOWspawner_trigger.tscn<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/Camera2D.gd<>res://Game/PlayerVignette.gdshader<>uid://cb72bp87umm38::::res://Game/Enemy/HIGHspawner_trigger.tscn<>res://Game/game.gdshader<>uid://sb6tcfo61bah::::res://Game/Economy/resource_ship.tscn<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://Game/Economy/resource_ship.gd<>uid://bakkhny4k2by4::::res://Game/Enemy/enemy_spawner_MED.tscn<>uid://b8nwiicw3w1ck::::res://Game/Stations/station_1.tscn<>uid://bhvmbkkb0hd00::::res://Game/Enemy/enemy_spawner_HIGH.tscn<>uid://bxouswost8ppp::::res://Game/Stations/station_2.tscn<>res://videoplayer.gd<>uid://ddnjhsyy5bwau::::res://Game/Stations/station_3.tscn<>uid://cwj8utn1vy426::::res://Game/Stations/station_4.tscn<>uid://q2ko4ucq1wi3::::res://Game/Enemy/enemy_spawner_LOW.tscn<>uid://b07ump11ij1r4::::res://Game/Sounds/Music/Grav Nebula Loop.mp3<>uid://bq08qot182dga::::res://Game/Sounds/Music/Space Shooter Battle Theme 1 Intro.wav<>res://Game/mission_vector.gd<>uid://det8m7f1rud6g::::res://Sprites/uı_elements/naviC1000.png
+mission_vector.gd::GDScript::-1::1729620339::0::1::::<>Sprite2D<>::
+PlayerVignette.gdshader::Shader::-1::1729533284::0::1::::<><>::
+safezone.gdshader::Shader::-1::1720991543::0::1::::<><>::
+survival.tscn::PackedScene::5093986584544238216::1729620339::0::1::::<><>::uid://cjyvauoxu8sol::::res://Menus/backgroundInGame.tscn<>res://Game/PlayerVignette.gdshader<>res://Game/Camera2D.gd<>res://Game/game.gdshader<>uid://dijae0twlo3ps::::res://Sprites/uı_elements/enemy_alert.png<>res://videoplayer.gd<>uid://inmklbs8atec::::res://Game/Player/Character.tscn<>uid://058ddaleep5x::::res://Game/Enemy/enemy_spawner_SURVIVAL.tscn<>res://Game/SurvivalStats.gd<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://dv3v2y2c2ua6m::::res://Game/final_battle.tscn<>uid://cd0w731hxwrv3::::res://Game/Sounds/Music/epic_war_theme.mp3<>uid://nj8ot8qcfy50::::res://Game/Sounds/Music/Menu Music.wav<>uid://bf5w263d5nymg::::res://Game/dsouls.MP3
+SurvivalStats.gd::GDScript::-1::1729620339::0::1::::<>CanvasLayer<>::
+::res://Game/DialogueSystem/::1729620339
+dialogue.gd::GDScript::-1::1729620339::0::1::::<>Node2D<>::
+dialogue.gdshader::Shader::-1::1720000224::0::1::::<><>::
+dialogue.tscn::PackedScene::2608000470540816233::1729620339::0::1::::<><>::res://Game/DialogueSystem/dialogue.gd<>uid://cb4yopppgssbs::::res://Sprites/dialogue_sprites/imperiassslCARD500.png<>uid://dlpbgecp3lyxc::::res://Sprites/dialogue_sprites/Pixellari.ttf<>res://Game/DialogueSystem/dialogue.gdshader
+OCR A Regular.otf::FontFile::2120938788082134784::1717603899::1717603899::1::::<><>::
+::res://Game/DialogueSystem/mission_dialogues/::1729620339
+mission1_part1.json::JSON::-1::1729620339::0::1::::<><>::
+mission1_part2.json::JSON::-1::1719394879::0::1::::<><>::
+mission1_part3.json::JSON::-1::1719394879::0::1::::<><>::
+::res://Game/Economy/::1720991543
+economy.gd::GDScript::-1::1717603900::0::1::::<>Node<>::
+economy.tscn::PackedScene::4456821559663239828::1717960560::0::1::::<><>::res://Game/Economy/economy.gd
+resource_ship.gd::GDScript::-1::1720991543::0::1::::<>Node2D<>::
+resource_ship.tscn::PackedScene::1267379833547863883::1719958198::0::1::::<><>::
+test_resource_planet.tscn::PackedScene::3774087416680068665::1717960560::0::1::::<><>::uid://cbbyeie2hopdg::::res://Sprites/gezegenler/gezegen2.png
+::res://Game/Enemy/::1729620339
+enemy_spawner_HIGH.gd::GDScript::-1::1720104190::0::1::::<>Node2D<>::
+enemy_spawner_HIGH.tscn::PackedScene::2921825452462354399::1718911286::0::1::::<><>::res://Game/Enemy/enemy_spawner_HIGH.gd
+enemy_spawner_LOW.gd::GDScript::-1::1720103992::0::1::::<>Node2D<>::
+enemy_spawner_LOW.tscn::PackedScene::1179393422797007636::1718911286::0::1::::<><>::res://Game/Enemy/enemy_spawner_LOW.gd
+enemy_spawner_MED.gd::GDScript::-1::1720104068::0::1::::<>Node2D<>::
+enemy_spawner_MED.tscn::PackedScene::2407684852929609449::1718911286::0::1::::<><>::res://Game/Enemy/enemy_spawner_MED.gd
+enemy_spawner_SURVIVAL.gd::GDScript::-1::1729620339::0::1::::<>Node2D<>::
+enemy_spawner_SURVIVAL.tscn::PackedScene::1818661599790971919::1722885989::0::1::::<><>::res://Game/Enemy/enemy_spawner_SURVIVAL.gd
+explosion_death_particle.gd::GDScript::-1::1717603900::0::1::::<>GPUParticles2D<>::
+explosion_death_particle.tscn::PackedScene::5388445551141711661::1717960560::0::1::::<><>::res://Game/Enemy/explosion_death_particle.gd
+HIGHspawner_trigger.gd::GDScript::-1::1718911286::0::1::::<>Node2D<>::
+HIGHspawner_trigger.tscn::PackedScene::4910732284062691433::1718919208::0::1::::<><>::res://Game/Enemy/HIGHspawner_trigger.gd
+hitFlash.tres::VisualShader::1042910257028187848::1729533284::0::1::::<><>::
+hulk.gd::GDScript::-1::1721043076::0::1::::EnemyH<>RigidBody2D<>::
+hulk.tscn::PackedScene::4717231470457473767::1729620339::0::1::::<><>::res://Game/Enemy/hulk.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://cn2j68thnvc73::::res://Sprites/uzaygemisi/dman gemiler/hulk_Harbinger_Top_dir5.png<>uid://by464r5c4grus::::res://Game/Enemy/hunterForHulk.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn
+hunter.gd::GDScript::-1::1729620339::0::1::::Enemy<>RigidBody2D<>::
+hunter.tscn::PackedScene::3290575436752437376::1729620339::0::1::::<><>::uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>res://Game/Enemy/hunter.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png
+hunterForHulk.gd::GDScript::-1::1720000074::0::1::::EnemyHH<>RigidBody2D<>::
+hunterForHulk.tscn::PackedScene::4132754840043579838::1720000074::0::1::::<><>::res://Game/Enemy/hunterForHulk.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://cclahj55d7oeu::::res://Sprites/uzaygemisi/EnemyShips/HUNTER.png<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn
+kamikaze.gd::GDScript::-1::1721053301::0::1::::EnemyK<>RigidBody2D<>::
+kamikaze.tscn::PackedScene::272893630689775236::1722885989::0::1::::<><>::res://Game/Enemy/kamikaze.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://kvwtd2bdncsm::::res://Sprites/uzaygemisi/EnemyShips/Kamikze 128x 128.png<>uid://d1vtrplp2oebl::::res://Game/Player/TrailEffectBlue.tscn
+laser_enemy.gd::GDScript::-1::1718132348::0::1::::<>Area2D<>::
+laser_enemy.tscn::PackedScene::8982958392345640664::1717603900::0::1::::<><>::res://Game/Enemy/laser_enemy.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
+LOWspawner_trigger.gd::GDScript::-1::1718911286::0::1::::<>Node2D<>::
+LOWspawner_trigger.tscn::PackedScene::8322653099043958074::1718911286::0::1::::<><>::res://Game/Enemy/LOWspawner_trigger.gd
+MEDspawner_trigger.gd::GDScript::-1::1718911286::0::1::::<>Node2D<>::
+MEDspawner_trigger.tscn::PackedScene::2048088384636483033::1718911286::0::1::::<><>::res://Game/Enemy/MEDspawner_trigger.gd
+survival_spawner_trigger.gd::GDScript::-1::1718994656::0::1::::<>Node2D<>::
+survival_spawner_trigger.tscn::PackedScene::3504980076784644815::1718994656::0::1::::<><>::res://Game/Enemy/survival_spawner_trigger.gd
+temporary_kamikaze.png::CompressedTexture2D::8462769557787184448::1718132242::1718132242::1::::<><>::
+::res://Game/Player/::1729620339
+BoostBar.gd::GDScript::-1::1718132337::0::1::::<>ProgressBar<>::
+Character.gd::GDScript::-1::1729620339::0::1::::Player<>CharacterBody2D<>::
+Character.tscn::PackedScene::589094701922897510::1729620339::0::1::::<><>::res://Game/Player/Character.gd<>uid://ci1g58cucklej::::res://Game/Enemy/explosion_death_particle.tscn<>uid://o4gtx8d1ohwq::::res://Game/Enemy/hitFlash.tres<>uid://caq61xx2lvglr::::res://Game/Player/TrailEffect.tscn<>uid://bjotcnhdcymeo::::res://Sprites/StarSparrow_Top_dir5.png<>uid://cl5654k3a2mk3::::res://Game/Player/muzzle_flash.png<>res://Upgrade/upgradeInGame.gd<>uid://u6klu5dwo002::::res://Game/Player/TrailEffectTurbo.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png<>uid://bwv47xinnqyrs::::res://Menus/pause_menu.tscn<>res://Game/Player/shockwaveShader.gdshader<>res://Game/Player/HealthBar.gd<>uid://btgiyvnu75u0q::::res://Menus/die_menu.tscn<>res://Game/Player/BoostBar.gd<>res://Game/Player/DeathChroma.gdshader<>uid://btm7ov7g0rmq8::::res://Sprites/uı_elements/Bar2CAMSIZ_a.png<>res://Game/Player/DeathChroma.gd<>uid://bnr3fvjdajr70::::res://Sprites/uı_elements/CanBar1CAMSIZ_a.png<>uid://begsq0a1m2yfd::::res://Sprites/radar-export.png<>uid://b18wgg1guj5xf::::res://Sprites/radar.png<>uid://b10drvfq1tjqa::::res://Game/Sounds/Music/Breaker Cannon.wav<>uid://8gqnnotk7kkb::::res://Game/Sounds/Music/Enemy Impact Energy.wav<>uid://u6imtikbq2ed::::res://Game/Sounds/Music/028301_spaceship-ambience-61038.mp3<>uid://3s74knb8qx5m::::res://Game/Sounds/Music/Player Impact Energy.wav<>uid://cisqms6m5vs62::::res://Game/Sounds/Music/Ship Collision S.wav<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
+dash_ghost2.tscn::PackedScene::9141263625724374750::1719868240::0::1::::<><>::uid://dnsi6cscy7oyt::::res://icon.svg<>res://Game/Player/dash_ghost.gd
+dash_ghost.gd::GDScript::-1::1717603900::0::1::::<>Sprite2D<>::
+dash_ghost.tscn::PackedScene::596018892802009348::1717848966::0::1::::<><>::res://Game/Player/dash_ghost.gd<>uid://dnsi6cscy7oyt::::res://icon.svg
+DeathChroma.gd::GDScript::-1::1717861534::0::1::::<>ColorRect<>::
+DeathChroma.gdshader::Shader::-1::1718144751::0::1::::<><>::
+HealthBar.gd::GDScript::-1::1717958902::0::1::::<>ProgressBar<>::
+laser.gd::GDScript::-1::1718132348::0::1::::<>Area2D<>::
+laser.tscn::PackedScene::1881788047753721134::1719958198::0::1::::<><>::res://Game/Player/laser.gd<>uid://bn11s6t2uiqnw::::res://Sprites/uzaygemisi/laserBlue01.png
+laser_enemy.tscn::PackedScene::8668903748600545563::1717603900::0::1::::<><>::res://Game/Player/laser.gd<>uid://or0eucopyc11::::res://Sprites/uzaygemisi/laserRed01.png
+muzzle_flash.png::CompressedTexture2D::5608787320517724536::1717603900::1717603900::1::::<><>::
+shockwaveShader.gdshader::Shader::-1::1718144751::0::1::::<><>::
+texture_rect.tscn::PackedScene::2956359452697985705::1717960560::0::1::::<><>::res://Game/Player/shockwaveShader.gdshader<>uid://dnsi6cscy7oyt::::res://icon.svg
+TrailEffect.gd::GDScript::-1::1729533284::0::1::::Trails<>Line2D<>::
+TrailEffect.tscn::PackedScene::4807801313678289943::1721043076::0::1::::<><>::res://Game/Player/TrailEffect.gd
+TrailEffectBlue.tscn::PackedScene::9028708705423614589::1721034582::0::1::::<><>::res://Game/Player/TrailEffect.gd
+TrailEffectTurbo.tscn::PackedScene::1468400493774540289::1721043076::0::1::::<><>::res://Game/Player/TrailEffect.gd
+::res://Game/Player/texts/::1729620339
+1.1.json::JSON::-1::1729620339::0::1::::<><>::
+1.2.json::JSON::-1::1729620339::0::1::::<><>::
+1.3.json::JSON::-1::1729620339::0::1::::<><>::
+2.1.json::JSON::-1::1729620339::0::1::::<><>::
+2.2.json::JSON::-1::1729620339::0::1::::<><>::
+2.3.json::JSON::-1::1729620339::0::1::::<><>::
+::res://Game/Sounds/::1721053301
+::res://Game/Sounds/Effect/::1721055329
+dash fart.mp3::AudioStreamMP3::3906721737157597789::1721053301::1721053301::1::::<><>::
+die laugh longer.mp3::AudioStreamMP3::7243661340843985145::1721053301::1721053301::1::::<><>::
+die laugh.mp3::AudioStreamMP3::2115516957175032775::1721053301::1721053301::1::::<><>::
+die yamete kudasai.mp3::AudioStreamMP3::598279299169955042::1721053301::1721053301::1::::<><>::
+engine start VUTUTUTUTU.mp3::AudioStreamMP3::7202686020411263109::1721053301::1721053301::1::::<><>::
+shoot ersin korkut.mp3::AudioStreamMP3::8816968567213868898::1721053301::1721053301::1::::<><>::
+::res://Game/Sounds/Music/::1729620339
+028301_spaceship-ambience-61038.mp3::AudioStreamMP3::1468280759363930055::1729620339::1729620339::1::::<><>::
+airplane-atmos-22955.mp3::AudioStreamMP3::6347547128338486991::1729620339::1729620339::1::::<><>::
+Breaker Cannon.wav::AudioStreamWAV::4263153683084964412::1729620339::1729620339::1::::<><>::
+chill tofas.mp3::AudioStreamMP3::7220486660110451595::1721053301::1721053301::1::::<><>::
+chill_theme.mp3::AudioStreamMP3::8540802820955234802::1729620339::1729620339::1::::<><>::
+Comet Trail Loop_1.wav::AudioStreamWAV::5163420773548083932::1729620339::1729620339::1::::<><>::
+danger undertale.mp3::AudioStreamMP3::3019619225228977542::1721053301::1721053301::1::::<><>::
+Enemy Impact Energy.wav::AudioStreamWAV::2329613499093174141::1729620339::1729620339::1::::<><>::
+epic_war_theme.mp3::AudioStreamMP3::5036411772566000170::1729620339::1729620339::1::::<><>::
+Grav Nebula Loop.mp3::AudioStreamMP3::4208438461363574607::1729620339::1729620339::1::::<><>::
+Menu Music.wav::AudioStreamWAV::933064078608984061::1729620339::1729620339::1::::<><>::
+Player Impact Energy.wav::AudioStreamWAV::2004441698635901396::1729620339::1729620339::1::::<><>::
+Ship Collision S.wav::AudioStreamWAV::5372504811370061257::1729620339::1729620339::1::::<><>::
+Space Shooter Battle Theme 1 Intro.wav::AudioStreamWAV::3563084625121556160::1729620339::1729620339::1::::<><>::
+::res://Game/Stations/::1729620339
+resource_ship.gd::GDScript::-1::1720991543::0::1::::<>Node2D<>::
+StationInteraction.gd::GDScript::-1::1729620339::0::1::::<>Node2D<>::
+station_1.tscn::PackedScene::4730839919057349734::1729620339::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://b07dx03rg3igq::::res://Sprites/gezegenler/station_sprites/istasyonetrafindaucansey1_c.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>uid://c7ovbs8i5shd4::::res://videoplayer.tscn
+station_2.tscn::PackedScene::4030913038055808065::1722067374::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://cb17kiidps85m::::res://Sprites/gezegenler/station_sprites/korsanistasyonu1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://cddac5klpybc::::res://Sprites/gezegenler/station_sprites/korsan_istasyon_001.png
+station_3.tscn::PackedScene::7397225429914623444::1729620339::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn<>uid://c5ujcvt65lgt3::::res://Sprites/gezegenler/station_sprites/titanyumfabrikasi1_a.png<>uid://esfvwdrh1tea::::res://Sprites/gezegenler/station_sprites/tenis_istasyonu1.png<>uid://bbiaes4dgeof0::::res://Sprites/gezegenler/station_sprites/istasyon1_uydu diski_a.png<>res://Game/Stations/themis_paths.gd<>uid://cbs2pnprf0u1s::::res://Sprites/uzaygemisi/resource_ship.png
+station_4.tscn::PackedScene::6337615723085315769::1729620339::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
+station_5.tscn::PackedScene::4112037158122291311::1720991543::0::1::::<><>::res://Game/Stations/StationInteraction.gd<>uid://dfvoyj767tibj::::res://Sprites/gezegenler/station_sprites/istasyonDEVRIMCI1_a.png<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
+test_station.tscn::PackedScene::5218317929303006808::1719958199::0::1::::<><>::uid://cq3vsv5p5s4hr::::res://Sprites/gezegenler/gezegen1.png<>res://Game/Stations/StationInteraction.gd<>uid://bdflnfbq0e65b::::res://Game/DialogueSystem/dialogue.tscn
+themis_paths.gd::GDScript::-1::1720991543::0::1::::<>Node2D<>::
+::res://Game/videos/::1729620344
+1.1.ogv::VideoStreamTheora::-1::1729620340::0::1::::<><>::
+1.2.ogv::VideoStreamTheora::-1::1729620341::0::1::::<><>::
+1.3.ogv::VideoStreamTheora::-1::1729620341::0::1::::<><>::
+2.1.ogv::VideoStreamTheora::-1::1729620342::0::1::::<><>::
+2.2.ogv::VideoStreamTheora::-1::1729620342::0::1::::<><>::
+2.3.ogv::VideoStreamTheora::-1::1729620343::0::1::::<><>::
+intro (1).ogv::VideoStreamTheora::-1::1729620344::0::1::::<><>::
+::res://Menus/::1729620345
+background.tscn::PackedScene::5086623374241556541::1718911286::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
+backgroundInGame.tscn::PackedScene::5455362156241348439::1722885988::0::1::::<><>::uid://c2qqr1srb3htp::::res://Sprites/background/SPACE/uzay1verlayer1.png<>uid://c0qfmdrpcowtq::::res://Sprites/background/SPACE/uzay1verlayer2.png<>uid://cd8qsinw7ip7d::::res://Sprites/background/SPACE/uzay1verlayer3.png
+credits.gd::GDScript::-1::1717603900::0::1::::<>Control<>::
+credits.tscn::PackedScene::2050627466389793228::1717603900::0::1::::<><>::res://Menus/credits.gd<>uid://cep87dbpwhpf6::::res://Menus/background.tscn<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
+die_menu.gd::GDScript::-1::1721053301::0::1::::<>Control<>::
+die_menu.tscn::PackedScene::3732924698361408994::1721040966::0::1::::<><>::res://Menus/die_menu.gd<>res://Menus/pause_menu.gdshader<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres
+main_menu.gd::GDScript::-1::1729620345::0::1::::<>Control<>::
+main_menu.tscn::PackedScene::2491070560617598181::1729620345::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Menus/main_menu.gd<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://8ipe1retfqng::::res://Sprites/gezegenler/station_sprites/istasyonKARAGUNESATOLYESI1_a.png
+options_menu.gd::GDScript::-1::1729620345::0::1::::<>Control<>::
+options_menu.tscn::PackedScene::5921788066902643366::1718993983::0::1::::<><>::res://Menus/options_menu.gd
+pause_menu.gd::GDScript::-1::1721043076::0::1::::<>Control<>::
+pause_menu.gdshader::Shader::-1::1720000224::0::1::::<><>::
+pause_menu.tscn::PackedScene::3975746335764431652::1722067155::0::1::::<><>::uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>res://Menus/pause_menu.gdshader<>res://Menus/pause_menu.gd
+Untitled-Project.ogv::VideoStreamTheora::-1::1717603900::0::1::::<><>::
+::res://Resources/::1713299605
+ChiKareGo2.ttf::FontFile::6772442393733449730::1717603900::1717603900::1::::<><>::
+Metal.png::CompressedTexture2D::4099735440482473760::1717603900::1717603900::1::::<><>::
+PixelTheme.tres::Theme::4149999933650392076::1717603900::0::1::::<><>::uid://c3qvewdfn0r3o::::res://Resources/ChiKareGo2.ttf
+::res://Sprites/::1729620345
+BGStatic.png::CompressedTexture2D::5877160624191961755::1717603900::1717603900::1::::<><>::
+radar-export.png::CompressedTexture2D::2680685117624063717::1729620345::1729620345::1::::<><>::
+radar.png::CompressedTexture2D::4280801928374951379::1729620345::1729620345::1::::<><>::
+StarSparrow_Top_dir5.png::CompressedTexture2D::3048179453199721030::1729620345::1729620345::1::::<><>::
+takla.jpg::CompressedTexture2D::7345180060144423799::1721057571::1721057571::1::::<><>::
+UpgradeEmpty.png::CompressedTexture2D::7065546211407957567::1717603900::1717603900::1::::<><>::
+UpgradeFilled.png::CompressedTexture2D::2685171465560284814::1717603900::1717603900::1::::<><>::
+::res://Sprites/background/::1718911286
+nebula max znr.png::CompressedTexture2D::9087597484868003410::1717603900::1717603900::1::::<><>::
+starsLayer1.png::CompressedTexture2D::8313554038122753234::1717603900::1717603900::1::::<><>::
+starsLayer2.png::CompressedTexture2D::4111155254277764700::1717603901::1717603901::1::::<><>::
+starsLayer3.png::CompressedTexture2D::3172365180236665011::1717603901::1717603901::1::::<><>::
+starsLayer3_512x512.png::CompressedTexture2D::3340511738728731244::1717603901::1717603901::1::::<><>::
+uzay arkaplan max znrlk.png::CompressedTexture2D::2656228473320750957::1717603901::1717603901::1::::<><>::
+uzay ve nebula max znrkl.png::CompressedTexture2D::5393830554240215564::1717603901::1717603901::1::::<><>::
+::res://Sprites/background/SPACE/::1718911286
+uzay1.png::CompressedTexture2D::8223417577961264938::1718911286::1718911286::1::::<><>::
+uzay1ver2.png::CompressedTexture2D::5482937988923463824::1718911286::1718911286::1::::<><>::
+uzay1verlayer1.png::CompressedTexture2D::6701973414247110593::1718911286::1718911286::1::::<><>::
+uzay1verlayer2.png::CompressedTexture2D::6560917701409165086::1718911286::1718911286::1::::<><>::
+uzay1verlayer3.png::CompressedTexture2D::5052536421670756927::1718911286::1718911286::1::::<><>::
+::res://Sprites/dialogue_sprites/::1729620345
+avelion_dialogue.png::CompressedTexture2D::6468911932288977472::1729620345::1729620345::1::::<><>::
+imperiassslCARD500.png::CompressedTexture2D::4904380186545627788::1729620345::1729620345::1::::<><>::
+nathan1 (1).png::CompressedTexture2D::879705876502398053::1729620345::1729620345::1::::<><>::
+Pixellari.ttf::FontFile::7962376643067170920::1719394879::1719394879::1::::<><>::
+::res://Sprites/dialogue_sprites/PART 1 PNG/::1729620345
+greybgdialogue.png::CompressedTexture2D::8608622287674584562::1729620345::1729620345::1::::<><>::
+istasyonKARAGUNESATOLYESI1_a.png::CompressedTexture2D::6725096122846919183::1729620345::1729620345::1::::<><>::
+Sprite-010ahh_be_ab.png::CompressedTexture2D::1578871006989363219::1729620345::1729620345::1::::<><>::
+text1_500.png::CompressedTexture2D::7501273885370412798::1729620345::1729620345::1::::<><>::
+text2(baseCORRIDOR)_500.png::CompressedTexture2D::760178128008530983::1729620345::1729620345::1::::<><>::
+text3_500.png::CompressedTexture2D::6348230795997758047::1729620345::1729620345::1::::<><>::
+text4_500.png::CompressedTexture2D::1368923463953605353::1729620345::1729620345::1::::<><>::
+text5_500.png::CompressedTexture2D::7230190718527053739::1729620345::1729620345::1::::<><>::
+text6_500.png::CompressedTexture2D::9211445752741790049::1729620345::1729620345::1::::<><>::
+text7_500.png::CompressedTexture2D::3948526424682590221::1729620345::1729620345::1::::<><>::
+text8_500.png::CompressedTexture2D::5886371514730025021::1729620345::1729620345::1::::<><>::
+text9_500.png::CompressedTexture2D::887097514862802522::1729620345::1729620345::1::::<><>::
+text10(alternative_500).png::CompressedTexture2D::7628242413144712260::1729620345::1729620345::1::::<><>::
+text10_500.png::CompressedTexture2D::8553076968096647031::1729620345::1729620345::1::::<><>::
+text11_500.png::CompressedTexture2D::6358730089698375157::1729620345::1729620345::1::::<><>::
+text12_500.png::CompressedTexture2D::2316186673755395110::1729620345::1729620345::1::::<><>::
+text13_500.png::CompressedTexture2D::8481249584568672189::1729620345::1729620345::1::::<><>::
+text14_500.png::CompressedTexture2D::5072514633769146263::1729620345::1729620345::1::::<><>::
+text15_500.png::CompressedTexture2D::5161071663317495084::1729620345::1729620345::1::::<><>::
+text16_500.png::CompressedTexture2D::7391154217473566758::1729620345::1729620345::1::::<><>::
+::res://Sprites/gezegenler/::1720991543
+gezegen1.png::CompressedTexture2D::5954973793903626051::1717603901::1717603901::1::::<><>::
+gezegen2.png::CompressedTexture2D::4846559367383006312::1717603901::1717603901::1::::<><>::
+gezegen 3.png::CompressedTexture2D::5334084285625302017::1717603901::1717603901::1::::<><>::
+::res://Sprites/gezegenler/station_sprites/::1729620345
+istasyon1_a.png::CompressedTexture2D::8397264286475377370::1720991543::1720991543::1::::<><>::
+istasyon1_b.png::CompressedTexture2D::8151273674184073605::1720991543::1720991543::1::::<><>::
+istasyon1_uydu diski_a.png::CompressedTexture2D::2473132682903359771::1720991543::1720991543::1::::<><>::
+istasyonDEVRIMCI1_a.png::CompressedTexture2D::7554451622653077955::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_acikmavi.png::CompressedTexture2D::5761783388766624518::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_b.png::CompressedTexture2D::7003435674089372848::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_c.png::CompressedTexture2D::4207426444131742940::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_d.png::CompressedTexture2D::8214865717610207718::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_siyah.png::CompressedTexture2D::5148401509158805870::1720991543::1720991543::1::::<><>::
+istasyonetrafindaucansey1_turuncu.png::CompressedTexture2D::4078660369348240448::1720991543::1720991543::1::::<><>::
+istasyonKARAGUNESATOLYESI1_a.png::CompressedTexture2D::2333666152230789784::1720991543::1720991543::1::::<><>::
+korsanistasyonu1_a.png::CompressedTexture2D::4898665267039698924::1720991543::1720991543::1::::<><>::
+korsan_istasyon_001.png::CompressedTexture2D::146753123377047532::1720991543::1720991543::1::::<><>::
+tenis_istasyonu1.png::CompressedTexture2D::318256421691957620::1729620345::1729620345::1::::<><>::
+titanyumfabrikasi1_a.png::CompressedTexture2D::6920345389921742226::1720991543::1720991543::1::::<><>::
+::res://Sprites/uı_elements/::1729620345
+Bar2CAMSIZ_a.png::CompressedTexture2D::3746750343478426953::1720991543::1720991543::1::::<><>::
+CanBar1CAMSIZ_a.png::CompressedTexture2D::3335680194603797253::1720991543::1720991543::1::::<><>::
+cursor1.png::CompressedTexture2D::885380277326395875::1719999662::1719999662::1::::<><>::
+enemy_alert.png::CompressedTexture2D::7739360686595619488::1719999662::1719999662::1::::<><>::
+E_0.png::CompressedTexture2D::2443041529323598748::1719999662::1719999662::1::::<><>::
+E_1.png::CompressedTexture2D::2726793433150905980::1719999662::1719999662::1::::<><>::
+E_2.png::CompressedTexture2D::7046480673245266957::1719999662::1719999662::1::::<><>::
+E_3.png::CompressedTexture2D::8422527779041715619::1719999662::1719999662::1::::<><>::
+E_3_LightedUp.png::CompressedTexture2D::1358986622304627111::1719999662::1719999662::1::::<><>::
+naviC1000.png::CompressedTexture2D::7481267382922776544::1729620345::1729620345::1::::<><>::
+::res://Sprites/uzaygemisi/::1729620345
+laserBlue01.png::CompressedTexture2D::3354161917524247344::1719925943::1719925943::1::::<><>::
+laserGreen11.png::CompressedTexture2D::3926770430275004464::1719925943::1719925943::1::::<><>::
+laserRed01.png::CompressedTexture2D::1019264354959949958::1717603901::1717603901::1::::<><>::
+resource_ship.png::CompressedTexture2D::4881855863066287054::1720991543::1720991543::1::::<><>::
+::res://Sprites/uzaygemisi/Bodies/::1729620345
+Body_lvl1.png::CompressedTexture2D::3405637901787742998::1729620345::1717603901::1::::<><>::
+Body_lvl2.png::CompressedTexture2D::1033537567746915865::1729620345::1717603901::1::::<><>::
+Body_lvl3.png::CompressedTexture2D::4588034963519242340::1729620345::1717603901::1::::<><>::
+Body_lvl4.png::CompressedTexture2D::318161191919175179::1729620345::1717603901::1::::<><>::
+Body_lvl5.png::CompressedTexture2D::2513689915473210479::1729620345::1717603901::1::::<><>::
+::res://Sprites/uzaygemisi/dman gemiler/::1721057571
+healer max znrlk.png::CompressedTexture2D::7331522764654350510::1717603901::1717603901::1::::<><>::
+hulk_Harbinger_Top_dir5.png::CompressedTexture2D::5741638109544274812::1721057571::1721057571::1::::<><>::
+Kamikze mzx znrlk.png::CompressedTexture2D::3401038335667345941::1717603901::1717603901::1::::<><>::
+::res://Sprites/uzaygemisi/EnemyShips/::1729620345
+Bison_Top_dir5.png::CompressedTexture2D::5366231235071231649::1729620345::1729620345::1::::<><>::
+Cruxio__Top_dir5.png::CompressedTexture2D::6051705632304903071::1729620345::1729620345::1::::<><>::
+Diablo_Top_dir5.png::CompressedTexture2D::589202820313624045::1729620345::1729620345::1::::<><>::
+healer 128x128.png::CompressedTexture2D::1981629833367384770::1717603901::1717603901::1::::<><>::
+HUNTER.png::CompressedTexture2D::4935940230936888260::1717603901::1717603901::1::::<><>::
+Kamikze 128x 128.png::CompressedTexture2D::746610272470362352::1717603901::1717603901::1::::<><>::
+SwitchBlade_Top_dir1.png::CompressedTexture2D::1048770618615391010::1729620345::1729620345::1::::<><>::
+::res://Sprites/uzaygemisi/Wings/::1729620345
+kanat lvl2.png::CompressedTexture2D::805025060197733088::1729620345::1729620345::1::::<><>::
+kanat lvl3.png::CompressedTexture2D::2213642321372846988::1729620345::1729620345::1::::<><>::
+kanat lvl4.png::CompressedTexture2D::5721946825437076786::1729620345::1729620345::1::::<><>::
+kanat lvl5.png::CompressedTexture2D::4463369325067316570::1729620345::1729620345::1::::<><>::
+Wing_lvl1.png::CompressedTexture2D::6080999855173027565::1729620345::1729620345::1::::<><>::
+wing_lvl3_body_lvl1.png::CompressedTexture2D::5722792222200353783::1729620345::1729620345::1::::<><>::
+wing_lvl4_body_lvl1.png::CompressedTexture2D::2099624895185056603::1729620345::1729620345::1::::<><>::
+wing_lvl5_body_lvl1.png::CompressedTexture2D::3669213841212512227::1729620345::1729620345::1::::<><>::
+wing_lvl_2_body_lvl1.png::CompressedTexture2D::6592560055222990073::1729620345::1729620345::1::::<><>::
+::res://Upgrade/::1729620345
+upgrade.gd::GDScript::-1::1729620345::0::1::::<>Node2D<>::
+upgrade.tscn::PackedScene::5837162084311246330::1729620345::0::1::::<><>::uid://cep87dbpwhpf6::::res://Menus/background.tscn<>res://Upgrade/upgrade.gd<>uid://borymgvjaafis::::res://Sprites/uzaygemisi/Bodies/Body_lvl1.png<>uid://csvxgdecwj7d6::::res://Sprites/uzaygemisi/Wings/Wing_lvl1.png<>uid://b0ej5l3e8y73e::::res://Resources/PixelTheme.tres<>uid://c7wurp75mpiqh::::res://Sprites/UpgradeEmpty.png<>uid://byn7bqsuq56bs::::res://Resources/Metal.png
+upgradeInGame.gd::GDScript::-1::1729620345::0::1::::<>Node2D<>::
