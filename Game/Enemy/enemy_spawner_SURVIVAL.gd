@@ -122,7 +122,6 @@ func _on_timer_2_timeout():
 			add_child(enemy)
 		elif enemyType >= 6:
 			enemy = preload("res://Game/Enemy/hulk.tscn").instantiate()
-			#TEST
 			add_child(enemy)
 			enemy.playerDamage = 1.5
 	if currentWave >=14 and currentWave <16:
